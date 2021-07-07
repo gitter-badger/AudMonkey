@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_WIDGETS_FILEHISTORY__
-#define __AUDACITY_WIDGETS_FILEHISTORY__
+#ifndef __AUDMONKEY_WIDGETS_FILEHISTORY__
+#define __AUDMONKEY_WIDGETS_FILEHISTORY__
 
 #include <vector>
 #include <algorithm>
@@ -22,7 +22,7 @@
 class wxConfigBase;
 class wxMenu;
 
-class AUDACITY_DLL_API FileHistory
+class AUDMONKEY_DLL_API FileHistory
 {
  public:
    FileHistory(size_t maxfiles = 12, wxWindowID idbase = wxID_FILE);

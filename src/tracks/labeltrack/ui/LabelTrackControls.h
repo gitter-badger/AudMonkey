@@ -8,8 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_LABEL_TRACK_CONTROLS__
-#define __AUDACITY_LABEL_TRACK_CONTROLS__
+#ifndef __AUDMONKEY_LABEL_TRACK_CONTROLS__
+#define __AUDMONKEY_LABEL_TRACK_CONTROLS__
 
 #include "../../ui/CommonTrackControls.h" // to inherit
 

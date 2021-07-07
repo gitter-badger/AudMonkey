@@ -10,8 +10,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_NOISE_REDUCTION__
-#define __AUDACITY_EFFECT_NOISE_REDUCTION__
+#ifndef __AUDMONKEY_EFFECT_NOISE_REDUCTION__
+#define __AUDMONKEY_EFFECT_NOISE_REDUCTION__
 
 #include "Effect.h"
 

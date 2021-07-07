@@ -23,8 +23,8 @@
 
 *//*******************************************************************/
 
-#ifndef __AUDACITY_MATRIX__
-#define __AUDACITY_MATRIX__
+#ifndef __AUDMONKEY_MATRIX__
+#define __AUDMONKEY_MATRIX__
 
 #include "SampleFormat.h"
 
@@ -110,4 +110,4 @@ Matrix MatrixConcatenateCols(const Matrix& left, const Matrix& right);
 
 bool InvertMatrix(const Matrix& M, Matrix& Minv);
 
-#endif // __AUDACITY_MATRIX__
+#endif // __AUDMONKEY_MATRIX__

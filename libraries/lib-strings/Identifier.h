@@ -8,8 +8,8 @@
  
  **********************************************************************/
 
-#ifndef __AUDACITY_IDENTIFIER__
-#define __AUDACITY_IDENTIFIER__
+#ifndef __AUDMONKEY_IDENTIFIER__
+#define __AUDMONKEY_IDENTIFIER__
 
 #include <vector>
 #include <wx/string.h>

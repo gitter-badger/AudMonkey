@@ -8,15 +8,15 @@ Paul Licameli split from class TrackView
 
 **********************************************************************/
 
-#ifndef __AUDACITY_COMMON_TRACK_VIEW__
-#define __AUDACITY_COMMON_TRACK_VIEW__
+#ifndef __AUDMONKEY_COMMON_TRACK_VIEW__
+#define __AUDMONKEY_COMMON_TRACK_VIEW__
 
 #include "TrackView.h" // to inherit
 
 class SelectHandle;
 class TimeShiftHandle;
 
-class AUDACITY_DLL_API CommonTrackView /* not final */ : public TrackView
+class AUDMONKEY_DLL_API CommonTrackView /* not final */ : public TrackView
 {
 public:
    using TrackView::TrackView;

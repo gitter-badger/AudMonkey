@@ -9,8 +9,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SHUTTLE_PREFS__
-#define __AUDACITY_SHUTTLE_PREFS__
+#ifndef __AUDMONKEY_SHUTTLE_PREFS__
+#define __AUDMONKEY_SHUTTLE_PREFS__
 
 #include "Shuttle.h"
 

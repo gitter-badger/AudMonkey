@@ -8,8 +8,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_NUMBER_SCALE__
-#define __AUDACITY_NUMBER_SCALE__
+#ifndef __AUDMONKEY_NUMBER_SCALE__
+#define __AUDMONKEY_NUMBER_SCALE__
 
 #include <algorithm>
 #include <cmath>

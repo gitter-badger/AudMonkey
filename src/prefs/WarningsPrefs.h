@@ -10,8 +10,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_WARNINGS_PREFS__
-#define __AUDACITY_WARNINGS_PREFS__
+#ifndef __AUDMONKEY_WARNINGS_PREFS__
+#define __AUDMONKEY_WARNINGS_PREFS__
 
 #include <wx/defs.h>
 

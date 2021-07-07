@@ -260,7 +260,7 @@ void PopulatePreferences()
 
    // record the Prefs version for future checking (this has not been used for a very
    // long time).
-   gPrefs->Write(wxT("/PrefsVersion"), wxString(wxT(AUDACITY_PREFS_VERSION_STRING)));
+   gPrefs->Write(wxT("/PrefsVersion"), wxString(wxT(AUDMONKEY_PREFS_VERSION_STRING)));
 
    // Check if some prefs updates need to happen based on audmonkey version.
    // Unfortunately we can't use the PrefsVersion prefs key because that resets things.
@@ -376,9 +376,9 @@ void PopulatePreferences()
    }
 
    // write out the version numbers to the prefs file for future checking
-   gPrefs->Write(wxT("/Version/Major"), AUDACITY_VERSION);
-   gPrefs->Write(wxT("/Version/Minor"), AUDACITY_RELEASE);
-   gPrefs->Write(wxT("/Version/Micro"), AUDACITY_REVISION);
+   gPrefs->Write(wxT("/Version/Major"), AUDMONKEY_VERSION);
+   gPrefs->Write(wxT("/Version/Minor"), AUDMONKEY_RELEASE);
+   gPrefs->Write(wxT("/Version/Micro"), AUDMONKEY_REVISION);
 
    gPrefs->Flush();
 }
@@ -400,7 +400,7 @@ void InitBreakpad()
             .SetReportURL(CRASH_REPORT_URL)
     #endif
             .SetParameters({
-                { "version", wxString(AUDACITY_VERSION_STRING).ToUTF8().data() }
+                { "version", wxString(AUDMONKEY_VERSION_STRING).ToUTF8().data() }
             })
             .Start();
     }
@@ -1106,7 +1106,7 @@ bool AudMonkeyApp::OnInit()
                        "widget_class \"*GtkCombo*\" style \"audmonkey\"");
 #endif
 
-   // Don't use AUDACITY_NAME here.
+   // Don't use AUDMONKEY_NAME here.
    // We want AudMonkey with a capital 'A'
 
 // DA: App name
@@ -1136,7 +1136,7 @@ bool AudMonkeyApp::OnInit()
    wxStandardPaths::Get().SetInstallPrefix(wxT(INSTALL_PREFIX));
 
    /* Search path (for plug-ins, translations etc) is (in this order):
-      * The AUDACITY_PATH environment variable
+      * The AUDMONKEY_PATH environment variable
       * The current directory
       * The user's "~/.audmonkey-data" or "Portable Settings" directory
       * The user's "~/.audmonkey-files" directory
@@ -1157,9 +1157,9 @@ bool AudMonkeyApp::OnInit()
 
 // DA: Path env variable.
 #ifndef EXPERIMENTAL_DA
-   wxString pathVar = wxGetenv(wxT("AUDACITY_PATH"));
+   wxString pathVar = wxGetenv(wxT("AUDMONKEY_PATH"));
 #else
-   wxString pathVar = wxGetenv(wxT("DARKAUDACITY_PATH"));
+   wxString pathVar = wxGetenv(wxT("DARKAUDMONKEY_PATH"));
 #endif
    if (!pathVar.empty())
       FileNames::AddMultiPathsToPathList(pathVar, audmonkeyPathList);
@@ -1172,19 +1172,19 @@ bool AudMonkeyApp::OnInit()
 
    FileNames::AddUniquePathToPathList(FileNames::DataDir(), audmonkeyPathList);
 
-#ifdef AUDACITY_NAME
+#ifdef AUDMONKEY_NAME
    FileNames::AddUniquePathToPathList(wxString::Format(wxT("%s/.%s-files"),
-      home, wxT(AUDACITY_NAME)),
+      home, wxT(AUDMONKEY_NAME)),
       audmonkeyPathList);
    FileNames::AddUniquePathToPathList(FileNames::ModulesDir(),
       audmonkeyPathList);
    FileNames::AddUniquePathToPathList(wxString::Format(wxT("%s/share/%s"),
-      wxT(INSTALL_PREFIX), wxT(AUDACITY_NAME)),
+      wxT(INSTALL_PREFIX), wxT(AUDMONKEY_NAME)),
       audmonkeyPathList);
    FileNames::AddUniquePathToPathList(wxString::Format(wxT("%s/share/doc/%s"),
-      wxT(INSTALL_PREFIX), wxT(AUDACITY_NAME)),
+      wxT(INSTALL_PREFIX), wxT(AUDMONKEY_NAME)),
       audmonkeyPathList);
-#else //AUDACITY_NAME
+#else //AUDMONKEY_NAME
    FileNames::AddUniquePathToPathList(wxString::Format(wxT("%s/.audmonkey-files"),
       home),
       audmonkeyPathList)
@@ -1196,7 +1196,7 @@ bool AudMonkeyApp::OnInit()
    FileNames::AddUniquePathToPathList(wxString::Format(wxT("%s/share/doc/audmonkey"),
       wxT(INSTALL_PREFIX)),
       audmonkeyPathList);
-#endif //AUDACITY_NAME
+#endif //AUDMONKEY_NAME
 
    FileNames::AddUniquePathToPathList(wxString::Format(wxT("%s/share/locale"),
       wxT(INSTALL_PREFIX)),
@@ -1368,7 +1368,7 @@ bool AudMonkeyApp::InitPart2()
 
    if (parser->Found(wxT("v")))
    {
-      wxPrintf("AudMonkey v%s\n", AUDACITY_VERSION_STRING);
+      wxPrintf("AudMonkey v%s\n", AUDMONKEY_VERSION_STRING);
       exit(0);
    }
 
@@ -1500,8 +1500,8 @@ bool AudMonkeyApp::InitPart2()
       // Remove duplicate shortcuts when there's a change of version
       int vMajorInit, vMinorInit, vMicroInit;
       gPrefs->GetVersionKeysInit(vMajorInit, vMinorInit, vMicroInit);
-      if (vMajorInit != AUDACITY_VERSION || vMinorInit != AUDACITY_RELEASE
-         || vMicroInit != AUDACITY_REVISION) {
+      if (vMajorInit != AUDMONKEY_VERSION || vMinorInit != AUDMONKEY_RELEASE
+         || vMicroInit != AUDMONKEY_REVISION) {
          CommandManager::Get(*project).RemoveDuplicateShortcuts();
       }
       //
@@ -1761,7 +1761,7 @@ bool AudMonkeyApp::CreateSingleInstanceChecker(const wxString &dir)
 
       if (parser->Found(wxT("v")))
       {
-         wxPrintf("AudMonkey v%s\n", AUDACITY_VERSION_STRING);
+         wxPrintf("AudMonkey v%s\n", AUDMONKEY_VERSION_STRING);
          return false;
       }
 
@@ -2053,7 +2053,7 @@ bool AudMonkeyApp::CreateSingleInstanceChecker(const wxString &dir)
    // Display AudMonkey's version if requested
    if (parser->Found(wxT("v")))
    {
-      wxPrintf("AudMonkey v%s\n", AUDACITY_VERSION_STRING);
+      wxPrintf("AudMonkey v%s\n", AUDMONKEY_VERSION_STRING);
 
       return false;
    }

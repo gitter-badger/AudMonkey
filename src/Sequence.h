@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SEQUENCE__
-#define __AUDACITY_SEQUENCE__
+#ifndef __AUDMONKEY_SEQUENCE__
+#define __AUDMONKEY_SEQUENCE__
 
 
 #include <vector>
@@ -51,9 +51,9 @@ using BlockPtrArray = std::vector<SeqBlock*>; // non-owning pointers
 
 // Put extra symbol information in the release build, for the purpose of gathering
 // profiling information (as from Windows Process Monitor), when there otherwise
-// isn't a need for AUDACITY_DLL_API.
+// isn't a need for AUDMONKEY_DLL_API.
 #ifdef IS_ALPHA
-   #define PROFILE_DLL_API AUDACITY_DLL_API
+   #define PROFILE_DLL_API AUDMONKEY_DLL_API
 #else
    #define PROFILE_DLL_API
 #endif
@@ -281,5 +281,5 @@ private:
 
 };
 
-#endif // __AUDACITY_SEQUENCE__
+#endif // __AUDMONKEY_SEQUENCE__
 

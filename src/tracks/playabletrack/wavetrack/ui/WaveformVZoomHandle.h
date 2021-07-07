@@ -8,8 +8,8 @@ Paul Licameli split from WaveTrackVZoomHandle.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_WAVEFORM_VZOOM_HANDLE__
-#define __AUDACITY_WAVEFORM_VZOOM_HANDLE__
+#ifndef __AUDMONKEY_WAVEFORM_VZOOM_HANDLE__
+#define __AUDMONKEY_WAVEFORM_VZOOM_HANDLE__
 
 #include "../../../../UIHandle.h" // to inherit
 #include "WaveTrackViewConstants.h"

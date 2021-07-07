@@ -33,7 +33,7 @@ xargs xgettext \
 --package-version='3.0.3' \
 --msgid-bugs-address="audmonkey-translation@lists.sourceforge.net" \
 --add-location=file -L Lisp -j -o audmonkey.pot 
-if test "${AUDACITY_ONLY_POT:-}" = 'y'; then
+if test "${AUDMONKEY_ONLY_POT:-}" = 'y'; then
     return 0
 fi
 echo ";; Updating the .po files - Updating Project-Id-Version"

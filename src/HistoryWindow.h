@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_HISTORY_WINDOW__
-#define __AUDACITY_HISTORY_WINDOW__
+#ifndef __AUDMONKEY_HISTORY_WINDOW__
+#define __AUDMONKEY_HISTORY_WINDOW__
 
 #include "Prefs.h"
 #include "widgets/wxPanelWrapper.h" // to inherit

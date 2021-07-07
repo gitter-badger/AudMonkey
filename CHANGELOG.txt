@@ -2416,7 +2416,7 @@ New features in Audacity 1.1.1:
     - On Unix, Audacity looks for translations in
       <prefix>/share/locale and looks for everything else
       in <prefix>/share/audacity and also in any paths in
-      the AUDACITY_PATH environment variable
+      the AUDMONKEY_PATH environment variable
 
 
 

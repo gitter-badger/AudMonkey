@@ -8,8 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TRACK_SELECT_HANDLE__
-#define __AUDACITY_TRACK_SELECT_HANDLE__
+#ifndef __AUDMONKEY_TRACK_SELECT_HANDLE__
+#define __AUDMONKEY_TRACK_SELECT_HANDLE__
 
 #include "../../UIHandle.h"
 

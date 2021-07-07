@@ -15,8 +15,8 @@
 
 *//*******************************************************************/
 
-#ifndef __AUDACITY_DEVICEMANAGER__
-#define __AUDACITY_DEVICEMANAGER__
+#ifndef __AUDMONKEY_DEVICEMANAGER__
+#define __AUDMONKEY_DEVICEMANAGER__
 
 #include <chrono>
 #include <vector>
@@ -29,7 +29,7 @@
 #endif
 
 // Event sent to the application
-wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT(AUDMONKEY_DLL_API,
                          EVT_RESCANNED_DEVICES, wxCommandEvent);
 
 typedef struct DeviceSourceMap {
@@ -43,10 +43,10 @@ typedef struct DeviceSourceMap {
    wxString hostString;
 } DeviceSourceMap;
 
-AUDACITY_DLL_API
+AUDMONKEY_DLL_API
 wxString MakeDeviceSourceString(const DeviceSourceMap *map);
 
-class AUDACITY_DLL_API DeviceManager final
+class AUDMONKEY_DLL_API DeviceManager final
 #if defined(EXPERIMENTAL_DEVICE_CHANGE_HANDLER)
 #if defined(HAVE_DEVICE_CHANGE)
 :  public DeviceChangeHandler

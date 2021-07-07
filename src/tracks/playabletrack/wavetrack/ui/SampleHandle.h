@@ -8,8 +8,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SAMPLE_HANDLE__
-#define __AUDACITY_SAMPLE_HANDLE__
+#ifndef __AUDMONKEY_SAMPLE_HANDLE__
+#define __AUDMONKEY_SAMPLE_HANDLE__
 
 #include "../../../../UIHandle.h"
 #include "audmonkey/Types.h"

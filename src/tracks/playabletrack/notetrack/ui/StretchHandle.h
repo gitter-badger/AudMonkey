@@ -8,8 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_STRETCH_HANDLE__
-#define __AUDACITY_STRETCH_HANDLE__
+#ifndef __AUDMONKEY_STRETCH_HANDLE__
+#define __AUDMONKEY_STRETCH_HANDLE__
 
 #include "../../../../UIHandle.h"
 

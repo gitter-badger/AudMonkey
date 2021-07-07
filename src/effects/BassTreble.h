@@ -9,8 +9,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_BASS_TREBLE__
-#define __AUDACITY_EFFECT_BASS_TREBLE__
+#ifndef __AUDMONKEY_EFFECT_BASS_TREBLE__
+#define __AUDMONKEY_EFFECT_BASS_TREBLE__
 
 #include "Effect.h"
 

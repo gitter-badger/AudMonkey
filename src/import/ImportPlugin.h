@@ -42,8 +42,8 @@ but little else.
 
 *//*******************************************************************/
 
-#ifndef __AUDACITY_IMPORTER__
-#define __AUDACITY_IMPORTER__
+#ifndef __AUDMONKEY_IMPORTER__
+#define __AUDMONKEY_IMPORTER__
 
 
 
@@ -62,7 +62,7 @@ class Tags;
 
 class ImportFileHandle;
 
-class AUDACITY_DLL_API ImportPlugin /* not final */
+class AUDMONKEY_DLL_API ImportPlugin /* not final */
 {
 public:
 
@@ -102,7 +102,7 @@ protected:
 class WaveTrack;
 using TrackHolders = std::vector< std::vector< std::shared_ptr<WaveTrack> > >;
 
-class AUDACITY_DLL_API ImportFileHandle /* not final */
+class AUDMONKEY_DLL_API ImportFileHandle /* not final */
 {
 public:
    ImportFileHandle(const FilePath & filename);

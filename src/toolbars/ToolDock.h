@@ -10,8 +10,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TOOLDOCK__
-#define __AUDACITY_TOOLDOCK__
+#ifndef __AUDMONKEY_TOOLDOCK__
+#define __AUDMONKEY_TOOLDOCK__
 
 #include <vector>
 #include <wx/defs.h>

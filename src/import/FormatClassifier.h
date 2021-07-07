@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_FORMATCLASSIFIER_H_
-#define __AUDACITY_FORMATCLASSIFIER_H_
+#ifndef __AUDMONKEY_FORMATCLASSIFIER_H_
+#define __AUDMONKEY_FORMATCLASSIFIER_H_
 
 #include <vector>
 #include "MultiFormatReader.h"

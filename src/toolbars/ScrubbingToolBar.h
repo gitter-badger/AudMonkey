@@ -9,8 +9,8 @@
 
  **********************************************************************/
 
-#ifndef __AUDACITY_SCRUBBING_TOOLBAR__
-#define __AUDACITY_SCRUBBING_TOOLBAR__
+#ifndef __AUDMONKEY_SCRUBBING_TOOLBAR__
+#define __AUDMONKEY_SCRUBBING_TOOLBAR__
 
 
 

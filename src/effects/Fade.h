@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_FADE__
-#define __AUDACITY_EFFECT_FADE__
+#ifndef __AUDMONKEY_EFFECT_FADE__
+#define __AUDMONKEY_EFFECT_FADE__
 
 #include "Effect.h"
 

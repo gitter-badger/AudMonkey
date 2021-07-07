@@ -9,8 +9,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_CLIENT_DATA__
-#define __AUDACITY_CLIENT_DATA__
+#ifndef __AUDMONKEY_CLIENT_DATA__
+#define __AUDMONKEY_CLIENT_DATA__
 
 #include "ClientDataHelpers.h"
 
@@ -24,7 +24,7 @@ Paul Licameli
 namespace ClientData {
 
 //! A convenient default parameter for class template @b Site
-struct AUDACITY_DLL_API Base
+struct AUDMONKEY_DLL_API Base
 {
    virtual ~Base() {}
 };
@@ -44,7 +44,7 @@ template< typename Object > using BarePtr = Object*;
  */
 template<
    template<typename> class Owner = UniquePtr
-> struct AUDACITY_DLL_API Cloneable
+> struct AUDMONKEY_DLL_API Cloneable
 {
    using Base = Cloneable;
    using PointerType = Owner< Base >;

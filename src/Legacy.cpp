@@ -278,7 +278,7 @@ bool ConvertLegacyProjectFile(const wxFileName &filename)
       xmlFile.StartTag(wxT("audmonkeyproject"));
       xmlFile.WriteAttr(wxT("projname"), f.GetNextLine());
       xmlFile.WriteAttr(wxT("version"), wxT("1.1.0"));
-      xmlFile.WriteAttr(wxT("audmonkeyversion"),AUDACITY_VERSION_STRING);
+      xmlFile.WriteAttr(wxT("audmonkeyversion"),AUDMONKEY_VERSION_STRING);
 
       label = f.GetNextLine();
       while (label != wxT("BeginTracks")) {

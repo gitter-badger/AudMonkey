@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EXPORT_MULTIPLE__
-#define __AUDACITY_EXPORT_MULTIPLE__
+#ifndef __AUDMONKEY_EXPORT_MULTIPLE__
+#define __AUDMONKEY_EXPORT_MULTIPLE__
 
 #include "Export.h"
 #include "../wxFileNameWrapper.h" // member variable
@@ -29,7 +29,7 @@ class SelectionState;
 class ShuttleGui;
 class Track;
 
-class AUDACITY_DLL_API ExportMultipleDialog final : public wxDialogWrapper
+class AUDMONKEY_DLL_API ExportMultipleDialog final : public wxDialogWrapper
 {
 public:
 

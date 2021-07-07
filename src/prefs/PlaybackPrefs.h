@@ -9,8 +9,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PLAYBACK_PREFS__
-#define __AUDACITY_PLAYBACK_PREFS__
+#ifndef __AUDMONKEY_PLAYBACK_PREFS__
+#define __AUDMONKEY_PLAYBACK_PREFS__
 
 #include <wx/defs.h>
 

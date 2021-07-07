@@ -11,8 +11,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_METER_TOOLBAR__
-#define __AUDACITY_METER_TOOLBAR__
+#ifndef __AUDMONKEY_METER_TOOLBAR__
+#define __AUDMONKEY_METER_TOOLBAR__
 
 #include "ToolBar.h"
 

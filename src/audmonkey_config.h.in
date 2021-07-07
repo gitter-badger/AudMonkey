@@ -2,7 +2,7 @@
 
 /* define if AudMonkey is being installed under a name other than "audmonkey",
    so it can find the files it needs at runtime */
-#cmakedefine AUDACITY_NAME "@AUDACITY_NAME@"
+#cmakedefine AUDMONKEY_NAME "@AUDMONKEY_NAME@"
 
 /* Use system FFmpeg library and disable dynamic loading of it. */
 #cmakedefine DISABLE_DYNAMIC_LOADING_FFMPEG 1

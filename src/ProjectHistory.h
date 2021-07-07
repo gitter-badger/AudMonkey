@@ -8,8 +8,8 @@ Paul Licameli split from ProjectManager.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PROJECT_HISTORY__
-#define __AUDACITY_PROJECT_HISTORY__
+#ifndef __AUDMONKEY_PROJECT_HISTORY__
+#define __AUDMONKEY_PROJECT_HISTORY__
 
 #include "ClientData.h"
 
@@ -17,7 +17,7 @@ class AudMonkeyProject;
 struct UndoState;
 enum class UndoPush : unsigned char;
 
-class AUDACITY_DLL_API ProjectHistory final
+class AUDMONKEY_DLL_API ProjectHistory final
    : public ClientData::Base
 {
 public:

@@ -9,8 +9,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_DEVICE_PREFS__
-#define __AUDACITY_DEVICE_PREFS__
+#ifndef __AUDMONKEY_DEVICE_PREFS__
+#define __AUDMONKEY_DEVICE_PREFS__
 
 #include <wx/defs.h>
 

@@ -8,8 +8,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SLIDER_HANDLE__
-#define __AUDACITY_SLIDER_HANDLE__
+#ifndef __AUDMONKEY_SLIDER_HANDLE__
+#define __AUDMONKEY_SLIDER_HANDLE__
 
 #include "../../UIHandle.h"
 
@@ -19,7 +19,7 @@ class LWSlider;
 class Track;
 class TranslatableString;
 
-class AUDACITY_DLL_API SliderHandle /* not final */ : public UIHandle
+class AUDMONKEY_DLL_API SliderHandle /* not final */ : public UIHandle
 {
    SliderHandle(const SliderHandle&) = delete;
 

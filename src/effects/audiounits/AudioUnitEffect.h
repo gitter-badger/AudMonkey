@@ -8,7 +8,7 @@
   Leland Lucius
 
 **********************************************************************/
-#ifndef AUDACITY_AUDIOUNIT_EFFECT_H
+#ifndef AUDMONKEY_AUDIOUNIT_EFFECT_H
 
 
 

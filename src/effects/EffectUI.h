@@ -11,8 +11,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECTUI_H__
-#define __AUDACITY_EFFECTUI_H__
+#ifndef __AUDMONKEY_EFFECTUI_H__
+#define __AUDMONKEY_EFFECTUI_H__
 
 #include <wx/bitmap.h> // member variables
 
@@ -220,7 +220,7 @@ class CommandContext;
 
 namespace  EffectUI {
 
-   AUDACITY_DLL_API
+   AUDMONKEY_DLL_API
    wxDialog *DialogFactory( wxWindow &parent, EffectHostInterface *pHost,
       EffectUIClientInterface *client);
 
@@ -228,7 +228,7 @@ namespace  EffectUI {
    // Returns true on success.  Will only operate on tracks that
    // have the "selected" flag set to true, which is consistent with
    // AudMonkey's standard UI.
-   AUDACITY_DLL_API bool DoEffect(
+   AUDMONKEY_DLL_API bool DoEffect(
       const PluginID & ID, const CommandContext &context, unsigned flags );
 
 }
@@ -236,7 +236,7 @@ namespace  EffectUI {
 class ShuttleGui;
 
 // Obsolescent dialog still used only in Noise Reduction/Removal
-class AUDACITY_DLL_API EffectDialog /* not final */ : public wxDialogWrapper
+class AUDMONKEY_DLL_API EffectDialog /* not final */ : public wxDialogWrapper
 {
 public:
    // constructors and destructors
@@ -265,4 +265,4 @@ private:
    wxDECLARE_NO_COPY_CLASS(EffectDialog);
 };
 
-#endif // __AUDACITY_EFFECTUI_H__
+#endif // __AUDMONKEY_EFFECTUI_H__

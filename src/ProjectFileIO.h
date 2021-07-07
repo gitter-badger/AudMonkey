@@ -8,8 +8,8 @@ Paul Licameli split from AudMonkeyProject.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PROJECT_FILE_IO__
-#define __AUDACITY_PROJECT_FILE_IO__
+#ifndef __AUDMONKEY_PROJECT_FILE_IO__
+#define __AUDMONKEY_PROJECT_FILE_IO__
 
 #include <memory>
 #include <unordered_set>
@@ -42,17 +42,17 @@ using BlockIDs = std::unordered_set<SampleBlockID>;
 
 // An event processed by the project in the main thread after a checkpoint
 // failure was detected in a worker thread
-wxDECLARE_EXPORTED_EVENT( AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT( AUDMONKEY_DLL_API,
                           EVT_CHECKPOINT_FAILURE, wxCommandEvent );
 
 // An event processed by the project in the main thread after failure to
 // reconnect to the database, after temporary close and attempted file movement
-wxDECLARE_EXPORTED_EVENT( AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT( AUDMONKEY_DLL_API,
                           EVT_RECONNECTION_FAILURE, wxCommandEvent );
 
 ///\brief Object associated with a project that manages reading and writing
 /// of AudMonkey project file formats, and autosave
-class AUDACITY_DLL_API ProjectFileIO final
+class AUDMONKEY_DLL_API ProjectFileIO final
    : public ClientData::Base
    , public XMLTagHandler
    , private PrefsListener
@@ -323,11 +323,11 @@ public:
 
 // This event is emitted by the project when there is a change
 // in its title
-wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT(AUDMONKEY_DLL_API,
                          EVT_PROJECT_TITLE_CHANGE, wxCommandEvent);
 
 //! Makes a temporary project that doesn't display on the screen
-class AUDACITY_DLL_API InvisibleTemporaryProject
+class AUDMONKEY_DLL_API InvisibleTemporaryProject
 {
 public:
    InvisibleTemporaryProject();

@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_REPEAT__
-#define __AUDACITY_EFFECT_REPEAT__
+#ifndef __AUDMONKEY_EFFECT_REPEAT__
+#define __AUDMONKEY_EFFECT_REPEAT__
 
 #include "Effect.h"
 

@@ -57,33 +57,33 @@ INFILE = os.path.splitext(INFILE)[0]
 # Platform specific constants
 if sys.platform == 'win32':
     print("recording-test.py, running on windows")
-    PIPE_TO_AUDACITY = '\\\\.\\pipe\\ToSrvPipe'
-    PIPE_FROM_AUDACITY = '\\\\.\\pipe\\FromSrvPipe'
+    PIPE_TO_AUDMONKEY = '\\\\.\\pipe\\ToSrvPipe'
+    PIPE_FROM_AUDMONKEY = '\\\\.\\pipe\\FromSrvPipe'
     EOL = '\r\n\0'
 else:
     print("recording-test.py, running on linux or mac")
-    PIPE_TO_AUDACITY = '/tmp/audmonkey_script_pipe.to.' + str(os.getuid())
-    PIPE_FROM_AUDACITY = '/tmp/audmonkey_script_pipe.from.' + str(os.getuid())
+    PIPE_TO_AUDMONKEY = '/tmp/audmonkey_script_pipe.to.' + str(os.getuid())
+    PIPE_FROM_AUDMONKEY = '/tmp/audmonkey_script_pipe.from.' + str(os.getuid())
     EOL = '\n'
 
 
-print("Write to  \"" + PIPE_TO_AUDACITY +"\"")
-if not os.path.exists(PIPE_TO_AUDACITY):
+print("Write to  \"" + PIPE_TO_AUDMONKEY +"\"")
+if not os.path.exists(PIPE_TO_AUDMONKEY):
     print(""" ..does not exist.
     Ensure AudMonkey is running with mod-script-pipe.""")
     sys.exit()
 
-print("Read from \"" + PIPE_FROM_AUDACITY +"\"")
-if not os.path.exists(PIPE_FROM_AUDACITY):
+print("Read from \"" + PIPE_FROM_AUDMONKEY +"\"")
+if not os.path.exists(PIPE_FROM_AUDMONKEY):
     print(""" ..does not exist.
     Ensure AudMonkey is running with mod-script-pipe.""")
     sys.exit()
 
 print("-- Both pipes exist.  Good.")
 
-TOPIPE = open(PIPE_TO_AUDACITY, 'w')
+TOPIPE = open(PIPE_TO_AUDMONKEY, 'w')
 print("-- File to write to has been opened")
-FROMPIPE = open(PIPE_FROM_AUDACITY, 'r')
+FROMPIPE = open(PIPE_FROM_AUDMONKEY, 'r')
 print("-- File to read from has now been opened too\r\n")
 
 

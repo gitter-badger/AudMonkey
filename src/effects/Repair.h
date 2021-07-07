@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_REPAIR__
-#define __AUDACITY_EFFECT_REPAIR__
+#ifndef __AUDMONKEY_EFFECT_REPAIR__
+#define __AUDMONKEY_EFFECT_REPAIR__
 
 #include "Effect.h"
 
@@ -47,4 +47,4 @@ private:
                    size_t repairLen);
 };
 
-#endif // __AUDACITY_EFFECT_REPAIT__
+#endif // __AUDMONKEY_EFFECT_REPAIT__

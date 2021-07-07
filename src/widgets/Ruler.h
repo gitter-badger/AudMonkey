@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_RULER__
-#define __AUDACITY_RULER__
+#ifndef __AUDMONKEY_RULER__
+#define __AUDMONKEY_RULER__
 
 #include "wxPanelWrapper.h" // to inherit
 #include "../NumberScale.h" // member variable
@@ -23,7 +23,7 @@ class wxFont;
 class Envelope;
 class ZoomInfo;
 
-class AUDACITY_DLL_API Ruler {
+class AUDMONKEY_DLL_API Ruler {
  public:
 
    enum RulerFormat {
@@ -225,7 +225,7 @@ private:
    NumberScale mNumberScale;
 };
 
-class AUDACITY_DLL_API RulerPanel final : public wxPanelWrapper {
+class AUDMONKEY_DLL_API RulerPanel final : public wxPanelWrapper {
    DECLARE_DYNAMIC_CLASS(RulerPanel)
 
  public:
@@ -291,4 +291,4 @@ private:
     DECLARE_EVENT_TABLE()
 };
 
-#endif //define __AUDACITY_RULER__
+#endif //define __AUDMONKEY_RULER__

@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_DEVICE_TOOLBAR__
-#define __AUDACITY_DEVICE_TOOLBAR__
+#ifndef __AUDMONKEY_DEVICE_TOOLBAR__
+#define __AUDMONKEY_DEVICE_TOOLBAR__
 
 #include <vector>
 #include "ToolBar.h"

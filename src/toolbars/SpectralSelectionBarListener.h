@@ -8,13 +8,13 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SPECTRAL_SELECTION_BAR_LISTENER__
-#define __AUDACITY_SPECTRAL_SELECTION_BAR_LISTENER__
+#ifndef __AUDMONKEY_SPECTRAL_SELECTION_BAR_LISTENER__
+#define __AUDMONKEY_SPECTRAL_SELECTION_BAR_LISTENER__
 
 
 #include "Identifier.h"
 
-class AUDACITY_DLL_API SpectralSelectionBarListener /* not final */ {
+class AUDMONKEY_DLL_API SpectralSelectionBarListener /* not final */ {
 
  public:
 

@@ -8,8 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_COMMON_TRACK_PANEL_CELL__
-#define __AUDACITY_COMMON_TRACK_PANEL_CELL__
+#ifndef __AUDMONKEY_COMMON_TRACK_PANEL_CELL__
+#define __AUDMONKEY_COMMON_TRACK_PANEL_CELL__
 
 
 #include "../../TrackPanelCell.h"
@@ -21,7 +21,7 @@ Paul Licameli split from TrackPanel.cpp
 class Track;
 class XMLWriter;
 
-class AUDACITY_DLL_API CommonTrackPanelCell /* not final */
+class AUDMONKEY_DLL_API CommonTrackPanelCell /* not final */
    : public TrackPanelCell
 {
 public:
@@ -54,7 +54,7 @@ protected:
 
 };
 
-class AUDACITY_DLL_API CommonTrackCell /* not final */
+class AUDMONKEY_DLL_API CommonTrackCell /* not final */
    : public CommonTrackPanelCell
 {
 public:

@@ -15,8 +15,8 @@
 **********************************************************************/
 
 
-#ifndef __AUDACITY_GENERATOR__
-#define __AUDACITY_GENERATOR__
+#ifndef __AUDMONKEY_GENERATOR__
+#define __AUDMONKEY_GENERATOR__
 
 #include "Effect.h"
 
@@ -51,7 +51,7 @@ protected:
    // Postcondition:
    // If mDuration was valid (>= 0), then the tracks are replaced by the
    // generated results and true is returned. Otherwise, return false.
-   AUDACITY_DLL_API bool Process() override;
+   AUDMONKEY_DLL_API bool Process() override;
 };
 
 // Abstract generator which creates the sound in discrete blocks, whilst

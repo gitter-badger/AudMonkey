@@ -7,8 +7,8 @@
   Dominic Mazzoni
 
 **********************************************************************/
-#ifndef __AUDACITY_MENUS__
-#define __AUDACITY_MENUS__
+#ifndef __AUDMONKEY_MENUS__
+#define __AUDMONKEY_MENUS__
 
 #include "Identifier.h"
 
@@ -34,7 +34,7 @@ typedef wxArrayString PluginIDs;
 
 namespace Registry{ class Visitor; }
 
-class AUDACITY_DLL_API MenuCreator
+class AUDMONKEY_DLL_API MenuCreator
 {
 public:
    MenuCreator();
@@ -70,7 +70,7 @@ public:
 
 struct ToolbarMenuVisitor;
 
-class AUDACITY_DLL_API MenuManager final
+class AUDMONKEY_DLL_API MenuManager final
    : public MenuCreator
    , public ClientData::Base
    , private PrefsListener

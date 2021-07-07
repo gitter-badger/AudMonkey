@@ -6,8 +6,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_WIDGETS_KEYVIEW__
-#define __AUDACITY_WIDGETS_KEYVIEW__
+#ifndef __AUDMONKEY_WIDGETS_KEYVIEW__
+#define __AUDMONKEY_WIDGETS_KEYVIEW__
 
 
 #include "audmonkey/Types.h"

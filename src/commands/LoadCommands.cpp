@@ -100,7 +100,7 @@ VendorSymbol BuiltinCommandsModule::GetVendor()
 wxString BuiltinCommandsModule::GetVersion()
 {
    // This "may" be different if this were to be maintained as a separate DLL
-   return AUDACITY_VERSION_STRING;
+   return AUDMONKEY_VERSION_STRING;
 }
 
 TranslatableString BuiltinCommandsModule::GetDescription()

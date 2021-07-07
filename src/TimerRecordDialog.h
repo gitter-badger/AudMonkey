@@ -13,8 +13,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TIMERRECORD_DIALOG__
-#define __AUDACITY_TIMERRECORD_DIALOG__
+#ifndef __AUDMONKEY_TIMERRECORD_DIALOG__
+#define __AUDMONKEY_TIMERRECORD_DIALOG__
 
 #include <wx/textctrl.h> // to inherit
 #include <wx/timer.h> // member variable

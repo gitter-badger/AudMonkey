@@ -8,26 +8,26 @@ Paul Licameli split from Menus.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_COMMON_COMMAND_FLAGS__
-#define __AUDACITY_COMMON_COMMAND_FLAGS__
+#ifndef __AUDMONKEY_COMMON_COMMAND_FLAGS__
+#define __AUDMONKEY_COMMON_COMMAND_FLAGS__
 
 
 
 #include "commands/CommandFlag.h"
 
-AUDACITY_DLL_API
+AUDMONKEY_DLL_API
 bool EditableTracksSelectedPred( const AudMonkeyProject &project );
 
-AUDACITY_DLL_API
+AUDMONKEY_DLL_API
 bool AudioIOBusyPred( const AudMonkeyProject &project );
 
-AUDACITY_DLL_API
+AUDMONKEY_DLL_API
 bool TimeSelectedPred( const AudMonkeyProject &project );
 
-AUDACITY_DLL_API
+AUDMONKEY_DLL_API
 const CommandFlagOptions &cutCopyOptions();
 
-extern AUDACITY_DLL_API const ReservedCommandFlag
+extern AUDMONKEY_DLL_API const ReservedCommandFlag
    &AudioIONotBusyFlag(),
    &StereoRequiredFlag(),  //lda
    &NoiseReductionTimeSelectedFlag(),
@@ -38,11 +38,11 @@ extern AUDACITY_DLL_API const ReservedCommandFlag
    &AnyTracksSelectedFlag(),
    &TrackPanelHasFocus();  //lll
 
-extern AUDACITY_DLL_API const ReservedCommandFlag
+extern AUDMONKEY_DLL_API const ReservedCommandFlag
    &AudioIOBusyFlag(), // lll
    &CaptureNotBusyFlag();
 
-extern AUDACITY_DLL_API const ReservedCommandFlag
+extern AUDMONKEY_DLL_API const ReservedCommandFlag
    &LabelTracksExistFlag(),
    &UnsavedChangesFlag(),
    &UndoAvailableFlag(),

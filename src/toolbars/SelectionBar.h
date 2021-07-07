@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SELECTION_BAR__
-#define __AUDACITY_SELECTION_BAR__
+#ifndef __AUDMONKEY_SELECTION_BAR__
+#define __AUDMONKEY_SELECTION_BAR__
 
 #include <wx/defs.h>
 
@@ -42,7 +42,7 @@ class AudMonkeyProject;
 class SelectionBarListener;
 class NumericTextCtrl;
 
-class AUDACITY_DLL_API SelectionBar final : public ToolBar {
+class AUDMONKEY_DLL_API SelectionBar final : public ToolBar {
 
  public:
    SelectionBar( AudMonkeyProject &project );

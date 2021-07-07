@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TIMETRACK__
-#define __AUDACITY_TIMETRACK__
+#ifndef __AUDMONKEY_TIMETRACK__
+#define __AUDMONKEY_TIMETRACK__
 
 #include "Track.h"
 
@@ -21,7 +21,7 @@ class Ruler;
 class ZoomInfo;
 struct TrackPanelDrawingContext;
 
-class AUDACITY_DLL_API TimeTrack final : public Track {
+class AUDMONKEY_DLL_API TimeTrack final : public Track {
 
  public:
 
@@ -120,5 +120,5 @@ private:
 };
 
 
-#endif // __AUDACITY_TIMETRACK__
+#endif // __AUDMONKEY_TIMETRACK__
 

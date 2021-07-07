@@ -8,8 +8,8 @@ Paul Licameli split from TrackControls.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_COMMON_TRACK_CONTROLS__
-#define __AUDACITY_COMMON_TRACK_CONTROLS__
+#ifndef __AUDMONKEY_COMMON_TRACK_CONTROLS__
+#define __AUDMONKEY_COMMON_TRACK_CONTROLS__
 
 #include "TrackControls.h" // to inherit
 
@@ -23,7 +23,7 @@ class TrackSelectHandle;
 namespace TrackInfo{ struct TCPLine; }
 using TCPLines = std::vector< TrackInfo::TCPLine >;
 
-class AUDACITY_DLL_API CommonTrackControls /* not final */ : public TrackControls
+class AUDMONKEY_DLL_API CommonTrackControls /* not final */ : public TrackControls
 {
 public:
    using TrackControls::TrackControls;

@@ -8,8 +8,8 @@
 
 *******************************************************************/
 
-#ifndef __AUDACITY_PROJECTSERIALIZER__
-#define __AUDACITY_PROJECTSERIALIZER__
+#ifndef __AUDMONKEY_PROJECTSERIALIZER__
+#define __AUDMONKEY_PROJECTSERIALIZER__
 
 #include "xml/XMLTagHandler.h"
 
@@ -30,7 +30,7 @@ using NameMap = std::unordered_map<wxString, unsigned short>;
 using IdMap = std::unordered_map<unsigned short, wxString>;
 
 // This class's overrides do NOT throw AudMonkeyException.
-class AUDACITY_DLL_API ProjectSerializer final : public XMLWriter
+class AUDMONKEY_DLL_API ProjectSerializer final : public XMLWriter
 {
 public:
 

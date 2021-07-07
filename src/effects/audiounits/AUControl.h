@@ -15,8 +15,8 @@
 \brief a wxWidgetCocoaImpl 
 
 *//********************************************************************/
-#ifndef AUDACITY_AUCONTROL_H
-#define AUDACITY_AUCONTROL_H
+#ifndef AUDMONKEY_AUCONTROL_H
+#define AUDMONKEY_AUCONTROL_H
 
 #if !defined(_LP64)
 #include <Carbon/Carbon.h>

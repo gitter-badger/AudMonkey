@@ -8,15 +8,15 @@
 
  **********************************************************************/
 
-#ifndef __AUDACITY_PLAYABLE_TRACK_CONTROLS__
-#define __AUDACITY_PLAYABLE_TRACK_CONTROLS__
+#ifndef __AUDMONKEY_PLAYABLE_TRACK_CONTROLS__
+#define __AUDMONKEY_PLAYABLE_TRACK_CONTROLS__
 
 #include "../../ui/CommonTrackControls.h"
 
 class wxRect;
 class Track;
 
-class AUDACITY_DLL_API PlayableTrackControls /* not final */
+class AUDMONKEY_DLL_API PlayableTrackControls /* not final */
    : public CommonTrackControls
 {
 public:

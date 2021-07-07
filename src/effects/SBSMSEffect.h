@@ -11,8 +11,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_SBSMS__
-#define __AUDACITY_EFFECT_SBSMS__
+#ifndef __AUDMONKEY_EFFECT_SBSMS__
+#define __AUDMONKEY_EFFECT_SBSMS__
 
 
 

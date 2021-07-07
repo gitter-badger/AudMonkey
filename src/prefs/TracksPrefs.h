@@ -10,8 +10,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TRACKS_PREFS__
-#define __AUDACITY_TRACKS_PREFS__
+#ifndef __AUDMONKEY_TRACKS_PREFS__
+#define __AUDMONKEY_TRACKS_PREFS__
 
 //#include <wx/defs.h>
 
@@ -24,7 +24,7 @@ class ShuttleGui;
 
 #define TRACKS_PREFS_PLUGIN_SYMBOL ComponentInterfaceSymbol{ XO("Tracks") }
 
-class AUDACITY_DLL_API TracksPrefs final : public PrefsPanel
+class AUDMONKEY_DLL_API TracksPrefs final : public PrefsPanel
 {
  public:
    TracksPrefs(wxWindow * parent, wxWindowID winid);

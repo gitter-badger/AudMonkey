@@ -72,7 +72,7 @@ VendorSymbol PrefsPanel::GetVendor()
 {  return XO("AudMonkey");}
 
 wxString PrefsPanel::GetVersion()
-{     return AUDACITY_VERSION_STRING;}
+{     return AUDMONKEY_VERSION_STRING;}
 
 PrefsPanel::Registration::Registration( const wxString &name,
    const Factory &factory, bool expanded,

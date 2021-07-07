@@ -13,8 +13,8 @@ Describes shared object that is used to access FFmpeg libraries.
 
 *//*******************************************************************/
 
-#if !defined(__AUDACITY_FFMPEG__)
-#define __AUDACITY_FFMPEG__
+#if !defined(__AUDMONKEY_FFMPEG__)
+#define __AUDMONKEY_FFMPEG__
 
 
 
@@ -1038,5 +1038,5 @@ using ScsPtr = std::shared_ptr<Scs>;
 extern FFmpegLibs *FFmpegLibsInst();
 
 #endif // USE_FFMPEG
-#endif // __AUDACITY_FFMPEG__
+#endif // __AUDMONKEY_FFMPEG__
 

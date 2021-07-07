@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_LEGACYALIASBLOCKFILE__
-#define __AUDACITY_LEGACYALIASBLOCKFILE__
+#ifndef __AUDMONKEY_LEGACYALIASBLOCKFILE__
+#define __AUDMONKEY_LEGACYALIASBLOCKFILE__
 
 #include "PCMAliasBlockFile.h"
 

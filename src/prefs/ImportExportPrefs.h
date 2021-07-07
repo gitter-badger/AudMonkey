@@ -10,8 +10,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_IMPORT_EXPORT_PREFS__
-#define __AUDACITY_IMPORT_EXPORT_PREFS__
+#ifndef __AUDMONKEY_IMPORT_EXPORT_PREFS__
+#define __AUDMONKEY_IMPORT_EXPORT_PREFS__
 
 #include <wx/defs.h>
 
@@ -23,7 +23,7 @@ class ShuttleGui;
 
 template< typename Enum > class EnumSetting;
 
-class AUDACITY_DLL_API ImportExportPrefs final : public PrefsPanel
+class AUDMONKEY_DLL_API ImportExportPrefs final : public PrefsPanel
 {
  public:
    static EnumSetting< bool > ExportDownMixSetting;

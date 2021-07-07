@@ -23,7 +23,7 @@ if( GIT_FOUND )
       COMMAND
          ${CMAKE_COMMAND} -D GIT="${GIT_EXECUTABLE}"
                           -D "_PRVDIR=${_PRVDIR}"
-                          -P "${AUDACITY_MODULE_PATH}/Version.cmake"
+                          -P "${AUDMONKEY_MODULE_PATH}/Version.cmake"
       WORKING_DIRECTORY
          ${topdir}
    )
@@ -1038,7 +1038,7 @@ list( APPEND RESOURCES
 #
 list( APPEND DEFINES
    PRIVATE
-      BUILDING_AUDACITY
+      BUILDING_AUDMONKEY
       WXUSINGDLL
       CMAKE
       $<$<BOOL:${HAVE_LRINT}>:
@@ -1115,7 +1115,7 @@ list( APPEND LIBRARIES
       $<$<PLATFORM_ID:Linux,FreeBSD,OpenBSD,NetBSD,CYGWIN>:pthread>
 )
 
-set( BUILDING_AUDACITY YES )
+set( BUILDING_AUDMONKEY YES )
 set( INSTALL_PREFIX "${_PREFIX}" )
 set( PKGLIBDIR "${_PKGLIBDIR}" )
 set( LIBDIR "${CMAKE_INSTALL_FULL_LIBDIR}" )
@@ -1157,7 +1157,7 @@ if( CMAKE_SYSTEM_NAME MATCHES "Windows" )
          ${CMAKE_COMMAND} -D SRC="${_EXEDIR}/AudMonkey.exe"
                           -D DST="${_EXEDIR}"
                           -D WXWIN="${_SHARED_PROXY_BASE_PATH}/$<CONFIG>/"
-                          -P ${AUDACITY_MODULE_PATH}/CopyLibs.cmake
+                          -P ${AUDMONKEY_MODULE_PATH}/CopyLibs.cmake
       POST_BUILD
    )
 
@@ -1242,7 +1242,7 @@ elseif( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
          ${CMAKE_COMMAND} -D SRC="${_EXEDIR}/AudMonkey"
                           -D DST="${_PKGLIB}"
                           -D WXWIN="${_SHARED_PROXY_BASE_PATH}/$<CONFIG>"
-                          -P ${AUDACITY_MODULE_PATH}/CopyLibs.cmake
+                          -P ${AUDMONKEY_MODULE_PATH}/CopyLibs.cmake
       POST_BUILD
    )
 
@@ -1311,7 +1311,7 @@ else()
          ${CMAKE_COMMAND} -D SRC="${_EXEDIR}/audmonkey"
                           -D DST="${_DEST}/${_PKGLIB}"
                           -D WXWIN="${_SHARED_PROXY_BASE_PATH}/$<CONFIG>"
-                          -P ${AUDACITY_MODULE_PATH}/CopyLibs.cmake
+                          -P ${AUDMONKEY_MODULE_PATH}/CopyLibs.cmake
       POST_BUILD
    )
 endif()
@@ -1320,7 +1320,7 @@ if(CRASH_REPORT_URL)
     list(APPEND DEFINES PRIVATE -DCRASH_REPORT_URL="${CRASH_REPORT_URL}")
 endif()
 
-set_target_property_all( ${TARGET} RUNTIME_OUTPUT_NAME ${AUDACITY_NAME} )
+set_target_property_all( ${TARGET} RUNTIME_OUTPUT_NAME ${AUDMONKEY_NAME} )
 
 organize_source( "${TARGET_ROOT}/.." "include" "${HEADERS}" )
 organize_source( "${TARGET_ROOT}/../presets" "presets" "${RESOURCES}" )
@@ -1341,9 +1341,9 @@ source_group(
         ${_INTDIR}/CMakeFiles/AudMonkey.dir/cmake_pch.hxx
 )
 
-# Define AUDACITY_DLL_API
-import_symbol_define( import_symbol AUDACITY_DLL )
-export_symbol_define( export_symbol AUDACITY_DLL )
+# Define AUDMONKEY_DLL_API
+import_symbol_define( import_symbol AUDMONKEY_DLL )
+export_symbol_define( export_symbol AUDMONKEY_DLL )
 list( APPEND DEFINES PRIVATE "${export_symbol}" INTERFACE "${import_symbol}" )
 
 target_sources( ${TARGET} PRIVATE ${HEADERS} ${SOURCES} ${RESOURCES} ${MAC_RESOURCES} ${WIN_RESOURCES} )
@@ -1352,7 +1352,7 @@ target_compile_options( ${TARGET} PRIVATE ${OPTIONS} )
 target_include_directories( ${TARGET} PRIVATE ${INCLUDES} )
 target_link_options( ${TARGET} PRIVATE ${LDFLAGS} )
 target_link_libraries( ${TARGET} ${LIBRARIES} )
-target_link_libraries( ${TARGET} PUBLIC ${AUDACITY_LIBRARIES} )
+target_link_libraries( ${TARGET} PUBLIC ${AUDMONKEY_LIBRARIES} )
 
 if( CMAKE_VERSION VERSION_GREATER_EQUAL "3.16" AND NOT CCACHE_PROGRAM )
    if( ${_OPT}use_pch )
@@ -1390,7 +1390,7 @@ else()
       install( FILES "${_INTDIR}/audmonkey.desktop"
                DESTINATION "${_DATADIR}/applications" )
       install( FILES "${topdir}/LICENSE.txt" "${topdir}/README.txt"
-               DESTINATION "${_DATADIR}/doc/${AUDACITY_NAME}" )
+               DESTINATION "${_DATADIR}/doc/${AUDMONKEY_NAME}" )
       install( FILES "${_SRCDIR}/audmonkey.xml"
                DESTINATION "${_DATADIR}/mime/packages" )
       install( FILES "${topdir}/presets/EQDefaultCurves.xml"

@@ -9,8 +9,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_ERRORDIALOG__
-#define __AUDACITY_ERRORDIALOG__
+#ifndef __AUDMONKEY_ERRORDIALOG__
+#define __AUDMONKEY_ERRORDIALOG__
 
 
 
@@ -47,7 +47,7 @@ private:
 };
 
 /// Displays an error dialog with a button that offers help
-AUDACITY_DLL_API
+AUDMONKEY_DLL_API
 void ShowErrorDialog(wxWindow *parent,
                      const TranslatableString &dlogTitle,
                      const TranslatableString &message,
@@ -56,7 +56,7 @@ void ShowErrorDialog(wxWindow *parent,
                      const std::wstring &log = {});
 
 /// Displays an error dialog, possibly allowing to send error report.
-AUDACITY_DLL_API
+AUDMONKEY_DLL_API
 void ShowExceptionDialog(
    wxWindow* parent, const TranslatableString& dlogTitle,
    const TranslatableString& message, const wxString& helpPage,
@@ -76,7 +76,7 @@ void ShowModelessErrorDialog(wxWindow *parent,
 \class AudMonkeyTextEntryDialog
 \brief Wrap wxTextEntryDialog so that caption IS translatable.
 ********************************************************************************/
-class AUDACITY_DLL_API AudMonkeyTextEntryDialog
+class AUDMONKEY_DLL_API AudMonkeyTextEntryDialog
    : public wxTabTraversalWrapper< wxTextEntryDialog >
 {
 public:
@@ -99,4 +99,4 @@ private:
    bool mSetInsertionPointEnd{};
 };
 
-#endif // __AUDACITY_ERRORDIALOG__
+#endif // __AUDMONKEY_ERRORDIALOG__

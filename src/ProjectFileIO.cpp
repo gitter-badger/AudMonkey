@@ -39,7 +39,7 @@ Paul Licameli split from AudMonkeyProject.cpp
 
 // Don't change this unless the file format changes
 // in an irrevocable way
-#define AUDACITY_FILE_FORMAT_VERSION "1.3.0"
+#define AUDMONKEY_FILE_FORMAT_VERSION "1.3.0"
 
 #undef NO_SHM
 #if !defined(__WXMSW__)
@@ -1583,7 +1583,7 @@ bool ProjectFileIO::HandleXMLTag(const wxChar *tag, const wxChar **attrs)
    int cver;
    int crel;
    int crev;
-   wxSscanf(wxT(AUDACITY_FILE_FORMAT_VERSION), wxT("%i.%i.%i"), &cver, &crel, &crev);
+   wxSscanf(wxT(AUDMONKEY_FILE_FORMAT_VERSION), wxT("%i.%i.%i"), &cver, &crel, &crev);
 
    int fileVer = ((fver *100)+frel)*100+frev;
    int codeVer = ((cver *100)+crel)*100+crev;
@@ -1592,7 +1592,7 @@ bool ProjectFileIO::HandleXMLTag(const wxChar *tag, const wxChar **attrs)
    {
       /* i18n-hint: %s will be replaced by the version number.*/
       auto msg = XO("This file was saved using AudMonkey %s.\nYou are using AudMonkey %s. You may need to upgrade to a newer version to open this file.")
-         .Format(audmonkeyVersion, AUDACITY_VERSION_STRING);
+         .Format(audmonkeyVersion, AUDMONKEY_VERSION_STRING);
 
       ShowError(
          &window,
@@ -1662,8 +1662,8 @@ void ProjectFileIO::WriteXML(XMLWriter &xmlFile,
    xmlFile.StartTag(wxT("project"));
    xmlFile.WriteAttr(wxT("xmlns"), wxT("http://audmonkey.sourceforge.net/xml/"));
 
-   xmlFile.WriteAttr(wxT("version"), wxT(AUDACITY_FILE_FORMAT_VERSION));
-   xmlFile.WriteAttr(wxT("audmonkeyversion"), AUDACITY_VERSION_STRING);
+   xmlFile.WriteAttr(wxT("version"), wxT(AUDMONKEY_FILE_FORMAT_VERSION));
+   xmlFile.WriteAttr(wxT("audmonkeyversion"), AUDMONKEY_VERSION_STRING);
 
    viewInfo.WriteXMLAttributes(xmlFile);
    xmlFile.WriteAttr(wxT("rate"), settings.GetRate());

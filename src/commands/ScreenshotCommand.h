@@ -28,7 +28,7 @@ class AdornedRulerPanel;
 class AudMonkeyProject;
 class CommandContext;
 
-class AUDACITY_DLL_API ScreenshotCommand : public AudMonkeyCommand
+class AUDMONKEY_DLL_API ScreenshotCommand : public AudMonkeyCommand
 {
 public:
    enum kBackgrounds

@@ -101,9 +101,9 @@ appimagetool_args=(
     # none
 )
 
-if [[ "${AUDACITY_UPDATE_INFO-}" ]]; then
+if [[ "${AUDMONKEY_UPDATE_INFO-}" ]]; then
     # Enable updates. See https://github.com/AppImage/AppImageSpec/blob/master/draft.md#update-information
-    appimagetool_args+=( --updateinformation="${AUDACITY_UPDATE_INFO}" )
+    appimagetool_args+=( --updateinformation="${AUDMONKEY_UPDATE_INFO}" )
 else
     echo >&2 "$0: Automatic updates disabled"
 fi

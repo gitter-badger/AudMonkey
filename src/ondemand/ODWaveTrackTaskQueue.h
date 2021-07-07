@@ -19,8 +19,8 @@ tasks associated with a WaveTrack.
 
 
 
-#ifndef __AUDACITY_ODWAVETRACKTASKQUEUE__
-#define __AUDACITY_ODWAVETRACKTASKQUEUE__
+#ifndef __AUDMONKEY_ODWAVETRACKTASKQUEUE__
+#define __AUDMONKEY_ODWAVETRACKTASKQUEUE__
 
 #include <vector>
 #include "ODTaskThread.h"

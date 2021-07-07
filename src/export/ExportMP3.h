@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EXPORTMP3__
-#define __AUDACITY_EXPORTMP3__
+#ifndef __AUDMONKEY_EXPORTMP3__
+#define __AUDMONKEY_EXPORTMP3__
 
 /* --------------------------------------------------------------------------*/
 

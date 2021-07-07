@@ -6,8 +6,8 @@
 //
 //
 
-#ifndef __AUDACITY_OVERLAY__
-#define __AUDACITY_OVERLAY__
+#ifndef __AUDMONKEY_OVERLAY__
+#define __AUDMONKEY_OVERLAY__
 
 
 
@@ -90,7 +90,7 @@ AdornedRulerPanel.
 
 */
 
-class AUDACITY_DLL_API Overlay
+class AUDMONKEY_DLL_API Overlay
 {
 public:
    Overlay() = default;

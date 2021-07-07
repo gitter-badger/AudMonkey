@@ -8,8 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_NOTE_TRACK_VZOOM_HANDLE__
-#define __AUDACITY_NOTE_TRACK_VZOOM_HANDLE__
+#ifndef __AUDMONKEY_NOTE_TRACK_VZOOM_HANDLE__
+#define __AUDMONKEY_NOTE_TRACK_VZOOM_HANDLE__
 
 class wxMouseState;
 class NoteTrack;

@@ -8,8 +8,8 @@ Paul Licameli split from ProjectWindow.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PROJECT_WINDOW_BASE__
-#define __AUDACITY_PROJECT_WINDOW_BASE__
+#ifndef __AUDMONKEY_PROJECT_WINDOW_BASE__
+#define __AUDMONKEY_PROJECT_WINDOW_BASE__
 
 #include <wx/frame.h> // to inherit
 
@@ -33,7 +33,7 @@ protected:
    AudMonkeyProject &mProject;
 };
 
-AUDACITY_DLL_API AudMonkeyProject *FindProjectFromWindow( wxWindow *pWindow );
+AUDMONKEY_DLL_API AudMonkeyProject *FindProjectFromWindow( wxWindow *pWindow );
 const AudMonkeyProject *FindProjectFromWindow( const wxWindow *pWindow );
 
 #endif

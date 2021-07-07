@@ -9,8 +9,8 @@ fi
 
 export LD_LIBRARY_PATH="${APPDIR}/lib:${LD_LIBRARY_PATH}"
 
-export AUDACITY_PATH="${AUDACITY_PATH}:${APPDIR}/share/audmonkey"
-export AUDACITY_MODULES_PATH="${AUDACITY_MODULES_PATH}:${APPDIR}/lib/modules"
+export AUDMONKEY_PATH="${AUDMONKEY_PATH}:${APPDIR}/share/audmonkey"
+export AUDMONKEY_MODULES_PATH="${AUDMONKEY_MODULES_PATH}:${APPDIR}/lib/modules"
 
 function help()
 {

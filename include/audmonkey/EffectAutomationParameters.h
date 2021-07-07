@@ -40,8 +40,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_COMMAND_PARAMETERS_H__
-#define __AUDACITY_COMMAND_PARAMETERS_H__
+#ifndef __AUDMONKEY_COMMAND_PARAMETERS_H__
+#define __AUDMONKEY_COMMAND_PARAMETERS_H__
 
 #include <locale.h>
 

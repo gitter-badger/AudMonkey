@@ -8,13 +8,13 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_MESSAGE_BOX__
-#define __AUDACITY_MESSAGE_BOX__
+#ifndef __AUDMONKEY_MESSAGE_BOX__
+#define __AUDMONKEY_MESSAGE_BOX__
 
 #include <wx/msgdlg.h>
 #include "Internat.h"
 
-extern AUDACITY_DLL_API TranslatableString AudMonkeyMessageBoxCaptionStr();
+extern AUDMONKEY_DLL_API TranslatableString AudMonkeyMessageBoxCaptionStr();
 
 // Do not use wxMessageBox!!  Its default window title does not translate!
 inline int AudMonkeyMessageBox(const TranslatableString& message,

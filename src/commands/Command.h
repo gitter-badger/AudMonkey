@@ -72,7 +72,7 @@ public:
 
 };
 
-class AUDACITY_DLL_API CommandImplementation /* not final */
+class AUDMONKEY_DLL_API CommandImplementation /* not final */
    : public OldStyleCommand
 {
 private:

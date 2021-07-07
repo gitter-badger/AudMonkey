@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_IMPORT_RAW__
-#define __AUDACITY_IMPORT_RAW__
+#ifndef __AUDMONKEY_IMPORT_RAW__
+#define __AUDMONKEY_IMPORT_RAW__
 
 #include <memory>
 

@@ -8,8 +8,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SPECTRAL_SELECTION_BAR__
-#define __AUDACITY_SPECTRAL_SELECTION_BAR__
+#ifndef __AUDMONKEY_SPECTRAL_SELECTION_BAR__
+#define __AUDMONKEY_SPECTRAL_SELECTION_BAR__
 
 #include <wx/defs.h>
 

@@ -9,8 +9,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_REVERB__
-#define __AUDACITY_EFFECT_REVERB__
+#ifndef __AUDMONKEY_EFFECT_REVERB__
+#define __AUDMONKEY_EFFECT_REVERB__
 
 #include "Effect.h"
 

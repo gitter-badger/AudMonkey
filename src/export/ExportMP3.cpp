@@ -1238,9 +1238,9 @@ bool MP3Exporter::InitLibraryExternal(wxString libpath)
             .Format(
                v.byMajorVersion,
                v.byMinorVersion,
-               AUDACITY_VERSION,
-               AUDACITY_RELEASE,
-               AUDACITY_REVISION);
+               AUDMONKEY_VERSION,
+               AUDMONKEY_RELEASE,
+               AUDMONKEY_REVISION);
       }
 #endif
 

@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TRACK_PANEL_LISTENER__
-#define __AUDACITY_TRACK_PANEL_LISTENER__
+#ifndef __AUDMONKEY_TRACK_PANEL_LISTENER__
+#define __AUDMONKEY_TRACK_PANEL_LISTENER__
 
 
 
@@ -20,7 +20,7 @@ enum class UndoPush : unsigned char;
 TrackPanel code pretend it doesn't completely know what an AudMonkeyProject is
 and use only a limited number of its services.
 */
-class AUDACITY_DLL_API TrackPanelListener /* not final */ {
+class AUDMONKEY_DLL_API TrackPanelListener /* not final */ {
 
  public:
    TrackPanelListener(){};

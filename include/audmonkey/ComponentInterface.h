@@ -39,8 +39,8 @@
    
 **********************************************************************/
 
-#ifndef __AUDACITY_COMPONENT_INTERFACE_H__
-#define __AUDACITY_COMPONENT_INTERFACE_H__
+#ifndef __AUDMONKEY_COMPONENT_INTERFACE_H__
+#define __AUDMONKEY_COMPONENT_INTERFACE_H__
 
 #include "Identifier.h"
 #include "audmonkey/Types.h"
@@ -118,7 +118,7 @@ plugins.  It is what makes a class a plug-in.  Additionally it provides an
 optional parameter definitions function, for those components such as commands,
 effects and (soon) preference pagess that define parameters.
 ********************************************************************************/
-class AUDACITY_DLL_API ComponentInterface /* not final */
+class AUDMONKEY_DLL_API ComponentInterface /* not final */
 {
 public:
    virtual ~ComponentInterface() {};
@@ -145,4 +145,4 @@ public:
    virtual bool DefineParams( ShuttleParams & WXUNUSED(S) ){ return false;};   
 };
 
-#endif // __AUDACITY_IDENTINTERFACE_H__
+#endif // __AUDMONKEY_IDENTINTERFACE_H__

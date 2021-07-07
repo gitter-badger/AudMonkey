@@ -6,8 +6,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SCORE_ALIGN_DIALOG__
-#define __AUDACITY_SCORE_ALIGN_DIALOG__
+#ifndef __AUDMONKEY_SCORE_ALIGN_DIALOG__
+#define __AUDMONKEY_SCORE_ALIGN_DIALOG__
 
 #ifdef EXPERIMENTAL_SCOREALIGN
 

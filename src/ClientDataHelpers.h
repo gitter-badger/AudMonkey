@@ -9,8 +9,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_CLIENT_DATA_HELPERS__
-#define __AUDACITY_CLIENT_DATA_HELPERS__
+#ifndef __AUDMONKEY_CLIENT_DATA_HELPERS__
+#define __AUDMONKEY_CLIENT_DATA_HELPERS__
 
 #include <memory>
 #include <mutex>

@@ -28,7 +28,7 @@ if( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
          ${CMAKE_COMMAND} -D SRC="${_EXEDIR}/crashreporter"
                           -D DST="${_PKGLIB}"
                           -D WXWIN="${_SHARED_PROXY_BASE_PATH}/$<CONFIG>"
-                          -P ${AUDACITY_MODULE_PATH}/CopyLibs.cmake
+                          -P ${AUDMONKEY_MODULE_PATH}/CopyLibs.cmake
       POST_BUILD
    )
 elseif(UNIX)

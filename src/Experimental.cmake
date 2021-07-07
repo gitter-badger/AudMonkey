@@ -143,7 +143,7 @@ set( EXPERIMENTAL_OPTIONS_LIST
    MODULE_PREFS
 
    # Define to allow realtime processing in AudMonkey effects that have been converted.
-   REALTIME_AUDACITY_EFFECTS
+   REALTIME_AUDMONKEY_EFFECTS
 
    # Define to include the effects rack (such as it is).
    #EFFECTS_RACK

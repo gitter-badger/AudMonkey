@@ -226,16 +226,16 @@ function( audmonkey_append_common_compiler_options var use_pch )
       )
    endif()
    list( APPEND ${var}
-         -DAUDACITY_VERSION=${AUDACITY_VERSION}
-         -DAUDACITY_RELEASE=${AUDACITY_RELEASE}
-         -DAUDACITY_REVISION=${AUDACITY_REVISION}
-         -DAUDACITY_MODLEVEL=${AUDACITY_MODLEVEL}
+         -DAUDMONKEY_VERSION=${AUDMONKEY_VERSION}
+         -DAUDMONKEY_RELEASE=${AUDMONKEY_RELEASE}
+         -DAUDMONKEY_REVISION=${AUDMONKEY_REVISION}
+         -DAUDMONKEY_MODLEVEL=${AUDMONKEY_MODLEVEL}
 
          # Version string for visual display
-         -DAUDACITY_VERSION_STRING=L"${AUDACITY_VERSION}.${AUDACITY_RELEASE}.${AUDACITY_REVISION}${AUDACITY_SUFFIX}"
+         -DAUDMONKEY_VERSION_STRING=L"${AUDMONKEY_VERSION}.${AUDMONKEY_RELEASE}.${AUDMONKEY_REVISION}${AUDMONKEY_SUFFIX}"
 
          # This value is used in the resource compiler for Windows
-         -DAUDACITY_FILE_VERSION=L"${AUDACITY_VERSION},${AUDACITY_RELEASE},${AUDACITY_REVISION},${AUDACITY_MODLEVEL}"
+         -DAUDMONKEY_FILE_VERSION=L"${AUDMONKEY_VERSION},${AUDMONKEY_RELEASE},${AUDMONKEY_REVISION},${AUDMONKEY_MODLEVEL}"
 
          # This renames a good use of this C++ keyword that we don't need
 	      # to review when hunting for leaks because of naked new and delete.
@@ -264,10 +264,10 @@ function( audmonkey_append_common_compiler_options var use_pch )
 	 # Yes, -U to /U too as needed for Windows:
 	 $<IF:$<CONFIG:Debug>,-D_DEBUG=1,-U_DEBUG>
    )   
-   # Definitions controlled by the AUDACITY_BUILD_LEVEL switch
-   if( AUDACITY_BUILD_LEVEL EQUAL 0 )
+   # Definitions controlled by the AUDMONKEY_BUILD_LEVEL switch
+   if( AUDMONKEY_BUILD_LEVEL EQUAL 0 )
       list( APPEND ${var} -DIS_ALPHA -DUSE_ALPHA_MANUAL )
-   elseif( AUDACITY_BUILD_LEVEL EQUAL 1 )
+   elseif( AUDMONKEY_BUILD_LEVEL EQUAL 1 )
       list( APPEND ${var} -DIS_BETA -DUSE_ALPHA_MANUAL )
    else()
       list( APPEND ${var} -DIS_RELEASE )
@@ -374,7 +374,7 @@ function( audmonkey_module_fn NAME SOURCES IMPORT_TARGETS
             COMMAND ${CMAKE_COMMAND}
 	       -D SRC="${_MODDIR}/${TARGET}.so"
                -D WXWIN="${_SHARED_PROXY_BASE_PATH}/$<CONFIG>"
-               -P ${AUDACITY_MODULE_PATH}/CopyLibs.cmake
+               -P ${AUDMONKEY_MODULE_PATH}/CopyLibs.cmake
             POST_BUILD )
       endif()
    else()
@@ -536,8 +536,8 @@ macro( audmonkey_library NAME SOURCES IMPORT_TARGETS
    )
    set( GRAPH_EDGES "${GRAPH_EDGES}" PARENT_SCOPE )
    # Collect list of libraries for the executable to declare dependency on
-   list( APPEND AUDACITY_LIBRARIES "${NAME}" )
-   set( AUDACITY_LIBRARIES "${AUDACITY_LIBRARIES}" PARENT_SCOPE )
+   list( APPEND AUDMONKEY_LIBRARIES "${NAME}" )
+   set( AUDMONKEY_LIBRARIES "${AUDMONKEY_LIBRARIES}" PARENT_SCOPE )
 endmacro()
 
 # A special macro for header only libraries
@@ -552,8 +552,8 @@ macro( audmonkey_header_only_library NAME SOURCES IMPORT_TARGETS
    target_link_libraries( ${NAME} INTERFACE ${IMPORT_TARGETS} )
    target_compile_definitions( ${NAME} INTERFACE ${ADDITIONAL_DEFINES} )
 
-   list( APPEND AUDACITY_LIBRARIES "${NAME}" )
-   set( AUDACITY_LIBRARIES "${AUDACITY_LIBRARIES}" PARENT_SCOPE )
+   list( APPEND AUDMONKEY_LIBRARIES "${NAME}" )
+   set( AUDMONKEY_LIBRARIES "${AUDMONKEY_LIBRARIES}" PARENT_SCOPE )
 endmacro()
 
 #

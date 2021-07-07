@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_COMMAND__
-#define __AUDACITY_COMMAND__
+#ifndef __AUDMONKEY_COMMAND__
+#define __AUDMONKEY_COMMAND__
 
 
 
@@ -36,7 +36,7 @@ class EffectUIHostInterface;
 class ProgressDialog;
 
 
-class AUDACITY_DLL_API AudMonkeyCommand /* not final */ : public wxEvtHandler,
+class AUDMONKEY_DLL_API AudMonkeyCommand /* not final */ : public wxEvtHandler,
                                 public ComponentInterface
 {
  public:
@@ -139,7 +139,7 @@ private:
 
 
 // Base dialog for command dialog.
-class AUDACITY_DLL_API AudMonkeyCommandDialog /* not final */ : public wxDialogWrapper
+class AUDMONKEY_DLL_API AudMonkeyCommandDialog /* not final */ : public wxDialogWrapper
 {
 public:
    // constructors and destructors

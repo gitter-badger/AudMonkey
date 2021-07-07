@@ -10,8 +10,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PROJECT_FSCK__
-#define __AUDACITY_PROJECT_FSCK__
+#ifndef __AUDMONKEY_PROJECT_FSCK__
+#define __AUDMONKEY_PROJECT_FSCK__
 
 class DirManager;
 

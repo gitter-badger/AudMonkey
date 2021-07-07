@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PROJECT_FILE_IO_REGISTRY__
-#define __AUDACITY_PROJECT_FILE_IO_REGISTRY__
+#ifndef __AUDMONKEY_PROJECT_FILE_IO_REGISTRY__
+#define __AUDMONKEY_PROJECT_FILE_IO_REGISTRY__
 
 #include <functional>
 
@@ -24,7 +24,7 @@ using TagHandlerFactory =
    std::function< XMLTagHandler *( AudMonkeyProject & ) >;
 
 // Typically statically constructed
-struct AUDACITY_DLL_API Entry{
+struct AUDMONKEY_DLL_API Entry{
    Entry( const wxString &tag, const TagHandlerFactory &factory );
 };
 

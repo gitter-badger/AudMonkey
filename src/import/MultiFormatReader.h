@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_MULTIFORMATREADER_H__
-#define __AUDACITY_MULTIFORMATREADER_H__
+#ifndef __AUDMONKEY_MULTIFORMATREADER_H__
+#define __AUDMONKEY_MULTIFORMATREADER_H__
 
 #include <stdio.h>
 #include <stdint.h>

@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SENTRYERRORDIALOG__
-#define __AUDACITY_SENTRYERRORDIALOG__
+#ifndef __AUDMONKEY_SENTRYERRORDIALOG__
+#define __AUDMONKEY_SENTRYERRORDIALOG__
 
 #include <memory>
 
@@ -60,10 +60,10 @@ private:
 };
 
 /// Displays an error dialog that allows to send the error report
-AUDACITY_DLL_API
+AUDMONKEY_DLL_API
 void ShowErrorReportDialog(
    wxWindow* parent, const TranslatableString& dlogTitle,
    const TranslatableString& message, const wxString& helpPage = {},
    const wxString& log = {});
 
-#endif // __AUDACITY_SENTRYERRORDIALOG__
+#endif // __AUDMONKEY_SENTRYERRORDIALOG__

@@ -8,8 +8,8 @@
  
  **********************************************************************/
 
-#ifndef __AUDACITY_SCRUB_UI__
-#define __AUDACITY_SCRUB_UI__
+#ifndef __AUDMONKEY_SCRUB_UI__
+#define __AUDMONKEY_SCRUB_UI__
 
 
 

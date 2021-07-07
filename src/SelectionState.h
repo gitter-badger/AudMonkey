@@ -6,8 +6,8 @@
 
  **********************************************************************/
 
-#ifndef __AUDACITY_SELECTION_STATE__
-#define __AUDACITY_SELECTION_STATE__
+#ifndef __AUDMONKEY_SELECTION_STATE__
+#define __AUDMONKEY_SELECTION_STATE__
 
 class AudMonkeyProject;
 class Track;
@@ -18,7 +18,7 @@ class ViewInfo;
 #include <vector>
 
 // State relating to the set of selected tracks
-class AUDACITY_DLL_API SelectionState final
+class AUDMONKEY_DLL_API SelectionState final
    : public ClientData::Base
 {
 public:
@@ -52,7 +52,7 @@ private:
 
 // For committing or rolling-back of changes in selectedness of tracks.
 // When rolling back, it is assumed that no tracks have been added or removed.
-class AUDACITY_DLL_API SelectionStateChanger
+class AUDMONKEY_DLL_API SelectionStateChanger
 {
 public:
    SelectionStateChanger( SelectionState &state, TrackList &tracks );

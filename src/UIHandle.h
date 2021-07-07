@@ -8,8 +8,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_UI_HANDLE__
-#define __AUDACITY_UI_HANDLE__
+#ifndef __AUDMONKEY_UI_HANDLE__
+#define __AUDMONKEY_UI_HANDLE__
 
 #include <utility>
 #include <memory>
@@ -30,7 +30,7 @@ struct TrackPanelMouseState;
 // A TrackPanelCell reports a handle object of some subclass, in response to a
 // hit test at a mouse position; then this handle processes certain events,
 // and maintains necessary state through click-drag-release event sequences.
-class AUDACITY_DLL_API UIHandle /* not final */ : public TrackPanelDrawable
+class AUDMONKEY_DLL_API UIHandle /* not final */ : public TrackPanelDrawable
 {
 public:
    // See RefreshCode.h for bit flags:

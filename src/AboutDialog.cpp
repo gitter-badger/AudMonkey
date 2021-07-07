@@ -397,7 +397,7 @@ visit our %s.")
       #undef _
       #define _(s) wxGetTranslation((s))
       << wxT("<h3>DarkAudacity ")
-      << wxString(AUDACITY_VERSION_STRING)
+      << wxString(AUDMONKEY_VERSION_STRING)
       << wxT("</center></h3>")
       << wxT("Customised version of the Audacity free, open source, cross-platform software " )
       << wxT("for recording and editing sounds.")
@@ -408,7 +408,7 @@ visit our %s.")
       << XO("<h3>")
       << ProgramName
       << wxT(" ")
-      << wxString(AUDACITY_VERSION_STRING)
+      << wxString(AUDMONKEY_VERSION_STRING)
       << wxT("</center></h3>")
       /* i18n-hint: The program's name substitutes for %s */
       << XO("%s the free, open source, cross-platform software for recording and editing sounds.")

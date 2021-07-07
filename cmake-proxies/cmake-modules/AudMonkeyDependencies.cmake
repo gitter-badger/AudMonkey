@@ -266,7 +266,7 @@ macro( resolve_conan_dependencies )
         endif()
     endforeach()
 
-    file(GLOB dependency_helpers "${AUDACITY_MODULE_PATH}/dependencies/*.cmake")
+    file(GLOB dependency_helpers "${AUDMONKEY_MODULE_PATH}/dependencies/*.cmake")
 
     foreach(f ${dependency_helpers})
         include(${f})

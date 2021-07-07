@@ -8,8 +8,8 @@
 
 *******************************************************************/
 
-#ifndef __AUDACITY_RING_BUFFER__
-#define __AUDACITY_RING_BUFFER__
+#ifndef __AUDMONKEY_RING_BUFFER__
+#define __AUDMONKEY_RING_BUFFER__
 
 #include "SampleFormat.h"
 #include <atomic>
@@ -52,4 +52,4 @@ class RingBuffer final : public NonInterferingBase {
    SampleBuffer  mBuffer;
 };
 
-#endif /*  __AUDACITY_RING_BUFFER__ */
+#endif /*  __AUDMONKEY_RING_BUFFER__ */

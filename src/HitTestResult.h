@@ -8,8 +8,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_HIT_TEST_RESULT__
-#define __AUDACITY_HIT_TEST_RESULT__
+#ifndef __AUDMONKEY_HIT_TEST_RESULT__
+#define __AUDMONKEY_HIT_TEST_RESULT__
 
 #include <memory>
 #include "Internat.h" // for TranslatableString

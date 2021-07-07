@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SPECTRUM__
-#define __AUDACITY_SPECTRUM__
+#ifndef __AUDMONKEY_SPECTRUM__
+#define __AUDMONKEY_SPECTRUM__
 
 #include "FFT.h"
 
@@ -21,7 +21,7 @@
   calculates windowSize/2 frequency samples
 */
 
-AUDACITY_DLL_API
+AUDMONKEY_DLL_API
 bool ComputeSpectrum(const float * data, size_t width, size_t windowSize,
                      double rate, float *out, bool autocorrelation,
                      int windowFunc = eWinFuncHann);

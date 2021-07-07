@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_LEGACY_BLOCKFILE__
-#define __AUDACITY_LEGACY_BLOCKFILE__
+#ifndef __AUDMONKEY_LEGACY_BLOCKFILE__
+#define __AUDMONKEY_LEGACY_BLOCKFILE__
 
 #include "../BlockFile.h"
 
@@ -67,4 +67,4 @@ class LegacyBlockFile final : public BlockFile {
    sampleFormat mFormat;
 };
 
-#endif // __AUDACITY_LEGACY_BLOCKFILE__
+#endif // __AUDMONKEY_LEGACY_BLOCKFILE__

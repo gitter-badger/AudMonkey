@@ -24,8 +24,8 @@ but it will probably work fine if you use it on a high level.
 
 
 
-#ifndef __AUDACITY_PROFILER__
-#define __AUDACITY_PROFILER__
+#ifndef __AUDMONKEY_PROFILER__
+#define __AUDMONKEY_PROFILER__
 #include <mutex>
 #include <vector>
 #include <time.h>

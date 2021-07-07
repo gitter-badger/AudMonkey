@@ -1,5 +1,5 @@
-#ifndef __AUDACITY_EXCEPTION__
-#define __AUDACITY_EXCEPTION__
+#ifndef __AUDMONKEY_EXCEPTION__
+#define __AUDMONKEY_EXCEPTION__
 
 /*!********************************************************************
 
@@ -53,7 +53,7 @@ protected:
 //! Abstract AudMonkeyException subclass displays a message, specified by further subclass
 /*! At most one message will be displayed for each pass through the main event idle loop,
  no matter how many exceptions were caught. */
-class AUDACITY_DLL_API MessageBoxException /* not final */
+class AUDMONKEY_DLL_API MessageBoxException /* not final */
    : public AudMonkeyException
 {
    //! Privatize the inherited function
@@ -86,7 +86,7 @@ protected:
 };
 
 //! A MessageBoxException that shows a given, unvarying string.
-class AUDACITY_DLL_API SimpleMessageBoxException /* not final */
+class AUDMONKEY_DLL_API SimpleMessageBoxException /* not final */
    : public MessageBoxException
 {
 public:

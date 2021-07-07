@@ -9,14 +9,14 @@ Paul Licameli split from Prefs.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_FILE_CONFIG__
-#define __AUDACITY_FILE_CONFIG__
+#ifndef __AUDMONKEY_FILE_CONFIG__
+#define __AUDMONKEY_FILE_CONFIG__
 
 #include <memory>
 #include "widgets/FileConfig.h" // to inherit
 
 /// \brief Our own specialisation of FileConfig.
-class AUDACITY_DLL_API AudMonkeyFileConfig final : public FileConfig
+class AUDMONKEY_DLL_API AudMonkeyFileConfig final : public FileConfig
 {
 public:
    //! Require a call to this factory, to guarantee proper two-phase initialization

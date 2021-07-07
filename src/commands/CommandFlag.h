@@ -6,8 +6,8 @@
 //
 //
 
-#ifndef __AUDACITY_COMMAND_FLAG__
-#define __AUDACITY_COMMAND_FLAG__
+#ifndef __AUDMONKEY_COMMAND_FLAG__
+#define __AUDMONKEY_COMMAND_FLAG__
 
 // Flags used in command handling.
 
@@ -85,7 +85,7 @@ struct CommandFlagOptions{
 // Construct one statically to register (and reserve) a bit position in the set
 // an associate it with a test function; those with quickTest = true are cheap
 // to compute and always checked
-class AUDACITY_DLL_API ReservedCommandFlag : public CommandFlag
+class AUDMONKEY_DLL_API ReservedCommandFlag : public CommandFlag
 {
 public:
    using Predicate = std::function< bool( const AudMonkeyProject& ) >;
@@ -116,7 +116,7 @@ struct MenuItemEnabler {
 };
 
 // Typically this is statically constructed:
-struct AUDACITY_DLL_API RegisteredMenuItemEnabler{
+struct AUDMONKEY_DLL_API RegisteredMenuItemEnabler{
    RegisteredMenuItemEnabler( const MenuItemEnabler &enabler );
 };
 

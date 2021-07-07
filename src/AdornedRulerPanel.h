@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_ADORNED_RULER_PANEL__
-#define __AUDACITY_ADORNED_RULER_PANEL__
+#ifndef __AUDMONKEY_ADORNED_RULER_PANEL__
+#define __AUDMONKEY_ADORNED_RULER_PANEL__
 
 #include "CellularPanel.h"
 #include "widgets/Ruler.h" // member variable
@@ -22,7 +22,7 @@ class SnapManager;
 class TrackList;
 
 // This is an AudMonkey Specific ruler panel.
-class AUDACITY_DLL_API AdornedRulerPanel final
+class AUDMONKEY_DLL_API AdornedRulerPanel final
 : public CellularPanel
 , private PrefsListener
 {
@@ -234,4 +234,4 @@ private:
    bool mDirtySelectedRegion{};
 };
 
-#endif //define __AUDACITY_ADORNED_RULER_PANEL__
+#endif //define __AUDMONKEY_ADORNED_RULER_PANEL__

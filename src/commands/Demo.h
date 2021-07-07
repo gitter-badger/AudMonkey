@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_DEMO_COMMAND__
-#define __AUDACITY_DEMO_COMMAND__
+#ifndef __AUDMONKEY_DEMO_COMMAND__
+#define __AUDMONKEY_DEMO_COMMAND__
 
 #include "AudMonkeyCommand.h"
 #include "../SampleFormat.h"
@@ -36,4 +36,4 @@ private:
    double decay;
 };
 
-#endif // __AUDACITY_DEMO_COMMAND__
+#endif // __AUDMONKEY_DEMO_COMMAND__

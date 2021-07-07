@@ -8,8 +8,8 @@
 
  **********************************************************************/
 
-#ifndef __AUDACITY_TRACK_PANEL_DRAWING_CONTEXT__
-#define __AUDACITY_TRACK_PANEL_DRAWING_CONTEXT__
+#ifndef __AUDMONKEY_TRACK_PANEL_DRAWING_CONTEXT__
+#define __AUDMONKEY_TRACK_PANEL_DRAWING_CONTEXT__
 
 #include <memory>
 

@@ -8,8 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_BACKGROUND_CELL__
-#define __AUDACITY_BACKGROUND_CELL__
+#ifndef __AUDMONKEY_BACKGROUND_CELL__
+#define __AUDMONKEY_BACKGROUND_CELL__
 
 #include "../../ClientData.h"
 #include "CommonTrackPanelCell.h"

@@ -104,7 +104,7 @@ static AudMonkeyProject *gActiveProject;
 //This array holds onto all of the projects currently open
 AllProjects::Container AllProjects::gAudMonkeyProjects;
 
-AUDACITY_DLL_API AudMonkeyProject *GetActiveProject()
+AUDMONKEY_DLL_API AudMonkeyProject *GetActiveProject()
 {
    return gActiveProject;
 }
@@ -183,7 +183,7 @@ void AudMonkeyProject::SetInitialImportPath(const FilePath &path)
    }
 }
 
-AUDACITY_DLL_API wxFrame &GetProjectFrame( AudMonkeyProject &project )
+AUDMONKEY_DLL_API wxFrame &GetProjectFrame( AudMonkeyProject &project )
 {
    auto ptr = project.GetFrame();
    if ( !ptr )
@@ -191,7 +191,7 @@ AUDACITY_DLL_API wxFrame &GetProjectFrame( AudMonkeyProject &project )
    return *ptr;
 }
 
-AUDACITY_DLL_API const wxFrame &GetProjectFrame( const AudMonkeyProject &project )
+AUDMONKEY_DLL_API const wxFrame &GetProjectFrame( const AudMonkeyProject &project )
 {
    auto ptr = project.GetFrame();
    if ( !ptr )
@@ -199,7 +199,7 @@ AUDACITY_DLL_API const wxFrame &GetProjectFrame( const AudMonkeyProject &project
    return *ptr;
 }
 
-AUDACITY_DLL_API wxWindow &GetProjectPanel( AudMonkeyProject &project )
+AUDMONKEY_DLL_API wxWindow &GetProjectPanel( AudMonkeyProject &project )
 {
    auto ptr = project.GetPanel();
    if ( !ptr )
@@ -207,7 +207,7 @@ AUDACITY_DLL_API wxWindow &GetProjectPanel( AudMonkeyProject &project )
    return *ptr;
 }
 
-AUDACITY_DLL_API const wxWindow &GetProjectPanel(
+AUDMONKEY_DLL_API const wxWindow &GetProjectPanel(
    const AudMonkeyProject &project )
 {
    auto ptr = project.GetPanel();

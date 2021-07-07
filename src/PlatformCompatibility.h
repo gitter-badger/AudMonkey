@@ -17,12 +17,12 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_COMPATIBILITY__
-#define __AUDACITY_COMPATIBILITY__
+#ifndef __AUDMONKEY_COMPATIBILITY__
+#define __AUDMONKEY_COMPATIBILITY__
 
 #include "Identifier.h"
 
-class AUDACITY_DLL_API PlatformCompatibility
+class AUDMONKEY_DLL_API PlatformCompatibility
 {
 public:
    //

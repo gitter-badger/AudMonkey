@@ -12,12 +12,12 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_LANG_CHOICE__
-#define __AUDACITY_LANG_CHOICE__
+#ifndef __AUDMONKEY_LANG_CHOICE__
+#define __AUDMONKEY_LANG_CHOICE__
 
 class wxString;
 class wxWindow;
 
 wxString ChooseLanguage(wxWindow *parent);
 
-#endif // __AUDACITY_LANG_CHOICE__
+#endif // __AUDMONKEY_LANG_CHOICE__

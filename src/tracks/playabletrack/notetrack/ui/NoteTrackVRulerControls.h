@@ -8,8 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_NOTE_TRACK_VRULER_CONTROLS__
-#define __AUDACITY_NOTE_TRACK_VRULER_CONTROLS__
+#ifndef __AUDMONKEY_NOTE_TRACK_VRULER_CONTROLS__
+#define __AUDMONKEY_NOTE_TRACK_VRULER_CONTROLS__
 
 #include "../../../ui/TrackVRulerControls.h"
 

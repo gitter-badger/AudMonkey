@@ -11,8 +11,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_COLOR__
-#define __AUDACITY_COLOR__
+#ifndef __AUDMONKEY_COLOR__
+#define __AUDMONKEY_COLOR__
 
 #include <memory>
 #include <wx/brush.h> // member variable
@@ -22,7 +22,7 @@ class wxDC;
 class wxGraphicsContext;
 class wxRect;
 
-class AUDACITY_DLL_API AColor {
+class AUDMONKEY_DLL_API AColor {
  public:
 
     enum ColorGradientChoice {

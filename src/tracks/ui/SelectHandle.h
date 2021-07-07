@@ -8,8 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SELECT_HANDLE__
-#define __AUDACITY_SELECT_HANDLE__
+#ifndef __AUDMONKEY_SELECT_HANDLE__
+#define __AUDMONKEY_SELECT_HANDLE__
 
 #include "../../UIHandle.h"
 #include "../../SelectedRegion.h"
@@ -27,7 +27,7 @@ class ViewInfo;
 class WaveTrack;
 class wxMouseState;
 
-class AUDACITY_DLL_API SelectHandle : public UIHandle
+class AUDMONKEY_DLL_API SelectHandle : public UIHandle
 {
    SelectHandle(const SelectHandle&);
 

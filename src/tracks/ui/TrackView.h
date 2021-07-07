@@ -8,8 +8,8 @@ Paul Licameli split from class Track
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TRACK_VIEW__
-#define __AUDACITY_TRACK_VIEW__
+#ifndef __AUDMONKEY_TRACK_VIEW__
+#define __AUDMONKEY_TRACK_VIEW__
 
 #include <memory>
 #include "CommonTrackPanelCell.h" // to inherit
@@ -19,7 +19,7 @@ class TrackList;
 class TrackVRulerControls;
 class TrackPanelResizerCell;
 
-class AUDACITY_DLL_API TrackView /* not final */ : public CommonTrackCell
+class AUDMONKEY_DLL_API TrackView /* not final */ : public CommonTrackCell
    , public std::enable_shared_from_this<TrackView>
 {
    TrackView( const TrackView& ) = delete;

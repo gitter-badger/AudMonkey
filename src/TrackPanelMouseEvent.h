@@ -8,8 +8,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TRACK_PANEL_MOUSE_EVENT__
-#define __AUDACITY_TRACK_PANEL_MOUSE_EVENT__
+#ifndef __AUDMONKEY_TRACK_PANEL_MOUSE_EVENT__
+#define __AUDMONKEY_TRACK_PANEL_MOUSE_EVENT__
 
 class wxMouseEvent;
 class wxMouseState;

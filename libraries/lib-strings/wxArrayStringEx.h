@@ -8,8 +8,8 @@
  
  **********************************************************************/
 
-#ifndef __AUDACITY_WX_ARRAY_STRING_EX__
-#define __AUDACITY_WX_ARRAY_STRING_EX__
+#ifndef __AUDMONKEY_WX_ARRAY_STRING_EX__
+#define __AUDMONKEY_WX_ARRAY_STRING_EX__
 
 #include <wx/arrstr.h>
 

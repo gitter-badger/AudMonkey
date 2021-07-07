@@ -6,8 +6,8 @@
 
 */
 
-#ifndef __AUDACITY_INCONSISTENCY_EXCEPTION__
-#define __AUDACITY_INCONSISTENCY_EXCEPTION__
+#ifndef __AUDMONKEY_INCONSISTENCY_EXCEPTION__
+#define __AUDMONKEY_INCONSISTENCY_EXCEPTION__
 
 #include "AudMonkeyException.h"
 
@@ -20,7 +20,7 @@
   The error message identifies source file and line number, possibly the function too (depending on
   the compiler), and suggests that the user inform the development team.
  */
-class AUDACITY_DLL_API InconsistencyException final : public MessageBoxException
+class AUDMONKEY_DLL_API InconsistencyException final : public MessageBoxException
 {
 public:
    InconsistencyException () 

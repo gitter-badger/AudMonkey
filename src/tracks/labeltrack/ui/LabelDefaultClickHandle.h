@@ -8,8 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_LABEL_DEFAULT_CLICK_HANDLE__
-#define __AUDACITY_LABEL_DEFAULT_CLICK_HANDLE__
+#ifndef __AUDMONKEY_LABEL_DEFAULT_CLICK_HANDLE__
+#define __AUDMONKEY_LABEL_DEFAULT_CLICK_HANDLE__
 
 #include "../../../UIHandle.h"
 

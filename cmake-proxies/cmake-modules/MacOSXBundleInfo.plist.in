@@ -206,7 +206,7 @@
 	<key>CFBundleExecutable</key>
 	<string>Wrapper</string>
 	<key>CFBundleGetInfoString</key>
-	<string>AudMonkey version ${AUDACITY_INFO_VERSION}</string>
+	<string>AudMonkey version ${AUDMONKEY_INFO_VERSION}</string>
 	<key>CFBundleIconFile</key>
 	<string>AudMonkey.icns</string>
 	<key>CFBundleIdentifier</key>
@@ -214,17 +214,17 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleLongVersionString</key>
-	<string>Version ${AUDACITY_INFO_VERSION}</string>
+	<string>Version ${AUDMONKEY_INFO_VERSION}</string>
 	<key>CFBundleName</key>
 	<string>AudMonkey</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>${AUDACITY_INFO_VERSION}</string>
+	<string>${AUDMONKEY_INFO_VERSION}</string>
 	<key>CFBundleSignature</key>
 	<string>auDy</string>
 	<key>CFBundleVersion</key>
-	<string>${AUDACITY_INFO_VERSION}</string>
+	<string>${AUDMONKEY_INFO_VERSION}</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.music</string>
 	<key>NSHighResolutionCapable</key>
@@ -232,7 +232,7 @@
    <key>NSRequiresAquaSystemAppearance</key>
    <true/>
 	<key>NSHumanReadableCopyright</key>
-	<string>AudMonkey version ${AUDACITY_INFO_VERSION}</string>
+	<string>AudMonkey version ${AUDMONKEY_INFO_VERSION}</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>AudMonkey requires access to the microphone only if you intend to record from it.</string>
 	<key>NSPrincipalClass</key>

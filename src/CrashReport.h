@@ -9,8 +9,8 @@
  
  **********************************************************************/
 
-#ifndef __AUDACITY_CRASH_REPORT__
-#define __AUDACITY_CRASH_REPORT__
+#ifndef __AUDMONKEY_CRASH_REPORT__
+#define __AUDMONKEY_CRASH_REPORT__
 
 #undef HAS_CRASH_REPORT
 
@@ -26,7 +26,7 @@
 
    namespace CrashReport
    {
-      AUDACITY_DLL_API
+      AUDMONKEY_DLL_API
       void Generate(wxDebugReport::Context ctx);
    }
 #endif

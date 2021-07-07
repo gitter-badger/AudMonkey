@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_MODULE_CONSTANTS__
-#define __AUDACITY_MODULE_CONSTANTS__
+#ifndef __AUDMONKEY_MODULE_CONSTANTS__
+#define __AUDMONKEY_MODULE_CONSTANTS__
 
 #define ModuleDispatchName "ModuleDispatch"
 
@@ -43,7 +43,7 @@ extern "C" {                                                           \
       of AudMonkey it is built with.                                    \
       For now, the versions must match exactly for AudMonkey to         \
       agree to load the module. */                                     \
-      return AUDACITY_VERSION_STRING;                                  \
+      return AUDMONKEY_VERSION_STRING;                                  \
    }                                                                   \
 }
 

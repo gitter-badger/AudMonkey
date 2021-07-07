@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_DEVICECHANGE_H__
-#define __AUDACITY_DEVICECHANGE_H__
+#ifndef __AUDMONKEY_DEVICECHANGE_H__
+#define __AUDMONKEY_DEVICECHANGE_H__
 
 
 

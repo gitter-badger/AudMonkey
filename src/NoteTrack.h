@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_NOTETRACK__
-#define __AUDACITY_NOTETRACK__
+#ifndef __AUDMONKEY_NOTETRACK__
+#define __AUDMONKEY_NOTETRACK__
 
 
 
@@ -61,7 +61,7 @@ using QuantizedTimeAndBeat = std::pair< double, double >;
 class StretchHandle;
 class TimeWarper;
 
-class AUDACITY_DLL_API NoteTrack final
+class AUDMONKEY_DLL_API NoteTrack final
    : public NoteTrackBase
 {
 public:

@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_LOUDNESS__
-#define __AUDACITY_EFFECT_LOUDNESS__
+#ifndef __AUDMONKEY_EFFECT_LOUDNESS__
+#define __AUDMONKEY_EFFECT_LOUDNESS__
 
 #include <wx/checkbox.h>
 #include <wx/choice.h>

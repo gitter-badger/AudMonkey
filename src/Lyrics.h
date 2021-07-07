@@ -9,8 +9,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_LYRICS__
-#define __AUDACITY_LYRICS__
+#ifndef __AUDMONKEY_LYRICS__
+#define __AUDMONKEY_LYRICS__
 
 
 
@@ -162,4 +162,4 @@ private:
    DECLARE_EVENT_TABLE()
 };
 
-#endif // __AUDACITY_LYRICS__
+#endif // __AUDMONKEY_LYRICS__

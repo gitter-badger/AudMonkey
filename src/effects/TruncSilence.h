@@ -14,8 +14,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_TRUNC_SILENCE__
-#define __AUDACITY_EFFECT_TRUNC_SILENCE__
+#ifndef __AUDMONKEY_EFFECT_TRUNC_SILENCE__
+#define __AUDMONKEY_EFFECT_TRUNC_SILENCE__
 
 #include "Effect.h"
 

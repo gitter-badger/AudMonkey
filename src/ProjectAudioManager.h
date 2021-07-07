@@ -8,8 +8,8 @@ Paul Licameli split from ProjectManager.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PROJECT_AUDIO_MANAGER__
-#define __AUDACITY_PROJECT_AUDIO_MANAGER__
+#ifndef __AUDMONKEY_PROJECT_AUDIO_MANAGER__
+#define __AUDMONKEY_PROJECT_AUDIO_MANAGER__
 
 #include <memory>
 #include <vector>
@@ -38,7 +38,7 @@ struct TransportTracks;
 
 enum StatusBarField : int;
 
-class AUDACITY_DLL_API ProjectAudioManager final
+class AUDMONKEY_DLL_API ProjectAudioManager final
    : public ClientData::Base
    , public AudioIOListener
    , public std::enable_shared_from_this< ProjectAudioManager >
@@ -163,9 +163,9 @@ private:
          const AudMonkeyProject &project, StatusBarField field);
 };
 
-AUDACITY_DLL_API
+AUDMONKEY_DLL_API
 AudioIOStartStreamOptions DefaultPlayOptions( AudMonkeyProject &project );
-AUDACITY_DLL_API
+AUDMONKEY_DLL_API
 AudioIOStartStreamOptions DefaultSpeedPlayOptions( AudMonkeyProject &project );
 
 struct PropertiesOfSelected
@@ -175,12 +175,12 @@ struct PropertiesOfSelected
    int numberOfSelected{ 0 };
 };
 
-AUDACITY_DLL_API
+AUDMONKEY_DLL_API
 PropertiesOfSelected GetPropertiesOfSelected(const AudMonkeyProject &proj);
 
 #include "commands/CommandFlag.h"
 
-extern AUDACITY_DLL_API const ReservedCommandFlag
+extern AUDMONKEY_DLL_API const ReservedCommandFlag
    &CanStopAudioStreamFlag();
 
 #endif

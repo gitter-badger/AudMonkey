@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_DIRECTORIES_PREFS__
-#define __AUDACITY_DIRECTORIES_PREFS__
+#ifndef __AUDMONKEY_DIRECTORIES_PREFS__
+#define __AUDMONKEY_DIRECTORIES_PREFS__
 
 #include "PrefsPanel.h"
 

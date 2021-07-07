@@ -12,8 +12,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_DIAGS__
-#define __AUDACITY_DIAGS__
+#ifndef __AUDMONKEY_DIAGS__
+#define __AUDMONKEY_DIAGS__
 
 typedef long t_diag_timer;
 

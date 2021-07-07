@@ -8,8 +8,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PROJECT_STATUS__
-#define __AUDACITY_PROJECT_STATUS__
+#ifndef __AUDMONKEY_PROJECT_STATUS__
+#define __AUDMONKEY_PROJECT_STATUS__
 #endif
 
 #include <utility>
@@ -31,10 +31,10 @@ enum StatusBarField : int {
 
 // Type of event emitted by the project when its status message is set
 // GetInt() identifies the intended field of the status bar
-wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT(AUDMONKEY_DLL_API,
                          EVT_PROJECT_STATUS_UPDATE, wxCommandEvent);
 
-class AUDACITY_DLL_API ProjectStatus final
+class AUDMONKEY_DLL_API ProjectStatus final
    : public ClientData::Base
    , public PrefsListener
 {
@@ -57,7 +57,7 @@ public:
    using StatusWidthFunctions = std::vector< StatusWidthFunction >;
 
    // Typically a static instance of this struct is used.
-   struct AUDACITY_DLL_API RegisteredStatusWidthFunction
+   struct AUDMONKEY_DLL_API RegisteredStatusWidthFunction
    {
       explicit
       RegisteredStatusWidthFunction( const StatusWidthFunction &function );

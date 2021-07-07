@@ -8,8 +8,8 @@
    Distributed under the terms of the GPL Version 2 or later.
 
 ***************************************************************************/
-#ifndef __AUDACITY_VOICEKEY__
-#define __AUDACITY_VOICEKEY__
+#ifndef __AUDMONKEY_VOICEKEY__
+#define __AUDMONKEY_VOICEKEY__
 
 
 #ifndef M_PI

@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SIMPLE_BLOCKFILE__
-#define __AUDACITY_SIMPLE_BLOCKFILE__
+#ifndef __AUDMONKEY_SIMPLE_BLOCKFILE__
+#define __AUDMONKEY_SIMPLE_BLOCKFILE__
 
 #include "../BlockFile.h"
 

@@ -11,8 +11,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EDIT_TOOLBAR__
-#define __AUDACITY_EDIT_TOOLBAR__
+#ifndef __AUDMONKEY_EDIT_TOOLBAR__
+#define __AUDMONKEY_EDIT_TOOLBAR__
 
 #include <wx/defs.h>
 

@@ -45,5 +45,5 @@ private:
 /// Return version (VersionId) object with current AudMonkey build version.
 static inline VersionId CurrentBuildVersion()
 {
-    return VersionId{ AUDACITY_VERSION, AUDACITY_RELEASE, AUDACITY_REVISION };
+    return VersionId{ AUDMONKEY_VERSION, AUDMONKEY_RELEASE, AUDMONKEY_REVISION };
 }

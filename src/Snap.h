@@ -12,8 +12,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SNAP__
-#define __AUDACITY_SNAP__
+#ifndef __AUDMONKEY_SNAP__
+#define __AUDMONKEY_SNAP__
 
 #include <vector>
 #include <wx/defs.h>
@@ -52,7 +52,7 @@ struct SnapResults {
    bool Snapped() const { return snappedPoint || snappedTime; }
 };
 
-class AUDACITY_DLL_API SnapManager
+class AUDMONKEY_DLL_API SnapManager
 {
 public:
    SnapManager(const AudMonkeyProject &project,

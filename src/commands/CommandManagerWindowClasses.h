@@ -8,15 +8,15 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_COMMAND_MANAGER_WINDOW_CLASSES__
-#define __AUDACITY_COMMAND_MANAGER_WINDOW_CLASSES__
+#ifndef __AUDMONKEY_COMMAND_MANAGER_WINDOW_CLASSES__
+#define __AUDMONKEY_COMMAND_MANAGER_WINDOW_CLASSES__
 
 /*
  \brief By default, windows when focused override the association of the digits
  and certain navigation keys with commands, but certain windows do not, and
  those inherit this class.
  */
-struct AUDACITY_DLL_API NonKeystrokeInterceptingWindow
+struct AUDMONKEY_DLL_API NonKeystrokeInterceptingWindow
 {
    virtual ~NonKeystrokeInterceptingWindow();
 };
@@ -25,7 +25,7 @@ struct AUDACITY_DLL_API NonKeystrokeInterceptingWindow
  \brief Top-level windows that do redirect keystrokes to the associated
  project's CommandManager inherit this class.
 */
-struct AUDACITY_DLL_API TopLevelKeystrokeHandlingWindow
+struct AUDMONKEY_DLL_API TopLevelKeystrokeHandlingWindow
 {
    virtual ~TopLevelKeystrokeHandlingWindow();
 };

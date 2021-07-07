@@ -9,8 +9,8 @@ Paul Licameli
 **********************************************************************/
 
 
-#ifndef __AUDACITY_WAVEFORM_PREFS__
-#define __AUDACITY_WAVEFORM_PREFS__
+#ifndef __AUDMONKEY_WAVEFORM_PREFS__
+#define __AUDMONKEY_WAVEFORM_PREFS__
 
 #include "PrefsPanel.h"
 #include "WaveformSettings.h"

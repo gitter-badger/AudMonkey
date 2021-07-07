@@ -8,8 +8,8 @@ Paul Licameli split from AudMonkeyProject.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PROJECT_FILE_MANAGER__
-#define __AUDACITY_PROJECT_FILE_MANAGER__
+#ifndef __AUDMONKEY_PROJECT_FILE_MANAGER__
+#define __AUDMONKEY_PROJECT_FILE_MANAGER__
 
 #include <functional>
 #include <memory>
@@ -29,7 +29,7 @@ class XMLTagHandler;
 using WaveTrackArray = std::vector < std::shared_ptr < WaveTrack > >;
 using TrackHolders = std::vector< WaveTrackArray >;
 
-class AUDACITY_DLL_API ProjectFileManager final
+class AUDMONKEY_DLL_API ProjectFileManager final
    : public ClientData::Base
 {
 public:

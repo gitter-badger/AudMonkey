@@ -8,8 +8,8 @@ Paul Licameli split from class WaveTrack
 
 **********************************************************************/
 
-#ifndef __AUDACITY_WAVE_TRACK_VIEW__
-#define __AUDACITY_WAVE_TRACK_VIEW__
+#ifndef __AUDMONKEY_WAVE_TRACK_VIEW__
+#define __AUDMONKEY_WAVE_TRACK_VIEW__
 
 #include "../../../ui/CommonTrackView.h"
 #include "../../../../ClientData.h"
@@ -22,7 +22,7 @@ class TranslatableString;
 class WaveTrack;
 class WaveTrackView;
 
-class AUDACITY_DLL_API WaveTrackSubView : public CommonTrackView
+class AUDMONKEY_DLL_API WaveTrackSubView : public CommonTrackView
 {
 public:
 
@@ -66,7 +66,7 @@ using WaveTrackSubViews = ClientData::Site<
    WaveTrackView, WaveTrackSubView, ClientData::SkipCopying, std::shared_ptr
 >;
 
-class AUDACITY_DLL_API WaveTrackView final
+class AUDMONKEY_DLL_API WaveTrackView final
    : public CommonTrackView
    , public WaveTrackSubViews
 {
@@ -157,7 +157,7 @@ class SelectedRegion;
 class WaveClip;
 class ZoomInfo;
 
-struct AUDACITY_DLL_API ClipParameters
+struct AUDMONKEY_DLL_API ClipParameters
 {
    // Do a bunch of calculations common to waveform and spectrum drawing.
    ClipParameters

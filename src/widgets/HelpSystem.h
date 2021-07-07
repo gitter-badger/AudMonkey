@@ -18,8 +18,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_HELPSYSTEM__
-#define __AUDACITY_HELPSYSTEM__
+#ifndef __AUDMONKEY_HELPSYSTEM__
+#define __AUDMONKEY_HELPSYSTEM__
 
 
 
@@ -36,7 +36,7 @@ class AudMonkeyProject;
  * the online copy of the AudMonkey manual is stored, so that it can be 
  * changed if required
  */
-class AUDACITY_DLL_API HelpSystem
+class AUDMONKEY_DLL_API HelpSystem
 {
 public:
    /// Displays cuttable information in a text ctrl, with an OK button.
@@ -116,13 +116,13 @@ class ShuttleGui;
 
 #include "HtmlWindow.h" // to inherit
 
-AUDACITY_DLL_API void OpenInDefaultBrowser(const URLString& link);
+AUDMONKEY_DLL_API void OpenInDefaultBrowser(const URLString& link);
 
 
 /// \brief An HtmlWindow that handles linked clicked - usually the
 /// link will go to our own local copy of the manual, but it could
 /// launch a new browser window.
-class AUDACITY_DLL_API LinkingHtmlWindow final : public HtmlWindow
+class AUDMONKEY_DLL_API LinkingHtmlWindow final : public HtmlWindow
 {
  public:
    LinkingHtmlWindow(wxWindow *parent, wxWindowID id = -1,
@@ -156,4 +156,4 @@ public:
    DECLARE_EVENT_TABLE()
 };
 
-#endif // __AUDACITY_HELPSYSTEM__
+#endif // __AUDMONKEY_HELPSYSTEM__

@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_COMPRESSOR__
-#define __AUDACITY_EFFECT_COMPRESSOR__
+#ifndef __AUDMONKEY_EFFECT_COMPRESSOR__
+#define __AUDMONKEY_EFFECT_COMPRESSOR__
 
 #include "TwoPassSimpleMono.h"
 

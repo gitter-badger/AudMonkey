@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_FILEIO__
-#define __AUDACITY_FILEIO__
+#ifndef __AUDMONKEY_FILEIO__
+#define __AUDMONKEY_FILEIO__
 
 #include <memory>
 
@@ -18,7 +18,7 @@ class wxOutputStream;
 class wxFFileOutputStream;
 class wxFileNameWrapper;
 
-class AUDACITY_DLL_API FileIO
+class AUDMONKEY_DLL_API FileIO
 {
  public:
    typedef enum FileIOMode

@@ -19,10 +19,10 @@
 
 
 
-#ifndef __AUDACITY_ODTASKTHREAD__
-#define __AUDACITY_ODTASKTHREAD__
+#ifndef __AUDMONKEY_ODTASKTHREAD__
+#define __AUDMONKEY_ODTASKTHREAD__
 
-#include "../AudMonkey.h"	// contains the set-up of AUDACITY_DLL_API
+#include "../AudMonkey.h"	// contains the set-up of AUDMONKEY_DLL_API
 
 #include <wx/thread.h> // to inherit
 
@@ -85,7 +85,7 @@ protected:
 
 
 //a wrapper for wxMutex.
-class AUDACITY_DLL_API ODLock final : public wxMutex
+class AUDMONKEY_DLL_API ODLock final : public wxMutex
 {
 public:
    ///Constructs a ODTaskThread
@@ -149,5 +149,5 @@ public:
    ODLocker &operator= (const ODLocker &that) PROHIBITED;
 };
 
-#endif //__AUDACITY_ODTASKTHREAD__
+#endif //__AUDMONKEY_ODTASKTHREAD__
 

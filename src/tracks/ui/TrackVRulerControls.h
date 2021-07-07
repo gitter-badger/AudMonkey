@@ -8,8 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TRACK_VRULER_CONTROLS__
-#define __AUDACITY_TRACK_VRULER_CONTROLS__
+#ifndef __AUDMONKEY_TRACK_VRULER_CONTROLS__
+#define __AUDMONKEY_TRACK_VRULER_CONTROLS__
 
 #include "CommonTrackPanelCell.h"
 
@@ -19,7 +19,7 @@ class wxDC;
 
 const int kGuard = 5; // 5 pixels to reduce risk of VZooming accidentally
 
-class AUDACITY_DLL_API TrackVRulerControls /* not final */
+class AUDMONKEY_DLL_API TrackVRulerControls /* not final */
    : public CommonTrackPanelCell
    , public std::enable_shared_from_this< TrackVRulerControls >
 {

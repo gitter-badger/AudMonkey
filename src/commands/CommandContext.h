@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_COMMAND_CONTEXT__
-#define __AUDACITY_COMMAND_CONTEXT__
+#ifndef __AUDMONKEY_COMMAND_CONTEXT__
+#define __AUDMONKEY_COMMAND_CONTEXT__
 
 #include <memory>
 #include "Identifier.h"
@@ -19,7 +19,7 @@ class wxEvent;
 class CommandOutputTargets;
 using CommandParameter = CommandID;
 
-class AUDACITY_DLL_API CommandContext {
+class AUDMONKEY_DLL_API CommandContext {
 public:
    CommandContext(
       AudMonkeyProject &p

@@ -1,4 +1,4 @@
-# translation of AUDACITY.PO.po to
+# translation of AUDMONKEY.PO.po to
 # Audacity Strings for Translation.
 # Copyright (C) YEAR Audacity Development Team
 # This file is distributed under the same license as Audacity.

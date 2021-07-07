@@ -9,8 +9,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECTMANAGER__
-#define __AUDACITY_EFFECTMANAGER__
+#ifndef __AUDMONKEY_EFFECTMANAGER__
+#define __AUDMONKEY_EFFECTMANAGER__
 
 #include <memory>
 #include <vector>
@@ -42,7 +42,7 @@ class AudMonkeyCommand;
 
 class NotifyingSelectedRegion;
 
-class AUDACITY_DLL_API EffectManager
+class AUDMONKEY_DLL_API EffectManager
 {
 public:
 

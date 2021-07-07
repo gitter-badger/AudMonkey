@@ -10,8 +10,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_REVERSE__
-#define __AUDACITY_EFFECT_REVERSE__
+#ifndef __AUDMONKEY_EFFECT_REVERSE__
+#define __AUDMONKEY_EFFECT_REVERSE__
 
 #include "Effect.h"
 

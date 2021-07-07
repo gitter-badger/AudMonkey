@@ -237,7 +237,7 @@ struct Item {
 
 }
 
-class AUDACITY_DLL_API ShuttleGuiBase /* not final */
+class AUDMONKEY_DLL_API ShuttleGuiBase /* not final */
 {
 public:
    ShuttleGuiBase(
@@ -616,12 +616,12 @@ enum
    eCloseID       = wxID_CANCEL
 };
 
-AUDACITY_DLL_API std::unique_ptr<wxSizer> CreateStdButtonSizer( wxWindow *parent,
+AUDMONKEY_DLL_API std::unique_ptr<wxSizer> CreateStdButtonSizer( wxWindow *parent,
                                long buttons = eOkButton | eCancelButton,
                                wxWindow *extra = NULL );
 
 // ShuttleGui extends ShuttleGuiBase with AudMonkey specific extensions.
-class AUDACITY_DLL_API ShuttleGui /* not final */ : public ShuttleGuiBase
+class AUDMONKEY_DLL_API ShuttleGui /* not final */ : public ShuttleGuiBase
 {
 public:
    ShuttleGui(
@@ -749,10 +749,10 @@ public:
 class ComponentInterfaceSymbol;
 
 //! Convenience function often useful when adding choice controls
-AUDACITY_DLL_API TranslatableStrings Msgids(
+AUDMONKEY_DLL_API TranslatableStrings Msgids(
    const EnumValueSymbol strings[], size_t nStrings);
 
 //! Convenience function often useful when adding choice controls
-AUDACITY_DLL_API TranslatableStrings Msgids( const std::vector<EnumValueSymbol> &strings );
+AUDMONKEY_DLL_API TranslatableStrings Msgids( const std::vector<EnumValueSymbol> &strings );
 
 #endif

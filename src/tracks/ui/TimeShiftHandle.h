@@ -8,8 +8,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TIMESHIFT_HANDLE__
-#define __AUDACITY_TIMESHIFT_HANDLE__
+#ifndef __AUDMONKEY_TIMESHIFT_HANDLE__
+#define __AUDMONKEY_TIMESHIFT_HANDLE__
 
 #include <functional>
 #include <unordered_map>
@@ -28,7 +28,7 @@ class TrackInterval;
 class ViewInfo;
 
 //! Abstract base class for policies to manipulate a track type with the Time Shift tool
-class AUDACITY_DLL_API TrackShifter {
+class AUDMONKEY_DLL_API TrackShifter {
 public:
    TrackShifter();
    TrackShifter(const TrackShifter&) PROHIBITED;
@@ -199,7 +199,7 @@ using MakeTrackShifter = AttachedVirtualFunction<
 
 class ViewInfo;
 
-struct AUDACITY_DLL_API ClipMoveState {
+struct AUDMONKEY_DLL_API ClipMoveState {
    ClipMoveState() = default;
 
    ClipMoveState(const ClipMoveState&) PROHIBITED;
@@ -251,7 +251,7 @@ struct AUDACITY_DLL_API ClipMoveState {
    }
 };
 
-class AUDACITY_DLL_API TimeShiftHandle final : public UIHandle
+class AUDMONKEY_DLL_API TimeShiftHandle final : public UIHandle
 {
    TimeShiftHandle(const TimeShiftHandle&) = delete;
    static HitTestPreview HitPreview

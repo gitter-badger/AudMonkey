@@ -20,8 +20,8 @@ in a background thread.
 
 
 
-#ifndef __AUDACITY_ODTASK__
-#define __AUDACITY_ODTASK__
+#ifndef __AUDMONKEY_ODTASK__
+#define __AUDMONKEY_ODTASK__
 
 #include "../BlockFile.h"
 
@@ -32,7 +32,7 @@ class Track;
 class WaveTrack;
 
 
-wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT(AUDMONKEY_DLL_API,
                          EVT_ODTASK_COMPLETE, wxCommandEvent);
 
 /// A class representing a modular task to be used with the On-Demand structures.

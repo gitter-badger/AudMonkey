@@ -9,8 +9,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_BATCH_COMMANDS_DIALOG__
-#define __AUDACITY_BATCH_COMMANDS_DIALOG__
+#ifndef __AUDMONKEY_BATCH_COMMANDS_DIALOG__
+#define __AUDMONKEY_BATCH_COMMANDS_DIALOG__
 
 #include <wx/defs.h>
 

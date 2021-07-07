@@ -9,15 +9,15 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SPECTRUM_ANALYST__
-#define __AUDACITY_SPECTRUM_ANALYST__
+#ifndef __AUDMONKEY_SPECTRUM_ANALYST__
+#define __AUDMONKEY_SPECTRUM_ANALYST__
 
 #include <vector>
 #include <wx/statusbr.h>
 
 class FreqGauge;
 
-class AUDACITY_DLL_API SpectrumAnalyst
+class AUDMONKEY_DLL_API SpectrumAnalyst
 {
 public:
 
@@ -59,7 +59,7 @@ private:
    std::vector<float> mProcessed;
 };
 
-class AUDACITY_DLL_API FreqGauge final : public wxStatusBar
+class AUDMONKEY_DLL_API FreqGauge final : public wxStatusBar
 {
 public:
    FreqGauge(wxWindow * parent, wxWindowID winid);

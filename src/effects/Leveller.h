@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_LEVELER__
-#define __AUDACITY_EFFECT_LEVELER__
+#ifndef __AUDMONKEY_EFFECT_LEVELER__
+#define __AUDMONKEY_EFFECT_LEVELER__
 
 // PRL: no longer used
 

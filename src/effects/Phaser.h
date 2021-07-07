@@ -13,8 +13,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_PHASER__
-#define __AUDACITY_EFFECT_PHASER__
+#ifndef __AUDMONKEY_EFFECT_PHASER__
+#define __AUDMONKEY_EFFECT_PHASER__
 
 #include "Effect.h"
 

@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_WARNING__
-#define __AUDACITY_WARNING__
+#ifndef __AUDMONKEY_WARNING__
+#define __AUDMONKEY_WARNING__
 
 
 
@@ -19,14 +19,14 @@ class wxWindow;
 class TranslatableString;
 
 // "Don't show this warning again"
-AUDACITY_DLL_API
+AUDMONKEY_DLL_API
 const TranslatableString &DefaultWarningFooter();
 
 /// Displays a warning dialog with a check box.  If the user checks
 /// the box, the internalDialogName is noted in the
 /// preferences.  The internalDialogName is never seen by
 /// the user; it should be unique to each message.
-AUDACITY_DLL_API
+AUDMONKEY_DLL_API
 int ShowWarningDialog(wxWindow *parent,
                       const wxString &internalDialogName,
                       const TranslatableString &message,
@@ -34,4 +34,4 @@ int ShowWarningDialog(wxWindow *parent,
                       // This message appears by the checkbox:
                       const TranslatableString &footer = DefaultWarningFooter());
 
-#endif // __AUDACITY_WARNING__
+#endif // __AUDMONKEY_WARNING__
