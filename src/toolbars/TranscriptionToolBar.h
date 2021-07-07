@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
 
   TranscriptionToolBar.h
@@ -26,7 +26,7 @@ class wxKeyEvent;
 
 class AButton;
 class ASlider;
-class AudacityProject;
+class AudMonkeyProject;
 class BoundedEnvelope;
 class WaveTrack;
 
@@ -63,11 +63,11 @@ class TranscriptionToolBar final : public ToolBar {
 
  public:
 
-   TranscriptionToolBar( AudacityProject &project );
+   TranscriptionToolBar( AudMonkeyProject &project );
    virtual ~TranscriptionToolBar();
 
-   static TranscriptionToolBar &Get( AudacityProject &project );
-   static const TranscriptionToolBar &Get( const AudacityProject &project );
+   static TranscriptionToolBar &Get( AudMonkeyProject &project );
+   static const TranscriptionToolBar &Get( const AudMonkeyProject &project );
 
    void Create(wxWindow *parent) override;
 

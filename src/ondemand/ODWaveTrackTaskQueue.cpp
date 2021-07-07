@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   ODWaveTrackTaskQueue.h
 
@@ -16,7 +16,7 @@ tasks associated with a WaveTrack.
 
 *//*******************************************************************/
 
-#include "../Audacity.h"
+#include "../AudMonkey.h"
 #include "ODWaveTrackTaskQueue.h"
 
 #include "ODTask.h"

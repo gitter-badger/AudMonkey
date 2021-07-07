@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 LabelTrackView.h
 
@@ -53,11 +53,11 @@ public:
    static LabelTrackView &Get( LabelTrack& );
    static const LabelTrackView &Get( const LabelTrack& );
 
-   bool DoCaptureKey( AudacityProject &project, wxKeyEvent &event );
+   bool DoCaptureKey( AudMonkeyProject &project, wxKeyEvent &event );
    bool DoKeyDown(
-      AudacityProject &project, NotifyingSelectedRegion &sel, wxKeyEvent & event);
+      AudMonkeyProject &project, NotifyingSelectedRegion &sel, wxKeyEvent & event);
    bool DoChar(
-      AudacityProject &project, NotifyingSelectedRegion &sel, wxKeyEvent & event);
+      AudMonkeyProject &project, NotifyingSelectedRegion &sel, wxKeyEvent & event);
 
    //This returns the index of the label we just added.
    int AddLabel(const SelectedRegion &region,
@@ -70,20 +70,20 @@ private:
 
    std::vector<UIHandlePtr> DetailedHitTest
       (const TrackPanelMouseState &state,
-       const AudacityProject *pProject, int currentTool, bool bMultiTool)
+       const AudMonkeyProject *pProject, int currentTool, bool bMultiTool)
       override;
 
    unsigned CaptureKey
      (wxKeyEvent &event, ViewInfo &viewInfo, wxWindow *pParent,
-      AudacityProject *project) override;
+      AudMonkeyProject *project) override;
 
    unsigned KeyDown
       (wxKeyEvent &event, ViewInfo &viewInfo, wxWindow *pParent,
-      AudacityProject *project) override;
+      AudMonkeyProject *project) override;
 
    unsigned Char
       (wxKeyEvent &event, ViewInfo &viewInfo, wxWindow *pParent,
-      AudacityProject *project) override;
+      AudMonkeyProject *project) override;
 
    std::shared_ptr<TrackVRulerControls> DoGetVRulerControls() override;
 
@@ -92,13 +92,13 @@ private:
 
 public:
    static void DoEditLabels(
-      AudacityProject &project, LabelTrack *lt = nullptr, int index = -1);
+      AudMonkeyProject &project, LabelTrack *lt = nullptr, int index = -1);
 
    static int DialogForLabelName(
-      AudacityProject &project, const SelectedRegion& region,
+      AudMonkeyProject &project, const SelectedRegion& region,
       const wxString& initialValue, wxString& value);
 
-   bool IsTextSelected( AudacityProject &project ) const;
+   bool IsTextSelected( AudMonkeyProject &project ) const;
 
 private:
    void CreateCustomGlyphs();
@@ -109,13 +109,13 @@ public:
 
    void Draw( TrackPanelDrawingContext &context, const wxRect & r ) const;
 
-   int GetSelectedIndex( AudacityProject &project ) const;
+   int GetSelectedIndex( AudMonkeyProject &project ) const;
    void SetSelectedIndex( int index );
 
-   bool CutSelectedText( AudacityProject &project );
-   bool CopySelectedText( AudacityProject &project );
+   bool CutSelectedText( AudMonkeyProject &project );
+   bool CopySelectedText( AudMonkeyProject &project );
    bool PasteSelectedText(
-      AudacityProject &project, double sel0, double sel1 );
+      AudMonkeyProject &project, double sel0, double sel1 );
 
    static void OverGlyph(
       const LabelTrack &track, LabelTrackHit &hit, int x, int y );
@@ -176,16 +176,16 @@ private:
 public:
    //get current cursor position,
    // relative to the left edge of the track panel
-   bool CalcCursorX( AudacityProject &project, int * x ) const;
+   bool CalcCursorX( AudMonkeyProject &project, int * x ) const;
 
 private:
    void CalcHighlightXs(int *x1, int *x2) const;
 
 public:
-   void ShowContextMenu( AudacityProject &project );
+   void ShowContextMenu( AudMonkeyProject &project );
 
 private:
-   void OnContextMenu( AudacityProject &project, wxCommandEvent & evt);
+   void OnContextMenu( AudMonkeyProject &project, wxCommandEvent & evt);
 
    mutable Index mSelIndex{-1};  /// Keeps track of the currently selected label
 
@@ -235,7 +235,7 @@ private:
    static void calculateFontHeight(wxDC & dc);
 
 public:
-   bool HasSelection( AudacityProject &project ) const;
+   bool HasSelection( AudMonkeyProject &project ) const;
 
 private:
    void RemoveSelectedText();

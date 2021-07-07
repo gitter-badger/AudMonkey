@@ -30,7 +30,7 @@ class AUDACITY_DLL_API Resample final
  public:
    /// Resamplers may have more than one method, offering a
    /// tradeoff between speed and quality.
-   /// Audacity identifies two methods out of all of the choices:
+   /// AudMonkey identifies two methods out of all of the choices:
    /// a Fast method intended for real-time audio I/O, and a Best
    /// method intended for mixing and exporting.
    //

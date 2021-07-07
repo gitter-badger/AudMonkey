@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 TrackPanelResizeHandle.cpp
 
@@ -30,7 +30,7 @@ TrackPanelResizerCell::TrackPanelResizerCell(
 {}
 
 std::vector<UIHandlePtr> TrackPanelResizerCell::HitTest
-(const TrackPanelMouseState &st, const AudacityProject *pProject)
+(const TrackPanelMouseState &st, const AudMonkeyProject *pProject)
 {
    (void)pProject;// Compiler food
    std::vector<UIHandlePtr> results;

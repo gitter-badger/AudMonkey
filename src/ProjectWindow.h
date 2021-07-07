@@ -1,10 +1,10 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 ProjectWindow.h
 
-Paul Licameli split from AudacityProject.h
+Paul Licameli split from AudMonkeyProject.h
 
 **********************************************************************/
 
@@ -31,15 +31,15 @@ class AUDACITY_DLL_API ProjectWindow final : public ProjectWindowBase
    , public PrefsListener
 {
 public:
-   static ProjectWindow &Get( AudacityProject &project );
-   static const ProjectWindow &Get( const AudacityProject &project );
-   static ProjectWindow *Find( AudacityProject *pProject );
-   static const ProjectWindow *Find( const AudacityProject *pProject );
+   static ProjectWindow &Get( AudMonkeyProject &project );
+   static const ProjectWindow &Get( const AudMonkeyProject &project );
+   static ProjectWindow *Find( AudMonkeyProject *pProject );
+   static const ProjectWindow *Find( const AudMonkeyProject *pProject );
 
    explicit ProjectWindow(
       wxWindow * parent, wxWindowID id,
       const wxPoint & pos, const wxSize &size,
-      AudacityProject &project );
+      AudMonkeyProject &project );
    ~ProjectWindow() override;
 
    // Next available ID for sub-windows
@@ -60,7 +60,7 @@ public:
    class PlaybackScroller final : public wxEvtHandler
    {
    public:
-      explicit PlaybackScroller(AudacityProject *project);
+      explicit PlaybackScroller(AudMonkeyProject *project);
 
       enum class Mode {
          Off,
@@ -80,7 +80,7 @@ public:
    private:
       void OnTimer(wxCommandEvent &event);
 
-      AudacityProject *mProject;
+      AudMonkeyProject *mProject;
       Mode mMode { Mode::Off };
 
       // During timer update, grab the volatile stream time just once, so that

@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   NumericTextCtrl.h
 
@@ -18,7 +18,7 @@
 
 
 #include <memory>
-#include "../../include/audacity/ComponentInterface.h"
+#include "../../include/audmonkey/ComponentInterface.h"
 #include <vector>
 #include <wx/setup.h> // for wxUSE_* macros
 #include <wx/defs.h>

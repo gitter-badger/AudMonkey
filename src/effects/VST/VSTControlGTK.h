@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   VSTControlGTK.h
 
@@ -13,7 +13,7 @@
 
 
 // Must include after ours since we have a lot of name collisions
-#define Region XRegion     // Conflicts with Audacity's Region structure
+#define Region XRegion     // Conflicts with AudMonkey's Region structure
 #include <gtk/gtk.h>
 #include <gdk/gdkx.h>
 #undef Success

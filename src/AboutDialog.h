@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   AboutDialog.h
 
@@ -56,7 +56,7 @@ class AUDACITY_DLL_API AboutDialog final : public wxDialogWrapper {
    };
 
    AboutDialogCreditItemsList creditItems;
-   void PopulateAudacityPage( ShuttleGui & S );
+   void PopulateAudMonkeyPage( ShuttleGui & S );
    void PopulateLicensePage( ShuttleGui & S );
    void PopulateInformationPage (ShuttleGui & S );
 

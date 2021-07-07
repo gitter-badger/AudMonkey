@@ -1,5 +1,5 @@
 /*!********************************************************************
- Audacity: A Digital Audio Editor
+ AudMonkey: A Digital Audio Editor
 
  @file VersionPatch.h
  @brief Declare a structure that describes patch fields.

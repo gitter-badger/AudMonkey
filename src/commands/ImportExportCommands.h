@@ -23,7 +23,7 @@
 
 // Import
 
-class ImportCommand : public AudacityCommand
+class ImportCommand : public AudMonkeyCommand
 {
 public:
    static const ComponentInterfaceSymbol Symbol;
@@ -35,13 +35,13 @@ public:
    void PopulateOrExchange(ShuttleGui & S) override;
    bool Apply(const CommandContext & context) override;
 
-   // AudacityCommand overrides
+   // AudMonkeyCommand overrides
    ManualPageID ManualPage() override {return L"Extra_Menu:_Scriptables_II#import";}
 public:
    wxString mFileName;
 };
 
-class ExportCommand : public AudacityCommand
+class ExportCommand : public AudMonkeyCommand
 {
 public:
    static const ComponentInterfaceSymbol Symbol;
@@ -53,7 +53,7 @@ public:
    void PopulateOrExchange(ShuttleGui & S) override;
    bool Apply(const CommandContext & context) override;
 
-   // AudacityCommand overrides
+   // AudMonkeyCommand overrides
    ManualPageID ManualPage() override {return L"Extra_Menu:_Scriptables_II#export";}
 public:
    wxString mFileName;

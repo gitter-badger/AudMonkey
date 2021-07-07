@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 TimeTrackVRulerControls.h
 
@@ -30,7 +30,7 @@ public:
 
    std::vector<UIHandlePtr> HitTest(
       const TrackPanelMouseState &state,
-      const AudacityProject *) override;
+      const AudMonkeyProject *) override;
 
 private:
 

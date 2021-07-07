@@ -1,6 +1,6 @@
 //
 //  wxPanelWrapper.h
-//  Audacity
+//  AudMonkey
 //
 //  Created by Paul Licameli on 6/25/16.
 //
@@ -211,10 +211,10 @@ public:
 
 \brief Wrap wxMessageDialog so that caption IS translatable.
 ********************************************************************************/
-class AudacityMessageDialog : public wxTabTraversalWrapper< wxMessageDialog >
+class AudMonkeyMessageDialog : public wxTabTraversalWrapper< wxMessageDialog >
 {
 public:
-    AudacityMessageDialog(
+    AudMonkeyMessageDialog(
          wxWindow *parent,
          const TranslatableString &message,
          const TranslatableString &caption, // don't use = wxMessageBoxCaptionStr,

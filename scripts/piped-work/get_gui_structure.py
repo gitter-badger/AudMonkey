@@ -1,9 +1,9 @@
 # get-gui-structure.py
-# Obtains all menus and all box locations from the currently running Audacity.
+# Obtains all menus and all box locations from the currently running AudMonkey.
 # This is useful for wit.audacityteam.org, where we need these lists when we
 # draw the menus and create the image maps.
 
-# Make sure Audacity is running first and that mod-script-pipe is enabled
+# Make sure AudMonkey is running first and that mod-script-pipe is enabled
 # before running this script.
 
 import os
@@ -23,12 +23,12 @@ else:
 
 print( "Write to  \"" + toname +"\"" )
 if not os.path.exists( toname ) :
-   print( " ..does not exist.  Ensure Audacity is running with mod-script-pipe." )
+   print( " ..does not exist.  Ensure AudMonkey is running with mod-script-pipe." )
    sys.exit();
     
 print( "Read from \"" + fromname +"\"")
 if not os.path.exists( fromname ) :
-   print( " ..does not exist.  Ensure Audacity is running with mod-script-pipe." )
+   print( " ..does not exist.  Ensure AudMonkey is running with mod-script-pipe." )
    sys.exit();
 
 print( "-- Both pipes exist.  Good." )

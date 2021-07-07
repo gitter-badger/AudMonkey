@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   TrackPanel.h
 
@@ -63,9 +63,9 @@ class AUDACITY_DLL_API TrackPanel final
    , private PrefsListener
 {
  public:
-   static TrackPanel &Get( AudacityProject &project );
-   static const TrackPanel &Get( const AudacityProject &project );
-   static void Destroy( AudacityProject &project );
+   static TrackPanel &Get( AudMonkeyProject &project );
+   static const TrackPanel &Get( const AudMonkeyProject &project );
+   static void Destroy( AudMonkeyProject &project );
  
    TrackPanel(wxWindow * parent,
               wxWindowID id,
@@ -73,7 +73,7 @@ class AUDACITY_DLL_API TrackPanel final
               const wxSize & size,
               const std::shared_ptr<TrackList> &tracks,
               ViewInfo * viewInfo,
-              AudacityProject * project,
+              AudMonkeyProject * project,
               AdornedRulerPanel * ruler );
 
    virtual ~ TrackPanel();
@@ -109,7 +109,7 @@ class AUDACITY_DLL_API TrackPanel final
 
    void HandlePageUpKey();
    void HandlePageDownKey();
-   AudacityProject * GetProject() const override;
+   AudMonkeyProject * GetProject() const override;
 
    void OnTrackMenu(Track *t = NULL);
 
@@ -174,7 +174,7 @@ protected:
 
    std::unique_ptr<TrackArtist> mTrackArtist;
 
-   class AUDACITY_DLL_API AudacityTimer final : public wxTimer {
+   class AUDACITY_DLL_API AudMonkeyTimer final : public wxTimer {
    public:
      void Notify() override{
        // (From Debian)
@@ -215,7 +215,7 @@ protected:
 // A predicate class
 struct AUDACITY_DLL_API IsVisibleTrack
 {
-   IsVisibleTrack(AudacityProject *project);
+   IsVisibleTrack(AudMonkeyProject *project);
 
    bool operator () (const Track *pTrack) const;
 

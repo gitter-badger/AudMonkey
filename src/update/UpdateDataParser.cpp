@@ -1,5 +1,5 @@
 /*!********************************************************************
- Audacity: A Digital Audio Editor
+ AudMonkey: A Digital Audio Editor
 
  @file UpdateDataParser.cpp
  @brief Declare a class that parses update server data format.

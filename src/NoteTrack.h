@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   NoteTrack.h
 
@@ -185,7 +185,7 @@ public:
          mVisibleChannels = CHANNEL_BIT(c);
    }
 
-   Track::Holder PasteInto( AudacityProject & ) const override;
+   Track::Holder PasteInto( AudMonkeyProject & ) const override;
 
    ConstIntervals GetIntervals() const override;
    Intervals GetIntervals() override;

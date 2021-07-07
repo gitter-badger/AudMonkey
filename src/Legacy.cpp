@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   Legacy.cpp
 
@@ -9,12 +9,12 @@
 *******************************************************************//*!
 
 \file Legacy.cpp
-\brief Converts old Audacity file types.  Implements
+\brief Converts old AudMonkey file types.  Implements
 AutoRollbackRenamer.
 
-  These routines convert Audacity project files from the
+  These routines convert AudMonkey project files from the
   0.98...1.0 format into an XML format that's compatible with
-  Audacity 1.2.0 and newer.
+  AudMonkey 1.2.0 and newer.
 
 *//****************************************************************//**
 
@@ -40,7 +40,7 @@ On failure the old version is put back in place.
 #include <wx/string.h>
 #include <wx/textfile.h>
 
-#include "widgets/AudacityMessageBox.h"
+#include "widgets/AudMonkeyMessageBox.h"
 #include "xml/XMLWriter.h"
 
 static bool ConvertLegacyTrack(wxTextFile *f, XMLFileWriter &xmlFile)
@@ -266,7 +266,7 @@ bool ConvertLegacyProjectFile(const wxFileName &filename)
       wxString label;
       wxString value;
 
-      if (f.GetFirstLine() != wxT("AudacityProject"))
+      if (f.GetFirstLine() != wxT("AudMonkeyProject"))
          return false;
       if (f.GetNextLine() != wxT("Version"))
          return false;
@@ -275,10 +275,10 @@ bool ConvertLegacyProjectFile(const wxFileName &filename)
       if (f.GetNextLine() != wxT("projName"))
          return false;
 
-      xmlFile.StartTag(wxT("audacityproject"));
+      xmlFile.StartTag(wxT("audmonkeyproject"));
       xmlFile.WriteAttr(wxT("projname"), f.GetNextLine());
       xmlFile.WriteAttr(wxT("version"), wxT("1.1.0"));
-      xmlFile.WriteAttr(wxT("audacityversion"),AUDACITY_VERSION_STRING);
+      xmlFile.WriteAttr(wxT("audmonkeyversion"),AUDACITY_VERSION_STRING);
 
       label = f.GetNextLine();
       while (label != wxT("BeginTracks")) {
@@ -297,14 +297,14 @@ bool ConvertLegacyProjectFile(const wxFileName &filename)
       // Close original before Commit() tries to overwrite it.
       f.Close();
 
-      xmlFile.EndTag(wxT("audacityproject"));
+      xmlFile.EndTag(wxT("audmonkeyproject"));
       xmlFile.Commit();
 
-      ::AudacityMessageBox(
+      ::AudMonkeyMessageBox(
          XO(
 "Converted a 1.0 project file to the new format.\nThe old file has been saved as '%s'")
             .Format( xmlFile.GetBackupName() ),
-         XO("Opening Audacity Project"));
+         XO("Opening AudMonkey Project"));
 
       return true;
    } );

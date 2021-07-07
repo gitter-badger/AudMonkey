@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   ImportRaw.h
 
@@ -13,7 +13,7 @@
 
 #include <memory>
 
-class AudacityProject;
+class AudMonkeyProject;
 class WaveTrackFactory;
 class WaveTrack;
 class wxString;
@@ -27,7 +27,7 @@ using NewChannelGroup = std::vector< std::shared_ptr<WaveTrack> >;
 using TrackHolders = std::vector< NewChannelGroup >;
 
 
-void ImportRaw(const AudacityProject &project, wxWindow *parent, const wxString &fileName,
+void ImportRaw(const AudMonkeyProject &project, wxWindow *parent, const wxString &fileName,
    WaveTrackFactory *trackFactory, TrackHolders &outTracks);
 
 #endif

@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 ProjectSelectionManager.cpp
 
@@ -24,27 +24,27 @@ Paul Licameli split from ProjectManager.cpp
 #include "toolbars/SpectralSelectionBar.h"
 #include "toolbars/TimeToolBar.h"
 
-static AudacityProject::AttachedObjects::RegisteredFactory
+static AudMonkeyProject::AttachedObjects::RegisteredFactory
 sProjectSelectionManagerKey {
-   []( AudacityProject &project ) {
+   []( AudMonkeyProject &project ) {
       return std::make_shared< ProjectSelectionManager >( project );
    }
 };
 
 ProjectSelectionManager &ProjectSelectionManager::Get(
-   AudacityProject &project )
+   AudMonkeyProject &project )
 {
    return project.AttachedObjects::Get< ProjectSelectionManager >(
       sProjectSelectionManagerKey );
 }
 
 const ProjectSelectionManager &ProjectSelectionManager::Get(
-   const AudacityProject &project )
+   const AudMonkeyProject &project )
 {
-   return Get( const_cast< AudacityProject & >( project ) );
+   return Get( const_cast< AudMonkeyProject & >( project ) );
 }
 
-ProjectSelectionManager::ProjectSelectionManager( AudacityProject &project )
+ProjectSelectionManager::ProjectSelectionManager( AudMonkeyProject &project )
    : mProject{ project }
 {
 }

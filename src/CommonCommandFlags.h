@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 CommonCommandFlags.h
 
@@ -16,13 +16,13 @@ Paul Licameli split from Menus.cpp
 #include "commands/CommandFlag.h"
 
 AUDACITY_DLL_API
-bool EditableTracksSelectedPred( const AudacityProject &project );
+bool EditableTracksSelectedPred( const AudMonkeyProject &project );
 
 AUDACITY_DLL_API
-bool AudioIOBusyPred( const AudacityProject &project );
+bool AudioIOBusyPred( const AudMonkeyProject &project );
 
 AUDACITY_DLL_API
-bool TimeSelectedPred( const AudacityProject &project );
+bool TimeSelectedPred( const AudMonkeyProject &project );
 
 AUDACITY_DLL_API
 const CommandFlagOptions &cutCopyOptions();

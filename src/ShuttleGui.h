@@ -1,12 +1,12 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   ShuttleGui.h
 
   James Crook
 
-  Audacity is free software.
+  AudMonkey is free software.
   This file is licensed under the wxWidgets license, see License.txt
 
 **********************************************************************/
@@ -620,7 +620,7 @@ AUDACITY_DLL_API std::unique_ptr<wxSizer> CreateStdButtonSizer( wxWindow *parent
                                long buttons = eOkButton | eCancelButton,
                                wxWindow *extra = NULL );
 
-// ShuttleGui extends ShuttleGuiBase with Audacity specific extensions.
+// ShuttleGui extends ShuttleGuiBase with AudMonkey specific extensions.
 class AUDACITY_DLL_API ShuttleGui /* not final */ : public ShuttleGuiBase
 {
 public:

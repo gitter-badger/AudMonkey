@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
 
   ToolsToolBar.h
@@ -25,7 +25,7 @@ class wxImage;
 class wxWindow;
 
 class AButton;
-class AudacityProject;
+class AudMonkeyProject;
 
 // Code duplication warning: these apparently need to be in the
 // same order as the enum in ToolsToolBar.cpp
@@ -36,11 +36,11 @@ class ToolsToolBar final : public ToolBar {
 
  public:
 
-   ToolsToolBar( AudacityProject &project );
+   ToolsToolBar( AudMonkeyProject &project );
    virtual ~ToolsToolBar();
 
-   static ToolsToolBar &Get( AudacityProject &project );
-   static const ToolsToolBar &Get( const AudacityProject &project );
+   static ToolsToolBar &Get( AudMonkeyProject &project );
+   static const ToolsToolBar &Get( const AudMonkeyProject &project );
 
    void UpdatePrefs() override;
 

@@ -1,12 +1,12 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   MacroMagic.h
 
   James Crook
 
-  Audacity is free software.
+  AudMonkey is free software.
   This file is licensed under the wxWidgets license, see License.txt
 
 ********************************************************************//*!

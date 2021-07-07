@@ -24,7 +24,7 @@
 #include "../import/Import.h"
 #include "../import/ImportMIDI.h"
 #include "../import/ImportRaw.h"
-#include "../widgets/AudacityMessageBox.h"
+#include "../widgets/AudMonkeyMessageBox.h"
 #include "../widgets/FileHistory.h"
 #include "../widgets/wxPanelWrapper.h"
 
@@ -37,7 +37,7 @@
 // private helper classes and functions
 namespace {
 
-void DoExport(AudacityProject &project, const FileExtension &format)
+void DoExport(AudMonkeyProject &project, const FileExtension &format)
 {
    auto &tracks = TrackList::Get( project );
    auto &projectFileIO = ProjectFileIO::Get( project );
@@ -90,7 +90,7 @@ void DoExport(AudacityProject &project, const FileExtension &format)
       FilePath fullPath = fileName.GetFullPath();
 
       if (wxFileName::FileExists(fileName.GetPath())) {
-         AudacityMessageBox(
+         AudMonkeyMessageBox(
             XO("Cannot create directory '%s'. \n"
                "File already exists that is not a directory"),
             Verbatim(fullPath));
@@ -131,7 +131,7 @@ void DoImport(const CommandContext &context, bool isRaw)
 
    // PRL:  This affects FFmpegImportPlugin::Open which resets the preference
    // to false.  Should it also be set to true on other paths that reach
-   // AudacityProject::Import ?
+   // AudMonkeyProject::Import ?
    gPrefs->Write(wxT("/NewImportingSession"), true);
 
    selectedFiles.Sort(FileNames::CompareNoCase);
@@ -275,7 +275,7 @@ void OnExportLabels(const CommandContext &context)
    auto numLabelTracks = trackRange.size();
 
    if (numLabelTracks == 0) {
-      AudacityMessageBox( XO("There are no label tracks to export.") );
+      AudMonkeyMessageBox( XO("There are no label tracks to export.") );
       return;
    }
    else
@@ -313,7 +313,7 @@ void OnExportLabels(const CommandContext &context)
    f.Create();
    f.Open();
    if (!f.IsOpened()) {
-      AudacityMessageBox(
+      AudMonkeyMessageBox(
          XO( "Couldn't write to file: %s" ).Format( fName ) );
       return;
    }
@@ -346,12 +346,12 @@ void OnExportMIDI(const CommandContext &context)
    const auto numNoteTracksSelected = range.size();
 
    if(numNoteTracksSelected > 1) {
-      AudacityMessageBox(
+      AudMonkeyMessageBox(
          XO("Please select only one Note Track at a time.") );
       return;
    }
    else if(numNoteTracksSelected < 1) {
-      AudacityMessageBox(
+      AudMonkeyMessageBox(
          XO("Please select a Note Track.") );
       return;
    }
@@ -409,7 +409,7 @@ void OnExportMIDI(const CommandContext &context)
          auto msg = XO(
 "You have selected a filename with an unrecognized file extension.\nDo you want to continue?");
          auto title = XO("Export MIDI");
-         int id = AudacityMessageBox( msg, title, wxYES_NO );
+         int id = AudMonkeyMessageBox( msg, title, wxYES_NO );
          if (id == wxNO) {
             continue;
          } else if (id == wxYES) {
@@ -448,7 +448,7 @@ void OnImportLabels(const CommandContext &context)
 
       f.Open(fileName);
       if (!f.IsOpened()) {
-         AudacityMessageBox(
+         AudMonkeyMessageBox(
             XO("Could not open file: %s").Format( fileName ) );
          return;
       }
@@ -537,9 +537,9 @@ void OnExportFLAC(const CommandContext &context)
 
 } // namespace
 
-static CommandHandlerObject &findCommandHandler(AudacityProject &) {
+static CommandHandlerObject &findCommandHandler(AudMonkeyProject &) {
    // Handler is not stateful.  Doesn't need a factory registered with
-   // AudacityProject.
+   // AudMonkeyProject.
    static FileActions::Handler instance;
    return instance;
 };
@@ -588,7 +588,7 @@ BaseItemSharedPtr FileMenu()
    #endif
             ,
             Special( wxT("PopulateRecentFilesStep"),
-            [](AudacityProject &, wxMenu &theMenu){
+            [](AudMonkeyProject &, wxMenu &theMenu){
                // Recent Files and Recent Projects menus
                auto &history = FileHistory::Global();
                history.UseMenu( &theMenu );
@@ -693,7 +693,7 @@ BaseItemSharedPtr FileMenu()
       Section( "Exit",
          // On the Mac, the Exit item doesn't actually go here...wxMac will
          // pull it out
-         // and put it in the Audacity menu for us based on its ID.
+         // and put it in the AudMonkey menu for us based on its ID.
          /* i18n-hint: (verb) It's item on a menu. */
          Command( wxT("Exit"), XXO("E&xit"), FN(OnExit),
             AlwaysEnabledFlag, wxT("Ctrl+Q") )

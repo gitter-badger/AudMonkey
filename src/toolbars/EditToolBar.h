@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
 
   EditToolbar.h
@@ -72,7 +72,7 @@ class EditToolBar final : public ToolBar {
 
  public:
 
-   EditToolBar( AudacityProject &project );
+   EditToolBar( AudMonkeyProject &project );
    virtual ~EditToolBar();
 
    void Create(wxWindow *parent) override;

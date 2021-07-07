@@ -1,4 +1,4 @@
-;;; A collection of helper functions and macros to make scripting Audacity commands
+;;; A collection of helper functions and macros to make scripting AudMonkey commands
 ;;; easier and more Lisp-like.
 ;;;
 ;;; Copyright 2018 - 2020 Audacity Team
@@ -163,9 +163,9 @@
         ;; 'aud-do-version' tests the interned version.
         ;; 'autoload-helper' tests the disk version and prevents repeating cache refresh in the initial session.
         (unless (or (string= (format nil "~a" (aud-do-version))
-                             (format nil "~a" (get '*audacity* 'version)))
+                             (format nil "~a" (get '*audmonkey* 'version)))
                     (string= (format nil "~a" (autoload-helper fqname 'aud-do-version nil))
-                             (format nil "~a" (get '*audacity* 'version))))
+                             (format nil "~a" (get '*audmonkey* 'version))))
           (aud-refresh-debug-data-cache fqname)))
       ;cache not loaded, so try loading and refresh if we can't.
       ((not (load fqname :verbose t))
@@ -218,7 +218,7 @@
         (when (string-equal (string id) (second (assoc 'id cmd)))
           (return cmd)))
       cmds))"
-                      (get '*audacity* 'version)
+                      (get '*audmonkey* 'version)
                       (get-usable-commands))
               (format t "Debug data cache refreshed.~%")
               (close fp)

@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   LV2Effect.h
 
@@ -51,13 +51,13 @@ Functions that find and load all LV2 plugins on the system.
 // ============================================================================
 // Module registration entry point
 //
-// This is the symbol that Audacity looks for when the module is built as a
+// This is the symbol that AudMonkey looks for when the module is built as a
 // dynamic library.
 //
-// When the module is builtin to Audacity, we use the same function, but it is
+// When the module is builtin to AudMonkey, we use the same function, but it is
 // declared static so as not to clash with other builtin modules.
 // ============================================================================
-DECLARE_MODULE_ENTRY(AudacityModule)
+DECLARE_MODULE_ENTRY(AudMonkeyModule)
 {
    // Create and register the importer
    // Trust the module manager not to leak this
@@ -102,7 +102,7 @@ ComponentInterfaceSymbol LV2EffectsModule::GetSymbol()
 
 VendorSymbol LV2EffectsModule::GetVendor()
 {
-   return XO("The Audacity Team");
+   return XO("The AudMonkey Team");
 }
 
 wxString LV2EffectsModule::GetVersion()
@@ -113,7 +113,7 @@ wxString LV2EffectsModule::GetVersion()
 
 TranslatableString LV2EffectsModule::GetDescription()
 {
-   return XO("Provides LV2 Effects support to Audacity");
+   return XO("Provides LV2 Effects support to AudMonkey");
 }
 
 // ============================================================================

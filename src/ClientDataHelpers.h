@@ -1,6 +1,6 @@
 /*!********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 @file ClientDataHelpers.h
 @brief Some implementation details for ClientData

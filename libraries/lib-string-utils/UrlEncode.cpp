@@ -1,6 +1,6 @@
 /*!********************************************************************
 
- Audacity: A Digital Audio Editor
+ AudMonkey: A Digital Audio Editor
 
  @file UrlEncode.cpp
  @brief Define a function to perfom URL encoding of a string.
@@ -10,7 +10,7 @@
 
 #include "UrlEncode.h"
 
-namespace audacity
+namespace audmonkey
 {
 
 std::string UrlEncode (const std::string& url)

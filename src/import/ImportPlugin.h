@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   ImportPlugin.h
 
@@ -15,7 +15,7 @@
   them that) must implement.  Defines ImportFileHandle, ImportPlugin,
   UnusableImportPlugin, ImportPluginList and UnusableImportPluginList.
 
-  Since this is part of libaudacity, it must not use any GUI parts
+  Since this is part of libaudmonkey, it must not use any GUI parts
   of wxWidgets.
 
 *//****************************************************************//**
@@ -36,7 +36,7 @@ Gives API for sound file import.
 
 \class UnusableImportPlugin
 \brief Used in place of a real plug in for plug ins that have not
-been compiled or are not available in this version of Audacity.  Has
+been compiled or are not available in this version of AudMonkey.  Has
 enough information to identify the file extensions that would be used,
 but little else.
 
@@ -48,12 +48,12 @@ but little else.
 
 
 #include <memory>
-#include "audacity/Types.h"
+#include "audmonkey/Types.h"
 #include "Identifier.h"
 #include "Internat.h"
 #include "wxArrayStringEx.h"
 
-class AudacityProject;
+class AudMonkeyProject;
 class ProgressDialog;
 enum class ProgressResult : unsigned;
 class WaveTrackFactory;
@@ -68,7 +68,7 @@ public:
 
    // Get unique string ID of this plugin, usually it corresponds
    // to the underlying library, i.e. "libsndfile", "libflac", "libav"
-   // These MUST NOT change across Audacity versions (but NEW IDs can
+   // These MUST NOT change across AudMonkey versions (but NEW IDs can
    // be added).
    virtual wxString GetPluginStringID() = 0;
 
@@ -87,7 +87,7 @@ public:
    // format, false otherwise.  This puts the importer into the open
    // state.
    virtual std::unique_ptr<ImportFileHandle> Open(
-      const FilePath &Filename, AudacityProject*) = 0;
+      const FilePath &Filename, AudMonkeyProject*) = 0;
 
    virtual ~ImportPlugin();
 

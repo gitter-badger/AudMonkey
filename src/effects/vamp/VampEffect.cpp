@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   VampEffect.cpp
 
@@ -38,7 +38,7 @@
 
 #include "../../ShuttleGui.h"
 #include "../../widgets/valnum.h"
-#include "../../widgets/AudacityMessageBox.h"
+#include "../../widgets/AudMonkeyMessageBox.h"
 
 #include "../../LabelTrack.h"
 #include "../../WaveTrack.h"

@@ -1,6 +1,6 @@
 /**********************************************************************
  
- Audacity: A Digital Audio Editor
+ AudMonkey: A Digital Audio Editor
  
  CrashReport.cpp
  
@@ -20,7 +20,7 @@
 #endif
 
 #include "wxFileNameWrapper.h"
-#include "AudacityLogger.h"
+#include "AudMonkeyLogger.h"
 #include "AudioIOBase.h"
 #include "FileNames.h"
 #include "Internat.h"
@@ -44,7 +44,7 @@ void Generate(wxDebugReport::Context ctx)
 
    {
       // Provides a progress dialog with indeterminate mode
-      wxGenericProgressDialog pd(XO("Audacity Support Data").Translation(),
+      wxGenericProgressDialog pd(XO("AudMonkey Support Data").Translation(),
                                  XO("This may take several seconds").Translation(),
                                  300000,     // range
                                  nullptr,    // parent
@@ -53,8 +53,8 @@ void Generate(wxDebugReport::Context ctx)
       std::atomic_bool done = {false};
       auto thread = std::thread([&]
       {
-         wxFileNameWrapper fn{ FileNames::DataDir(), wxT("audacity.cfg") };
-         rpt.AddFile(fn.GetFullPath(), _TS("Audacity Configuration"));
+         wxFileNameWrapper fn{ FileNames::DataDir(), wxT("audmonkey.cfg") };
+         rpt.AddFile(fn.GetFullPath(), _TS("AudMonkey Configuration"));
          rpt.AddFile(FileNames::PluginRegistry(), wxT("Plugin Registry"));
          rpt.AddFile(FileNames::PluginSettings(), wxT("Plugin Settings"));
    
@@ -74,10 +74,10 @@ void Generate(wxDebugReport::Context ctx)
             rpt.AddText(wxT("project.txt"), projectFileIO.GenerateDoc(), wxT("Active project doc"));
          }
    
-         auto logger = AudacityLogger::Get();
+         auto logger = AudMonkeyLogger::Get();
          if (logger)
          {
-            rpt.AddText(wxT("log.txt"), logger->GetLog(), _TS("Audacity Log"));
+            rpt.AddText(wxT("log.txt"), logger->GetLog(), _TS("AudMonkey Log"));
          }
    
          done = true;
@@ -100,9 +100,9 @@ void Generate(wxDebugReport::Context ctx)
    
    if (ok && rpt.Process())
    {
-      AudacityTextEntryDialog dlg(nullptr,
+      AudMonkeyTextEntryDialog dlg(nullptr,
          XO("Report generated to:"),
-         XO("Audacity Support Data"),
+         XO("AudMonkey Support Data"),
          rpt.GetCompressedFileName(),
          wxOK | wxCENTER);
       dlg.SetName(dlg.GetTitle());

@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   ProgressDialog.cpp
 
@@ -22,7 +22,7 @@
 *//*******************************************************************//**
 
 \class ProgressDialog
-\brief Custom progress dialog with Audacity specific semantics.
+\brief Custom progress dialog with AudMonkey specific semantics.
 
 *//**********************************************************************/
 
@@ -1641,7 +1641,7 @@ bool ProgressDialog::ConfirmAction(const TranslatableString & sPrompt,
       return true;
    }
 
-   AudacityMessageDialog dlgMessage(
+   AudMonkeyMessageDialog dlgMessage(
       this,
       sPrompt,
       sTitle,

@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   ImportMIDI.h
 
@@ -23,10 +23,10 @@ into a NoteTrack.
 
 #if defined(USE_MIDI)
 
-class AudacityProject;
+class AudMonkeyProject;
 class NoteTrack;
 
-bool DoImportMIDI( AudacityProject &project, const FilePath &fileName );
+bool DoImportMIDI( AudMonkeyProject &project, const FilePath &fileName );
 
 bool ImportMIDI(const FilePath &fName, NoteTrack * dest);
 

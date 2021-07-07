@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 LabelGlyphHandle.cpp
 
@@ -68,7 +68,7 @@ LabelGlyphHandle::LabelGlyphHandle
 {
 }
 
-void LabelGlyphHandle::Enter(bool, AudacityProject *)
+void LabelGlyphHandle::Enter(bool, AudMonkeyProject *)
 {
    mChangeHighlight = RefreshCode::RefreshCell;
 }
@@ -196,7 +196,7 @@ void LabelGlyphHandle::HandleGlyphClick
 }
 
 UIHandle::Result LabelGlyphHandle::Click
-(const TrackPanelMouseEvent &evt, AudacityProject *pProject)
+(const TrackPanelMouseEvent &evt, AudMonkeyProject *pProject)
 {
    auto result = LabelDefaultClickHandle::Click( evt, pProject );
 
@@ -291,7 +291,7 @@ static int Constrain( int value, int min, int max )
 }
 
 bool LabelGlyphHandle::HandleGlyphDragRelease
-(AudacityProject &project,
+(AudMonkeyProject &project,
  LabelTrackHit &hit, const wxMouseEvent & evt,
  wxRect & r, const ZoomInfo &zoomInfo,
  NotifyingSelectedRegion &newSel)
@@ -365,7 +365,7 @@ bool LabelGlyphHandle::HandleGlyphDragRelease
 }
 
 UIHandle::Result LabelGlyphHandle::Drag
-(const TrackPanelMouseEvent &evt, AudacityProject *pProject)
+(const TrackPanelMouseEvent &evt, AudMonkeyProject *pProject)
 {
    auto result = LabelDefaultClickHandle::Drag( evt, pProject );
 
@@ -379,13 +379,13 @@ UIHandle::Result LabelGlyphHandle::Drag
 }
 
 HitTestPreview LabelGlyphHandle::Preview
-(const TrackPanelMouseState &, AudacityProject *)
+(const TrackPanelMouseState &, AudMonkeyProject *)
 {
    return HitPreview( (mpHit->mEdge & 4 )!=0);
 }
 
 UIHandle::Result LabelGlyphHandle::Release
-(const TrackPanelMouseEvent &evt, AudacityProject *pProject,
+(const TrackPanelMouseEvent &evt, AudMonkeyProject *pProject,
  wxWindow *pParent)
 {
    auto result = LabelDefaultClickHandle::Release( evt, pProject, pParent );
@@ -403,7 +403,7 @@ UIHandle::Result LabelGlyphHandle::Release
    return result | RefreshCode::RefreshAll | RefreshCode::DrawOverlays;
 }
 
-UIHandle::Result LabelGlyphHandle::Cancel(AudacityProject *pProject)
+UIHandle::Result LabelGlyphHandle::Cancel(AudMonkeyProject *pProject)
 {
    ProjectHistory::Get( *pProject ).RollbackState();
    auto result = LabelDefaultClickHandle::Cancel( pProject );

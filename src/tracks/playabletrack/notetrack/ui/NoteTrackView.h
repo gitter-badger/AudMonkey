@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 NoteTrackView.h
 
@@ -28,7 +28,7 @@ public:
 private:
    std::vector<UIHandlePtr> DetailedHitTest
       (const TrackPanelMouseState &state,
-       const AudacityProject *pProject, int currentTool, bool bMultiTool)
+       const AudMonkeyProject *pProject, int currentTool, bool bMultiTool)
       override;
 
    // TrackPanelDrawable implementation

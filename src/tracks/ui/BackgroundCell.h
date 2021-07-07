@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 BackgroundCell.h
 
@@ -14,7 +14,7 @@ Paul Licameli split from TrackPanel.cpp
 #include "../../ClientData.h"
 #include "CommonTrackPanelCell.h"
 
-class AudacityProject;
+class AudMonkeyProject;
 
 class BackgroundHandle;
 class ZoomHandle;
@@ -27,11 +27,11 @@ class BackgroundCell final
    , public ClientData::Base
 {
 public:
-   static BackgroundCell &Get( AudacityProject &project );
-   static const BackgroundCell &Get( const AudacityProject &project );
+   static BackgroundCell &Get( AudMonkeyProject &project );
+   static const BackgroundCell &Get( const AudMonkeyProject &project );
 
    explicit
-   BackgroundCell(AudacityProject *pProject)
+   BackgroundCell(AudMonkeyProject *pProject)
       : mpProject(pProject)
    {}
 
@@ -40,7 +40,7 @@ public:
 protected:
    std::vector<UIHandlePtr> HitTest
       (const TrackPanelMouseState &state,
-       const AudacityProject *) override;
+       const AudMonkeyProject *) override;
 
    std::shared_ptr<Track> DoFindTrack() override;
 
@@ -54,7 +54,7 @@ private:
       TrackPanelDrawingContext &,
       const wxRect &rect, const wxRect &panelRect, unsigned iPass ) override;
    
-   AudacityProject *mpProject;
+   AudMonkeyProject *mpProject;
 
    std::weak_ptr<BackgroundHandle> mHandle;
 

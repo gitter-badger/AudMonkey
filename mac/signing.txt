@@ -25,8 +25,8 @@ with the following:
    value above. Storing the password in your keychain protects it from curious
    eyes.
 
-4) Build the Release version of Audacity. You can follow the cmake_build.txt
-   instructions in this folder. Once complete, you should find "Audacity.app"
+4) Build the Release version of AudMonkey. You can follow the cmake_build.txt
+   instructions in this folder. Once complete, you should find "AudMonkey.app"
    in:
 
       audacity/bld/bin/Release
@@ -41,7 +41,7 @@ with the following:
 
 As it goes through the notarization process twice, once for the app bundle
 and again for the DMG, it will take awhile to run and you will see progress
-while waiting. If it is successful, you will find the Audacity DMG in
+while waiting. If it is successful, you will find the AudMonkey DMG in
 "audacity/bld/bin" and you will receive an email confirming it was notarized.
 
 In the event of a failure, you will find a URL in the output messages

@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   Wrapper.c
 
@@ -28,20 +28,20 @@ executable.
 #include <string.h>
 #include <unistd.h>
 
-static const char audacity[] = "Audacity";
+static const char audmonkey[] = "AudMonkey";
 extern char **environ;
 
 int main(int argc, char *argv[])
 {
    size_t len = strlen(argv[0]);
-   char *path = alloca(len + sizeof(audacity)); // not precise, but we don't need it to be
+   char *path = alloca(len + sizeof(audmonkey)); // not precise, but we don't need it to be
 
    strcpy(path, argv[0]);
 
    char *slash = strrchr(path, '/');
    if (slash)
    {
-      strcpy(++slash, audacity);
+      strcpy(++slash, audmonkey);
    }
 
    unsetenv("DYLD_LIBRARY_PATH");

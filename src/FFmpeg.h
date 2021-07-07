@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 FFmpeg.h
 
@@ -155,7 +155,7 @@ extern "C" {
 
 class wxDynamicLibrary;
 
-// if you needed them, any other audacity header files would go here
+// if you needed them, any other audmonkey header files would go here
 
 /// Callback function to catch FFmpeg log messages.
 void av_log_wx_callback(void* ptr, int level, const char* fmt, va_list vl);
@@ -176,7 +176,7 @@ void FFmpegStartup();
 bool LoadFFmpeg(bool showerror);
 
 
-/// If Audacity failed to load libav*, this dialog
+/// If AudMonkey failed to load libav*, this dialog
 /// shows up and tells user about that. It will pop-up
 /// again and again until it is disabled.
 class FFmpegNotFoundDialog final : public wxDialogWrapper
@@ -250,7 +250,7 @@ public:
 
    wxString GetLibAVFormatPath()
    {
-      wxRegKey reg(wxT("HKEY_LOCAL_MACHINE\\Software\\FFmpeg for Audacity"));
+      wxRegKey reg(wxT("HKEY_LOCAL_MACHINE\\Software\\FFmpeg for AudMonkey"));
       wxString path;
 
       if (reg.Exists()) {
@@ -286,7 +286,7 @@ public:
 
    wxString GetLibAVFormatPath()
    {
-      return wxT("/Library/Application Support/audacity/libs");
+      return wxT("/Library/Application Support/audmonkey/libs");
    }
 
    wxString GetLibAVFormatName()
@@ -1003,7 +1003,7 @@ template<typename T> using AVMallocHolder = std::unique_ptr<
 
 struct streamContext
 {
-   bool                 m_use{};                           // TRUE = this stream will be loaded into Audacity
+   bool                 m_use{};                           // TRUE = this stream will be loaded into AudMonkey
    AVStream            *m_stream{};                        // an AVStream *
    AVCodecContext      *m_codecCtx{};                      // pointer to m_stream->codec
 

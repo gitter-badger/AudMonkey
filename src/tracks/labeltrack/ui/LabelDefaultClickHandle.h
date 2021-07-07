@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 LabelDefaultClickHandle.h
 
@@ -28,24 +28,24 @@ public:
       (const LabelDefaultClickHandle&) = default;
    
    Result Click
-      (const TrackPanelMouseEvent &event, AudacityProject *pProject) override;
+      (const TrackPanelMouseEvent &event, AudMonkeyProject *pProject) override;
 
    Result Drag
-      (const TrackPanelMouseEvent &event, AudacityProject *pProject) override;
+      (const TrackPanelMouseEvent &event, AudMonkeyProject *pProject) override;
 
    // does not override Preview()
 
    Result Release
-      (const TrackPanelMouseEvent &event, AudacityProject *pProject,
+      (const TrackPanelMouseEvent &event, AudMonkeyProject *pProject,
        wxWindow *pParent) override;
 
-   Result Cancel(AudacityProject *pProject) override;
+   Result Cancel(AudMonkeyProject *pProject) override;
 
 private:
    struct LabelState;
    std::shared_ptr< LabelState > mLabelState;
-   void SaveState( AudacityProject *pProject );
-   void RestoreState( AudacityProject *pProject );
+   void SaveState( AudMonkeyProject *pProject );
+   void RestoreState( AudMonkeyProject *pProject );
 };
 
 #endif

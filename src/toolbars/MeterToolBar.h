@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   MeterToolbar.h
 
@@ -21,7 +21,7 @@ class wxGridBagSizer;
 class wxSizeEvent;
 class wxWindow;
 
-class AudacityProject;
+class AudMonkeyProject;
 class MeterPanel;
 
 
@@ -33,7 +33,7 @@ class MeterToolBar final : public ToolBar {
 
  public:
 
-   MeterToolBar(AudacityProject &project, int type);
+   MeterToolBar(AudMonkeyProject &project, int type);
    virtual ~MeterToolBar();
 
    void Create(wxWindow *parent) override;

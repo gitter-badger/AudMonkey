@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   ApplicationPrefs.cpp
 
@@ -68,7 +68,7 @@ void ApplicationPrefs::PopulateOrExchange(ShuttleGui & S)
    S.SetBorder(2);
    S.StartScroller();
 
-   S.StartStatic(XO("Update Audacity"));
+   S.StartStatic(XO("Update AudMonkey"));
    {
       S.TieCheckBox(XO("&Check for Updates"),
           UpdatesCheckingSettings::DefaultUpdatesCheckingFlag);
@@ -87,7 +87,7 @@ bool ApplicationPrefs::Commit()
 
 namespace{
 PrefsPanel::Registration sAttachment{ "Application",
-   [](wxWindow *parent, wxWindowID winid, AudacityProject *)
+   [](wxWindow *parent, wxWindowID winid, AudMonkeyProject *)
    {
       wxASSERT(parent); // to justify safenew
       return safenew ApplicationPrefs(parent, winid);

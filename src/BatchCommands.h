@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   MacroCommands.h
 
@@ -16,13 +16,13 @@
 
 #include "export/Export.h"
 #include "commands/CommandFlag.h"
-#include "audacity/ComponentInterface.h" // for ComponentInterfaceSymbol
+#include "audmonkey/ComponentInterface.h" // for ComponentInterfaceSymbol
 
 class wxArrayString;
 class Effect;
 class CommandContext;
 class CommandManager;
-class AudacityProject;
+class AudMonkeyProject;
 class wxArrayStringEx;
 
 class MacroCommandsCatalog {
@@ -34,7 +34,7 @@ public:
    };
    using Entries = std::vector<Entry>;
 
-   MacroCommandsCatalog( const AudacityProject *project );
+   MacroCommandsCatalog( const AudMonkeyProject *project );
 
    // binary search
    Entries::const_iterator ByFriendlyName( const TranslatableString &friendlyName ) const;
@@ -55,11 +55,11 @@ private:
 // Stores information for one macro
 class MacroCommands final {
  public:
-   static bool DoAudacityCommand(
+   static bool DoAudMonkeyCommand(
       const PluginID & ID, const CommandContext & context, unsigned flags );
 
    // constructors and destructors
-   MacroCommands( AudacityProject &project );
+   MacroCommands( AudMonkeyProject &project );
  public:
    bool ApplyMacro( const MacroCommandsCatalog &catalog,
       const wxString & filename = {});
@@ -115,7 +115,7 @@ class MacroCommands final {
    wxString Join(const wxString & command, const wxString & param);
 
 private:
-   AudacityProject &mProject;
+   AudMonkeyProject &mProject;
 
    CommandIDs mCommandMacro;
    wxArrayString mParamsMacro;

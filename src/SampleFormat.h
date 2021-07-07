@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   @file SampleFormat.h
 
@@ -16,7 +16,7 @@
 #include "MemoryX.h"
 #include <wx/defs.h>
 
-#include "audacity/Types.h"
+#include "audmonkey/Types.h"
 #include "Dither.h"
 
 //
@@ -27,7 +27,7 @@
 extern AUDACITY_DLL_API DitherType gLowQualityDither, gHighQualityDither;
 
 #if 0
-// Moved to audacity/types.h
+// Moved to audmonkey/types.h
 typedef enum {
    int16Sample = 0x00020001,
    int24Sample = 0x00040001,

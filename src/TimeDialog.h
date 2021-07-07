@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   TimeDialog.h
 
@@ -13,7 +13,7 @@
 
 #include <wx/defs.h>
 
-#include "audacity/ComponentInterface.h" // member variable
+#include "audmonkey/ComponentInterface.h" // member variable
 
 #include "widgets/wxPanelWrapper.h" // to inherit
 

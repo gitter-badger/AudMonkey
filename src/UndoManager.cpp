@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   UndoManager.cpp
 
@@ -49,22 +49,22 @@ wxDEFINE_EVENT(EVT_UNDO_PURGE, wxCommandEvent);
 
 using SampleBlockID = long long;
 
-static const AudacityProject::AttachedObjects::RegisteredFactory key{
-   [](AudacityProject &project)
+static const AudMonkeyProject::AttachedObjects::RegisteredFactory key{
+   [](AudMonkeyProject &project)
       { return std::make_unique<UndoManager>( project ); }
 };
 
-UndoManager &UndoManager::Get( AudacityProject &project )
+UndoManager &UndoManager::Get( AudMonkeyProject &project )
 {
    return project.AttachedObjects::Get< UndoManager >( key );
 }
 
-const UndoManager &UndoManager::Get( const AudacityProject &project )
+const UndoManager &UndoManager::Get( const AudMonkeyProject &project )
 {
-   return Get( const_cast< AudacityProject & >( project ) );
+   return Get( const_cast< AudMonkeyProject & >( project ) );
 }
 
-UndoManager::UndoManager( AudacityProject &project )
+UndoManager::UndoManager( AudMonkeyProject &project )
    : mProject{ project }
 {
    current = -1;

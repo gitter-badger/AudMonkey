@@ -1,6 +1,6 @@
 /**********************************************************************
  
- Audacity: A Digital Audio Editor
+ AudMonkey: A Digital Audio Editor
  
  TimeToolBar.cpp
  
@@ -36,7 +36,7 @@
 IMPLEMENT_CLASS(TimeToolBar, ToolBar);
 
 // Having a fixed ID for the Audio Position is helpful for
-// the Jaws screen reader script for Audacity.
+// the Jaws screen reader script for AudMonkey.
 enum {
    TimeBarFirstID = 2800,
    AudioPositionID
@@ -48,7 +48,7 @@ BEGIN_EVENT_TABLE(TimeToolBar, ToolBar)
    EVT_IDLE(TimeToolBar::OnIdle)
 END_EVENT_TABLE()
 
-TimeToolBar::TimeToolBar(AudacityProject &project)
+TimeToolBar::TimeToolBar(AudMonkeyProject &project)
 :  ToolBar(project, TimeBarID, XO("Time"), wxT("Time"), true),
    mListener(NULL),
    mAudioTime(NULL)
@@ -60,15 +60,15 @@ TimeToolBar::~TimeToolBar()
 {
 }
 
-TimeToolBar &TimeToolBar::Get(AudacityProject &project)
+TimeToolBar &TimeToolBar::Get(AudMonkeyProject &project)
 {
    auto &toolManager = ToolManager::Get(project);
    return *static_cast<TimeToolBar*>(toolManager.GetToolBar(TimeBarID));
 }
 
-const TimeToolBar &TimeToolBar::Get(const AudacityProject &project)
+const TimeToolBar &TimeToolBar::Get(const AudMonkeyProject &project)
 {
-   return Get(const_cast<AudacityProject&>(project)) ;
+   return Get(const_cast<AudMonkeyProject&>(project)) ;
 }
 
 void TimeToolBar::Populate()
@@ -376,7 +376,7 @@ void TimeToolBar::OnIdle(wxIdleEvent &evt)
 static RegisteredToolbarFactory factory
 {
    TimeBarID,
-   []( AudacityProject &project )
+   []( AudMonkeyProject &project )
    {
       return ToolBar::Holder{ safenew TimeToolBar{ project } };
    }

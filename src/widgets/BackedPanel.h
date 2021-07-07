@@ -1,6 +1,6 @@
 //
 //  BackedPanel.h
-//  Audacity
+//  AudMonkey
 //
 //  Created by Paul Licameli on 5/7/16.
 //

@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 SpectrumVRulerControls.h
 
@@ -29,13 +29,13 @@ public:
 
    std::vector<UIHandlePtr> HitTest(
       const TrackPanelMouseState &state,
-      const AudacityProject *) override;
+      const AudMonkeyProject *) override;
 
    unsigned HandleWheelRotation(
       const TrackPanelMouseEvent &event,
-      AudacityProject *pProject) override;
+      AudMonkeyProject *pProject) override;
    static unsigned DoHandleWheelRotation(
-      const TrackPanelMouseEvent &evt, AudacityProject *pProject,
+      const TrackPanelMouseEvent &evt, AudMonkeyProject *pProject,
       WaveTrack *wt);
 
 private:

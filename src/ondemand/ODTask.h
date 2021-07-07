@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   ODTask.h
 
@@ -27,7 +27,7 @@ in a background thread.
 
 #include <vector>
 #include <wx/event.h> // to declare custom event type
-class AudacityProject;
+class AudMonkeyProject;
 class Track;
 class WaveTrack;
 
@@ -120,7 +120,7 @@ class ODTask /* not final */
    virtual TranslatableString GetTip()=0;
 
     ///returns true if the task is associated with the project.
-   virtual bool IsTaskAssociatedWithProject(AudacityProject* proj);
+   virtual bool IsTaskAssociatedWithProject(AudMonkeyProject* proj);
 
    bool IsRunning();
 

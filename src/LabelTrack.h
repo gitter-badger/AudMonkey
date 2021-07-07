@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   LabelTrack.h
 
@@ -19,7 +19,7 @@
 
 class wxTextFile;
 
-class AudacityProject;
+class AudMonkeyProject;
 class NotifyingSelectedRegion;
 class TimeWarper;
 
@@ -155,7 +155,7 @@ public:
    int FindNextLabel(const SelectedRegion& currentSelection);
    int FindPrevLabel(const SelectedRegion& currentSelection);
 
-   Track::Holder PasteInto( AudacityProject & ) const override;
+   Track::Holder PasteInto( AudMonkeyProject & ) const override;
 
    struct IntervalData final : Track::IntervalData {
       size_t index;

@@ -19,7 +19,7 @@
 #include <memory>
 #include <wx/string.h>
 
-class AudacityProject;
+class AudMonkeyProject;
 class ResponseTarget;
 using ResponseTargetPointer = std::shared_ptr<ResponseTarget>;
 class OldStyleCommand;
@@ -39,12 +39,12 @@ class CommandBuilder
 
       void Failure(const wxString &msg = {});
       void Success(const OldStyleCommandPointer &cmd);
-      void BuildCommand( AudacityProject *project,
+      void BuildCommand( AudMonkeyProject *project,
          const wxString &cmdName, const wxString &cmdParams);
-      void BuildCommand( AudacityProject *project, const wxString &cmdString);
+      void BuildCommand( AudMonkeyProject *project, const wxString &cmdString);
    public:
-      CommandBuilder(AudacityProject *project, const wxString &cmdString);
-      CommandBuilder(AudacityProject *project, const wxString &cmdName,
+      CommandBuilder(AudMonkeyProject *project, const wxString &cmdString);
+      CommandBuilder(AudMonkeyProject *project, const wxString &cmdName,
                      const wxString &cmdParams);
       ~CommandBuilder();
       bool WasValid();

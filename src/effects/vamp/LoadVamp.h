@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   LoadVamp.h
 
@@ -14,9 +14,9 @@
 
 #include <memory>
 
-#include "audacity/ModuleInterface.h"
-#include "audacity/EffectInterface.h"
-#include "audacity/PluginInterface.h"
+#include "audmonkey/ModuleInterface.h"
+#include "audmonkey/EffectInterface.h"
+#include "audmonkey/PluginInterface.h"
 
 #include <vamp-hostsdk/PluginLoader.h>
 
