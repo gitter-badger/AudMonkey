@@ -113,10 +113,6 @@ It handles initialization and termination by subclassing wxApp.
 #include "widgets/FileHistory.h"
 #include "update/UpdateManager.h"
 
-#ifdef HAS_NETWORKING
-#include "NetworkManager.h"
-#endif
-
 #ifdef EXPERIMENTAL_EASY_CHANGE_KEY_BINDINGS
 #include "prefs/KeyConfigPrefs.h"
 #endif
@@ -2242,10 +2238,6 @@ int AudacityApp::OnExit()
 
    // Terminate the PluginManager (must be done before deleting the locale)
    PluginManager::Get().Terminate();
-
-#ifdef HAS_NETWORKING
-   audacity::network_manager::NetworkManager::GetInstance().Terminate();
-#endif
 
    return 0;
 }
