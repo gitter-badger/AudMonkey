@@ -206,3 +206,9 @@ win/xaudacity.ico
 #other files that get in the way
 */not-for-git/*
 *.dll
+
+# VsCodium files
+.vscode
+
+# clangd cache
+.cache
