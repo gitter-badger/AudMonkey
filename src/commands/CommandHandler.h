@@ -17,8 +17,8 @@
 #define __COMMANDHANDLER__
 
 #include <memory>
-class AudacityApp;
-class AudacityProject;
+class AudMonkeyApp;
+class AudMonkeyProject;
 class AppCommandEvent;
 class CommandContext;
 

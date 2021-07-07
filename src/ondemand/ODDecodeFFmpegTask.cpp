@@ -9,7 +9,7 @@
 
 ******************************************************************/
 
-#include "../Audacity.h"   // needed before FFmpeg.h // for USE_* macros
+#include "../AudMonkey.h"   // needed before FFmpeg.h // for USE_* macros
 #include "../blockfile/ODDecodeBlockFile.h" // base class
 #include "ODDecodeFFmpegTask.h"
 

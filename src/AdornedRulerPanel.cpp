@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   AdornedRulerPanel.cpp
 
@@ -9,7 +9,7 @@
 *******************************************************************//**
 
 \class AdornedRulerPanel
-\brief This is an Audacity Specific ruler panel which additionally
+\brief This is an AudMonkey Specific ruler panel which additionally
   has border, selection markers, play marker.
   
   Once TrackPanel uses wxSizers, we will derive it from some
@@ -51,7 +51,7 @@
 #include "tracks/ui/Scrubbing.h"
 #include "tracks/ui/TrackView.h"
 #include "widgets/AButton.h"
-#include "widgets/AudacityMessageBox.h"
+#include "widgets/AudMonkeyMessageBox.h"
 #include "widgets/Grabber.h"
 
 #include <wx/dcclient.h>
@@ -168,14 +168,14 @@ class AdornedRulerPanel::QuickPlayIndicatorOverlay final : public Overlay
    friend AdornedRulerPanel;
 
 public:
-   QuickPlayIndicatorOverlay(AudacityProject *project);
+   QuickPlayIndicatorOverlay(AudMonkeyProject *project);
 
 private:
    unsigned SequenceNumber() const override;
    std::pair<wxRect, bool> DoGetRectangle(wxSize size) override;
    void Draw(OverlayPanel &panel, wxDC &dc) override;
 
-   AudacityProject *mProject;
+   AudMonkeyProject *mProject;
 
    std::shared_ptr<QuickPlayRulerOverlay> mPartner
       { std::make_shared<QuickPlayRulerOverlay>(*this) };
@@ -299,7 +299,7 @@ void AdornedRulerPanel::QuickPlayRulerOverlay::Draw(
  **********************************************************************/
 
 AdornedRulerPanel::QuickPlayIndicatorOverlay::QuickPlayIndicatorOverlay(
-   AudacityProject *project)
+   AudMonkeyProject *project)
    : mProject(project)
 {
 }
@@ -405,7 +405,7 @@ public:
    {}
    
    HitTestPreview DefaultPreview
-      (const TrackPanelMouseState &state, const AudacityProject *pProject)
+      (const TrackPanelMouseState &state, const AudMonkeyProject *pProject)
       override
    {
       (void)pProject;// Compiler food
@@ -426,7 +426,7 @@ public:
 
    unsigned DoContextMenu
       (const wxRect &rect,
-       wxWindow *pParent, wxPoint *pPosition, AudacityProject*) final override
+       wxWindow *pParent, wxPoint *pPosition, AudMonkeyProject*) final override
    {
       (void)pParent;// Compiler food
       (void)rect;// Compiler food
@@ -462,20 +462,20 @@ public:
 
 protected:
    Result Click
-      (const TrackPanelMouseEvent &event, AudacityProject *) override
+      (const TrackPanelMouseEvent &event, AudMonkeyProject *) override
    {
       mClicked = event.event.LeftIsDown() ? Button::Left : Button::Right;
       return RefreshCode::DrawOverlays;
    }
 
    Result Drag
-      (const TrackPanelMouseEvent &, AudacityProject *) override
+      (const TrackPanelMouseEvent &, AudMonkeyProject *) override
    {
       return RefreshCode::DrawOverlays;
    }
 
    Result Release
-      (const TrackPanelMouseEvent &event, AudacityProject *,
+      (const TrackPanelMouseEvent &event, AudMonkeyProject *,
        wxWindow *) override
    {
       if ( mParent && mClicked == Button::Right ) {
@@ -485,13 +485,13 @@ protected:
       return RefreshCode::DrawOverlays;
    }
 
-   Result Cancel(AudacityProject *pProject) override
+   Result Cancel(AudMonkeyProject *pProject) override
    {
       (void)pProject;// Compiler food
       return RefreshCode::DrawOverlays;
    }
    
-   void Enter(bool, AudacityProject *) override
+   void Enter(bool, AudMonkeyProject *) override
    {
       mChangeHighlight = RefreshCode::DrawOverlays;
    }
@@ -519,20 +519,20 @@ public:
 
 private:
    Result Click
-      (const TrackPanelMouseEvent &event, AudacityProject *pProject) override;
+      (const TrackPanelMouseEvent &event, AudMonkeyProject *pProject) override;
 
    Result Drag
-      (const TrackPanelMouseEvent &event, AudacityProject *pProject) override;
+      (const TrackPanelMouseEvent &event, AudMonkeyProject *pProject) override;
 
    HitTestPreview Preview
-      (const TrackPanelMouseState &state, AudacityProject *pProject)
+      (const TrackPanelMouseState &state, AudMonkeyProject *pProject)
    override;
 
    Result Release
-      (const TrackPanelMouseEvent &event, AudacityProject *pProject,
+      (const TrackPanelMouseEvent &event, AudMonkeyProject *pProject,
        wxWindow *pParent) override;
 
-   Result Cancel(AudacityProject *pProject) override;
+   Result Cancel(AudMonkeyProject *pProject) override;
 
    SelectedRegion mOldSelection;
 };
@@ -540,7 +540,7 @@ private:
 namespace
 {
 
-wxCoord GetPlayHeadX( const AudacityProject *pProject )
+wxCoord GetPlayHeadX( const AudMonkeyProject *pProject )
 {
    const auto &viewInfo = ViewInfo::Get( *pProject );
    auto width = viewInfo.GetTracksUsableWidth();
@@ -548,7 +548,7 @@ wxCoord GetPlayHeadX( const AudacityProject *pProject )
       + width * TracksPrefs::GetPinnedHeadPositionPreference();
 }
 
-double GetPlayHeadFraction( const AudacityProject *pProject, wxCoord xx )
+double GetPlayHeadFraction( const AudMonkeyProject *pProject, wxCoord xx )
 {
    const auto &viewInfo = ViewInfo::Get( *pProject );
    auto width = viewInfo.GetTracksUsableWidth();
@@ -575,7 +575,7 @@ public:
    }
    
    static std::shared_ptr<PlayheadHandle>
-   HitTest( const AudacityProject *pProject, wxCoord xx )
+   HitTest( const AudMonkeyProject *pProject, wxCoord xx )
    {
       if( Scrubber::Get( *pProject )
          .IsTransportingPinned() &&
@@ -590,7 +590,7 @@ public:
    
 protected:
    Result Click
-      (const TrackPanelMouseEvent &event, AudacityProject *pProject) override
+      (const TrackPanelMouseEvent &event, AudMonkeyProject *pProject) override
    {
       (void)pProject;// Compiler food
       if (event.event.LeftDClick()) {
@@ -610,7 +610,7 @@ protected:
    }
 
    Result Drag
-      (const TrackPanelMouseEvent &event, AudacityProject *pProject) override
+      (const TrackPanelMouseEvent &event, AudMonkeyProject *pProject) override
    {
 
       auto value = GetPlayHeadFraction(pProject, event.event.m_x );
@@ -619,7 +619,7 @@ protected:
    }
 
    HitTestPreview Preview
-      (const TrackPanelMouseState &state, AudacityProject *pProject)
+      (const TrackPanelMouseState &state, AudMonkeyProject *pProject)
       override
    {
       (void)pProject;// Compiler food
@@ -636,7 +636,7 @@ protected:
    }
 
    Result Release
-      (const TrackPanelMouseEvent &event, AudacityProject *pProject,
+      (const TrackPanelMouseEvent &event, AudMonkeyProject *pProject,
        wxWindow *) override
    {
       auto value = GetPlayHeadFraction(pProject, event.event.m_x );
@@ -644,14 +644,14 @@ protected:
       return RefreshCode::DrawOverlays;
    }
 
-   Result Cancel(AudacityProject *pProject) override
+   Result Cancel(AudMonkeyProject *pProject) override
    {
       (void)pProject;// Compiler food
       TracksPrefs::SetPinnedHeadPositionPreference( mOrigPreference );
       return RefreshCode::DrawOverlays;
    }
    
-   void Enter(bool, AudacityProject *) override
+   void Enter(bool, AudMonkeyProject *) override
    {
       mChangeHighlight = RefreshCode::DrawOverlays;
    }
@@ -672,7 +672,7 @@ public:
    
    std::vector<UIHandlePtr> HitTest
       (const TrackPanelMouseState &state,
-       const AudacityProject *pProject) override;
+       const AudMonkeyProject *pProject) override;
    
    // Return shared_ptr to self, stored in parent
    std::shared_ptr<TrackPanelCell> ContextMenuDelegate() override
@@ -691,7 +691,7 @@ public:
 
 std::vector<UIHandlePtr> AdornedRulerPanel::QPCell::HitTest
 (const TrackPanelMouseState &state,
- const AudacityProject *pProject)
+ const AudMonkeyProject *pProject)
 {
    // Creation of overlays on demand here -- constructor of AdornedRulerPanel
    // is too early to do it
@@ -737,7 +737,7 @@ public:
 
 private:
    Result Click
-      (const TrackPanelMouseEvent &event, AudacityProject *pProject) override
+      (const TrackPanelMouseEvent &event, AudMonkeyProject *pProject) override
    {
       auto result = CommonRulerHandle::Click(event, pProject);
       if (!( result & RefreshCode::Cancelled )) {
@@ -762,7 +762,7 @@ private:
    }
 
    Result Drag
-      (const TrackPanelMouseEvent &event, AudacityProject *pProject) override
+      (const TrackPanelMouseEvent &event, AudMonkeyProject *pProject) override
    {
       auto result = CommonRulerHandle::Drag(event, pProject);
       if (!( result & RefreshCode::Cancelled )) {
@@ -773,11 +773,11 @@ private:
    }
 
    HitTestPreview Preview
-      (const TrackPanelMouseState &state, AudacityProject *pProject)
+      (const TrackPanelMouseState &state, AudMonkeyProject *pProject)
    override;
 
    Result Release
-      (const TrackPanelMouseEvent &event, AudacityProject *pProject,
+      (const TrackPanelMouseEvent &event, AudMonkeyProject *pProject,
        wxWindow *pParent) override {
       auto result = CommonRulerHandle::Release(event, pProject, pParent);
       if (!( result & RefreshCode::Cancelled )) {
@@ -788,7 +788,7 @@ private:
       return result;
    }
 
-   Result Cancel(AudacityProject *pProject) override
+   Result Cancel(AudMonkeyProject *pProject) override
    {
       auto result = CommonRulerHandle::Cancel(pProject);
 
@@ -813,7 +813,7 @@ public:
    
    std::vector<UIHandlePtr> HitTest
       (const TrackPanelMouseState &state,
-       const AudacityProject *pProject) override;
+       const AudMonkeyProject *pProject) override;
    
    // Return shared_ptr to self, stored in parent
    std::shared_ptr<TrackPanelCell> ContextMenuDelegate() override
@@ -832,7 +832,7 @@ private:
 
 std::vector<UIHandlePtr> AdornedRulerPanel::ScrubbingCell::HitTest
 (const TrackPanelMouseState &state,
- const AudacityProject *pProject)
+ const AudMonkeyProject *pProject)
 {
    (void)pProject;// Compiler food
    // Creation of overlays on demand here -- constructor of AdornedRulerPanel
@@ -856,8 +856,8 @@ std::vector<UIHandlePtr> AdornedRulerPanel::ScrubbingCell::HitTest
 }
 
 namespace{
-AudacityProject::AttachedWindows::RegisteredFactory sKey{
-[]( AudacityProject &project ) -> wxWeakRef< wxWindow > {
+AudMonkeyProject::AttachedWindows::RegisteredFactory sKey{
+[]( AudMonkeyProject &project ) -> wxWeakRef< wxWindow > {
    auto &viewInfo = ViewInfo::Get( project );
    auto &window = ProjectWindow::Get( project );
 
@@ -870,17 +870,17 @@ AudacityProject::AttachedWindows::RegisteredFactory sKey{
 };
 }
 
-AdornedRulerPanel &AdornedRulerPanel::Get( AudacityProject &project )
+AdornedRulerPanel &AdornedRulerPanel::Get( AudMonkeyProject &project )
 {
    return project.AttachedWindows::Get< AdornedRulerPanel >( sKey );
 }
 
-const AdornedRulerPanel &AdornedRulerPanel::Get( const AudacityProject &project )
+const AdornedRulerPanel &AdornedRulerPanel::Get( const AudMonkeyProject &project )
 {
-   return Get( const_cast< AudacityProject & >( project ) );
+   return Get( const_cast< AudMonkeyProject & >( project ) );
 }
 
-void AdornedRulerPanel::Destroy( AudacityProject &project )
+void AdornedRulerPanel::Destroy( AudMonkeyProject &project )
 {
    auto *pPanel = project.AttachedWindows::Find( sKey );
    if (pPanel) {
@@ -889,7 +889,7 @@ void AdornedRulerPanel::Destroy( AudacityProject &project )
    }
 }
 
-AdornedRulerPanel::AdornedRulerPanel(AudacityProject* project,
+AdornedRulerPanel::AdornedRulerPanel(AudMonkeyProject* project,
                                      wxWindow *parent,
                                      wxWindowID id,
                                      const wxPoint& pos,
@@ -1350,7 +1350,7 @@ bool AdornedRulerPanel::IsWithinMarker(int mousePosX, double markerTime)
 }
 
 auto AdornedRulerPanel::QPHandle::Click
-(const TrackPanelMouseEvent &event, AudacityProject *pProject) -> Result
+(const TrackPanelMouseEvent &event, AudMonkeyProject *pProject) -> Result
 {
    auto result = CommonRulerHandle::Click(event, pProject);
    if (!( result & RefreshCode::Cancelled )) {
@@ -1419,7 +1419,7 @@ void AdornedRulerPanel::HandleQPClick(wxMouseEvent &evt, wxCoord mousePosX)
 }
 
 auto AdornedRulerPanel::QPHandle::Drag
-(const TrackPanelMouseEvent &event, AudacityProject *pProject) -> Result
+(const TrackPanelMouseEvent &event, AudMonkeyProject *pProject) -> Result
 {
    auto result = CommonRulerHandle::Drag(event, pProject);
    if (!( result & RefreshCode::Cancelled )) {
@@ -1514,7 +1514,7 @@ void AdornedRulerPanel::HandleQPDrag(wxMouseEvent &/*event*/, wxCoord mousePosX)
 }
 
 auto AdornedRulerPanel::ScrubbingHandle::Preview
-(const TrackPanelMouseState &state, AudacityProject *pProject)
+(const TrackPanelMouseState &state, AudMonkeyProject *pProject)
 -> HitTestPreview
 {
    (void)state;// Compiler food
@@ -1530,7 +1530,7 @@ auto AdornedRulerPanel::ScrubbingHandle::Preview
 }
 
 auto AdornedRulerPanel::QPHandle::Preview
-(const TrackPanelMouseState &state, AudacityProject *pProject)
+(const TrackPanelMouseState &state, AudMonkeyProject *pProject)
 -> HitTestPreview
 {
    TranslatableString tooltip;
@@ -1571,7 +1571,7 @@ auto AdornedRulerPanel::QPHandle::Preview
 }
 
 auto AdornedRulerPanel::QPHandle::Release
-(const TrackPanelMouseEvent &event, AudacityProject *pProject,
+(const TrackPanelMouseEvent &event, AudMonkeyProject *pProject,
  wxWindow *pParent) -> Result
 {
    // Keep a shared pointer to self.  Otherwise *this might get deleted
@@ -1649,7 +1649,7 @@ void AdornedRulerPanel::HandleQPRelease(wxMouseEvent &evt)
 }
 
 auto AdornedRulerPanel::QPHandle::Cancel
-(AudacityProject *pProject) -> Result
+(AudMonkeyProject *pProject) -> Result
 {
    auto result = CommonRulerHandle::Cancel(pProject);
 
@@ -2213,7 +2213,7 @@ AdornedRulerPanel::GetIndicatorBitmap(wxCoord xx, bool playing) const
 void AdornedRulerPanel::SetPlayRegion(double playRegionStart,
                                       double playRegionEnd)
 {
-   // This is called by AudacityProject to make the play region follow
+   // This is called by AudMonkeyProject to make the play region follow
    // the current selection. But while the user is selecting a play region
    // with the mouse directly in the ruler, changes from outside are blocked.
    if (mMouseEventState != mesNone)
@@ -2301,7 +2301,7 @@ std::shared_ptr<TrackPanelNode> AdornedRulerPanel::Root()
    return std::make_shared< MainGroup >( *this );
 }
 
-AudacityProject * AdornedRulerPanel::GetProject() const
+AudMonkeyProject * AdornedRulerPanel::GetProject() const
 {
    return mProject;
 }
@@ -2358,7 +2358,7 @@ void AdornedRulerPanel::LockPlayRegion()
    auto &viewInfo = ViewInfo::Get( project );
    auto &playRegion = viewInfo.playRegion;
    if (playRegion.GetStart() >= tracks.GetEndTime()) {
-      AudacityMessageBox(
+      AudMonkeyMessageBox(
          XO("Cannot lock region beyond\nend of project."),
          XO("Error"));
    }

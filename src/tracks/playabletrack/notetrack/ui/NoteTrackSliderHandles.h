@@ -1,6 +1,6 @@
 /**********************************************************************
 
- Audacity: A Digital Audio Editor
+ AudMonkey: A Digital Audio Editor
 
  NoteTrackSliderHandles.h
 
@@ -36,12 +36,12 @@ public:
 protected:
    float GetValue() override;
    Result SetValue
-   (AudacityProject *pProject, float newValue) override;
+   (AudMonkeyProject *pProject, float newValue) override;
    Result CommitChanges
-   (const wxMouseEvent &event, AudacityProject *pProject) override;
+   (const wxMouseEvent &event, AudMonkeyProject *pProject) override;
 
    TranslatableString Tip(
-      const wxMouseState &state, AudacityProject &) const override;
+      const wxMouseState &state, AudMonkeyProject &) const override;
 
    bool StopsOnKeystroke () override { return true; }
 

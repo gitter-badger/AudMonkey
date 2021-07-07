@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 CommonTrackControls.h
 
@@ -33,7 +33,7 @@ public:
    struct InitMenuData
    {
    public:
-      AudacityProject &project;
+      AudMonkeyProject &project;
       Track *pTrack;
       wxWindow *pParent;
       unsigned result;
@@ -51,11 +51,11 @@ protected:
    // still marked pure virtual
    virtual std::vector<UIHandlePtr> HitTest
       (const TrackPanelMouseState &state,
-       const AudacityProject *) override = 0;
+       const AudMonkeyProject *) override = 0;
 
    unsigned DoContextMenu
       (const wxRect &rect, wxWindow *pParent, wxPoint *pPosition,
-       AudacityProject *pProject) override;
+       AudMonkeyProject *pProject) override;
    virtual PopupMenuTable *GetMenuExtension(Track *pTrack) = 0;
 
    // TrackPanelDrawable implementation

@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   LoadLV2.h
 
@@ -31,9 +31,9 @@
 #include "lv2/uri-map/uri-map.h"
 #include "lv2/units/units.h"
 
-#include "audacity/ModuleInterface.h"
-#include "audacity/EffectInterface.h"
-#include "audacity/PluginInterface.h"
+#include "audmonkey/ModuleInterface.h"
+#include "audmonkey/EffectInterface.h"
+#include "audmonkey/PluginInterface.h"
 
 #include "lv2_external_ui.h"
 

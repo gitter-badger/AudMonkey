@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   ODDecodeTask
 
@@ -16,7 +16,7 @@ updating the ODDecodeBlockFile and the GUI of the newly available data.
 
 *//*******************************************************************/
 
-#include "../Audacity.h"
+#include "../AudMonkey.h"
 #include "ODDecodeTask.h"
 
 #include "../blockfile/ODDecodeBlockFile.h"

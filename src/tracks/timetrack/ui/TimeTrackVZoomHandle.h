@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 TimeTrackVZoomHandle.h
 
@@ -27,23 +27,23 @@ public:
 
    ~TimeTrackVZoomHandle() override;
 
-   void Enter( bool forward, AudacityProject * ) override;
+   void Enter( bool forward, AudMonkeyProject * ) override;
 
    Result Click
-      (const TrackPanelMouseEvent &event, AudacityProject *pProject) override;
+      (const TrackPanelMouseEvent &event, AudMonkeyProject *pProject) override;
 
    Result Drag
-      (const TrackPanelMouseEvent &event, AudacityProject *pProject) override;
+      (const TrackPanelMouseEvent &event, AudMonkeyProject *pProject) override;
 
    HitTestPreview Preview
-      (const TrackPanelMouseState &state, AudacityProject *pProject)
+      (const TrackPanelMouseState &state, AudMonkeyProject *pProject)
       override;
 
    Result Release
-      (const TrackPanelMouseEvent &event, AudacityProject *pProject,
+      (const TrackPanelMouseEvent &event, AudMonkeyProject *pProject,
        wxWindow *pParent) override;
 
-   Result Cancel(AudacityProject *pProject) override;
+   Result Cancel(AudMonkeyProject *pProject) override;
 
 private:
    std::weak_ptr<TimeTrack> mpTrack;

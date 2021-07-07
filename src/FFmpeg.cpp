@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 FFmpeg.cpp
 
@@ -22,7 +22,7 @@ License: GPL v2.  See License.txt.
 
 #include "FileNames.h"
 #include "widgets/HelpSystem.h"
-#include "widgets/AudacityMessageBox.h"
+#include "widgets/AudMonkeyMessageBox.h"
 
 #include <wx/checkbox.h>
 #include <wx/dynlib.h>
@@ -91,7 +91,7 @@ bool LoadFFmpeg(bool showerror)
    }
 }
 
-/** Called during Audacity start-up to try and load the ffmpeg libraries */
+/** Called during AudMonkey start-up to try and load the ffmpeg libraries */
 void FFmpegStartup()
 {
    bool enabled = false;
@@ -101,9 +101,9 @@ void FFmpegStartup()
    {
       if (enabled)
       {
-         AudacityMessageBox(XO(
+         AudMonkeyMessageBox(XO(
 "FFmpeg was configured in Preferences and successfully loaded before, \
-\nbut this time Audacity failed to load it at startup. \
+\nbut this time AudMonkey failed to load it at startup. \
 \n\nYou may want to go back to Preferences > Libraries and re-configure it."),
             XO("FFmpeg startup failed"));
       }
@@ -476,7 +476,7 @@ public:
       {
          S.AddTitle(
             XO(
-"Audacity needs the file '%s' to import and export audio via FFmpeg.")
+"AudMonkey needs the file '%s' to import and export audio via FFmpeg.")
                .Format( mName ) );
 
          S.SetBorder(3);
@@ -585,7 +585,7 @@ void FFmpegNotFoundDialog::PopulateOrExchange(ShuttleGui & S)
    S.StartVerticalLay(true);
    {
       S.AddFixedText(XO(
-"Audacity attempted to use FFmpeg to import an audio file,\n\
+"AudMonkey attempted to use FFmpeg to import an audio file,\n\
 but the libraries were not found.\n\n\
 To use FFmpeg import, go to Edit > Preferences > Libraries\n\
 to download or locate the FFmpeg libraries."
@@ -719,7 +719,7 @@ bool FFmpegLibs::LoadLibs(wxWindow * WXUNUSED(parent), bool showerr)
 #if defined(__WXMAC__)
    // If not successful, try loading it from legacy path
    if (!mLibsLoaded && !GetLibAVFormatPath().empty()) {
-      const wxFileName fn{wxT("/usr/local/lib/audacity"), GetLibAVFormatName()};
+      const wxFileName fn{wxT("/usr/local/lib/audmonkey"), GetLibAVFormatName()};
       wxString path = fn.GetFullPath();
       wxLogMessage(wxT("Trying to load FFmpeg libraries from legacy path, '%s'."), path);
       mLibsLoaded = InitLibs(path,showerr);
@@ -754,7 +754,7 @@ bool FFmpegLibs::LoadLibs(wxWindow * WXUNUSED(parent), bool showerr)
    if (!ValidLibsLoaded()) {
       auto msg = XO("Failed to find compatible FFmpeg libraries.");
       if (showerr)
-         AudacityMessageBox( msg );
+         AudMonkeyMessageBox( msg );
       wxLogError(msg.Debug());
       return false;
    }

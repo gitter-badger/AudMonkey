@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   Benchmark.h
 
@@ -12,9 +12,9 @@
 #define __AUDACITY_BENCHMARK__
 
 class wxWindow;
-class AudacityProject;
+class AudMonkeyProject;
 
 AUDACITY_DLL_API
-void RunBenchmark( wxWindow *parent, AudacityProject &project );
+void RunBenchmark( wxWindow *parent, AudMonkeyProject &project );
 
 #endif // define __AUDACITY_BENCHMARK__

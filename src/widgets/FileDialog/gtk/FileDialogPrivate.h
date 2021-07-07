@@ -1,5 +1,5 @@
 //
-// Copied from wxWidgets 3.0.2 and modified for Audacity
+// Copied from wxWidgets 3.0.2 and modified for AudMonkey
 //
 /////////////////////////////////////////////////////////////////////////////
 // Name:        wx/gtk/filedlg.h

@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   LoadNyquist.cpp
 
@@ -21,7 +21,7 @@
 #include "../../ModuleManager.h"
 
 // ============================================================================
-// List of effects that ship with Audacity.  These will be autoregistered.
+// List of effects that ship with AudMonkey.  These will be autoregistered.
 // ============================================================================
 const static wxChar *kShippedEffects[] =
 {
@@ -57,13 +57,13 @@ const static wxChar *kShippedEffects[] =
 // ============================================================================
 // Module registration entry point
 //
-// This is the symbol that Audacity looks for when the module is built as a
+// This is the symbol that AudMonkey looks for when the module is built as a
 // dynamic library.
 //
-// When the module is builtin to Audacity, we use the same function, but it is
+// When the module is builtin to AudMonkey, we use the same function, but it is
 // declared static so as not to clash with other builtin modules.
 // ============================================================================
-DECLARE_MODULE_ENTRY(AudacityModule)
+DECLARE_MODULE_ENTRY(AudMonkeyModule)
 {
    // Create and register the importer
    // Trust the module manager not to leak this
@@ -105,7 +105,7 @@ ComponentInterfaceSymbol NyquistEffectsModule::GetSymbol()
 
 VendorSymbol NyquistEffectsModule::GetVendor()
 {
-   return XO("The Audacity Team");
+   return XO("The AudMonkey Team");
 }
 
 wxString NyquistEffectsModule::GetVersion()
@@ -116,7 +116,7 @@ wxString NyquistEffectsModule::GetVersion()
 
 TranslatableString NyquistEffectsModule::GetDescription()
 {
-   return XO("Provides Nyquist Effects support to Audacity");
+   return XO("Provides Nyquist Effects support to AudMonkey");
 }
 
 // ============================================================================
@@ -125,11 +125,11 @@ TranslatableString NyquistEffectsModule::GetDescription()
 
 bool NyquistEffectsModule::Initialize()
 {
-   const auto &audacityPathList = FileNames::AudacityPathList();
+   const auto &audmonkeyPathList = FileNames::AudMonkeyPathList();
 
-   for (size_t i = 0, cnt = audacityPathList.size(); i < cnt; i++)
+   for (size_t i = 0, cnt = audmonkeyPathList.size(); i < cnt; i++)
    {
-      wxFileName name(audacityPathList[i], wxT(""));
+      wxFileName name(audmonkeyPathList[i], wxT(""));
       name.AppendDir(wxT("nyquist"));
       name.SetFullName(wxT("nyquist.lsp"));
       if (name.FileExists())
@@ -175,7 +175,7 @@ FilePath NyquistEffectsModule::InstallPath()
 bool NyquistEffectsModule::AutoRegisterPlugins(PluginManagerInterface & pm)
 {
    // Autoregister effects that we "think" are ones that have been shipped with
-   // Audacity.  A little simplistic, but it should suffice for now.
+   // AudMonkey.  A little simplistic, but it should suffice for now.
    auto pathList = NyquistEffect::GetNyquistSearchPath();
    FilePaths files;
    TranslatableString ignoredErrMsg;

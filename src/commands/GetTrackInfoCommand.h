@@ -19,7 +19,7 @@
 #include "Command.h"
 #include "CommandType.h"
 
-class GetTrackInfoCommand final : public AudacityCommand
+class GetTrackInfoCommand final : public AudMonkeyCommand
 {
 public:
    static const ComponentInterfaceSymbol Symbol;
@@ -31,7 +31,7 @@ public:
    bool DefineParams( ShuttleParams & S ) override;
    void PopulateOrExchange(ShuttleGui & S) override;
 
-   // AudacityCommand overrides
+   // AudMonkeyCommand overrides
    ManualPageID ManualPage() override {return L"Extra_Menu:_Tools#get_track_info";}
 
    bool Apply(const CommandContext &context ) override;

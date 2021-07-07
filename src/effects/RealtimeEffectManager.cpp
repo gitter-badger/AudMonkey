@@ -1,6 +1,6 @@
 /**********************************************************************
  
- Audacity: A Digital Audio Editor
+ AudMonkey: A Digital Audio Editor
  
  RealtimeEffectManager.cpp
  
@@ -11,7 +11,7 @@
 
 #include "RealtimeEffectManager.h"
 
-#include "audacity/EffectInterface.h"
+#include "audmonkey/EffectInterface.h"
 #include <memory>
 
 #include <atomic>

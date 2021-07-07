@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   DeviceToolbar.h
 
@@ -19,17 +19,17 @@ class wxPoint;
 class wxChoice;
 struct DeviceSourceMap;
 
-class AudacityProject;
+class AudMonkeyProject;
 
 class DeviceToolBar final : public ToolBar {
 
  public:
 
-   DeviceToolBar( AudacityProject &project );
+   DeviceToolBar( AudMonkeyProject &project );
    virtual ~DeviceToolBar();
 
-   static DeviceToolBar &Get( AudacityProject &project );
-   static const DeviceToolBar &Get( const AudacityProject &project );
+   static DeviceToolBar &Get( AudMonkeyProject &project );
+   static const DeviceToolBar &Get( const AudMonkeyProject &project );
 
    void Create(wxWindow * parent) override;
 
@@ -46,7 +46,7 @@ class DeviceToolBar final : public ToolBar {
    void OnChoice(wxCommandEvent & event);
 
    /// When the prefs don't exist this value is used.
-   /// 883 takes a complete row in the default initial size of Audacity.
+   /// 883 takes a complete row in the default initial size of AudMonkey.
    int GetInitialWidth()  override{ return 883; }
    int GetMinToolbarWidth() override { return 350; }
 

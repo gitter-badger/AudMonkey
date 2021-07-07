@@ -29,7 +29,7 @@ capture the more lengthy output from some commands.
 #include <wx/string.h>
 #include <wx/textctrl.h>
 #include "../ShuttleGui.h"
-#include "../widgets/AudacityMessageBox.h"
+#include "../widgets/AudMonkeyMessageBox.h"
 #include "../widgets/wxPanelWrapper.h"
 
 #include <locale>
@@ -254,7 +254,7 @@ void BriefCommandMessageTarget::EndField(){
 void MessageBoxTarget::Update(const wxString &message)
 {
    // Should these messages be localized?
-   AudacityMessageBox( Verbatim( message ) );
+   AudMonkeyMessageBox( Verbatim( message ) );
 }
 
 

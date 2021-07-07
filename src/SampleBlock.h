@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 SampleBlock.h
 
@@ -9,13 +9,13 @@ SampleBlock.h
 #ifndef __AUDACITY_SAMPLE_BLOCK__
 #define __AUDACITY_SAMPLE_BLOCK__
 
-#include "audacity/Types.h"
+#include "audmonkey/Types.h"
 
 #include <functional>
 #include <memory>
 #include <unordered_set>
 
-class AudacityProject;
+class AudMonkeyProject;
 class ProjectFileIO;
 class XMLWriter;
 
@@ -24,7 +24,7 @@ using SampleBlockPtr = std::shared_ptr<SampleBlock>;
 class SampleBlockFactory;
 using SampleBlockFactoryPtr = std::shared_ptr<SampleBlockFactory>;
 using SampleBlockFactoryFactory =
-   std::function< SampleBlockFactoryPtr( AudacityProject& ) >;
+   std::function< SampleBlockFactoryPtr( AudMonkeyProject& ) >;
 
 using SampleBlockID = long long;
 
@@ -112,7 +112,7 @@ public:
       SampleBlockFactoryFactory newFactory );
 
    // Invoke the installed factory (throw an exception if none was installed)
-   static SampleBlockFactoryPtr New( AudacityProject &project );
+   static SampleBlockFactoryPtr New( AudMonkeyProject &project );
 
    virtual ~SampleBlockFactory();
 

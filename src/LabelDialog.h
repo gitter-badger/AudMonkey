@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   LabelDialog.h
 
@@ -15,11 +15,11 @@
 #include <wx/defs.h>
 
 #include "widgets/wxPanelWrapper.h" // to inherit
-#include "audacity/ComponentInterface.h" // member variable
+#include "audmonkey/ComponentInterface.h" // member variable
 
 class wxArrayString;
 class wxGridEvent;
-class AudacityProject;
+class AudMonkeyProject;
 class ChoiceEditor;
 class Grid;
 class NumericEditor;
@@ -37,7 +37,7 @@ class LabelDialog final : public wxDialogWrapper
  public:
 
    LabelDialog(wxWindow *parent,
-               AudacityProject &project,
+               AudMonkeyProject &project,
                TrackList *tracks,
 
                // if NULL edit all tracks, else this one only:
@@ -93,7 +93,7 @@ class LabelDialog final : public wxDialogWrapper
 
  private:
 
-   AudacityProject &mProject;
+   AudMonkeyProject &mProject;
 
    Grid *mGrid;
    ChoiceEditor *mChoiceEditor;

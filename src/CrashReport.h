@@ -1,11 +1,11 @@
 /**********************************************************************
  
- Audacity: A Digital Audio Editor
+ AudMonkey: A Digital Audio Editor
  
  CrashReport.h
  
  Paul Licameli
- split from AudacityApp.h
+ split from AudMonkeyApp.h
  
  **********************************************************************/
 

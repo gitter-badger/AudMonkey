@@ -1,6 +1,6 @@
 /**********************************************************************
 
- Audacity: A Digital Audio Editor
+ AudMonkey: A Digital Audio Editor
 
  SelectionState.h
 
@@ -13,18 +13,18 @@
 #include "Track.h"
 #include "Project.h"
 
-static const AudacityProject::AttachedObjects::RegisteredFactory key{
-  [](AudacityProject &){ return std::make_shared< SelectionState >(); }
+static const AudMonkeyProject::AttachedObjects::RegisteredFactory key{
+  [](AudMonkeyProject &){ return std::make_shared< SelectionState >(); }
 };
 
-SelectionState &SelectionState::Get( AudacityProject &project )
+SelectionState &SelectionState::Get( AudMonkeyProject &project )
 {
    return project.AttachedObjects::Get< SelectionState >( key );
 }
 
-const SelectionState &SelectionState::Get( const AudacityProject &project )
+const SelectionState &SelectionState::Get( const AudMonkeyProject &project )
 {
-   return Get( const_cast< AudacityProject & >( project ) );
+   return Get( const_cast< AudMonkeyProject & >( project ) );
 }
 
 // Set selection length to the length of a track -- but if sync-lock is turned

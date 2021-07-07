@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   ToolsToolBar.cpp
 
@@ -21,7 +21,7 @@
   normal project window, or within a ToolBarFrame.
 
   All of the controls in this window were custom-written for
-  Audacity - they are not native controls on any platform -
+  AudMonkey - they are not native controls on any platform -
   however, it is intended that the images could be easily
   replaced to allow "skinning" or just customization to
   match the look and feel of each platform.
@@ -72,7 +72,7 @@ BEGIN_EVENT_TABLE(ToolsToolBar, ToolBar)
 END_EVENT_TABLE()
 
 //Standard constructor
-ToolsToolBar::ToolsToolBar( AudacityProject &project )
+ToolsToolBar::ToolsToolBar( AudMonkeyProject &project )
 : ToolBar(project, ToolsBarID, XO("Tools"), wxT("Tools"))
 {
    using namespace ToolCodes;
@@ -100,15 +100,15 @@ ToolsToolBar::~ToolsToolBar()
       "mismatch in number of tools" );
 }
 
-ToolsToolBar &ToolsToolBar::Get( AudacityProject &project )
+ToolsToolBar &ToolsToolBar::Get( AudMonkeyProject &project )
 {
    auto &toolManager = ToolManager::Get( project );
    return *static_cast<ToolsToolBar*>( toolManager.GetToolBar(ToolsBarID) );
 }
 
-const ToolsToolBar &ToolsToolBar::Get( const AudacityProject &project )
+const ToolsToolBar &ToolsToolBar::Get( const AudMonkeyProject &project )
 {
-   return Get( const_cast<AudacityProject&>( project )) ;
+   return Get( const_cast<AudMonkeyProject&>( project )) ;
 }
 
 void ToolsToolBar::RegenerateTooltips()
@@ -117,7 +117,7 @@ void ToolsToolBar::RegenerateTooltips()
 // JKC:
 //   Under Win98 Tooltips appear to be buggy, when you have a lot of
 //   tooltip messages flying around.  I found that just creating a
-//   twelfth tooltip caused Audacity to crash when it tried to show
+//   twelfth tooltip caused AudMonkey to crash when it tried to show
 //   any tooltip.
 //
 //   Win98 does NOT recover from this crash - for any application which is
@@ -296,7 +296,7 @@ void ToolsToolBar::Create(wxWindow * parent)
 }
 
 static RegisteredToolbarFactory factory{ ToolsBarID,
-   []( AudacityProject &project ){
+   []( AudMonkeyProject &project ){
       return ToolBar::Holder{ safenew ToolsToolBar{ project } }; }
 };
 
@@ -316,7 +316,7 @@ AttachedToolBarMenuItem sAttachment{
 namespace {
 
 /// Called by handlers that set tools.
-void SetTool(AudacityProject &project, int tool)
+void SetTool(AudMonkeyProject &project, int tool)
 {
    auto toolbar = &ToolsToolBar::Get( project );
    if (toolbar) {
@@ -398,9 +398,9 @@ void OnNextTool(const CommandContext &context)
 
 }; // struct Handler
 
-static CommandHandlerObject &findCommandHandler(AudacityProject &) {
+static CommandHandlerObject &findCommandHandler(AudMonkeyProject &) {
    // Handler is not stateful.  Doesn't need a factory registered with
-   // AudacityProject.
+   // AudMonkeyProject.
    static ToolActions::Handler instance;
    return instance;
 };

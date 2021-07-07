@@ -1,6 +1,6 @@
 /*!********************************************************************
 
- Audacity: A Digital Audio Editor
+ AudMonkey: A Digital Audio Editor
 
  @file CodeConversions.h
  @brief Declare functions to preform UTF-8 to std::wstring conversions.
@@ -13,7 +13,7 @@
 #include <string>
 #include <wx/string.h>
 
-namespace audacity
+namespace audmonkey
 {
 
 STRING_UTILS_API std::string ToUTF8 (const std::wstring& wstr);

@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 ZoomHandle.h
 
@@ -20,7 +20,7 @@ class ZoomHandle final : public UIHandle
 {
    ZoomHandle(const ZoomHandle&) = delete;
    static HitTestPreview HitPreview
-      (const wxMouseState &state, const AudacityProject *pProject);
+      (const wxMouseState &state, const AudMonkeyProject *pProject);
 
 public:
    ZoomHandle();
@@ -35,20 +35,20 @@ public:
    virtual ~ZoomHandle();
 
    Result Click
-      (const TrackPanelMouseEvent &event, AudacityProject *pProject) override;
+      (const TrackPanelMouseEvent &event, AudMonkeyProject *pProject) override;
 
    Result Drag
-      (const TrackPanelMouseEvent &event, AudacityProject *pProject) override;
+      (const TrackPanelMouseEvent &event, AudMonkeyProject *pProject) override;
 
    HitTestPreview Preview
-      (const TrackPanelMouseState &state, AudacityProject *pProject)
+      (const TrackPanelMouseState &state, AudMonkeyProject *pProject)
       override;
 
    Result Release
-      (const TrackPanelMouseEvent &event, AudacityProject *pProject,
+      (const TrackPanelMouseEvent &event, AudMonkeyProject *pProject,
        wxWindow *pParent) override;
 
-   Result Cancel(AudacityProject *pProject) override;
+   Result Cancel(AudMonkeyProject *pProject) override;
 
 private:
 

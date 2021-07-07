@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   Internat.cpp
 
@@ -37,22 +37,22 @@ wxChar Internat::mDecimalSeparator = wxT('.'); // default
 // exclude is used by SanitiseFilename.
 wxArrayString Internat::exclude;
 
-// DA: Use tweaked translation mechanism to replace 'Audacity' by 'DarkAudacity'.
+// DA: Use tweaked translation mechanism to replace 'AudMonkey' by 'DarkAudMonkey'.
 #ifdef EXPERIMENTAL_DA
-// This function allows us to replace Audacity by DarkAudacity without peppering 
+// This function allows us to replace AudMonkey by DarkAudMonkey without peppering 
 // the source code with changes.  We split out this step, the customisation, as 
 // it is used on its own (without translation) in the wxTS macro.
 STRINGS_API const wxString& GetCustomSubstitution(const wxString& str2)
 {
-   // If contains 'DarkAudacity, already converted.
-   if( str2.Contains( "DarkAudacity" ))
+   // If contains 'DarkAudMonkey, already converted.
+   if( str2.Contains( "DarkAudMonkey" ))
       return str2;
-   // If does not contain 'Audacity', nothing to do.
-   if( !str2.Contains( "Audacity" ))
+   // If does not contain 'AudMonkey', nothing to do.
+   if( !str2.Contains( "AudMonkey" ))
       return str2;
    wxString str3 = str2;
-   str3.Replace( "Audacity", "DarkAudacity" );
-   str3.Replace( " an DarkAudacity", " a DarkAudacity" );
+   str3.Replace( "AudMonkey", "DarkAudMonkey" );
+   str3.Replace( " an DarkAudMonkey", " a DarkAudMonkey" );
    // DA also renames sync-lock(ed) as time-lock(ed).
    str3.Replace( "Sync-Lock", "Time-Lock" );
    str3.Replace( "Sync-&Lock", "Time-&Lock" );
@@ -66,7 +66,7 @@ STRINGS_API const wxString& GetCustomSubstitution(const wxString& str1)
 }
 #endif
 
-// In any translated string, we can replace the name 'Audacity' by 'DarkAudacity'
+// In any translated string, we can replace the name 'AudMonkey' by 'DarkAudMonkey'
 // without requiring translators to see extra strings for the two versions.
 STRINGS_API const wxString& GetCustomTranslation(const wxString& str1)
 {

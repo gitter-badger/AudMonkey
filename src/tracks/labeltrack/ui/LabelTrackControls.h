@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 LabelTrackControls.h
 
@@ -26,7 +26,7 @@ public:
 
    std::vector<UIHandlePtr> HitTest
       (const TrackPanelMouseState &state,
-       const AudacityProject *pProject) override;
+       const AudMonkeyProject *pProject) override;
 
    PopupMenuTable *GetMenuExtension(Track *pTrack) override;
 };

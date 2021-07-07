@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 SpectralSelectionBar.h
 
@@ -21,7 +21,7 @@ class wxCommandEvent;
 class wxDC;
 class wxSizeEvent;
 
-class AudacityProject;
+class AudMonkeyProject;
 class SpectralSelectionBarListener;
 class NumericTextCtrl;
 
@@ -29,11 +29,11 @@ class SpectralSelectionBar final : public ToolBar {
 
 public:
 
-   SpectralSelectionBar( AudacityProject &project );
+   SpectralSelectionBar( AudMonkeyProject &project );
    virtual ~SpectralSelectionBar();
 
-   static SpectralSelectionBar &Get( AudacityProject &project );
-   static const SpectralSelectionBar &Get( const AudacityProject &project );
+   static SpectralSelectionBar &Get( AudMonkeyProject &project );
+   static const SpectralSelectionBar &Get( const AudMonkeyProject &project );
 
    void Create(wxWindow *parent) override;
 

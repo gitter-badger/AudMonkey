@@ -35,7 +35,7 @@ CommandDirectory::CommandDirectory()
    // Not needed.  Sets selected/solo/mute on multiple tracks.
    //AddCommand(std::make_unique<SetProjectInfoCommandType>());
 
-//   Moved to AudacityCommand
+//   Moved to AudMonkeyCommand
 //   AddCommand(std::make_unique<OpenProjectCommandType>());
 //   AddCommand(std::make_unique<SaveProjectCommandType>());
 //   AddCommand(std::make_unique<ImportCommandType>());

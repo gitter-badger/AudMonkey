@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   Profiler.cpp
 
@@ -33,11 +33,11 @@ Profiler::~Profiler()
    if(mTasks.size())
    {
       //print everything out.  append to a log.
-      FILE* log = fopen("AudacityProfilerLog.txt", "a");
+      FILE* log = fopen("AudMonkeyProfilerLog.txt", "a");
       time_t now;
 
       time(&now);
-      wxFprintf(log,"Audacity Profiler Run, Ended at ");
+      wxFprintf(log,"AudMonkey Profiler Run, Ended at ");
       wxFprintf(log,"%s",ctime(&now));
       wxFprintf(log,"****************************************\n");
       //print out the tasks

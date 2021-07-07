@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
 
   ControlToolbar.h
@@ -26,19 +26,19 @@ class wxWindow;
 class wxStatusBar;
 
 class AButton;
-class AudacityProject;
+class AudMonkeyProject;
 
 // In the GUI, ControlToolBar appears as the "Transport Toolbar". "Control Toolbar" is historic.
 class AUDACITY_DLL_API ControlToolBar final : public ToolBar {
 
  public:
 
-   ControlToolBar( AudacityProject &project );
+   ControlToolBar( AudMonkeyProject &project );
    virtual ~ControlToolBar();
 
-   static ControlToolBar *Find( AudacityProject &project );
-   static ControlToolBar &Get( AudacityProject &project );
-   static const ControlToolBar &Get( const AudacityProject &project );
+   static ControlToolBar *Find( AudMonkeyProject &project );
+   static ControlToolBar &Get( AudMonkeyProject &project );
+   static const ControlToolBar &Get( const AudMonkeyProject &project );
 
    void Create(wxWindow *parent) override;
 

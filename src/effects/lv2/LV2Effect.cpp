@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   LV2Effect.cpp
 
@@ -48,7 +48,7 @@
 
 #include "../../ShuttleGui.h"
 #include "../../widgets/valnum.h"
-#include "../../widgets/AudacityMessageBox.h"
+#include "../../widgets/AudMonkeyMessageBox.h"
 #include "../../widgets/wxPanelWrapper.h"
 #include "../../widgets/NumericTextCtrl.h"
 
@@ -276,7 +276,7 @@ void LV2EffectSettingsDialog::PopulateOrExchange(ShuttleGui &S)
          {
             S.AddVariableText( XO(
 "As part of their processing, some LV2 effects must delay returning "
-"audio to Audacity. When not compensating for this delay, you will "
+"audio to AudMonkey. When not compensating for this delay, you will "
 "notice that small silences have been inserted into the audio. "
 "Enabling this setting will provide that compensation, but it may "
 "not work for all LV2 effects."),
@@ -1567,7 +1567,7 @@ bool LV2Effect::PopulateUI(ShuttleGui &S)
    mMaster = InitInstance(mSampleRate);
    if (mMaster == NULL)
    {
-      AudacityMessageBox( XO("Couldn't instantiate effect") );
+      AudMonkeyMessageBox( XO("Couldn't instantiate effect") );
       return false;
    }
 

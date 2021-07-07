@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   WaveClip.cpp
 
@@ -1524,7 +1524,7 @@ void WaveClip::Clear(double t0, double t1)
 }
 
 /*! @excsafety{Weak}
--- This WaveClip remains destructible in case of AudacityException.
+-- This WaveClip remains destructible in case of AudMonkeyException.
 But some cutlines may be deleted */
 void WaveClip::ClearAndAddCutLine(double t0, double t1)
 {

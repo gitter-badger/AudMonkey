@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   RawAudioGuess.cpp
 
@@ -16,7 +16,7 @@
 
 #include "RawAudioGuess.h"
 
-#include "../AudacityException.h"
+#include "../AudMonkeyException.h"
 
 #include <stdio.h>
 #include <stdlib.h>

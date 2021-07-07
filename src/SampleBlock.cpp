@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 SampleBlock.cpp
 
@@ -28,7 +28,7 @@ SampleBlockFactoryFactory SampleBlockFactory::RegisterFactoryFactory(
    return result;
 }
 
-SampleBlockFactoryPtr SampleBlockFactory::New( AudacityProject &project )
+SampleBlockFactoryPtr SampleBlockFactory::New( AudMonkeyProject &project )
 {
    auto &factory = installedFactory();
    if ( ! factory )

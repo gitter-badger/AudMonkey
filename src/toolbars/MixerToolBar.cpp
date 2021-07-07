@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   MixerToolBar.cpp
 
@@ -55,7 +55,7 @@ BEGIN_EVENT_TABLE(MixerToolBar, ToolBar)
 END_EVENT_TABLE()
 
 //Standard constructor
-MixerToolBar::MixerToolBar( AudacityProject &project )
+MixerToolBar::MixerToolBar( AudMonkeyProject &project )
 : ToolBar(project, MixerBarID, XO("Mixer"), wxT("Mixer"), true)
 {
    mInputSliderVolume = 0.0;
@@ -67,15 +67,15 @@ MixerToolBar::~MixerToolBar()
 {
 }
 
-MixerToolBar &MixerToolBar::Get( AudacityProject &project )
+MixerToolBar &MixerToolBar::Get( AudMonkeyProject &project )
 {
    auto &toolManager = ToolManager::Get( project );
    return *static_cast<MixerToolBar*>( toolManager.GetToolBar(MixerBarID) );
 }
 
-const MixerToolBar &MixerToolBar::Get( const AudacityProject &project )
+const MixerToolBar &MixerToolBar::Get( const AudMonkeyProject &project )
 {
-   return Get( const_cast<AudacityProject&>( project )) ;
+   return Get( const_cast<AudMonkeyProject&>( project )) ;
 }
 
 void MixerToolBar::Create(wxWindow *parent)
@@ -140,8 +140,8 @@ void MixerToolBar::OnAudioCapture(wxCommandEvent & event)
 {
    event.Skip();
 
-   AudacityProject *p = &mProject;
-   if ((AudacityProject *) event.GetEventObject() != p)
+   AudMonkeyProject *p = &mProject;
+   if ((AudMonkeyProject *) event.GetEventObject() != p)
    {
       mEnabled = !event.GetInt();
       mInputSlider->Enable(mEnabled);
@@ -332,7 +332,7 @@ void MixerToolBar::SetToolTips()
 }
 
 static RegisteredToolbarFactory factory{ MixerBarID,
-   []( AudacityProject &project ){
+   []( AudMonkeyProject &project ){
       return ToolBar::Holder{ safenew MixerToolBar{ project } }; }
 };
 

@@ -26,7 +26,7 @@
 
 // GetPreference
 
-class GetPreferenceCommand final : public AudacityCommand
+class GetPreferenceCommand final : public AudMonkeyCommand
 {
 public:
    static const ComponentInterfaceSymbol Symbol;
@@ -38,7 +38,7 @@ public:
    void PopulateOrExchange(ShuttleGui & S) override;
    bool Apply(const CommandContext & context) override;
 
-   // AudacityCommand overrides
+   // AudMonkeyCommand overrides
    ManualPageID ManualPage() override {return L"Extra_Menu:_Scriptables_I#get_preference";}
 
    wxString mName;
@@ -46,7 +46,7 @@ public:
 
 // SetPreference
 
-class SetPreferenceCommand final : public AudacityCommand
+class SetPreferenceCommand final : public AudMonkeyCommand
 {
 public:
    static const ComponentInterfaceSymbol Symbol;
@@ -58,7 +58,7 @@ public:
    void PopulateOrExchange(ShuttleGui & S) override;
    bool Apply(const CommandContext & context) override;
 
-   // AudacityCommand overrides
+   // AudMonkeyCommand overrides
    ManualPageID ManualPage() override {return L"Extra_Menu:_Scriptables_I#set_preference";}
 
    wxString mName;

@@ -1,6 +1,6 @@
 /**********************************************************************
 
- Audacity: A Digital Audio Editor
+ AudMonkey: A Digital Audio Editor
 
  SelectionState.h
 
@@ -9,7 +9,7 @@
 #ifndef __AUDACITY_SELECTION_STATE__
 #define __AUDACITY_SELECTION_STATE__
 
-class AudacityProject;
+class AudMonkeyProject;
 class Track;
 class TrackList;
 class ViewInfo;
@@ -26,8 +26,8 @@ public:
    SelectionState( const SelectionState & ) PROHIBITED;
    SelectionState &operator=( const SelectionState & ) PROHIBITED;
 
-   static SelectionState &Get( AudacityProject &project );
-   static const SelectionState &Get( const AudacityProject &project );
+   static SelectionState &Get( AudMonkeyProject &project );
+   static const SelectionState &Get( const AudMonkeyProject &project );
 
    static void SelectTrackLength
       ( ViewInfo &viewInfo, Track &track, bool syncLocked );

@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   EffectUI.h
 
@@ -28,7 +28,7 @@ class wxFlexGridSizer;
 class wxPanel;
 class wxStaticText;
 
-class AudacityProject;
+class AudMonkeyProject;
 
 class Effect;
 using EffectArray = std::vector<Effect*>;
@@ -36,12 +36,12 @@ using EffectArray = std::vector<Effect*>;
 class EffectRack final : public wxFrame
 {
 public:
-   EffectRack( AudacityProject &project );
+   EffectRack( AudMonkeyProject &project );
    virtual ~EffectRack();
 
    void Add(Effect *effect, bool active = false, bool favorite = false);
 
-   static EffectRack &Get( AudacityProject &project );
+   static EffectRack &Get( AudMonkeyProject &project );
 
 private:
 
@@ -63,7 +63,7 @@ private:
    void OnRemove(wxCommandEvent & evt);
 
 private:
-   AudacityProject &mProject;
+   AudMonkeyProject &mProject;
 
    wxStaticText *mLatency;
    int mLastLatency;
@@ -102,13 +102,13 @@ private:
 
 #endif
 
-#include "audacity/EffectInterface.h"
+#include "audmonkey/EffectInterface.h"
 #include "../widgets/wxPanelWrapper.h" // to inherit
 
 #include "../SelectedRegion.h"
 
-class AudacityCommand;
-class AudacityProject;
+class AudMonkeyCommand;
+class AudMonkeyProject;
 class Effect;
 
 class wxCheckBox;
@@ -120,12 +120,12 @@ class EffectUIHost final : public wxDialogWrapper,
 public:
    // constructors and destructors
    EffectUIHost(wxWindow *parent,
-                AudacityProject &project,
+                AudMonkeyProject &project,
                 Effect *effect,
                 EffectUIClientInterface *client);
    EffectUIHost(wxWindow *parent,
-                AudacityProject &project,
-                AudacityCommand *command,
+                AudMonkeyProject &project,
+                AudMonkeyCommand *command,
                 EffectUIClientInterface *client);
    virtual ~EffectUIHost();
 
@@ -173,10 +173,10 @@ private:
    void Resume();
 
 private:
-   AudacityProject *mProject;
+   AudMonkeyProject *mProject;
    wxWindow *mParent;
    Effect *mEffect;
-   AudacityCommand * mCommand;
+   AudMonkeyCommand * mCommand;
    EffectUIClientInterface *mClient;
 
    RegistryPaths mUserPresets;
@@ -227,7 +227,7 @@ namespace  EffectUI {
    /** Run an effect given the plugin ID */
    // Returns true on success.  Will only operate on tracks that
    // have the "selected" flag set to true, which is consistent with
-   // Audacity's standard UI.
+   // AudMonkey's standard UI.
    AUDACITY_DLL_API bool DoEffect(
       const PluginID & ID, const CommandContext &context, unsigned flags );
 

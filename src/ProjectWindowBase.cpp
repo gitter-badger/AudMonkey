@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 ProjectWindowBase.cpp
 
@@ -14,8 +14,8 @@ Paul Licameli split from ProjectWindow.cpp
 
 ProjectWindowBase::ProjectWindowBase(wxWindow * parent, wxWindowID id,
                                  const wxPoint & pos,
-                                 const wxSize & size, AudacityProject &project)
-   : wxFrame(parent, id, _TS("Audacity"), pos, size)
+                                 const wxSize & size, AudMonkeyProject &project)
+   : wxFrame(parent, id, _TS("AudMonkey"), pos, size)
    , mProject{ project }
 {
    project.SetFrame( this );
@@ -36,13 +36,13 @@ ProjectWindowBase *FindProjectWindow( wxWindow *pWindow )
 
 }
 
-AudacityProject *FindProjectFromWindow( wxWindow *pWindow )
+AudMonkeyProject *FindProjectFromWindow( wxWindow *pWindow )
 {
    auto pProjectWindow = FindProjectWindow( pWindow );
    return pProjectWindow ? &pProjectWindow->GetProject() : nullptr;
 }
 
-const AudacityProject *FindProjectFromWindow( const wxWindow *pWindow )
+const AudMonkeyProject *FindProjectFromWindow( const wxWindow *pWindow )
 {
    return FindProjectFromWindow( const_cast< wxWindow* >( pWindow ) );
 }

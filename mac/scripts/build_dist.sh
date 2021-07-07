@@ -89,8 +89,8 @@ then
       echo "Usage: ${0} srcroot dstroot"
       echo
       echo "  srcroot   path to the 'mac' subdirectory of your source tree"
-      echo "  dstroot   path to where Audacity was built:"
-      echo "            legacy build = /tmp/Audacity.dst"
+      echo "  dstroot   path to where AudMonkey was built:"
+      echo "            legacy build = /tmp/AudMonkey.dst"
       echo "            cmake build = <build directory/bin/Release"
       exit 1
    fi
@@ -103,11 +103,11 @@ SRCROOT=$(realpath "${SRCROOT}")
 DSTROOT=$(realpath "${DSTROOT}")
 
 # Setup
-VERSION=`awk '/^#define+ AUDACITY_VERSION / {print $3}' ${SRCROOT}/../src/Audacity.h`
-RELEASE=`awk '/^#define+ AUDACITY_RELEASE / {print $3}' ${SRCROOT}/../src/Audacity.h`
-REVISION=`awk '/^#define+ AUDACITY_REVISION / {print $3}' ${SRCROOT}/../src/Audacity.h`
+VERSION=`awk '/^#define+ AUDACITY_VERSION / {print $3}' ${SRCROOT}/../src/AudMonkey.h`
+RELEASE=`awk '/^#define+ AUDACITY_RELEASE / {print $3}' ${SRCROOT}/../src/AudMonkey.h`
+REVISION=`awk '/^#define+ AUDACITY_REVISION / {print $3}' ${SRCROOT}/../src/AudMonkey.h`
 VERSION=$VERSION.$RELEASE.$REVISION
-IDENT=$(plist "${DSTROOT}/Audacity.app/Contents/Info.plist" "CFBundleIdentifier")
+IDENT=$(plist "${DSTROOT}/AudMonkey.app/Contents/Info.plist" "CFBundleIdentifier")
 
 #
 # This depends on a file in the builders HOME directory called ".audacity_signing" that
@@ -136,10 +136,10 @@ then
    fi
 fi
 
-VOL="Audacity $VERSION"
+VOL="AudMonkey $VERSION"
 DMG="audacity-macos-$VERSION"
 
-echo "Audacity has been installed to: ${DSTROOT}"
+echo "AudMonkey has been installed to: ${DSTROOT}"
 cd "${DSTROOT}/.."
 
 # Make sure we have consistent ownership and permissions
@@ -156,29 +156,29 @@ then
                   --timestamp \
                   --identifier "${IDENT}" \
                   --options runtime \
-                  --entitlements "${SRCROOT}/Audacity.entitlements" \
+                  --entitlements "${SRCROOT}/AudMonkey.entitlements" \
                   --sign "${CODESIGN_APP_IDENTITY}" \
-                  ${DSTROOT}/Audacity.app/Contents/modules/*
+                  ${DSTROOT}/AudMonkey.app/Contents/modules/*
 
    xcrun codesign --verbose \
                   --timestamp \
                   --identifier "${IDENT}" \
                   --options runtime \
-                  --entitlements "${SRCROOT}/Audacity.entitlements" \
+                  --entitlements "${SRCROOT}/AudMonkey.entitlements" \
                   --sign "${CODESIGN_APP_IDENTITY}" \
-                  ${DSTROOT}/Audacity.app/Contents/plug-ins/*
+                  ${DSTROOT}/AudMonkey.app/Contents/plug-ins/*
 
    xcrun codesign --verbose \
                   --deep \
                   --timestamp \
                   --identifier "${IDENT}" \
                   --options runtime \
-                  --entitlements "${SRCROOT}/Audacity.entitlements" \
+                  --entitlements "${SRCROOT}/AudMonkey.entitlements" \
                   --sign "${CODESIGN_APP_IDENTITY}" \
-                  ${DSTROOT}/Audacity.app
+                  ${DSTROOT}/AudMonkey.app
 
    # Create the ZIP archive for notarization
-   xcrun ditto -c -k --keepParent "${DSTROOT}/Audacity.app" "${DSTROOT}.zip" 
+   xcrun ditto -c -k --keepParent "${DSTROOT}/AudMonkey.app" "${DSTROOT}.zip" 
 
    # Send it off for notarization
    notarize "${DSTROOT}.zip"
@@ -187,7 +187,7 @@ then
    rm "${DSTROOT}.zip"
 
    # Staple the app
-   stapler staple "${DSTROOT}/Audacity.app"
+   stapler staple "${DSTROOT}/AudMonkey.app"
 fi
 
 # Create structure
@@ -196,10 +196,10 @@ cp -pR "${DSTROOT}/" "${DMG}"
 
 # Copy over the background image
 mkdir "${DMG}/.background"
-cp "${SRCROOT}/Resources/Audacity-DMG-background.png" "${DMG}/.background"
+cp "${SRCROOT}/Resources/AudMonkey-DMG-background.png" "${DMG}/.background"
 
 #Add a custom icon for the DMG
-#cp -p mac/Resources/Audacity.icns "${DMG}"/.VolumeIcon.icns
+#cp -p mac/Resources/AudMonkey.icns "${DMG}"/.VolumeIcon.icns
 
 # Make sure it's not already attached
 ATTACHED=$(hdiutil info | awk "/\/Volumes\/${VOL}/{print \$1}")
@@ -247,9 +247,9 @@ echo '
               set theViewOptions to the icon view options of container window
               set arrangement of theViewOptions to not arranged
               set icon size of theViewOptions to 72
-              set background picture of theViewOptions to file ".background:Audacity-DMG-background.png" 
+              set background picture of theViewOptions to file ".background:AudMonkey-DMG-background.png" 
               make new alias file at container window to POSIX file "/Applications" with properties {name:"Applications"}
-              set position of item "Audacity" of container window to {170, 350}
+              set position of item "AudMonkey" of container window to {170, 350}
               set position of item "Applications" of container window to {430, 350}
               close
               open
@@ -278,7 +278,7 @@ fi
 
 # Create zip version
 rm -rf "${DMG}/.background"
-rm -rf "${DMG}/Audacity.app/Contents/help"
+rm -rf "${DMG}/AudMonkey.app/Contents/help"
 zip -r9 "${DMG}.zip" "${DMG}"
 
 # Cleanup

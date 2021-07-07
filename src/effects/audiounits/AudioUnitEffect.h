@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   AudioUnitEffect.h
 
@@ -21,9 +21,9 @@
 #include <AudioUnit/AudioUnit.h>
 #include <AudioUnit/AudioUnitProperties.h>
 
-#include "audacity/EffectInterface.h"
-#include "audacity/ModuleInterface.h"
-#include "audacity/PluginInterface.h"
+#include "audmonkey/EffectInterface.h"
+#include "audmonkey/ModuleInterface.h"
+#include "audmonkey/PluginInterface.h"
 
 #include "AUControl.h"
 

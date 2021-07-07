@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   TracksPrefs.cpp
 
@@ -452,7 +452,7 @@ bool TracksPrefs::Commit()
 
 namespace{
 PrefsPanel::Registration sAttachment{ "Tracks",
-   [](wxWindow *parent, wxWindowID winid, AudacityProject *)
+   [](wxWindow *parent, wxWindowID winid, AudMonkeyProject *)
    {
       wxASSERT(parent); // to justify safenew
       return safenew TracksPrefs(parent, winid);

@@ -1,7 +1,7 @@
 set(CPACK_PACKAGE_VERSION_MAJOR "${AUDACITY_VERSION}") # X
 set(CPACK_PACKAGE_VERSION_MINOR "${AUDACITY_RELEASE}") # Y
 set(CPACK_PACKAGE_VERSION_PATCH "${AUDACITY_REVISION}") # Z
-set(CPACK_PACKAGE_VENDOR "Audacity")
+set(CPACK_PACKAGE_VENDOR "AudMonkey")
 set(CPACK_PACKAGE_HOMEPAGE_URL "https://audacityteam.org")
 
 # X.Y.Z-alpha-20210615
@@ -49,7 +49,7 @@ if(CMAKE_SYSTEM_NAME MATCHES "Linux")
 elseif( CMAKE_SYSTEM_NAME STREQUAL "Darwin" )
    set( CPACK_GENERATOR DragNDrop )
 
-   set( CPACK_DMG_BACKGROUND_IMAGE "${CMAKE_SOURCE_DIR}/mac/Resources/Audacity-DMG-background.png")
+   set( CPACK_DMG_BACKGROUND_IMAGE "${CMAKE_SOURCE_DIR}/mac/Resources/AudMonkey-DMG-background.png")
    set( CPACK_DMG_DS_STORE_SETUP_SCRIPT "${CMAKE_SOURCE_DIR}/scripts/build/macOS/DMGSetup.scpt")
 
    if( ${_OPT}perform_codesign )

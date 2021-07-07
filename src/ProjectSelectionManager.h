@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 ProjectSelectionManager.cpp
 
@@ -15,7 +15,7 @@ Paul Licameli split from ProjectManager.cpp
 #include "toolbars/SelectionBarListener.h" // to inherit
 #include "toolbars/SpectralSelectionBarListener.h" // to inherit
 
-class AudacityProject;
+class AudMonkeyProject;
 
 class AUDACITY_DLL_API ProjectSelectionManager final
    : public ClientData::Base
@@ -24,10 +24,10 @@ class AUDACITY_DLL_API ProjectSelectionManager final
    , public TimeToolBarListener
 {
 public:
-   static ProjectSelectionManager &Get( AudacityProject &project );
-   static const ProjectSelectionManager &Get( const AudacityProject &project );
+   static ProjectSelectionManager &Get( AudMonkeyProject &project );
+   static const ProjectSelectionManager &Get( const AudMonkeyProject &project );
 
-   explicit ProjectSelectionManager( AudacityProject &project );
+   explicit ProjectSelectionManager( AudMonkeyProject &project );
    ProjectSelectionManager( const ProjectSelectionManager & ) PROHIBITED;
    ProjectSelectionManager &operator=(
       const ProjectSelectionManager & ) PROHIBITED;
@@ -58,7 +58,7 @@ public:
 private:
    bool SnapSelection();
 
-   AudacityProject &mProject;
+   AudMonkeyProject &mProject;
 };
 
 #endif

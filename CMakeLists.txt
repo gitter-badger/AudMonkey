@@ -8,7 +8,7 @@ cmake_minimum_required( VERSION 3.15 )
 # If building with GNU compiler, then must be 4.9 or later.
 if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU" AND
     CMAKE_CXX_COMPILER_VERSION VERSION_LESS "4.9")
-   message(FATAL_ERROR "Audacity requires at least GCC 4.9")
+   message(FATAL_ERROR "AudMonkey requires at least GCC 4.9")
 endif ()
 
 # We only do alpha builds, beta builds, and release versions.
@@ -21,7 +21,7 @@ endif ()
 # Set this value to 0 for alpha, 1 for beta, 2 for release builds
 set( AUDACITY_BUILD_LEVEL 0 )
 
-# The Audacity version
+# The AudMonkey version
 # Increment as appropriate after release of a new version, and set back
 # AUDACITY_BUILD_LEVEL to 0
 set( AUDACITY_VERSION 3 )
@@ -128,13 +128,13 @@ if( CCACHE_PROGRAM )
 endif()
 
 # Define option() prefix
-set( _OPT "audacity_" )
+set( _OPT "audmonkey_" )
 
 # Our very own project
-project( Audacity )
+project( AudMonkey )
 
 # Load our functions/macros
-include( AudacityFunctions )
+include( AudMonkeyFunctions )
 
 set_from_env(AUDACITY_ARCH_LABEL) # e.g. x86_64
 
@@ -151,7 +151,7 @@ cmd_option( ${_OPT}obey_system_dependencies
             Off
 )
 
-include( AudacityDependencies )
+include( AudMonkeyDependencies )
 
 # Pull all the modules we'll need
 include( CheckCXXCompilerFlag )
@@ -245,7 +245,7 @@ message( STATUS )
 set_property( GLOBAL PROPERTY USE_FOLDERS ON )
 
 if( CMAKE_GENERATOR MATCHES "Visual Studio" )
-   # Make sure Audacity is the startup project
+   # Make sure AudMonkey is the startup project
    set_directory_properties(
       PROPERTIES
          VS_STARTUP_PROJECT "${CMAKE_PROJECT_NAME}"
@@ -285,8 +285,8 @@ set( _DEST "${_DESTDIR}" )
 set( _PREFIX "${CMAKE_INSTALL_PREFIX}" )
 set( _LIBDIR "${CMAKE_INSTALL_LIBDIR}" )
 set( _DATADIR "${CMAKE_INSTALL_DATADIR}" )
-set( _PKGLIB "${_LIBDIR}/audacity" )
-set( _PKGDATA "${_DATADIR}/audacity/" )
+set( _PKGLIB "${_LIBDIR}/audmonkey" )
+set( _PKGDATA "${_DATADIR}/audmonkey/" )
 set( _MANDIR "${CMAKE_INSTALL_MANDIR}" )
 set( _MODDIR "${_DEST}/modules" )
 set( _EXEDIR "${_DEST}" )
@@ -299,7 +299,7 @@ set( CMAKE_INSTALL_RPATH_USE_LINK_PATH FALSE )
 
 # Adjust them for the Mac
 if( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
-   set( _APPDIR "Audacity.app/Contents" )
+   set( _APPDIR "AudMonkey.app/Contents" )
    set( _DEST "${_DESTDIR}/${_APPDIR}" )
    set( _EXEDIR "${_DEST}/MacOS" )
    set( _MODDIR "${_DEST}/modules" )
@@ -449,11 +449,11 @@ if( NOT CMAKE_INSTALL_LIBDIR STREQUAL "lib" AND NOT EXISTS "${CMAKE_BINARY_DIR}/
    file( CREATE_LINK "${CMAKE_BINARY_DIR}/lib" "${CMAKE_BINARY_DIR}/lib64" SYMBOLIC )
 endif()
 
-# Define Audacity's name
+# Define AudMonkey's name
 if( CMAKE_SYSTEM_NAME MATCHES "Darwin|Windows" )
-   set( AUDACITY_NAME "Audacity" )
+   set( AUDACITY_NAME "AudMonkey" )
 else()
-   set( AUDACITY_NAME "audacity" )
+   set( AUDACITY_NAME "audmonkey" )
 endif()
 
 # Create short and full version strings
@@ -495,13 +495,13 @@ add_subdirectory( "scripts" )
 
 # Generate config file
 if( CMAKE_SYSTEM_NAME MATCHES "Windows" )
-   configure_file( src/audacity_config.h.in src/private/configwin.h )
+   configure_file( src/audmonkey_config.h.in src/private/configwin.h )
 elseif( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
    set( HAVE_VISIBILITY 1 )
-   configure_file( src/audacity_config.h.in src/private/configmac.h )
+   configure_file( src/audmonkey_config.h.in src/private/configmac.h )
 else()
    set( HAVE_VISIBILITY 1 )
-   configure_file( src/audacity_config.h.in src/private/configunix.h )
+   configure_file( src/audmonkey_config.h.in src/private/configunix.h )
 endif()
 
 # Generate a picture of module dependencies
@@ -534,7 +534,7 @@ cmake_dependent_option(
 )
 
 if( ${_OPT}perform_codesign )
-   include( AudacityCodeSigning )
+   include( AudMonkeyCodeSigning )
 endif()
 
 #
@@ -549,7 +549,7 @@ cmd_option( ${_OPT}package_manual
 # Variables, that are common for all package targets
 
 if( CMAKE_SYSTEM_NAME MATCHES "Windows" )
-   include( AudacityInnoSetup )
+   include( AudMonkeyInnoSetup )
 endif()
 
 # Uncomment what follows for symbol values.

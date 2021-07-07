@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   TimeToolBar.h
 
@@ -22,11 +22,11 @@ class TimeToolBarListener;
 class TimeToolBar final : public ToolBar
 {
 public:
-   TimeToolBar(AudacityProject &project);
+   TimeToolBar(AudMonkeyProject &project);
    virtual ~TimeToolBar();
    
-   static TimeToolBar &Get(AudacityProject &project);
-   static const TimeToolBar &Get(const AudacityProject &project);
+   static TimeToolBar &Get(AudMonkeyProject &project);
+   static const TimeToolBar &Get(const AudMonkeyProject &project);
    
    void Populate() override;
    void Repaint(wxDC * WXUNUSED(dc)) override {};

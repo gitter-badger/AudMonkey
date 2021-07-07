@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   MixerToolbar.h
 
@@ -17,17 +17,17 @@ class wxSize;
 class wxPoint;
 
 class ASlider;
-class AudacityProject;
+class AudMonkeyProject;
 
 class MixerToolBar final : public ToolBar {
 
  public:
 
-   MixerToolBar( AudacityProject &project );
+   MixerToolBar( AudMonkeyProject &project );
    virtual ~MixerToolBar();
 
-   static MixerToolBar &Get( AudacityProject &project );
-   static const MixerToolBar &Get( const AudacityProject &project );
+   static MixerToolBar &Get( AudMonkeyProject &project );
+   static const MixerToolBar &Get( const AudMonkeyProject &project );
 
    void Create(wxWindow * parent) override;
 

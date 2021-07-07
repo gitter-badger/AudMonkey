@@ -1,6 +1,6 @@
 /**********************************************************************
 
- Audacity: A Digital Audio Editor
+ AudMonkey: A Digital Audio Editor
 
 
  ScrubbingToolbar.h
@@ -18,7 +18,7 @@
 
 #include "ToolBar.h"
 
-class AudacityProject;
+class AudMonkeyProject;
 
 class wxCommandEvent;
 class wxDC;
@@ -40,11 +40,11 @@ class ScrubbingToolBar final : public ToolBar {
 
 public:
 
-   ScrubbingToolBar( AudacityProject &project );
+   ScrubbingToolBar( AudMonkeyProject &project );
    virtual ~ScrubbingToolBar();
 
-   static ScrubbingToolBar &Get( AudacityProject &project );
-   static const ScrubbingToolBar &Get( const AudacityProject &project );
+   static ScrubbingToolBar &Get( AudMonkeyProject &project );
+   static const ScrubbingToolBar &Get( const AudMonkeyProject &project );
 
    void Create(wxWindow *parent) override;
 

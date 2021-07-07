@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 Equalization48x.h
 
@@ -16,7 +16,7 @@ Intrinsics (SSE/AVX) and Threaded Equalization
 #include <memory>
 
 #include <wx/thread.h> // to inherit
-#include <audacity/Types.h>
+#include <audmonkey/Types.h>
 class WaveTrack;
 using fft_type = float;
 

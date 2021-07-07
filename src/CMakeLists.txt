@@ -1,10 +1,10 @@
 
-set( TARGET Audacity )
+set( TARGET AudMonkey )
 set( TARGET_ROOT ${topdir}/src )
 
 message( STATUS "========== Configuring ${TARGET} ==========" )
 
-# Allow modules to link against the Audacity executable
+# Allow modules to link against the AudMonkey executable
 set( CMAKE_ENABLE_EXPORTS ON )
 
 add_executable( ${TARGET} )
@@ -85,17 +85,17 @@ list( APPEND SOURCES
       AllThemeResources.cpp
       AllThemeResources.h
       AttachedVirtualFunction.h
-      AudacityApp.cpp
-      AudacityApp.h
-      $<$<BOOL:${wxIS_MAC}>:AudacityApp.mm>
-      AudacityException.cpp
-      AudacityException.h
-      AudacityFileConfig.cpp
-      AudacityFileConfig.h
-      AudacityHeaders.cpp
-      AudacityHeaders.h
-      AudacityLogger.cpp
-      AudacityLogger.h
+      AudMonkeyApp.cpp
+      AudMonkeyApp.h
+      $<$<BOOL:${wxIS_MAC}>:AudMonkeyApp.mm>
+      AudMonkeyException.cpp
+      AudMonkeyException.h
+      AudMonkeyFileConfig.cpp
+      AudMonkeyFileConfig.h
+      AudMonkeyHeaders.cpp
+      AudMonkeyHeaders.h
+      AudMonkeyLogger.cpp
+      AudMonkeyLogger.h
       AudioIO.cpp
       AudioIO.h
       AudioIOBase.cpp
@@ -347,8 +347,8 @@ list( APPEND SOURCES
 
       commands/AppCommandEvent.cpp
       commands/AppCommandEvent.h
-      commands/AudacityCommand.cpp
-      commands/AudacityCommand.h
+      commands/AudMonkeyCommand.cpp
+      commands/AudMonkeyCommand.h
       commands/BatchEvalCommand.cpp
       commands/BatchEvalCommand.h
       commands/Command.cpp
@@ -902,8 +902,8 @@ list( APPEND SOURCES
       widgets/ASlider.h
       widgets/AttachableScrollBar.cpp
       widgets/AttachableScrollBar.h
-      widgets/AudacityMessageBox.cpp
-      widgets/AudacityMessageBox.h
+      widgets/AudMonkeyMessageBox.cpp
+      widgets/AudMonkeyMessageBox.h
       widgets/BackedPanel.cpp
       widgets/BackedPanel.h
       widgets/ErrorDialog.cpp
@@ -982,7 +982,7 @@ list( APPEND SOURCES
       xml/XMLTagHandler.h
       xml/XMLWriter.cpp
       xml/XMLWriter.h
-      xml/audacityproject.dtd
+      xml/audmonkeyproject.dtd
 
       # Update version
       $<$<BOOL:${${_OPT}has_updates_check}>:
@@ -1006,14 +1006,14 @@ list( APPEND SOURCES
 #
 #
 list( APPEND HEADERS
-   ../include/audacity/EffectInterface.h
-   ../include/audacity/Types.h
-   ../include/audacity/ConfigInterface.h
-   ../include/audacity/ModuleInterface.h
-   ../include/audacity/PluginInterface.h
-   ../include/audacity/ComponentInterface.h
-   ../include/audacity/EffectAutomationParameters.h
-   ../include/audacity/ImporterInterface.h
+   ../include/audmonkey/EffectInterface.h
+   ../include/audmonkey/Types.h
+   ../include/audmonkey/ConfigInterface.h
+   ../include/audmonkey/ModuleInterface.h
+   ../include/audmonkey/PluginInterface.h
+   ../include/audmonkey/ComponentInterface.h
+   ../include/audmonkey/EffectAutomationParameters.h
+   ../include/audmonkey/ImporterInterface.h
 )
 
 #
@@ -1071,7 +1071,7 @@ if( CMAKE_VERSION VERSION_GREATER_EQUAL "3.16" AND NOT CCACHE_PROGRAM )
    )
 endif()
 
-audacity_append_common_compiler_options( OPTIONS "${${_OPT}use_pch}" )
+audmonkey_append_common_compiler_options( OPTIONS "${${_OPT}use_pch}" )
 
 list( APPEND LDFLAGS
    PRIVATE
@@ -1144,7 +1144,7 @@ if( CMAKE_SYSTEM_NAME MATCHES "Windows" )
 
    # Define the Windows specific resources
    list( APPEND WIN_RESOURCES
-      ../win/audacity.rc
+      ../win/audmonkey.rc
    )
 
    # Copy over the wxWidgets DLLs
@@ -1154,7 +1154,7 @@ if( CMAKE_SYSTEM_NAME MATCHES "Windows" )
       TARGET
          ${TARGET}
       COMMAND
-         ${CMAKE_COMMAND} -D SRC="${_EXEDIR}/Audacity.exe"
+         ${CMAKE_COMMAND} -D SRC="${_EXEDIR}/AudMonkey.exe"
                           -D DST="${_EXEDIR}"
                           -D WXWIN="${_SHARED_PROXY_BASE_PATH}/$<CONFIG>/"
                           -P ${AUDACITY_MODULE_PATH}/CopyLibs.cmake
@@ -1189,13 +1189,13 @@ elseif( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
 
    # Define Mac specific resources
    list( APPEND MAC_RESOURCES
-      ../mac/Resources/Audacity.icns
-      ../mac/Resources/AudacityAIFF.icns
-      ../mac/Resources/AudacityAU.icns
-      ../mac/Resources/AudacityMP3.icns
-      ../mac/Resources/AudacityOGG.icns
-      ../mac/Resources/AudacityProject.icns
-      ../mac/Resources/AudacityWAV.icns
+      ../mac/Resources/AudMonkey.icns
+      ../mac/Resources/AudMonkeyAIFF.icns
+      ../mac/Resources/AudMonkeyAU.icns
+      ../mac/Resources/AudMonkeyMP3.icns
+      ../mac/Resources/AudMonkeyOGG.icns
+      ../mac/Resources/AudMonkeyProject.icns
+      ../mac/Resources/AudMonkeyWAV.icns
    )
 
    set_target_properties(
@@ -1211,7 +1211,7 @@ elseif( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
    # These sources must be compiled as Objective C++ and excluded
    # from precompiled header usage
    set_source_files_properties(
-      AudacityApp.mm
+      AudMonkeyApp.mm
       KeyboardCapture.cpp
       effects/EffectUI.cpp
       effects/VST/VSTControlOSX.mm
@@ -1239,7 +1239,7 @@ elseif( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
       TARGET
          ${TARGET}
       COMMAND
-         ${CMAKE_COMMAND} -D SRC="${_EXEDIR}/Audacity"
+         ${CMAKE_COMMAND} -D SRC="${_EXEDIR}/AudMonkey"
                           -D DST="${_PKGLIB}"
                           -D WXWIN="${_SHARED_PROXY_BASE_PATH}/$<CONFIG>"
                           -P ${AUDACITY_MODULE_PATH}/CopyLibs.cmake
@@ -1264,7 +1264,7 @@ else()
    # (Don't use generator expressions since it will leave null/empty
    # entries in the list.)
    set( MIMETYPES
-      application/x-audacity-project
+      application/x-audmonkey-project
    )
    if( USE_FFMPEG )
       list( APPEND MIMETYPES
@@ -1301,14 +1301,14 @@ else()
    endif()
 
    # Create the desktop file
-   configure_file( audacity.desktop.in ${_INTDIR}/audacity.desktop )
+   configure_file( audmonkey.desktop.in ${_INTDIR}/audmonkey.desktop )
 
    # Copy the required wxWidgets libs into the bundle
    add_custom_command(
       TARGET
          ${TARGET}
       COMMAND
-         ${CMAKE_COMMAND} -D SRC="${_EXEDIR}/audacity"
+         ${CMAKE_COMMAND} -D SRC="${_EXEDIR}/audmonkey"
                           -D DST="${_DEST}/${_PKGLIB}"
                           -D WXWIN="${_SHARED_PROXY_BASE_PATH}/$<CONFIG>"
                           -P ${AUDACITY_MODULE_PATH}/CopyLibs.cmake
@@ -1337,8 +1337,8 @@ source_group(
     PREFIX
         "CMake"
     FILES
-        ${_INTDIR}/CMakeFiles/Audacity.dir/cmake_pch.cxx
-        ${_INTDIR}/CMakeFiles/Audacity.dir/cmake_pch.hxx
+        ${_INTDIR}/CMakeFiles/AudMonkey.dir/cmake_pch.cxx
+        ${_INTDIR}/CMakeFiles/AudMonkey.dir/cmake_pch.hxx
 )
 
 # Define AUDACITY_DLL_API
@@ -1361,7 +1361,7 @@ if( CMAKE_VERSION VERSION_GREATER_EQUAL "3.16" AND NOT CCACHE_PROGRAM )
          $<$<PLATFORM_ID:Windows>:${CMAKE_BINARY_DIR}/src/private/configwin.h>
          $<$<PLATFORM_ID:Darwin>:${CMAKE_BINARY_DIR}/src/private/configmac.h>
          $<$<NOT:$<PLATFORM_ID:Windows,Darwin>>:${CMAKE_BINARY_DIR}/src/private/configunix.h>
-         AudacityHeaders.h
+         AudMonkeyHeaders.h
       )
    else()
       message( STATUS "Not using precompiled headers" )
@@ -1387,22 +1387,22 @@ else()
                DESTINATION "${_LIBDIR}"
                USE_SOURCE_PERMISSIONS
                FILES_MATCHING PATTERN "*.so*" )
-      install( FILES "${_INTDIR}/audacity.desktop"
+      install( FILES "${_INTDIR}/audmonkey.desktop"
                DESTINATION "${_DATADIR}/applications" )
       install( FILES "${topdir}/LICENSE.txt" "${topdir}/README.txt"
                DESTINATION "${_DATADIR}/doc/${AUDACITY_NAME}" )
-      install( FILES "${_SRCDIR}/audacity.xml"
+      install( FILES "${_SRCDIR}/audmonkey.xml"
                DESTINATION "${_DATADIR}/mime/packages" )
       install( FILES "${topdir}/presets/EQDefaultCurves.xml"
                DESTINATION "${_PKGDATA}" )
-      install( PROGRAMS "${PROJECT_SOURCE_DIR}/linux/audacity.sh"
+      install( PROGRAMS "${PROJECT_SOURCE_DIR}/linux/audmonkey.sh"
                DESTINATION "."
-               RENAME "audacity" )
+               RENAME "audmonkey" )
    endif()
 endif()
 
 # collect dependency information for third party libraries
-list( APPEND GRAPH_EDGES "Audacity [shape=house]" )
+list( APPEND GRAPH_EDGES "AudMonkey [shape=house]" )
 foreach( LIBRARY ${LIBRARIES} )
    if (NOT LIBRARY MATCHES "PUBLIC|PRIVATE|INTERFACE")
       canonicalize_node_name(LIBRARY "${LIBRARY}")

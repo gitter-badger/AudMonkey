@@ -1,5 +1,5 @@
 /*!********************************************************************
- Audacity: A Digital Audio Editor
+ AudMonkey: A Digital Audio Editor
 
  @file VersionId.h
  @brief Declare a class with version number manipulation.

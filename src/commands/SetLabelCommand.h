@@ -19,7 +19,7 @@
 #include "Command.h"
 #include "CommandType.h"
 
-class SetLabelCommand : public AudacityCommand
+class SetLabelCommand : public AudMonkeyCommand
 {
 public:
    static const ComponentInterfaceSymbol Symbol;
@@ -31,7 +31,7 @@ public:
    bool DefineParams( ShuttleParams & S ) override;
    void PopulateOrExchange(ShuttleGui & S) override;
 
-   // AudacityCommand overrides
+   // AudMonkeyCommand overrides
    ManualPageID ManualPage() override {return L"Extra_Menu:_Scriptables_I#set_label";}
 
    bool Apply(const CommandContext & context) override;

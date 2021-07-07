@@ -1,6 +1,6 @@
 /**********************************************************************
  
- Audacity: A Digital Audio Editor
+ AudMonkey: A Digital Audio Editor
  
  TrackUtilities.h
  
@@ -11,7 +11,7 @@
 #ifndef __AUDACITY_TRACK_UTILITIES__
 #define __AUDACITY_TRACK_UTILITIES__
 
-class AudacityProject;
+class AudMonkeyProject;
 class Track;
 
 namespace TrackUtilities {
@@ -21,18 +21,18 @@ namespace TrackUtilities {
    };
    /// Move a track up, down, to top or to bottom.
    AUDACITY_DLL_API void DoMoveTrack(
-      AudacityProject &project, Track* target, MoveChoice choice );
+      AudMonkeyProject &project, Track* target, MoveChoice choice );
    // "exclusive" mute means mute the chosen track and unmute all others.
    AUDACITY_DLL_API
-   void DoTrackMute( AudacityProject &project, Track *pTrack, bool exclusive );
+   void DoTrackMute( AudMonkeyProject &project, Track *pTrack, bool exclusive );
    // Type of solo (standard or simple) follows the set preference, unless
    // exclusive == true, which causes the opposite behavior.
    AUDACITY_DLL_API
-   void DoTrackSolo( AudacityProject &project, Track *pTrack, bool exclusive );
+   void DoTrackSolo( AudMonkeyProject &project, Track *pTrack, bool exclusive );
    AUDACITY_DLL_API
-   void DoRemoveTrack( AudacityProject &project, Track * toRemove );
+   void DoRemoveTrack( AudMonkeyProject &project, Track * toRemove );
    AUDACITY_DLL_API
-   void DoRemoveTracks( AudacityProject & );
+   void DoRemoveTracks( AudMonkeyProject & );
 
 }
 

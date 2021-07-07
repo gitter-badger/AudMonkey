@@ -16,7 +16,7 @@
 
       libsoxr, written by Rob Sykes. LGPL.
 
-   Since Audacity always does resampling on mono streams that are
+   Since AudMonkey always does resampling on mono streams that are
    contiguous in memory, this class doesn't support multiple channels
    or some of the other optional features of some of these resamplers.
 
@@ -25,7 +25,7 @@
 #include "Resample.h"
 #include "Prefs.h"
 #include "Internat.h"
-#include "../include/audacity/ComponentInterface.h"
+#include "../include/audmonkey/ComponentInterface.h"
 
 #include <soxr.h>
 

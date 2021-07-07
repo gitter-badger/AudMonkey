@@ -1,6 +1,6 @@
 /*!********************************************************************
 
- Audacity: A Digital Audio Editor
+ AudMonkey: A Digital Audio Editor
 
  @file Uuid.h
  @brief Declare a class to generate and parse UUIDs
@@ -14,7 +14,7 @@
 #include <cstdint>
 #include <string>
 
-namespace audacity
+namespace audmonkey
 {
 
 /*! @brief Utility class that generates and parses UUIDs.
@@ -78,13 +78,13 @@ private:
    Bytes mData;
 };
 
-} // namespace audacity
+} // namespace audmonkey
 
 namespace std
 {
-template <> struct UUID_API hash<audacity::Uuid>
+template <> struct UUID_API hash<audmonkey::Uuid>
 {
-   std::size_t operator()(const audacity::Uuid& uuid) const noexcept
+   std::size_t operator()(const audmonkey::Uuid& uuid) const noexcept
    {
       return uuid.GetHash();
    }

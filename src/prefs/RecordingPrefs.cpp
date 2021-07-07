@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   RecordingPrefs.cpp
 
@@ -302,7 +302,7 @@ void RecordingPrefs::OnToggleCustomName(wxCommandEvent & /* Evt */)
 
 namespace{
 PrefsPanel::Registration sAttachment{ "Recording",
-   [](wxWindow *parent, wxWindowID winid, AudacityProject *)
+   [](wxWindow *parent, wxWindowID winid, AudMonkeyProject *)
    {
       wxASSERT(parent); // to justify safenew
       return safenew RecordingPrefs(parent, winid);

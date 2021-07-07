@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  AudMonkey: A Digital Audio Editor
 
   DeviceManager.h
 
@@ -11,7 +11,7 @@
 ******************************************************************//**
 
 \class DeviceManager
-\brief A singleton that manages the audio devices known to Audacity
+\brief A singleton that manages the audio devices known to AudMonkey
 
 *//*******************************************************************/
 

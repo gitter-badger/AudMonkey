@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 SpectrumView.h
 
@@ -42,7 +42,7 @@ private:
 
    std::vector<UIHandlePtr> DetailedHitTest(
       const TrackPanelMouseState &state,
-      const AudacityProject *pProject, int currentTool, bool bMultiTool )
+      const AudMonkeyProject *pProject, int currentTool, bool bMultiTool )
       override;
 
 protected:

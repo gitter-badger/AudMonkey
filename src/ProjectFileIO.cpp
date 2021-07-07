@@ -1,10 +1,10 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 ProjectFileIO.cpp
 
-Paul Licameli split from AudacityProject.cpp
+Paul Licameli split from AudMonkeyProject.cpp
 
 **********************************************************************/
 
@@ -30,7 +30,7 @@ Paul Licameli split from AudacityProject.cpp
 #include "TempDirectory.h"
 #include "ViewInfo.h"
 #include "WaveTrack.h"
-#include "widgets/AudacityMessageBox.h"
+#include "widgets/AudMonkeyMessageBox.h"
 #include "widgets/ErrorDialog.h"
 #include "widgets/NumericTextCtrl.h"
 #include "widgets/ProgressDialog.h"
@@ -58,19 +58,19 @@ wxDEFINE_EVENT( EVT_RECONNECTION_FAILURE, wxCommandEvent);
 #define PACK(b1, b2, b3, b4) ((b1 << 24) | (b2 << 16) | (b3 << 8) | b4)
 
 // The ProjectFileID is stored in the SQLite database header to identify the file
-// as an Audacity project file. It can be used by applications that identify file
+// as an AudMonkey project file. It can be used by applications that identify file
 // types, such as the Linux "file" command.
 static const int ProjectFileID = PACK('A', 'U', 'D', 'Y');
 
-// The "ProjectFileVersion" represents the version of Audacity at which a specific
+// The "ProjectFileVersion" represents the version of AudMonkey at which a specific
 // database schema was used. It is assumed that any changes to the database schema
-// will require a new Audacity version so if schema changes are required set this
+// will require a new AudMonkey version so if schema changes are required set this
 // to the new release being produced.
 //
 // This version is checked before accessing any tables in the database since there's
 // no guarantee what tables exist. If it's found that the database is newer than the
-// currently running Audacity, an error dialog will be displayed informing the user
-// that they need a newer version of Audacity.
+// currently running AudMonkey, an error dialog will be displayed informing the user
+// that they need a newer version of AudMonkey.
 //
 // Note that this is NOT the "schema_version" that SQLite maintains. The value
 // specified here is stored in the "user_version" field of the SQLite database
@@ -227,7 +227,7 @@ static void RefreshAllTitles(bool bShowProjectNumbers )
 }
 
 TitleRestorer::TitleRestorer(
-   wxTopLevelWindow &window, AudacityProject &project )
+   wxTopLevelWindow &window, AudMonkeyProject &project )
 {
    if( window.IsIconized() )
       window.Restore();
@@ -258,25 +258,25 @@ TitleRestorer::~TitleRestorer() {
       RefreshAllTitles( false );
 }
 
-static const AudacityProject::AttachedObjects::RegisteredFactory sFileIOKey{
-   []( AudacityProject &parent ){
+static const AudMonkeyProject::AttachedObjects::RegisteredFactory sFileIOKey{
+   []( AudMonkeyProject &parent ){
       auto result = std::make_shared< ProjectFileIO >( parent );
       return result;
    }
 };
 
-ProjectFileIO &ProjectFileIO::Get( AudacityProject &project )
+ProjectFileIO &ProjectFileIO::Get( AudMonkeyProject &project )
 {
    auto &result = project.AttachedObjects::Get< ProjectFileIO >( sFileIOKey );
    return result;
 }
 
-const ProjectFileIO &ProjectFileIO::Get( const AudacityProject &project )
+const ProjectFileIO &ProjectFileIO::Get( const AudMonkeyProject &project )
 {
-   return Get( const_cast< AudacityProject & >( project ) );
+   return Get( const_cast< AudMonkeyProject & >( project ) );
 }
 
-ProjectFileIO::ProjectFileIO(AudacityProject &project)
+ProjectFileIO::ProjectFileIO(AudMonkeyProject &project)
    : mProject{ project }
    , mpErrors{ std::make_shared<DBConnectionErrors>() }
 {
@@ -642,7 +642,7 @@ bool ProjectFileIO::CheckVersion()
    // It's a database that SQLite recognizes, but it's not one of ours
    if (wxStrtoul<char **>(result, nullptr, 10) != ProjectFileID)
    {
-      SetError(XO("This is not an Audacity project file"));
+      SetError(XO("This is not an AudMonkey project file"));
       return false;
    }
 
@@ -659,7 +659,7 @@ bool ProjectFileIO::CheckVersion()
    if (version > ProjectFileVersion)
    {
       SetError(
-         XO("This project was created with a newer version of Audacity.\n\nYou will need to upgrade to open it.")
+         XO("This project was created with a newer version of AudMonkey.\n\nYou will need to upgrade to open it.")
       );
       return false;
    }
@@ -860,7 +860,7 @@ bool ProjectFileIO::CopyTo(const FilePath &destpath,
 
          // And detach the outbound DB in case (if it's attached). Don't check for
          // errors since it may not be attached. But, if it is and the DETACH fails,
-         // subsequent CopyTo() actions will fail until Audacity is relaunched.
+         // subsequent CopyTo() actions will fail until AudMonkey is relaunched.
          sqlite3_exec(db, "DETACH DATABASE outbound;", nullptr, nullptr, nullptr);
 
          // RemoveProject not necessary to clean up attached database
@@ -1151,7 +1151,7 @@ bool ProjectFileIO::RenameOrWarn(const FilePath &src, const FilePath &dst)
       ShowError(
          &window,
          XO("Error Writing to File"),
-         XO("Audacity failed to write file %s.\n"
+         XO("AudMonkey failed to write file %s.\n"
             "Perhaps disk is full or not writable.\n"
             "For tips on freeing up space, click the help button.")
             .Format(dst),
@@ -1418,15 +1418,15 @@ void ProjectFileIO::SetProjectTitle(int number)
    {
       name =
       /* i18n-hint: The %02i is the project number, the %s is the project name.*/
-      XO("[Project %02i] Audacity \"%s\"")
+      XO("[Project %02i] AudMonkey \"%s\"")
          .Format( number + 1,
                  name.empty() ? XO("<untitled>") : Verbatim((const char *)name))
          .Translation();
    }
-   // If we are not showing numbers, then <untitled> shows as 'Audacity'.
+   // If we are not showing numbers, then <untitled> shows as 'AudMonkey'.
    else if (name.empty())
    {
-      name = _TS("Audacity");
+      name = _TS("AudMonkey");
    }
 
    if (mRecovered)
@@ -1487,7 +1487,7 @@ bool ProjectFileIO::HandleXMLTag(const wxChar *tag, const wxChar **attrs)
    auto &settings = ProjectSettings::Get(project);
 
    wxString fileVersion;
-   wxString audacityVersion;
+   wxString audmonkeyVersion;
    int requiredTags = 0;
    long longVpos = 0;
 
@@ -1516,9 +1516,9 @@ bool ProjectFileIO::HandleXMLTag(const wxChar *tag, const wxChar **attrs)
          requiredTags++;
       }
 
-      else if (!wxStrcmp(attr, wxT("audacityversion")))
+      else if (!wxStrcmp(attr, wxT("audmonkeyversion")))
       {
-         audacityVersion = value;
+         audmonkeyVersion = value;
          requiredTags++;
       }
 
@@ -1579,7 +1579,7 @@ bool ProjectFileIO::HandleXMLTag(const wxChar *tag, const wxChar **attrs)
       return false;
    }
 
-   // Parse the file version Audacity was build with
+   // Parse the file version AudMonkey was build with
    int cver;
    int crel;
    int crev;
@@ -1591,14 +1591,14 @@ bool ProjectFileIO::HandleXMLTag(const wxChar *tag, const wxChar **attrs)
    if (codeVer<fileVer)
    {
       /* i18n-hint: %s will be replaced by the version number.*/
-      auto msg = XO("This file was saved using Audacity %s.\nYou are using Audacity %s. You may need to upgrade to a newer version to open this file.")
-         .Format(audacityVersion, AUDACITY_VERSION_STRING);
+      auto msg = XO("This file was saved using AudMonkey %s.\nYou are using AudMonkey %s. You may need to upgrade to a newer version to open this file.")
+         .Format(audmonkeyVersion, AUDACITY_VERSION_STRING);
 
       ShowError(
          &window,
          XO("Can't open project file"),
          msg,
-         "FAQ:Errors_opening_an_Audacity_project"
+         "FAQ:Errors_opening_an_AudMonkey_project"
          );
 
       return false;
@@ -1641,8 +1641,8 @@ void ProjectFileIO::WriteXMLHeader(XMLWriter &xmlFile) const
    xmlFile.Write(wxT("<!DOCTYPE "));
    xmlFile.Write(wxT("project "));
    xmlFile.Write(wxT("PUBLIC "));
-   xmlFile.Write(wxT("\"-//audacityproject-1.3.0//DTD//EN\" "));
-   xmlFile.Write(wxT("\"http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd\" "));
+   xmlFile.Write(wxT("\"-//audmonkeyproject-1.3.0//DTD//EN\" "));
+   xmlFile.Write(wxT("\"http://audmonkey.sourceforge.net/xml/audmonkeyproject-1.3.0.dtd\" "));
    xmlFile.Write(wxT(">\n"));
 }
 
@@ -1657,13 +1657,13 @@ void ProjectFileIO::WriteXML(XMLWriter &xmlFile,
    auto &tags = Tags::Get(proj);
    const auto &settings = ProjectSettings::Get(proj);
 
-   //TIMER_START( "AudacityProject::WriteXML", xml_writer_timer );
+   //TIMER_START( "AudMonkeyProject::WriteXML", xml_writer_timer );
 
    xmlFile.StartTag(wxT("project"));
-   xmlFile.WriteAttr(wxT("xmlns"), wxT("http://audacity.sourceforge.net/xml/"));
+   xmlFile.WriteAttr(wxT("xmlns"), wxT("http://audmonkey.sourceforge.net/xml/"));
 
    xmlFile.WriteAttr(wxT("version"), wxT(AUDACITY_FILE_FORMAT_VERSION));
-   xmlFile.WriteAttr(wxT("audacityversion"), AUDACITY_VERSION_STRING);
+   xmlFile.WriteAttr(wxT("audmonkeyversion"), AUDACITY_VERSION_STRING);
 
    viewInfo.WriteXMLAttributes(xmlFile);
    xmlFile.WriteAttr(wxT("rate"), settings.GetRate());
@@ -2261,7 +2261,7 @@ void ProjectFileIO::ShowError(wxWindow *parent,
                               const wxString &helpPage)
 {
    ShowExceptionDialog(parent, dlogTitle, message, helpPage, true,
-                   audacity::ToWString(GetLastLog()));
+                   audmonkey::ToWString(GetLastLog()));
 }
 
 const TranslatableString &ProjectFileIO::GetLastError() const
@@ -2619,7 +2619,7 @@ int ProjectFileIO::get_varint(const unsigned char *ptr, int64_t *out)
 }
 
 InvisibleTemporaryProject::InvisibleTemporaryProject()
-   : mpProject{ std::make_shared< AudacityProject >() }
+   : mpProject{ std::make_shared< AudMonkeyProject >() }
 {
 }
 

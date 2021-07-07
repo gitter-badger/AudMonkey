@@ -1,6 +1,6 @@
 /**********************************************************************
 
-Audacity: A Digital Audio Editor
+AudMonkey: A Digital Audio Editor
 
 NoteTrackView.cpp
 
@@ -41,7 +41,7 @@ NoteTrackView::~NoteTrackView()
 
 std::vector<UIHandlePtr> NoteTrackView::DetailedHitTest
 (const TrackPanelMouseState &WXUNUSED(state),
- const AudacityProject *WXUNUSED(pProject), int, bool )
+ const AudMonkeyProject *WXUNUSED(pProject), int, bool )
 {
    // Eligible for stretch?
    UIHandlePtr result;
