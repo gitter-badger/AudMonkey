@@ -113,10 +113,6 @@ It handles initialization and termination by subclassing wxApp.
 #include "widgets/FileHistory.h"
 #include "update/UpdateManager.h"
 
-#ifdef HAS_NETWORKING
-#include "NetworkManager.h"
-#endif
-
 #ifdef EXPERIMENTAL_EASY_CHANGE_KEY_BINDINGS
 #include "prefs/KeyConfigPrefs.h"
 #endif
@@ -188,7 +184,7 @@ void PopulatePreferences()
    bool writeLang = false;
 
    const wxFileName fn(
-      FileNames::ResourcesDir(), 
+      FileNames::ResourcesDir(),
       wxT("FirstTime.ini"));
    if (fn.FileExists())   // it will exist if the (win) installer put it there
    {
@@ -394,9 +390,9 @@ void InitBreakpad()
     databasePath.SetPath(wxStandardPaths::Get().GetUserLocalDataDir());
     databasePath.AppendDir("crashreports");
     databasePath.Mkdir(wxS_DIR_DEFAULT, wxPATH_MKDIR_FULL);
-    
+
     if(databasePath.DirExists())
-    {   
+    {
         BreakpadConfigurer configurer;
         configurer.SetDatabasePathUTF8(databasePath.GetPath().ToUTF8().data())
             .SetSenderPathUTF8(wxFileName(wxStandardPaths::Get().GetExecutablePath()).GetPath().ToUTF8().data())
@@ -740,7 +736,7 @@ int main(int argc, char *argv[])
 {
    wxDISABLE_DEBUG_SUPPORT();
 
-   // Bug #1986 workaround - This doesn't actually reduce the number of 
+   // Bug #1986 workaround - This doesn't actually reduce the number of
    // messages, it simply hides them in Release builds. We'll probably
    // never be able to get rid of the messages entirely, but we should
    // look into what's causing them, so allow them to show in Debug
@@ -1397,7 +1393,7 @@ bool AudacityApp::InitPart2()
 
    AudacityProject *project;
    {
-      // Bug 718: Position splash screen on same screen 
+      // Bug 718: Position splash screen on same screen
       // as where Audacity project will appear.
       wxRect wndRect;
       bool bMaximized = false;
@@ -1414,11 +1410,11 @@ bool AudacityApp::InitPart2()
          wxDefaultSize,
          wxSTAY_ON_TOP);
 
-      // Unfortunately with the Windows 10 Creators update, the splash screen 
+      // Unfortunately with the Windows 10 Creators update, the splash screen
       // now appears before setting its position.
-      // On a dual monitor screen it will appear on one screen and then 
+      // On a dual monitor screen it will appear on one screen and then
       // possibly jump to the second.
-      // We could fix this by writing our own splash screen and using Hide() 
+      // We could fix this by writing our own splash screen and using Hide()
       // until the splash scren was correctly positioned, then Show()
 
       // Possibly move it on to the second screen...
@@ -2243,10 +2239,6 @@ int AudacityApp::OnExit()
    // Terminate the PluginManager (must be done before deleting the locale)
    PluginManager::Get().Terminate();
 
-#ifdef HAS_NETWORKING
-   audacity::network_manager::NetworkManager::GetInstance().Terminate();
-#endif
-
    return 0;
 }
 
@@ -2507,4 +2499,3 @@ void AudacityApp::AssociateFileTypes()
    }
 }
 #endif
-

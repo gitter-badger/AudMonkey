@@ -10,7 +10,6 @@
 #include "UpdateManager.h"
 #include "UpdatePopupDialog.h"
 
-#include "NetworkManager.h"
 #include "IResponse.h"
 #include "Request.h"
 
@@ -66,6 +65,9 @@ VersionPatch UpdateManager::GetVersionPatch() const
 
 void UpdateManager::GetUpdates()
 {
+	// TODO This will need to be reworked.
+	// Check for updated versions from the github repo's releases?
+    /*
     const audacity::network_manager::Request request("https://updates.audacityteam.org/feed/latest.xml");
     auto response = audacity::network_manager::NetworkManager::GetInstance().doGet(request);
 
@@ -112,6 +114,7 @@ void UpdateManager::GetUpdates()
                 });
         }
         });
+    */
 }
 
 void UpdateManager::OnTimer(wxTimerEvent& WXUNUSED(event))
