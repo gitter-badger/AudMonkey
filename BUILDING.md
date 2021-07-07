@@ -121,19 +121,20 @@ cmake -GXCode -T buildsystem=1 -Daudmonkey_use_mad="off" -Daudmonkey_use_id3tag=
 1. Clone AudMonkey from the AudMonkey GitHub project. 
   
     ```
-    $ git clone https://github.com/audmonkey/audmonkey/
+    $ git clone https://github.com/audmonkey/audmonkey.git
     ```
 
 2. Configure AudMonkey using CMake:
    ```
+   $ cd audmonkey
    $ mkdir build && cd build
-   $ cmake -G "Unix Makefiles" -Daudmonkey_use_ffmpeg=loaded ../audmonkey
+   $ cmake -Daudmonkey_use_ffmpeg=loaded ..
    ```
    By default, Debug build will be configured. To change that, pass `-DCMAKE_BUILD_TYPE=Release` to CMake.
 
 3. Build AudMonkey:
    ```
-   $ make -j`nproc`
+   $ cmake --build . -- -j$(nproc)
    ```
 
 4. Testing the build:
@@ -146,8 +147,7 @@ cmake -GXCode -T buildsystem=1 -Daudmonkey_use_mad="off" -Daudmonkey_use_id3tag=
 
 5. Installing AudMonkey
    ```
-   $ cd <build directory>
-   $ sudo make install
+   $ sudo cmake --install .
    ```
 
 ## Advanced
