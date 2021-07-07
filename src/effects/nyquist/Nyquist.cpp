@@ -700,12 +700,12 @@ bool NyquistEffect::Process()
 
       mProps = wxEmptyString;
 
-      mProps += wxString::Format(wxT("(putprop '*AUDACITY* (list %d %d %d) 'VERSION)\n"), AUDACITY_VERSION, AUDACITY_RELEASE, AUDACITY_REVISION);
+      mProps += wxString::Format(wxT("(putprop '*AUDMONKEY* (list %d %d %d) 'VERSION)\n"), AUDMONKEY_VERSION, AUDMONKEY_RELEASE, AUDMONKEY_REVISION);
       wxString lang = gPrefs->Read(wxT("/Locale/Language"), wxT(""));
       lang = (lang.empty())
          ? Languages::GetSystemLanguageCode(FileNames::AudMonkeyPathList())
          : lang;
-      mProps += wxString::Format(wxT("(putprop '*AUDACITY* \"%s\" 'LANGUAGE)\n"), lang);
+      mProps += wxString::Format(wxT("(putprop '*AUDMONKEY* \"%s\" 'LANGUAGE)\n"), lang);
 
       mProps += wxString::Format(wxT("(setf *DECIMAL-SEPARATOR* #\\%c)\n"), wxNumberFormatter::GetDecimalSeparator());
 

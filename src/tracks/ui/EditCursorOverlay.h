@@ -8,8 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EDIT_CURSOR_OVERLAY__
-#define __AUDACITY_EDIT_CURSOR_OVERLAY__
+#ifndef __AUDMONKEY_EDIT_CURSOR_OVERLAY__
+#define __AUDMONKEY_EDIT_CURSOR_OVERLAY__
 
 #include <memory>
 #include "../../ClientData.h" // to inherit

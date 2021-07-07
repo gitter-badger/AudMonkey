@@ -9809,7 +9809,7 @@ msgid ""
 "silences have been inserted into the audio. Enabling this option will "
 "provide that compensation, but it may not work for all VST effects."
 msgstr ""
-"在部分的處理模式，部分的VST效果必須要延遲回傳聲音給AUDACITY。如果不補償這樣的延遲，你會發現聲音當中插入少量的靜音。開啟此選項會提供這樣的補償，但無法適用於所有的VST效果"
+"在部分的處理模式，部分的VST效果必須要延遲回傳聲音給AUDMONKEY。如果不補償這樣的延遲，你會發現聲音當中插入少量的靜音。開啟此選項會提供這樣的補償，但無法適用於所有的VST效果"
 
 #: src/effects/VST/VSTEffect.cpp src/effects/audiounits/AudioUnitEffect.cpp
 #: src/effects/ladspa/LadspaEffect.cpp src/effects/lv2/LV2Effect.cpp
@@ -9961,7 +9961,7 @@ msgid ""
 "effects."
 msgstr ""
 "在部分的處理模式，部分的 聲音效果單元 "
-"必須要延遲回傳聲音給AUDACITY。如果不補償這樣的延遲，你會發現聲音當中插入少量的靜音。開啟此選項會提供這樣的補償，但無法適用於所有的 "
+"必須要延遲回傳聲音給AUDMONKEY。如果不補償這樣的延遲，你會發現聲音當中插入少量的靜音。開啟此選項會提供這樣的補償，但無法適用於所有的 "
 "聲音效果單元。"
 
 #: src/effects/audiounits/AudioUnitEffect.cpp
@@ -10135,7 +10135,7 @@ msgid ""
 "provide that compensation, but it may not work for all LADSPA effects."
 msgstr ""
 "在部分的處理模式，部分的LADSPA "
-"效果必須要延遲回傳聲音給AUDACITY。如果不補償這樣的延遲，你會發現聲音當中插入少量的靜音。開啟此選項會提供這樣的補償，但無法適用於所有的LADSPA"
+"效果必須要延遲回傳聲音給AUDMONKEY。如果不補償這樣的延遲，你會發現聲音當中插入少量的靜音。開啟此選項會提供這樣的補償，但無法適用於所有的LADSPA"
 " 效果"
 
 #. i18n-hint: An item name introducing a value, which is not part of the
@@ -10176,7 +10176,7 @@ msgid ""
 "provide that compensation, but it may not work for all LV2 effects."
 msgstr ""
 "在部分的處理模式，部分的 LV2 "
-"效果必須要延遲回傳聲音給AUDACITY。如果不補償這樣的延遲，你會發現聲音當中插入少量的靜音。開啟此選項會提供這樣的補償，但無法適用於所有的 LV2 "
+"效果必須要延遲回傳聲音給AUDMONKEY。如果不補償這樣的延遲，你會發現聲音當中插入少量的靜音。開啟此選項會提供這樣的補償，但無法適用於所有的 LV2 "
 "效果"
 
 #: src/effects/lv2/LV2Effect.cpp

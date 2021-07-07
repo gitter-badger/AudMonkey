@@ -39,8 +39,8 @@
    
 **********************************************************************/
 
-#ifndef __AUDACITY_IMPORTERINTERFACE_H__
-#define __AUDACITY_IMPORTERINTERFACE_H__
+#ifndef __AUDMONKEY_IMPORTERINTERFACE_H__
+#define __AUDMONKEY_IMPORTERINTERFACE_H__
 
 #include "Identifier.h"
 #include "audmonkey/ConfigInterface.h"
@@ -148,4 +148,4 @@ public:
    virtual bool Import() = 0;
 };
 
-#endif // __AUDACITY_IMPORTERINTERFACE_H__
+#endif // __AUDMONKEY_IMPORTERINTERFACE_H__

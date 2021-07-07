@@ -16,8 +16,8 @@
 
 *//*******************************************************************/
 
-#ifndef __AUDACITY_SCREENSHOT__
-#define __AUDACITY_SCREENSHOT__
+#ifndef __AUDMONKEY_SCREENSHOT__
+#define __AUDMONKEY_SCREENSHOT__
 
 
 
@@ -25,7 +25,7 @@
 
 class AudMonkeyProject;
 
-AUDACITY_DLL_API void OpenScreenshotTools( AudMonkeyProject &project );
+AUDMONKEY_DLL_API void OpenScreenshotTools( AudMonkeyProject &project );
 void CloseScreenshotTools();
 
-#endif // __AUDACITY_SCREENSHOT__
+#endif // __AUDMONKEY_SCREENSHOT__

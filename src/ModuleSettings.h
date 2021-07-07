@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_MODULE_SETTINGS__
-#define __AUDACITY_MODULE_SETTINGS__
+#ifndef __AUDMONKEY_MODULE_SETTINGS__
+#define __AUDMONKEY_MODULE_SETTINGS__
 
 #include "Identifier.h"
 

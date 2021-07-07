@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TRACK_PANEL__
-#define __AUDACITY_TRACK_PANEL__
+#ifndef __AUDMONKEY_TRACK_PANEL__
+#define __AUDMONKEY_TRACK_PANEL__
 
 
 
@@ -57,7 +57,7 @@ enum {
 
 const int DragThreshold = 3;// Anything over 3 pixels is a drag, else a click.
 
-class AUDACITY_DLL_API TrackPanel final
+class AUDMONKEY_DLL_API TrackPanel final
    : public CellularPanel
    , public NonKeystrokeInterceptingWindow
    , private PrefsListener
@@ -174,7 +174,7 @@ protected:
 
    std::unique_ptr<TrackArtist> mTrackArtist;
 
-   class AUDACITY_DLL_API AudMonkeyTimer final : public wxTimer {
+   class AUDMONKEY_DLL_API AudMonkeyTimer final : public wxTimer {
    public:
      void Notify() override{
        // (From Debian)
@@ -213,7 +213,7 @@ protected:
 };
 
 // A predicate class
-struct AUDACITY_DLL_API IsVisibleTrack
+struct AUDMONKEY_DLL_API IsVisibleTrack
 {
    IsVisibleTrack(AudMonkeyProject *project);
 

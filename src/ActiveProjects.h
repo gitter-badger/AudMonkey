@@ -6,8 +6,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_ACTIVE_PROJECTS__
-#define __AUDACITY_ACTIVE_PROJECTS__
+#ifndef __AUDMONKEY_ACTIVE_PROJECTS__
+#define __AUDMONKEY_ACTIVE_PROJECTS__
 
 
 #include "Identifier.h"

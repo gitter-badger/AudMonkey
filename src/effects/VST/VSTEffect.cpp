@@ -31,7 +31,7 @@
 #include "../../widgets/ProgressDialog.h"
 
 #if 0
-#if defined(BUILDING_AUDACITY)
+#if defined(BUILDING_AUDMONKEY)
 #include "../../PlatformCompatibility.h"
 
 // Make the main function private
@@ -336,7 +336,7 @@ VendorSymbol VSTEffectsModule::GetVendor()
 wxString VSTEffectsModule::GetVersion()
 {
    // This "may" be different if this were to be maintained as a separate DLL
-   return AUDACITY_VERSION_STRING;
+   return AUDMONKEY_VERSION_STRING;
 }
 
 TranslatableString VSTEffectsModule::GetDescription()
@@ -964,10 +964,10 @@ intptr_t VSTEffect::AudioMaster(AEffect * effect,
          return 1;
 
       case audioMasterGetVendorVersion:
-         return (intptr_t) (AUDACITY_VERSION << 24 |
-                            AUDACITY_RELEASE << 16 |
-                            AUDACITY_REVISION << 8 |
-                            AUDACITY_MODLEVEL);
+         return (intptr_t) (AUDMONKEY_VERSION << 24 |
+                            AUDMONKEY_RELEASE << 16 |
+                            AUDMONKEY_REVISION << 8 |
+                            AUDMONKEY_MODLEVEL);
 
       // Some (older) effects depend on an effIdle call when requested.  An
       // example is the Antress Modern plugins which uses the call to update

@@ -9,15 +9,15 @@
   This bit by Martyn Shaw.
 
 **********************************************************************/
-#ifndef __AUDACITY_EFFECT_TWOPASSSIMPLEMONO__
-#define __AUDACITY_EFFECT_TWOPASSSIMPLEMONO__
+#ifndef __AUDMONKEY_EFFECT_TWOPASSSIMPLEMONO__
+#define __AUDMONKEY_EFFECT_TWOPASSSIMPLEMONO__
 
 #include "SimpleMono.h"
 
 
 class WaveTrack;
 
-class AUDACITY_DLL_API EffectTwoPassSimpleMono /* not final */ : public Effect
+class AUDMONKEY_DLL_API EffectTwoPassSimpleMono /* not final */ : public Effect
 {
 public:
    // Effect implementation

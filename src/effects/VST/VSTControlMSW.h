@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef AUDACITY_VSTCONTROLMSW_H
-#define AUDACITY_VSTCONTROLMSW_H
+#ifndef AUDMONKEY_VSTCONTROLMSW_H
+#define AUDMONKEY_VSTCONTROLMSW_H
 
 #include <Windows.h>
 

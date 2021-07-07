@@ -8,8 +8,8 @@ Paul Licameli split from AudMonkeyProject.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PROJECT_SETTINGS__
-#define __AUDACITY_PROJECT_SETTINGS__
+#ifndef __AUDMONKEY_PROJECT_SETTINGS__
+#define __AUDMONKEY_PROJECT_SETTINGS__
 
 #include <atomic>
 #include <wx/event.h> // to declare custom event type
@@ -20,7 +20,7 @@ Paul Licameli split from AudMonkeyProject.h
 class AudMonkeyProject;
 
 // Sent to the project when certain settings change
-wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT(AUDMONKEY_DLL_API,
    EVT_PROJECT_SETTINGS_CHANGE, wxCommandEvent);
 
 enum
@@ -47,7 +47,7 @@ enum {
 
 ///\brief Holds various per-project settings values, including the sample rate,
 /// and sends events to the project when certain values change
-class AUDACITY_DLL_API ProjectSettings final
+class AUDMONKEY_DLL_API ProjectSettings final
    : public ClientData::Base
    , private PrefsListener
 {

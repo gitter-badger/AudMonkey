@@ -8,8 +8,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_BUTTON_HANDLE__
-#define __AUDACITY_BUTTON_HANDLE__
+#ifndef __AUDMONKEY_BUTTON_HANDLE__
+#define __AUDMONKEY_BUTTON_HANDLE__
 
 #include "../../UIHandle.h"
 
@@ -22,7 +22,7 @@ class TranslatableString;
 
 /// \brief A UIHandle for a TrackPanel button, such as the Mute and Solo 
 /// buttons.
-class AUDACITY_DLL_API ButtonHandle /* not final */ : public UIHandle
+class AUDMONKEY_DLL_API ButtonHandle /* not final */ : public UIHandle
 {
    ButtonHandle(const ButtonHandle&) = delete;
 

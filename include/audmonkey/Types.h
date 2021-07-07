@@ -39,8 +39,8 @@
    
 **********************************************************************/
 
-#ifndef __AUDACITY_TYPES_H__
-#define __AUDACITY_TYPES_H__
+#ifndef __AUDMONKEY_TYPES_H__
+#define __AUDMONKEY_TYPES_H__
 
 #include <algorithm>
 #include <functional>
@@ -269,4 +269,4 @@ using VendorSymbol = ComponentInterfaceSymbol;
 
 using EffectFamilySymbol = ComponentInterfaceSymbol;
 
-#endif // __AUDACITY_TYPES_H__
+#endif // __AUDMONKEY_TYPES_H__

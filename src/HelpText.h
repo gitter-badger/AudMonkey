@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_HELP_TEXT__
-#define __AUDACITY_HELP_TEXT__
+#ifndef __AUDMONKEY_HELP_TEXT__
+#define __AUDMONKEY_HELP_TEXT__
 
 class TranslatableString;
 class wxString;
@@ -19,12 +19,12 @@ struct URLStringTag;
 //! Distinct type for URLs
 using URLString = TaggedIdentifier< URLStringTag >;
 
-AUDACITY_DLL_API  wxString HelpText( const wxString & Key );
-AUDACITY_DLL_API TranslatableString TitleText( const wxString & Key );
+AUDMONKEY_DLL_API  wxString HelpText( const wxString & Key );
+AUDMONKEY_DLL_API TranslatableString TitleText( const wxString & Key );
 
-extern AUDACITY_DLL_API const wxString VerCheckArgs();
-extern AUDACITY_DLL_API const URLString VerCheckUrl();
-extern AUDACITY_DLL_API const wxString VerCheckHtml();
-extern AUDACITY_DLL_API wxString FormatHtmlText( const wxString & Text );
+extern AUDMONKEY_DLL_API const wxString VerCheckArgs();
+extern AUDMONKEY_DLL_API const URLString VerCheckUrl();
+extern AUDMONKEY_DLL_API const wxString VerCheckHtml();
+extern AUDMONKEY_DLL_API wxString FormatHtmlText( const wxString & Text );
 
 #endif

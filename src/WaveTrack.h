@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_WAVETRACK__
-#define __AUDACITY_WAVETRACK__
+#ifndef __AUDMONKEY_WAVETRACK__
+#define __AUDMONKEY_WAVETRACK__
 
 #include "Track.h"
 
@@ -65,7 +65,7 @@ using Regions = std::vector < Region >;
 
 class Envelope;
 
-class AUDACITY_DLL_API WaveTrack final : public PlayableTrack {
+class AUDMONKEY_DLL_API WaveTrack final : public PlayableTrack {
 public:
 
    //
@@ -621,7 +621,7 @@ private:
 //! A short-lived object, during whose lifetime, the contents of the WaveTrack are assumed not to change.
 /*! It can replace repeated calls to WaveTrack::Get() (each of which opens and closes at least one block).
  */
-class AUDACITY_DLL_API WaveTrackCache {
+class AUDMONKEY_DLL_API WaveTrackCache {
 public:
    WaveTrackCache()
       : mBufferSize(0)
@@ -694,7 +694,7 @@ void VisitBlocks(TrackList &tracks, BlockVisitor visitor,
 void InspectBlocks(const TrackList &tracks, BlockInspector inspector,
    SampleBlockIDSet *pIDs = nullptr);
 
-class AUDACITY_DLL_API WaveTrackFactory final
+class AUDMONKEY_DLL_API WaveTrackFactory final
    : public ClientData::Base
 {
  public:
@@ -725,4 +725,4 @@ class AUDACITY_DLL_API WaveTrackFactory final
       double rate = 0);
 };
 
-#endif // __AUDACITY_WAVETRACK__
+#endif // __AUDMONKEY_WAVETRACK__

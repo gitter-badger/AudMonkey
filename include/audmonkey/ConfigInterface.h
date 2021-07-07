@@ -39,8 +39,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_CONFIGINTERFACE_H__
-#define __AUDACITY_CONFIGINTERFACE_H__
+#ifndef __AUDMONKEY_CONFIGINTERFACE_H__
+#define __AUDMONKEY_CONFIGINTERFACE_H__
 
 #include "Identifier.h"
 
@@ -53,7 +53,7 @@ differentiates between private and shared config.  It should probably be replace
 with a Shuttle.
 
 *******************************************************************************************/
-class AUDACITY_DLL_API ConfigClientInterface /* not final */
+class AUDMONKEY_DLL_API ConfigClientInterface /* not final */
 {
 public:
    virtual ~ConfigClientInterface() {};
@@ -111,4 +111,4 @@ public:
 };
 #endif
 
-#endif // __AUDACITY_CONFIGINTERFACE_H__
+#endif // __AUDMONKEY_CONFIGINTERFACE_H__

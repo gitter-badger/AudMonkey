@@ -17,8 +17,8 @@ responsible for calling the appropriate callback functions.
 **********************************************************************/
 
 
-#ifndef __AUDACITY_REGISTRAR__
-#define __AUDACITY_REGISTRAR__
+#ifndef __AUDMONKEY_REGISTRAR__
+#define __AUDMONKEY_REGISTRAR__
 
 
 
@@ -29,7 +29,7 @@ class LoadableModule;
 class ComponentInterface;
 class Effect;
 
-class AUDACITY_DLL_API Registrar 
+class AUDMONKEY_DLL_API Registrar 
 {
 public:
    Registrar(){

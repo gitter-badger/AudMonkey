@@ -8,8 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TIME_TRACK_CONTROLS__
-#define __AUDACITY_TIME_TRACK_CONTROLS__
+#ifndef __AUDMONKEY_TIME_TRACK_CONTROLS__
+#define __AUDMONKEY_TIME_TRACK_CONTROLS__
 
 #include "../../ui/CommonTrackControls.h" // to inherit
 

@@ -9,8 +9,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_INTERNAT__
-#define __AUDACITY_INTERNAT__
+#ifndef __AUDMONKEY_INTERNAT__
+#define __AUDMONKEY_INTERNAT__
 
 #include <vector>
 #include <wx/longlong.h>

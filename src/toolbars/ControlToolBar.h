@@ -11,8 +11,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_CONTROL_TOOLBAR__
-#define __AUDACITY_CONTROL_TOOLBAR__
+#ifndef __AUDMONKEY_CONTROL_TOOLBAR__
+#define __AUDMONKEY_CONTROL_TOOLBAR__
 
 #include "ToolBar.h"
 
@@ -29,7 +29,7 @@ class AButton;
 class AudMonkeyProject;
 
 // In the GUI, ControlToolBar appears as the "Transport Toolbar". "Control Toolbar" is historic.
-class AUDACITY_DLL_API ControlToolBar final : public ToolBar {
+class AUDMONKEY_DLL_API ControlToolBar final : public ToolBar {
 
  public:
 

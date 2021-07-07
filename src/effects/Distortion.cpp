@@ -212,7 +212,7 @@ EffectType EffectDistortion::GetType()
 
 bool EffectDistortion::SupportsRealtime()
 {
-#if defined(EXPERIMENTAL_REALTIME_AUDACITY_EFFECTS)
+#if defined(EXPERIMENTAL_REALTIME_AUDMONKEY_EFFECTS)
    return true;
 #else
    return false;

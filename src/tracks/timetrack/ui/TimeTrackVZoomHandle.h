@@ -8,8 +8,8 @@ Paul Licameli split from TimeTrackVZoomHandle.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TIMETRACK_VZOOM_HANDLE__
-#define __AUDACITY_TIMETRACK_VZOOM_HANDLE__
+#ifndef __AUDMONKEY_TIMETRACK_VZOOM_HANDLE__
+#define __AUDMONKEY_TIMETRACK_VZOOM_HANDLE__
 
 #include "../../../UIHandle.h" // to inherit
 

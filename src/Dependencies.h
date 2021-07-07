@@ -11,8 +11,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_DEPENDENCIES__
-#define __AUDACITY_DEPENDENCIES__
+#ifndef __AUDMONKEY_DEPENDENCIES__
+#define __AUDMONKEY_DEPENDENCIES__
 
 #include <list>
 #include "MemoryX.h"

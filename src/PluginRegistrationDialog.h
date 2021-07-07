@@ -7,8 +7,8 @@
   Paul Licameli split from PluginManager.cpp
 
 **********************************************************************/
-#ifndef __AUDACITY_PLUGIN_REGISTRATION_DIALOG__
-#define __AUDACITY_PLUGIN_REGISTRATION_DIALOG__
+#ifndef __AUDMONKEY_PLUGIN_REGISTRATION_DIALOG__
+#define __AUDMONKEY_PLUGIN_REGISTRATION_DIALOG__
 
 #include "widgets/wxPanelWrapper.h" // to inherit
 #include <vector>

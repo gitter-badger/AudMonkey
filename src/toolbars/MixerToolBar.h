@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_MIXER_TOOLBAR__
-#define __AUDACITY_MIXER_TOOLBAR__
+#ifndef __AUDMONKEY_MIXER_TOOLBAR__
+#define __AUDMONKEY_MIXER_TOOLBAR__
 
 #include "ToolBar.h"
 

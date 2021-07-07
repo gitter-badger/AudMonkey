@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PRINTING__
-#define __AUDACITY_PRINTING__
+#ifndef __AUDMONKEY_PRINTING__
+#define __AUDMONKEY_PRINTING__
 
 #include <wx/defs.h>
 
@@ -23,5 +23,5 @@ void HandlePrint(
    wxWindow *parent, const wxString &name, TrackList *tracks,
    TrackPanel &panel);
 
-#endif // __AUDACITY_PRINTING__
+#endif // __AUDMONKEY_PRINTING__
 

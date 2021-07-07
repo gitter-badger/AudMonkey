@@ -9,8 +9,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_BUTTON__
-#define __AUDACITY_BUTTON__
+#ifndef __AUDMONKEY_BUTTON__
+#define __AUDMONKEY_BUTTON__
 
 #include <vector>
 
@@ -22,7 +22,7 @@
 class wxImage;
 class TranslatableString;
 
-class AUDACITY_DLL_API AButton final : public wxWindow {
+class AUDMONKEY_DLL_API AButton final : public wxWindow {
    friend class AButtonAx;
    class Listener;
 

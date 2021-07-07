@@ -10,8 +10,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_CHANGESPEED__
-#define __AUDACITY_EFFECT_CHANGESPEED__
+#ifndef __AUDMONKEY_EFFECT_CHANGESPEED__
+#define __AUDMONKEY_EFFECT_CHANGESPEED__
 
 #include "Effect.h"
 
@@ -116,4 +116,4 @@ private:
    DECLARE_EVENT_TABLE()
 };
 
-#endif // __AUDACITY_EFFECT_CHANGESPEED__
+#endif // __AUDMONKEY_EFFECT_CHANGESPEED__

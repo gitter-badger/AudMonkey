@@ -9,8 +9,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_NOISE_REMOVAL__
-#define __AUDACITY_EFFECT_NOISE_REMOVAL__
+#ifndef __AUDMONKEY_EFFECT_NOISE_REMOVAL__
+#define __AUDMONKEY_EFFECT_NOISE_REMOVAL__
 
 
 

@@ -25,8 +25,8 @@ robust enough to allow all the user changes such as copy/paste, DELETE, and so o
 
 
 
-#ifndef __AUDACITY_ODDecodeFLACTask__
-#define __AUDACITY_ODDecodeFLACTask__
+#ifndef __AUDMONKEY_ODDecodeFLACTask__
+#define __AUDMONKEY_ODDecodeFLACTask__
 
 #include <vector>
 #include <wx/ffile.h> // data member

@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_NYQUIST__
-#define __AUDACITY_EFFECT_NYQUIST__
+#ifndef __AUDMONKEY_EFFECT_NYQUIST__
+#define __AUDMONKEY_EFFECT_NYQUIST__
 
 #include "../Effect.h"
 #include "../../FileNames.h"
@@ -61,7 +61,7 @@ public:
 };
 
 
-class AUDACITY_DLL_API NyquistEffect final : public Effect
+class AUDMONKEY_DLL_API NyquistEffect final : public Effect
 {
 public:
 

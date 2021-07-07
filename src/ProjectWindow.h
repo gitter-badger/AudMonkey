@@ -8,8 +8,8 @@ Paul Licameli split from AudMonkeyProject.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PROJECT_WINDOW__
-#define __AUDACITY_PROJECT_WINDOW__
+#ifndef __AUDMONKEY_PROJECT_WINDOW__
+#define __AUDMONKEY_PROJECT_WINDOW__
 
 #include <memory>
 #include "ProjectWindowBase.h" // to inherit
@@ -26,7 +26,7 @@ void InitProjectWindow( ProjectWindow &window );
 
 ///\brief A top-level window associated with a project, and handling scrollbars
 /// and zooming
-class AUDACITY_DLL_API ProjectWindow final : public ProjectWindowBase
+class AUDMONKEY_DLL_API ProjectWindow final : public ProjectWindowBase
    , public TrackPanelListener
    , public PrefsListener
 {

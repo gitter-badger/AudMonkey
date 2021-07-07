@@ -8,8 +8,8 @@ Paul Licameli split from ProjectManager.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PROJECT_SELECTION_MANAGER__
-#define __AUDACITY_PROJECT_SELECTION_MANAGER__
+#ifndef __AUDMONKEY_PROJECT_SELECTION_MANAGER__
+#define __AUDMONKEY_PROJECT_SELECTION_MANAGER__
 
 #include "ClientData.h" // to inherit
 #include "toolbars/SelectionBarListener.h" // to inherit
@@ -17,7 +17,7 @@ Paul Licameli split from ProjectManager.cpp
 
 class AudMonkeyProject;
 
-class AUDACITY_DLL_API ProjectSelectionManager final
+class AUDMONKEY_DLL_API ProjectSelectionManager final
    : public ClientData::Base
    , public SelectionBarListener
    , public SpectralSelectionBarListener

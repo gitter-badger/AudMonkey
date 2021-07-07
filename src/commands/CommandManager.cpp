@@ -1525,7 +1525,7 @@ void CommandManager::WriteXML(XMLWriter &xmlFile) const
 // may throw
 {
    xmlFile.StartTag(wxT("audmonkeykeyboard"));
-   xmlFile.WriteAttr(wxT("audmonkeyversion"), AUDACITY_VERSION_STRING);
+   xmlFile.WriteAttr(wxT("audmonkeyversion"), AUDMONKEY_VERSION_STRING);
 
    for(const auto &entry : mCommandList) {
 

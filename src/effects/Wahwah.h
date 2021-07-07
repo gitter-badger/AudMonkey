@@ -13,8 +13,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_WAHWAH__
-#define __AUDACITY_EFFECT_WAHWAH__
+#ifndef __AUDMONKEY_EFFECT_WAHWAH__
+#define __AUDMONKEY_EFFECT_WAHWAH__
 
 #include "Effect.h"
 

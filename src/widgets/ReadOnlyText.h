@@ -6,8 +6,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_READONLYTEXT__
-#define __AUDACITY_READONLYTEXT__
+#ifndef __AUDMONKEY_READONLYTEXT__
+#define __AUDMONKEY_READONLYTEXT__
 
 
 #include <wx/wx.h>
@@ -134,4 +134,4 @@ public:
    }
 };
 
-#endif // __AUDACITY_READONLYTEXT__
+#endif // __AUDMONKEY_READONLYTEXT__

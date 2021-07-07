@@ -8,13 +8,13 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PLAYABLE_TRACK_BUTTON_HANDLES__
-#define __AUDACITY_PLAYABLE_TRACK_BUTTON_HANDLES__
+#ifndef __AUDMONKEY_PLAYABLE_TRACK_BUTTON_HANDLES__
+#define __AUDMONKEY_PLAYABLE_TRACK_BUTTON_HANDLES__
 
 #include "../../ui/ButtonHandle.h"
 class wxMouseState;
 
-class AUDACITY_DLL_API MuteButtonHandle final : public ButtonHandle
+class AUDMONKEY_DLL_API MuteButtonHandle final : public ButtonHandle
 {
    MuteButtonHandle(const MuteButtonHandle&) = delete;
 
@@ -45,7 +45,7 @@ public:
 
 ////////////////////////////////////////////////////////////////////////////////
 
-class AUDACITY_DLL_API SoloButtonHandle final : public ButtonHandle
+class AUDMONKEY_DLL_API SoloButtonHandle final : public ButtonHandle
 {
    SoloButtonHandle(const SoloButtonHandle&) = delete;
 

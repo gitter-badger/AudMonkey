@@ -240,7 +240,7 @@ static wxString HelpTextBuiltIn( const wxString & Key )
 #ifdef EXPERIMENTAL_DA
          // Deliberately not translated.
          << wxT("<center><h3>DarkAudMonkey ")
-         << AUDACITY_VERSION_STRING
+         << AUDMONKEY_VERSION_STRING
          << wxT("</h3></center>")
          << wxT("<br><br>DarkAudMonkey is based on AudMonkey:")
          << wxT("<ul><li>")
@@ -260,7 +260,7 @@ static wxString HelpTextBuiltIn( const wxString & Key )
          << wxT("</li></ul>")
 #else
          << wxT("<center><h3>AudMonkey ")
-         << AUDACITY_VERSION_STRING
+         << AUDMONKEY_VERSION_STRING
          << wxT("</h3><h3>")
          << XO("How to get help")
          << wxT("</h3></center>")
@@ -377,7 +377,7 @@ wxString FormatHtmlText( const wxString & Text ){
 
 // Function to give the extra arguments to put on the version check string.
 const wxString VerCheckArgs(){
-   wxString result = wxString("from_ver=") + AUDACITY_VERSION_STRING;
+   wxString result = wxString("from_ver=") + AUDMONKEY_VERSION_STRING;
 #ifdef REV_LONG
    result += wxString("&CommitId=")+wxString(REV_LONG).Left(6);
 #endif

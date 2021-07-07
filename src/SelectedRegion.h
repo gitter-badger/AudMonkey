@@ -22,8 +22,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SELECTEDREGION__
-#define __AUDACITY_SELECTEDREGION__
+#ifndef __AUDMONKEY_SELECTEDREGION__
+#define __AUDMONKEY_SELECTEDREGION__
 
 
 
@@ -35,7 +35,7 @@
 
 class XMLWriter;
 
-class AUDACITY_DLL_API SelectedRegion {
+class AUDMONKEY_DLL_API SelectedRegion {
 
    // Maintains the invariant:  t1() >= t0()
 

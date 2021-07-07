@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_LOAD_EFFECTS__
-#define __AUDACITY_LOAD_EFFECTS__
+#ifndef __AUDMONKEY_LOAD_EFFECTS__
+#define __AUDMONKEY_LOAD_EFFECTS__
 
 #include "audmonkey/ModuleInterface.h"
 
@@ -26,7 +26,7 @@ class Effect;
 //
 ///////////////////////////////////////////////////////////////////////////////
 
-class AUDACITY_DLL_API BuiltinEffectsModule final : public ModuleInterface
+class AUDMONKEY_DLL_API BuiltinEffectsModule final : public ModuleInterface
 {
 public:
    BuiltinEffectsModule();

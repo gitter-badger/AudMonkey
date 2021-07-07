@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SHUTTLE__
-#define __AUDACITY_SHUTTLE__
+#ifndef __AUDMONKEY_SHUTTLE__
+#define __AUDMONKEY_SHUTTLE__
 
 #include "../include/audmonkey/ComponentInterface.h"
 
@@ -57,7 +57,7 @@ class CommandParameters;
 virtual functions that do nothing by default.
 Unrelated to class Shuttle.
 ********************************************************************************/
-class AUDACITY_DLL_API ShuttleParams /* not final */
+class AUDMONKEY_DLL_API ShuttleParams /* not final */
 {
 public:
    wxString mParams;
@@ -83,7 +83,7 @@ public:
 /**************************************************************************//**
 \brief Shuttle that gets parameter values into a string.
 ********************************************************************************/
-class AUDACITY_DLL_API ShuttleGetAutomation final : public ShuttleParams
+class AUDMONKEY_DLL_API ShuttleGetAutomation final : public ShuttleParams
 {
 public:
    ShuttleParams & Optional( bool & var ) override;
@@ -101,7 +101,7 @@ public:
 /**************************************************************************//**
 \brief Shuttle that sets parameters to a value (from a string)
 ********************************************************************************/
-class AUDACITY_DLL_API ShuttleSetAutomation final : public ShuttleParams
+class AUDMONKEY_DLL_API ShuttleSetAutomation final : public ShuttleParams
 {
 public:
    ShuttleSetAutomation(){ bWrite = false; bOK = false;};

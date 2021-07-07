@@ -100,7 +100,7 @@ void AudMonkeyLogger::DoLogText(const wxString & str)
 
       TimeStamp(&stamp);
 
-      mBuffer << stamp << _TS("AudMonkey ") << AUDACITY_VERSION_STRING << wxT("\n");
+      mBuffer << stamp << _TS("AudMonkey ") << AUDMONKEY_VERSION_STRING << wxT("\n");
    }
 
    mBuffer << str << wxT("\n");

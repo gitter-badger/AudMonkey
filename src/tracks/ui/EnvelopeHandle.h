@@ -8,8 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_ENVELOPE_HANDLE__
-#define __AUDACITY_ENVELOPE_HANDLE__
+#ifndef __AUDMONKEY_ENVELOPE_HANDLE__
+#define __AUDMONKEY_ENVELOPE_HANDLE__
 
 #include "../../UIHandle.h"
 
@@ -24,7 +24,7 @@ class ViewInfo;
 class TimeTrack;
 class WaveTrack;
 
-class AUDACITY_DLL_API EnvelopeHandle final : public UIHandle
+class AUDMONKEY_DLL_API EnvelopeHandle final : public UIHandle
 {
    EnvelopeHandle(const EnvelopeHandle&) = delete;
    EnvelopeHandle &operator=(const EnvelopeHandle&) = delete;

@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PLUGINMANAGER_H__
-#define __AUDACITY_PLUGINMANAGER_H__
+#ifndef __AUDMONKEY_PLUGINMANAGER_H__
+#define __AUDMONKEY_PLUGINMANAGER_H__
 
 #include <wx/defs.h>
 
@@ -41,7 +41,7 @@ typedef enum : unsigned {
 } PluginType;
 
 // TODO:  Convert this to multiple derived classes
-class AUDACITY_DLL_API PluginDescriptor
+class AUDMONKEY_DLL_API PluginDescriptor
 {
 public:
    PluginDescriptor();
@@ -171,7 +171,7 @@ typedef wxArrayString PluginIDs;
 
 class PluginRegistrationDialog;
 
-class AUDACITY_DLL_API PluginManager final : public PluginManagerInterface
+class AUDMONKEY_DLL_API PluginManager final : public PluginManagerInterface
 {
 public:
 
@@ -363,4 +363,4 @@ private:
 // User-visible name might change in later versions
 #define NYQUIST_PROMPT_NAME XO("Nyquist Prompt")
 
-#endif /* __AUDACITY_PLUGINMANAGER_H__ */
+#endif /* __AUDMONKEY_PLUGINMANAGER_H__ */

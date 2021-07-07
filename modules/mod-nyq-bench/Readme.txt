@@ -14,6 +14,6 @@ Two things first...
 2)  The NyqBench effect is just my (Leland Lucius) hairbrained idea and it
     may not produce desired results.
 
-For Mac and Linux user, you must change the AUDACITY_DIR variable
+For Mac and Linux user, you must change the AUDMONKEY_DIR variable
 at the top of your Makefile to point to the base of the AudMonkey
 source directory.

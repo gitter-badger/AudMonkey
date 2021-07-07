@@ -6,14 +6,14 @@
 
 */
 
-#ifndef __AUDACITY_USER_EXCEPTION__
-#define __AUDACITY_USER_EXCEPTION__
+#ifndef __AUDMONKEY_USER_EXCEPTION__
+#define __AUDMONKEY_USER_EXCEPTION__
 
 #include "AudMonkeyException.h"
 
  //! Can be thrown when user cancels operations, as with a progress dialog.  Delayed handler does nothing
 /*! This class does not inherit from MessageBoxException. */
-class AUDACITY_DLL_API UserException final : public AudMonkeyException
+class AUDMONKEY_DLL_API UserException final : public AudMonkeyException
 {
 public:
    UserException() {}

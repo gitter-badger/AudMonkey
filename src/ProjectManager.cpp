@@ -92,7 +92,7 @@ ProjectManager::~ProjectManager() = default;
 // a bad compilation dependency.  The event was never emitted anywhere.  I
 // preserve it and its handler here but I move it to remove the dependency.
 // Asynchronous open
-wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT(AUDMONKEY_DLL_API,
                          EVT_OPEN_AUDIO_FILE, wxCommandEvent);
 wxDEFINE_EVENT(EVT_OPEN_AUDIO_FILE, wxCommandEvent);
 
@@ -515,7 +515,7 @@ void InitProjectWindow( ProjectWindow &window )
 
    window.UpdateStatusWidths();
    auto msg = XO("Welcome to AudMonkey version %s")
-      .Format( AUDACITY_VERSION_STRING );
+      .Format( AUDMONKEY_VERSION_STRING );
    ProjectManager::Get( project ).SetStatusText( msg, mainStatusBarField );
 
 #ifdef EXPERIMENTAL_DA2

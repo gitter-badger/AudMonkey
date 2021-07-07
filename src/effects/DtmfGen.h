@@ -11,8 +11,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_DTMF__
-#define __AUDACITY_EFFECT_DTMF__
+#ifndef __AUDMONKEY_EFFECT_DTMF__
+#define __AUDMONKEY_EFFECT_DTMF__
 
 #include "Effect.h"
 

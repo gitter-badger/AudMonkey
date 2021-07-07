@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TIME_TOOLBAR__
-#define __AUDACITY_TIME_TOOLBAR__
+#ifndef __AUDMONKEY_TIME_TOOLBAR__
+#define __AUDMONKEY_TIME_TOOLBAR__
 
 #include <wx/defs.h>
 

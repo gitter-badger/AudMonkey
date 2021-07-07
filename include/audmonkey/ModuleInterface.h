@@ -39,8 +39,8 @@
    
 **********************************************************************/
 
-#ifndef __AUDACITY_MODULEINTERFACE_H__
-#define __AUDACITY_MODULEINTERFACE_H__
+#ifndef __AUDMONKEY_MODULEINTERFACE_H__
+#define __AUDMONKEY_MODULEINTERFACE_H__
 
 #include <functional>
 #include <memory>
@@ -178,4 +178,4 @@ void name::Unregister()                               \
    UnregisterProvider(AudMonkeyModule);                \
 }
 
-#endif // __AUDACITY_MODULEINTERFACE_H__
+#endif // __AUDMONKEY_MODULEINTERFACE_H__

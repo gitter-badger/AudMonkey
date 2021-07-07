@@ -367,7 +367,7 @@ void ExportPCMOptions::GetEncodings(int enc)
 void ExportPCMOptions::SendSuffixEvent()
 {
    // Synchronously process a change in suffix.
-   wxCommandEvent evt(AUDACITY_FILE_SUFFIX_EVENT, GetId());
+   wxCommandEvent evt(AUDMONKEY_FILE_SUFFIX_EVENT, GetId());
    evt.SetEventObject(this);
    evt.SetString(sf_header_extension(mType));
    ProcessWindowEvent(evt);

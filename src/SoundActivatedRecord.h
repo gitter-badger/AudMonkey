@@ -13,8 +13,8 @@
 
 ********************************************************************/
 
-#ifndef __AUDACITY_SOUND_ACTIVATED_RECORD__
-#define __AUDACITY_SOUND_ACTIVATED_RECORD__
+#ifndef __AUDMONKEY_SOUND_ACTIVATED_RECORD__
+#define __AUDMONKEY_SOUND_ACTIVATED_RECORD__
 
 #include "widgets/wxPanelWrapper.h" // to inherit
 

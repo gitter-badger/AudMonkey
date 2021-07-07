@@ -13,8 +13,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_METER__
-#define __AUDACITY_METER__
+#ifndef __AUDMONKEY_METER__
+#define __AUDMONKEY_METER__
 
 #include <wx/setup.h> // for wxUSE_* macros
 #include <wx/brush.h> // member variable
@@ -92,7 +92,7 @@ class MeterAx;
 \brief MeterPanel is a panel that paints the meter used for monitoring
 or playback.
 ************************************************************************/
-class AUDACITY_DLL_API MeterPanel final
+class AUDMONKEY_DLL_API MeterPanel final
    : public MeterPanelBase, private PrefsListener
 {
    DECLARE_DYNAMIC_CLASS(MeterPanel)
@@ -296,4 +296,4 @@ class AUDACITY_DLL_API MeterPanel final
    DECLARE_EVENT_TABLE()
 };
 
-#endif // __AUDACITY_METER__
+#endif // __AUDMONKEY_METER__

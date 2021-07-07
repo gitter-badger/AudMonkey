@@ -26,7 +26,7 @@ Paul Licameli split from AutoRecovery.cpp
 #include <wx/listctrl.h>
 
 enum {
-   ID_QUIT_AUDACITY = 10000,
+   ID_QUIT_AUDMONKEY = 10000,
    ID_DISCARD_SELECTED,
    ID_RECOVER_SELECTED,
    ID_SKIP,
@@ -63,7 +63,7 @@ public:
 };
 
 BEGIN_EVENT_TABLE(AutoRecoveryDialog, wxDialogWrapper)
-   EVT_BUTTON(ID_QUIT_AUDACITY, AutoRecoveryDialog::OnQuitAudMonkey)
+   EVT_BUTTON(ID_QUIT_AUDMONKEY, AutoRecoveryDialog::OnQuitAudMonkey)
    EVT_BUTTON(ID_DISCARD_SELECTED, AutoRecoveryDialog::OnDiscardSelected)
    EVT_BUTTON(ID_RECOVER_SELECTED, AutoRecoveryDialog::OnRecoverSelected)
    EVT_BUTTON(ID_SKIP, AutoRecoveryDialog::OnSkip)
@@ -122,7 +122,7 @@ void AutoRecoveryDialog::PopulateOrExchange(ShuttleGui &S)
 
       S.StartHorizontalLay(wxALIGN_CENTRE, 0);
       {
-         S.Id(ID_QUIT_AUDACITY).AddButton(XXO("&Quit AudMonkey"));
+         S.Id(ID_QUIT_AUDMONKEY).AddButton(XXO("&Quit AudMonkey"));
          S.Id(ID_DISCARD_SELECTED).AddButton(XXO("&Discard Selected"));
          S.Id(ID_RECOVER_SELECTED).AddButton(XXO("&Recover Selected"), wxALIGN_CENTRE, true);
          S.Id(ID_SKIP).AddButton(XXO("&Skip"));
@@ -230,7 +230,7 @@ bool AutoRecoveryDialog::HaveChecked()
 
 void AutoRecoveryDialog::OnQuitAudMonkey(wxCommandEvent &WXUNUSED(evt))
 {
-   EndModal(ID_QUIT_AUDACITY);
+   EndModal(ID_QUIT_AUDMONKEY);
 }
 
 void AutoRecoveryDialog::OnDiscardSelected(wxCommandEvent &WXUNUSED(evt))
@@ -499,7 +499,7 @@ bool ShowAutoRecoveryDialogIfNeeded(AudMonkeyProject *&pproj, bool *didRecoverAn
          break;
 
       default:
-         // This includes ID_QUIT_AUDACITY
+         // This includes ID_QUIT_AUDMONKEY
          return false;
       }
    }

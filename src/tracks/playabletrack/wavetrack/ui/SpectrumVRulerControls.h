@@ -8,8 +8,8 @@ Paul Licameli split from WaveTrackVRulerControls.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SPECTRUM_VRULER_CONTROLS__
-#define __AUDACITY_SPECTRUM_VRULER_CONTROLS__
+#ifndef __AUDMONKEY_SPECTRUM_VRULER_CONTROLS__
+#define __AUDMONKEY_SPECTRUM_VRULER_CONTROLS__
 
 #include "../../../ui/TrackVRulerControls.h" // to inherit
 

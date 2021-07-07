@@ -10,8 +10,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TOOLBAR__
-#define __AUDACITY_TOOLBAR__
+#ifndef __AUDMONKEY_TOOLBAR__
+#define __AUDMONKEY_TOOLBAR__
 
 #include <functional>
 #include <vector>
@@ -51,7 +51,7 @@ class ToolBarResizer;
 //
 // Custom event
 //
-DECLARE_EXPORTED_EVENT_TYPE(AUDACITY_DLL_API, EVT_TOOLBAR_UPDATED, -1);
+DECLARE_EXPORTED_EVENT_TYPE(AUDMONKEY_DLL_API, EVT_TOOLBAR_UPDATED, -1);
 
 //
 // Height of a single line toolbar
@@ -92,7 +92,7 @@ enum { ToolBarFloatMargin = 1 };
 
 class AudMonkeyProject;
 
-class AUDACITY_DLL_API ToolBar /* not final */
+class AUDMONKEY_DLL_API ToolBar /* not final */
 : public wxPanelWrapper
 , protected PrefsListener
 {
@@ -258,7 +258,7 @@ public:
    friend class ToolBarResizer;
 };
 
-struct AUDACITY_DLL_API RegisteredToolbarFactory {
+struct AUDMONKEY_DLL_API RegisteredToolbarFactory {
    using Function = std::function< ToolBar::Holder( AudMonkeyProject & ) >;
    using Functions = std::vector< Function >;
 

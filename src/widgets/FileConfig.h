@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_WIDGETS_FILECONFIG__
-#define __AUDACITY_WIDGETS_FILECONFIG__
+#ifndef __AUDMONKEY_WIDGETS_FILECONFIG__
+#define __AUDMONKEY_WIDGETS_FILECONFIG__
 
 #include <memory>
 

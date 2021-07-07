@@ -8,8 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_LABEL_GLYPH_HANDLE__
-#define __AUDACITY_LABEL_GLYPH_HANDLE__
+#ifndef __AUDMONKEY_LABEL_GLYPH_HANDLE__
+#define __AUDMONKEY_LABEL_GLYPH_HANDLE__
 
 #include "LabelDefaultClickHandle.h"
 

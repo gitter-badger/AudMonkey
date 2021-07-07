@@ -24,8 +24,8 @@ MousePrefs, QualityPrefs, SpectrumPrefs and ThemePrefs.
 
 *//*******************************************************************/
 
-#ifndef __AUDACITY_PREFS_PANEL__
-#define __AUDACITY_PREFS_PANEL__
+#ifndef __AUDMONKEY_PREFS_PANEL__
+#define __AUDMONKEY_PREFS_PANEL__
 
 #include <functional>
 #include "../widgets/wxPanelWrapper.h" // to inherit
@@ -46,7 +46,7 @@ MousePrefs, QualityPrefs, SpectrumPrefs and ThemePrefs.
 class AudMonkeyProject;
 class ShuttleGui;
 
-class AUDACITY_DLL_API PrefsPanel /* not final */
+class AUDMONKEY_DLL_API PrefsPanel /* not final */
    : public wxPanelWrapper, ComponentInterface
 {
  public:
@@ -80,7 +80,7 @@ class AUDACITY_DLL_API PrefsPanel /* not final */
 
    // Typically you make a static object of this type in the .cpp file that
    // also implements the PrefsPanel subclass.
-   struct AUDACITY_DLL_API Registration final
+   struct AUDMONKEY_DLL_API Registration final
    {
       Registration( const wxString &name, const Factory &factory,
          bool expanded = true,

@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_AUTODUCK__
-#define __AUDACITY_EFFECT_AUTODUCK__
+#ifndef __AUDMONKEY_EFFECT_AUTODUCK__
+#define __AUDMONKEY_EFFECT_AUTODUCK__
 
 #include "Effect.h"
 

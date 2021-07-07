@@ -13,8 +13,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_CLICK_REMOVAL__
-#define __AUDACITY_EFFECT_CLICK_REMOVAL__
+#ifndef __AUDMONKEY_EFFECT_CLICK_REMOVAL__
+#define __AUDMONKEY_EFFECT_CLICK_REMOVAL__
 
 #include "Effect.h"
 

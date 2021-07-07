@@ -9,8 +9,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_KEY_CONFIG_PREFS__
-#define __AUDACITY_KEY_CONFIG_PREFS__
+#ifndef __AUDMONKEY_KEY_CONFIG_PREFS__
+#define __AUDMONKEY_KEY_CONFIG_PREFS__
 
 class CommandManager;
 class ShuttleGui;

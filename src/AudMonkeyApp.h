@@ -11,8 +11,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_APP__
-#define __AUDACITY_APP__
+#ifndef __AUDMONKEY_APP__
+#define __AUDMONKEY_APP__
 
 
 #include "Identifier.h"

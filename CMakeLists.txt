@@ -12,30 +12,30 @@ if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU" AND
 endif ()
 
 # We only do alpha builds, beta builds, and release versions.
-# Most of the time we're in development, so AUDACITY_BUILD_LEVEL should be
+# Most of the time we're in development, so AUDMONKEY_BUILD_LEVEL should be
 # defined to 0.
 # Its value may be more than 0 for pre-release "Beta" builds that differ only
 # in the welcome screen, and hiding of some development menu commands, but
 # still link to the alpha manual online.
 
 # Set this value to 0 for alpha, 1 for beta, 2 for release builds
-set( AUDACITY_BUILD_LEVEL 0 )
+set( AUDMONKEY_BUILD_LEVEL 0 )
 
 # The AudMonkey version
 # Increment as appropriate after release of a new version, and set back
-# AUDACITY_BUILD_LEVEL to 0
-set( AUDACITY_VERSION 3 )
-set( AUDACITY_RELEASE 0 )
-set( AUDACITY_REVISION 4 )
-set( AUDACITY_MODLEVEL 0 )
+# AUDMONKEY_BUILD_LEVEL to 0
+set( AUDMONKEY_VERSION 3 )
+set( AUDMONKEY_RELEASE 0 )
+set( AUDMONKEY_REVISION 4 )
+set( AUDMONKEY_MODLEVEL 0 )
 
 string( TIMESTAMP __TDATE__ "%Y%m%d" )
-if( AUDACITY_BUILD_LEVEL EQUAL 0 )
-   set( AUDACITY_SUFFIX "-alpha-${__TDATE__}" )
-elseif(  AUDACITY_BUILD_LEVEL EQUAL 1 )
-   set( AUDACITY_SUFFIX "-beta-${__TDATE__}" )
+if( AUDMONKEY_BUILD_LEVEL EQUAL 0 )
+   set( AUDMONKEY_SUFFIX "-alpha-${__TDATE__}" )
+elseif(  AUDMONKEY_BUILD_LEVEL EQUAL 1 )
+   set( AUDMONKEY_SUFFIX "-beta-${__TDATE__}" )
 else()
-   set( AUDACITY_SUFFIX "" )
+   set( AUDMONKEY_SUFFIX "" )
 endif()
 
 # Don't allow in-source builds...no real reason, just
@@ -98,9 +98,9 @@ endif()
 
 # Add our module path
 # CMAKE_BINARY_DIR is required for Conan to work
-set( AUDACITY_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake-proxies/cmake-modules")
+set( AUDMONKEY_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake-proxies/cmake-modules")
 set( CMAKE_MODULE_PATH
-   ${AUDACITY_MODULE_PATH}
+   ${AUDMONKEY_MODULE_PATH}
    ${CMAKE_BINARY_DIR}
    ${CMAKE_MODULE_PATH}
 )
@@ -136,7 +136,7 @@ project( AudMonkey )
 # Load our functions/macros
 include( AudMonkeyFunctions )
 
-set_from_env(AUDACITY_ARCH_LABEL) # e.g. x86_64
+set_from_env(AUDMONKEY_ARCH_LABEL) # e.g. x86_64
 
 # Allow user to globally set the library preference
 cmd_option( ${_OPT}lib_preference
@@ -451,14 +451,14 @@ endif()
 
 # Define AudMonkey's name
 if( CMAKE_SYSTEM_NAME MATCHES "Darwin|Windows" )
-   set( AUDACITY_NAME "AudMonkey" )
+   set( AUDMONKEY_NAME "AudMonkey" )
 else()
-   set( AUDACITY_NAME "audmonkey" )
+   set( AUDMONKEY_NAME "audmonkey" )
 endif()
 
 # Create short and full version strings
-set( AUDACITY_DIST_VERSION ${AUDACITY_VERSION}.${AUDACITY_RELEASE}.${AUDACITY_REVISION} )
-set( AUDACITY_INFO_VERSION ${AUDACITY_VERSION}.${AUDACITY_RELEASE}.${AUDACITY_REVISION}.${AUDACITY_MODLEVEL} )
+set( AUDMONKEY_DIST_VERSION ${AUDMONKEY_VERSION}.${AUDMONKEY_RELEASE}.${AUDMONKEY_REVISION} )
+set( AUDMONKEY_INFO_VERSION ${AUDMONKEY_VERSION}.${AUDMONKEY_RELEASE}.${AUDMONKEY_REVISION}.${AUDMONKEY_MODLEVEL} )
 
 # Python is used for the manual and (possibly) message catalogs
 find_package( Python3 )

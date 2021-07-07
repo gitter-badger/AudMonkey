@@ -24,8 +24,8 @@ Also, see ODPCMAliasBlockFile for a similar file.
 
 
 
-#ifndef __AUDACITY_ODDecodeBlockFile__
-#define __AUDACITY_ODDecodeBlockFile__
+#ifndef __AUDMONKEY_ODDecodeBlockFile__
+#define __AUDMONKEY_ODDecodeBlockFile__
 
 #include "SimpleBlockFile.h"
 #include <wx/atomic.h> // member variable

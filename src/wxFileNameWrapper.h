@@ -8,8 +8,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_WXFILENAMEWRAPPER__
-#define __AUDACITY_WXFILENAMEWRAPPER__
+#ifndef __AUDMONKEY_WXFILENAMEWRAPPER__
+#define __AUDMONKEY_WXFILENAMEWRAPPER__
 
 class wxArrayString;
 

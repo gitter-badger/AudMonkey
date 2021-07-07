@@ -8,8 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_WAVE_TRACK_VRULER_CONTROLS__
-#define __AUDACITY_WAVE_TRACK_VRULER_CONTROLS__
+#ifndef __AUDMONKEY_WAVE_TRACK_VRULER_CONTROLS__
+#define __AUDMONKEY_WAVE_TRACK_VRULER_CONTROLS__
 
 #include "../../../ui/TrackVRulerControls.h"
 
@@ -18,9 +18,9 @@ class WaveTrack;
 
 namespace WaveTrackVRulerControls
 {
-   AUDACITY_DLL_API Ruler &ScratchRuler();
+   AUDMONKEY_DLL_API Ruler &ScratchRuler();
 
-   AUDACITY_DLL_API void DoDraw( TrackVRulerControls &controls,
+   AUDMONKEY_DLL_API void DoDraw( TrackVRulerControls &controls,
       TrackPanelDrawingContext &context,
       const wxRect &rect, unsigned iPass );
 };

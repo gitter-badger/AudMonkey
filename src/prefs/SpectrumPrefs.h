@@ -18,8 +18,8 @@
 */
 
 
-#ifndef __AUDACITY_SPECTRUM_PREFS__
-#define __AUDACITY_SPECTRUM_PREFS__
+#ifndef __AUDMONKEY_SPECTRUM_PREFS__
+#define __AUDMONKEY_SPECTRUM_PREFS__
 
 #include <vector>
 #include <wx/defs.h>

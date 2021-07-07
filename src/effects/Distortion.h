@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_DISTORTION__
-#define __AUDACITY_EFFECT_DISTORTION__
+#ifndef __AUDMONKEY_EFFECT_DISTORTION__
+#define __AUDMONKEY_EFFECT_DISTORTION__
 
 #include <queue>
 

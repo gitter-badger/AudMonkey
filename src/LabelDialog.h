@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_LABELDIALOG__
-#define __AUDACITY_LABELDIALOG__
+#ifndef __AUDMONKEY_LABELDIALOG__
+#define __AUDMONKEY_LABELDIALOG__
 
 #include <vector>
 #include <wx/defs.h>

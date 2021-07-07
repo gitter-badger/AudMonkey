@@ -6,8 +6,8 @@
 //
 //
 
-#ifndef __AUDACITY_COMMAND_FUNCTORS__
-#define __AUDACITY_COMMAND_FUNCTORS__
+#ifndef __AUDMONKEY_COMMAND_FUNCTORS__
+#define __AUDMONKEY_COMMAND_FUNCTORS__
 
 class AudMonkeyProject;
 class AudMonkeyApp;

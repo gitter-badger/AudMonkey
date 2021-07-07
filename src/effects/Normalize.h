@@ -9,8 +9,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_NORMALIZE__
-#define __AUDACITY_EFFECT_NORMALIZE__
+#ifndef __AUDMONKEY_EFFECT_NORMALIZE__
+#define __AUDMONKEY_EFFECT_NORMALIZE__
 
 #include "Effect.h"
 #include "Biquad.h"

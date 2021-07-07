@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_APPLICATION_PREFS__
-#define __AUDACITY_APPLICATION_PREFS__
+#ifndef __AUDMONKEY_APPLICATION_PREFS__
+#define __AUDMONKEY_APPLICATION_PREFS__
 
 #include <wx/defs.h>
 

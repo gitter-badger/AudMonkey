@@ -8,8 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PLAY_INDICATOR_OVERLAY__
-#define __AUDACITY_PLAY_INDICATOR_OVERLAY__
+#ifndef __AUDMONKEY_PLAY_INDICATOR_OVERLAY__
+#define __AUDMONKEY_PLAY_INDICATOR_OVERLAY__
 
 #include <wx/event.h> // to inherit
 #include <memory>

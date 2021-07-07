@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_STEREO_TO_MONO__
-#define __AUDACITY_EFFECT_STEREO_TO_MONO__
+#ifndef __AUDMONKEY_EFFECT_STEREO_TO_MONO__
+#define __AUDMONKEY_EFFECT_STEREO_TO_MONO__
 
 #include "Effect.h"
 

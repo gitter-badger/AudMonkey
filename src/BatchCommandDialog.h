@@ -9,8 +9,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_MACRO_COMMAND_DIALOG__
-#define __AUDACITY_MACRO_COMMAND_DIALOG__
+#ifndef __AUDMONKEY_MACRO_COMMAND_DIALOG__
+#define __AUDMONKEY_MACRO_COMMAND_DIALOG__
 
 #include <wx/defs.h>
 

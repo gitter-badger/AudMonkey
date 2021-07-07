@@ -10,8 +10,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_MODULE_PREFS__
-#define __AUDACITY_MODULE_PREFS__
+#ifndef __AUDMONKEY_MODULE_PREFS__
+#define __AUDMONKEY_MODULE_PREFS__
 
 #include <wx/defs.h>
 

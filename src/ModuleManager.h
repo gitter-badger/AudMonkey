@@ -9,8 +9,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_MODULEMANAGER_H__
-#define __AUDACITY_MODULEMANAGER_H__
+#ifndef __AUDMONKEY_MODULEMANAGER_H__
+#define __AUDMONKEY_MODULEMANAGER_H__
 
 #include "MemoryX.h"
 #include <functional>
@@ -68,7 +68,7 @@ typedef std::map<wxString, ModuleInterfaceHandle> ModuleMap;
 typedef std::map<ModuleInterface *, std::unique_ptr<wxDynamicLibrary>> LibraryMap;
 using PluginIDs = wxArrayString;
 
-class AUDACITY_DLL_API ModuleManager final
+class AUDMONKEY_DLL_API ModuleManager final
 {
 public:
 
@@ -143,9 +143,9 @@ private:
 // ----------------------------------------------------------------------------
 using ModuleMain = ModuleInterface *(*)();
 
-AUDACITY_DLL_API
+AUDMONKEY_DLL_API
 void RegisterProvider(ModuleMain rtn);
-AUDACITY_DLL_API
+AUDMONKEY_DLL_API
 void UnregisterProvider(ModuleMain rtn);
 
 // Guarantee the registry exists before any registrations, so it will
@@ -153,4 +153,4 @@ void UnregisterProvider(ModuleMain rtn);
 static struct Init{
    Init() { RegisterProvider(nullptr); } } sInitBuiltinModules;
 
-#endif /* __AUDACITY_MODULEMANAGER_H__ */
+#endif /* __AUDMONKEY_MODULEMANAGER_H__ */

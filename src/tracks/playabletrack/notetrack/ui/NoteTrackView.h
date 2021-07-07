@@ -8,8 +8,8 @@ Paul Licameli split from class NoteTrack
 
 **********************************************************************/
 
-#ifndef __AUDACITY_NOTE_TRACK_VIEW__
-#define __AUDACITY_NOTE_TRACK_VIEW__
+#ifndef __AUDMONKEY_NOTE_TRACK_VIEW__
+#define __AUDMONKEY_NOTE_TRACK_VIEW__
 
 #include "../../../ui/CommonTrackView.h"
 

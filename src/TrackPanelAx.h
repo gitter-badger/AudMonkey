@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TRACK_PANEL_ACCESSIBILITY__
-#define __AUDACITY_TRACK_PANEL_ACCESSIBILITY__
+#ifndef __AUDMONKEY_TRACK_PANEL_ACCESSIBILITY__
+#define __AUDMONKEY_TRACK_PANEL_ACCESSIBILITY__
 
 
 
@@ -34,7 +34,7 @@ class Track;
 class TrackList;
 
 // An event sent to the project
-wxDECLARE_EXPORTED_EVENT(AUDACITY_DLL_API,
+wxDECLARE_EXPORTED_EVENT(AUDMONKEY_DLL_API,
                          EVT_TRACK_FOCUS_CHANGE, wxCommandEvent);
 
 class TrackPanelAx final
@@ -156,7 +156,7 @@ private:
    int mMessageCount;
 };
 
-class AUDACITY_DLL_API TrackFocus final
+class AUDMONKEY_DLL_API TrackFocus final
    : public ClientData::Base
 {
 public:
@@ -201,4 +201,4 @@ private:
 #endif
 };
 
-#endif // __AUDACITY_TRACK_PANEL_ACCESSIBILITY__
+#endif // __AUDMONKEY_TRACK_PANEL_ACCESSIBILITY__

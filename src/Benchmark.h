@@ -8,13 +8,13 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_BENCHMARK__
-#define __AUDACITY_BENCHMARK__
+#ifndef __AUDMONKEY_BENCHMARK__
+#define __AUDMONKEY_BENCHMARK__
 
 class wxWindow;
 class AudMonkeyProject;
 
-AUDACITY_DLL_API
+AUDMONKEY_DLL_API
 void RunBenchmark( wxWindow *parent, AudMonkeyProject &project );
 
-#endif // define __AUDACITY_BENCHMARK__
+#endif // define __AUDMONKEY_BENCHMARK__

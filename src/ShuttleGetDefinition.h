@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SHUTTLE_GET_DEFINITION__
-#define __AUDACITY_SHUTTLE_GET_DEFINITION__
+#ifndef __AUDMONKEY_SHUTTLE_GET_DEFINITION__
+#define __AUDMONKEY_SHUTTLE_GET_DEFINITION__
 
 #include "Shuttle.h" // to inherit
 #include "commands/CommandTargets.h" // to inherit
@@ -17,7 +17,7 @@
 /**************************************************************************//**
 \brief Shuttle that retrieves a JSON format definition of a command's parameters.
 ********************************************************************************/
-class AUDACITY_DLL_API ShuttleGetDefinition final
+class AUDMONKEY_DLL_API ShuttleGetDefinition final
    : public ShuttleParams, public CommandMessageTargetDecorator
 {
 public:

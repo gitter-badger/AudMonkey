@@ -9,8 +9,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_RECORDING_PREFS__
-#define __AUDACITY_RECORDING_PREFS__
+#ifndef __AUDMONKEY_RECORDING_PREFS__
+#define __AUDMONKEY_RECORDING_PREFS__
 
 
 

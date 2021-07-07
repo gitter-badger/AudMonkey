@@ -26,8 +26,8 @@ flicker-free use.
 
 *//**********************************************************************/
 
-#ifndef __AUDACITY_WIDGETS_GRABBER__
-#define __AUDACITY_WIDGETS_GRABBER__
+#ifndef __AUDMONKEY_WIDGETS_GRABBER__
+#define __AUDMONKEY_WIDGETS_GRABBER__
 
 
 
@@ -42,7 +42,7 @@ class TranslatableString;
 
 // Custom events
 
-DECLARE_EXPORTED_EVENT_TYPE(AUDACITY_DLL_API, EVT_GRABBER_CLICKED, -1)
+DECLARE_EXPORTED_EVENT_TYPE(AUDMONKEY_DLL_API, EVT_GRABBER_CLICKED, -1)
 
 class GrabberEvent final : public wxCommandEvent
 {
@@ -99,7 +99,7 @@ typedef void (wxEvtHandler::*GrabberEventFunction)(GrabberEvent &);
 
 #define grabberWidth 10
 
-class AUDACITY_DLL_API Grabber final : public wxWindow
+class AUDMONKEY_DLL_API Grabber final : public wxWindow
 {
 
  public:
@@ -147,7 +147,7 @@ class AUDACITY_DLL_API Grabber final : public wxWindow
 
 // Piggy back in same source file as Grabber.
 // AudMonkey Flicker-free StaticBitmap.
-class AUDACITY_DLL_API AStaticBitmap : public wxStaticBitmap {
+class AUDMONKEY_DLL_API AStaticBitmap : public wxStaticBitmap {
   public:
     AStaticBitmap(wxWindow *parent,
                    wxWindowID id,

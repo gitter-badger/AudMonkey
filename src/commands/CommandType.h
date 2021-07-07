@@ -39,7 +39,7 @@ class CommandOutputTargets;
 class CommandSignature;
 class wxString;
 
-class AUDACITY_DLL_API OldStyleCommandType : public AudMonkeyCommand
+class AUDMONKEY_DLL_API OldStyleCommandType : public AudMonkeyCommand
 {
 private:
    ComponentInterfaceSymbol mSymbol;

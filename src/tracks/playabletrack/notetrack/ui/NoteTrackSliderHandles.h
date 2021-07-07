@@ -8,8 +8,8 @@
 
  **********************************************************************/
 
-#ifndef __AUDACITY_NOTE_TRACK_SLIDER_HANDLES__
-#define __AUDACITY_NOTE_TRACK_SLIDER_HANDLES__
+#ifndef __AUDMONKEY_NOTE_TRACK_SLIDER_HANDLES__
+#define __AUDMONKEY_NOTE_TRACK_SLIDER_HANDLES__
 
 #ifdef EXPERIMENTAL_MIDI_OUT
 

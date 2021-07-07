@@ -9,8 +9,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_ATTACHED_VIRTUAL_FUNCTION__
-#define __AUDACITY_ATTACHED_VIRTUAL_FUNCTION__
+#ifndef __AUDMONKEY_ATTACHED_VIRTUAL_FUNCTION__
+#define __AUDMONKEY_ATTACHED_VIRTUAL_FUNCTION__
 
 
 #include <functional>

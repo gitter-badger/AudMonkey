@@ -1,5 +1,5 @@
-#ifndef __AUDACITY_MEMORY_X_H__
-#define __AUDACITY_MEMORY_X_H__
+#ifndef __AUDMONKEY_MEMORY_X_H__
+#define __AUDMONKEY_MEMORY_X_H__
 
 // C++ standard header <memory> with a few extensions
 #include <iterator>
@@ -630,4 +630,4 @@ template< typename T > struct NonInterfering
 
 #define MAX_AUDIO (1. - 1./(1<<15))
 
-#endif // __AUDACITY_MEMORY_X_H__
+#endif // __AUDMONKEY_MEMORY_X_H__

@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EXT_IMPORT_PREFS__
-#define __AUDACITY_EXT_IMPORT_PREFS__
+#ifndef __AUDMONKEY_EXT_IMPORT_PREFS__
+#define __AUDMONKEY_EXT_IMPORT_PREFS__
 
 #include <wx/defs.h>
 #include <wx/dnd.h> // to inherit wxDropTarget

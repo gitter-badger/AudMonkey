@@ -8,8 +8,8 @@ Paul Licameli split from class TimeTrack
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TIME_TRACK_VIEW__
-#define __AUDACITY_TIME_TRACK_VIEW__
+#ifndef __AUDMONKEY_TIME_TRACK_VIEW__
+#define __AUDMONKEY_TIME_TRACK_VIEW__
 
 #include "../../ui/CommonTrackView.h"
 

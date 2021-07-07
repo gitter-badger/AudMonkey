@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TimeDialog__
-#define __AUDACITY_TimeDialog__
+#ifndef __AUDMONKEY_TimeDialog__
+#define __AUDMONKEY_TimeDialog__
 
 #include <wx/defs.h>
 
@@ -20,7 +20,7 @@
 class NumericTextCtrl;
 class ShuttleGui;
 
-class AUDACITY_DLL_API TimeDialog final : public wxDialogWrapper
+class AUDMONKEY_DLL_API TimeDialog final : public wxDialogWrapper
 {
  public:
 

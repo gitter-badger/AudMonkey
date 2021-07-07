@@ -8,8 +8,8 @@ Paul Licameli split from WaveTrackView.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SPECTRUM_VIEW__
-#define __AUDACITY_SPECTRUM_VIEW__
+#ifndef __AUDMONKEY_SPECTRUM_VIEW__
+#define __AUDMONKEY_SPECTRUM_VIEW__
 
 #include "WaveTrackView.h" // to inherit
 

@@ -9,8 +9,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_MACROS_WINDOW__
-#define __AUDACITY_MACROS_WINDOW__
+#ifndef __AUDMONKEY_MACROS_WINDOW__
+#define __AUDMONKEY_MACROS_WINDOW__
 
 #include <wx/defs.h>
 

@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_FREQ_WINDOW__
-#define __AUDACITY_FREQ_WINDOW__
+#ifndef __AUDMONKEY_FREQ_WINDOW__
+#define __AUDMONKEY_FREQ_WINDOW__
 
 #include <vector>
 #include <wx/font.h> // member variable
@@ -32,7 +32,7 @@ class FrequencyPlotDialog;
 class FreqGauge;
 class RulerPanel;
 
-DECLARE_EXPORTED_EVENT_TYPE(AUDACITY_DLL_API, EVT_FREQWINDOW_RECALC, -1);
+DECLARE_EXPORTED_EVENT_TYPE(AUDMONKEY_DLL_API, EVT_FREQWINDOW_RECALC, -1);
 
 class FreqPlot final : public wxWindow
 {

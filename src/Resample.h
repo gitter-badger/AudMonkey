@@ -9,8 +9,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_RESAMPLE_H__
-#define __AUDACITY_RESAMPLE_H__
+#ifndef __AUDMONKEY_RESAMPLE_H__
+#define __AUDMONKEY_RESAMPLE_H__
 
 
 
@@ -25,7 +25,7 @@ struct soxr_deleter {
 };
 using soxrHandle = std::unique_ptr<soxr, soxr_deleter>;
 
-class AUDACITY_DLL_API Resample final
+class AUDMONKEY_DLL_API Resample final
 {
  public:
    /// Resamplers may have more than one method, offering a
@@ -83,4 +83,4 @@ class AUDACITY_DLL_API Resample final
    bool mbWantConstRateResampling;
 };
 
-#endif // __AUDACITY_RESAMPLE_H__
+#endif // __AUDMONKEY_RESAMPLE_H__

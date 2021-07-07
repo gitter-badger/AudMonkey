@@ -39,8 +39,8 @@
    
 **********************************************************************/
 
-#ifndef __AUDACITY_PLUGININTERFACE_H__
-#define __AUDACITY_PLUGININTERFACE_H__
+#ifndef __AUDMONKEY_PLUGININTERFACE_H__
+#define __AUDMONKEY_PLUGININTERFACE_H__
 
 #include "audmonkey/ConfigInterface.h"
 #include "audmonkey/EffectInterface.h"
@@ -51,7 +51,7 @@
 class ModuleInterface;
 
 
-class AUDACITY_DLL_API PluginManagerInterface /* not final */
+class AUDMONKEY_DLL_API PluginManagerInterface /* not final */
 {
 public:
 
@@ -114,4 +114,4 @@ public:
    virtual bool RemovePrivateConfig(const PluginID & ID, const RegistryPath & group, const RegistryPath & key) = 0;
 };
 
-#endif // __AUDACITY_PLUGININTERFACE_H__
+#endif // __AUDMONKEY_PLUGININTERFACE_H__

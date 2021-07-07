@@ -20,8 +20,8 @@ around to NEW positions.
 
 *//**********************************************************************/
 
-#ifndef __AUDACITY_WIDGETS_HtmlWindow__
-#define __AUDACITY_WIDGETS_HtmlWindow__
+#ifndef __AUDMONKEY_WIDGETS_HtmlWindow__
+#define __AUDMONKEY_WIDGETS_HtmlWindow__
 
 
 
@@ -33,7 +33,7 @@ around to NEW positions.
 /// HtmlWindow Class
 ////////////////////////////////////////////////////////////
 
-class AUDACITY_DLL_API HtmlWindow /* not final */ : public wxHtmlWindow
+class AUDMONKEY_DLL_API HtmlWindow /* not final */ : public wxHtmlWindow
 {
 public:
    HtmlWindow(wxWindow *parent,

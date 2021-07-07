@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SPECPOWERMETER_H_
-#define __AUDACITY_SPECPOWERMETER_H_
+#ifndef __AUDMONKEY_SPECPOWERMETER_H_
+#define __AUDMONKEY_SPECPOWERMETER_H_
 
 #include <cstddef>
 #include "../SampleFormat.h"

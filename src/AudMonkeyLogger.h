@@ -11,8 +11,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_LOGGER__
-#define __AUDACITY_LOGGER__
+#ifndef __AUDMONKEY_LOGGER__
+#define __AUDMONKEY_LOGGER__
 
 
 
@@ -26,7 +26,7 @@
 class wxFrame;
 class wxTextCtrl;
 
-class AUDACITY_DLL_API AudMonkeyLogger final : public wxEvtHandler,
+class AUDMONKEY_DLL_API AudMonkeyLogger final : public wxEvtHandler,
                              public wxLog,
                              public PrefsListener
 {

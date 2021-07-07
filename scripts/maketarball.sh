@@ -269,10 +269,10 @@ eval $(cpp -E <<CPPEOF | sed -e 's/wxT("//g' \
                              -e '/^v_/p' \
                              -e 'd'
 #include "src/AudMonkey.h"
-v_major=AUDACITY_VERSION
-v_minor=AUDACITY_RELEASE
-v_micro=AUDACITY_REVISION
-v_suffix=AUDACITY_SUFFIX
+v_major=AUDMONKEY_VERSION
+v_minor=AUDMONKEY_RELEASE
+v_micro=AUDMONKEY_REVISION
+v_suffix=AUDMONKEY_SUFFIX
 CPPEOF
 )
 

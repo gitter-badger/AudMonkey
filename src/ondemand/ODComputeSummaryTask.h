@@ -16,8 +16,8 @@ updating the ODPCMAliasBlockFile and the GUI of the newly available data.
 
 *//*******************************************************************/
 
-#ifndef __AUDACITY_ODComputeSummaryTask__
-#define __AUDACITY_ODComputeSummaryTask__
+#ifndef __AUDMONKEY_ODComputeSummaryTask__
+#define __AUDMONKEY_ODComputeSummaryTask__
 
 #include <vector>
 #include "ODTask.h"

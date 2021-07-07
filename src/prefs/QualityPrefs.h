@@ -9,8 +9,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_QUALITY_PREFS__
-#define __AUDACITY_QUALITY_PREFS__
+#ifndef __AUDMONKEY_QUALITY_PREFS__
+#define __AUDMONKEY_QUALITY_PREFS__
 
 #include <vector>
 #include <wx/defs.h>
@@ -25,7 +25,7 @@ enum DitherType : unsigned;
 
 #define QUALITY_PREFS_PLUGIN_SYMBOL ComponentInterfaceSymbol{ XO("Quality") }
 
-class AUDACITY_DLL_API QualityPrefs final : public PrefsPanel
+class AUDMONKEY_DLL_API QualityPrefs final : public PrefsPanel
 {
  public:
    QualityPrefs(wxWindow * parent, wxWindowID winid);

@@ -9,8 +9,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_LOAD_COMMANDS__
-#define __AUDACITY_LOAD_COMMANDS__
+#ifndef __AUDMONKEY_LOAD_COMMANDS__
+#define __AUDMONKEY_LOAD_COMMANDS__
 
 #include "audmonkey/ModuleInterface.h"
 
@@ -27,7 +27,7 @@ class AudMonkeyCommand;
 //
 ///////////////////////////////////////////////////////////////////////////////
 
-class AUDACITY_DLL_API BuiltinCommandsModule final : public ModuleInterface
+class AUDMONKEY_DLL_API BuiltinCommandsModule final : public ModuleInterface
 {
 public:
    BuiltinCommandsModule();

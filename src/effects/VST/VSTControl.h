@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef AUDACITY_VSTCONTROL_H
-#define AUDACITY_VSTCONTROL_H
+#ifndef AUDMONKEY_VSTCONTROL_H
+#define AUDMONKEY_VSTCONTROL_H
 
 #include <wx/control.h> // to inherit
 

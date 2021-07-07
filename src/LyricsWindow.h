@@ -9,8 +9,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_LYRICS_WINDOW__
-#define __AUDACITY_LYRICS_WINDOW__
+#ifndef __AUDMONKEY_LYRICS_WINDOW__
+#define __AUDMONKEY_LYRICS_WINDOW__
 
 #include <wx/frame.h> // to inherit
 

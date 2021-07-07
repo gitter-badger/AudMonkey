@@ -8,8 +8,8 @@
 
  **********************************************************************/
 
-#ifndef __AUDACITY_TRACK_PANEL_RESIZER_CELL__
-#define __AUDACITY_TRACK_PANEL_RESIZER_CELL__
+#ifndef __AUDMONKEY_TRACK_PANEL_RESIZER_CELL__
+#define __AUDMONKEY_TRACK_PANEL_RESIZER_CELL__
 
 #include "ClientData.h" // to inherit
 #include "tracks/ui/CommonTrackPanelCell.h" // to inherit

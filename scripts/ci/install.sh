@@ -5,4 +5,4 @@
 set -euxo pipefail
 
 # Install AudMonkey
-cmake --install build --config "${AUDACITY_BUILD_TYPE}" --verbose
+cmake --install build --config "${AUDMONKEY_BUILD_TYPE}" --verbose

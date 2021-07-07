@@ -9,8 +9,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PREFS_DIALOG__
-#define __AUDACITY_PREFS_DIALOG__
+#ifndef __AUDMONKEY_PREFS_DIALOG__
+#define __AUDMONKEY_PREFS_DIALOG__
 
 #include <functional>
 #include <vector>
@@ -30,7 +30,7 @@ class ShuttleGui;
 
 class AudMonkeyProject;
 
-class AUDACITY_DLL_API PrefsDialog /* not final */ : public wxDialogWrapper
+class AUDMONKEY_DLL_API PrefsDialog /* not final */ : public wxDialogWrapper
 {
  public:
    PrefsDialog(wxWindow * parent,
@@ -77,7 +77,7 @@ private:
 
 // This adds code appropriate only to the original use of PrefsDialog for
 // global settings -- not its reuses elsewhere as in View Settings
-class AUDACITY_DLL_API GlobalPrefsDialog final : public PrefsDialog
+class AUDMONKEY_DLL_API GlobalPrefsDialog final : public PrefsDialog
 {
 public:
    GlobalPrefsDialog(
@@ -90,6 +90,6 @@ public:
 };
 
 class AudMonkeyProject;
-void AUDACITY_DLL_API DoReloadPreferences( AudMonkeyProject &project );
+void AUDMONKEY_DLL_API DoReloadPreferences( AudMonkeyProject &project );
 
 #endif

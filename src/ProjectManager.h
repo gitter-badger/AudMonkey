@@ -8,8 +8,8 @@ Paul Licameli split from AudMonkeyProject.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_PROJECT_MANAGER__
-#define __AUDACITY_PROJECT_MANAGER__
+#ifndef __AUDMONKEY_PROJECT_MANAGER__
+#define __AUDMONKEY_PROJECT_MANAGER__
 
 #include <memory>
 
@@ -26,7 +26,7 @@ struct AudioIOStartStreamOptions;
 ///\brief Object associated with a project for high-level management of the
 /// project's lifetime, including creation, destruction, opening from file,
 /// importing, pushing undo states, and reverting to saved states
-class AUDACITY_DLL_API ProjectManager final
+class AUDMONKEY_DLL_API ProjectManager final
    : public wxEvtHandler
    , public ClientData::Base
 {

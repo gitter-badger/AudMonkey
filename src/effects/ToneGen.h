@@ -10,8 +10,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_TONEGEN__
-#define __AUDACITY_EFFECT_TONEGEN__
+#ifndef __AUDMONKEY_EFFECT_TONEGEN__
+#define __AUDMONKEY_EFFECT_TONEGEN__
 
 #include "Effect.h"
 

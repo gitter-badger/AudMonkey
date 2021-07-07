@@ -13,8 +13,8 @@ CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "AudMonkey.exe.manifest"
 // Version
 //
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION AUDACITY_VERSION,AUDACITY_RELEASE,AUDACITY_REVISION,0
- PRODUCTVERSION AUDACITY_VERSION,AUDACITY_RELEASE,AUDACITY_REVISION,0
+ FILEVERSION AUDMONKEY_VERSION,AUDMONKEY_RELEASE,AUDMONKEY_REVISION,0
+ PRODUCTVERSION AUDMONKEY_VERSION,AUDMONKEY_RELEASE,AUDMONKEY_REVISION,0
  FILEFLAGSMASK 0x17L
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -32,23 +32,23 @@ BEGIN
 #ifdef EXPERIMENTAL_DA        
             VALUE "CompanyName", "Extended AudMonkey Team"
             VALUE "FileDescription", "A customised AudMonkey® Cross-Platform Sound Editor"
-            VALUE "FileVersion", AUDACITY_FILE_VERSION
+            VALUE "FileVersion", AUDMONKEY_FILE_VERSION
             VALUE "InternalName", "DarkAudMonkey"
             VALUE "LegalCopyright", "Copyright © 2018. All rights reserved."
             VALUE "LegalTrademarks", "AudMonkey® is a registered trademark of Dominic Mazzoni."
             VALUE "OriginalFilename", "DarkAudMonkey.exe"
             VALUE "ProductName", "DarkAudMonkey"
-            VALUE "ProductVersion", AUDACITY_FILE_VERSION
+            VALUE "ProductVersion", AUDMONKEY_FILE_VERSION
 #else
             VALUE "CompanyName", "AudMonkey Team"
             VALUE "FileDescription", "AudMonkey® Cross-Platform Sound Editor"
-            VALUE "FileVersion", AUDACITY_FILE_VERSION
+            VALUE "FileVersion", AUDMONKEY_FILE_VERSION
             VALUE "InternalName", "AudMonkey"
             VALUE "LegalCopyright", "Copyright © 2018. All rights reserved."
             VALUE "LegalTrademarks", "AudMonkey® is a registered trademark of Dominic Mazzoni."
             VALUE "OriginalFilename", "AudMonkey.exe"
             VALUE "ProductName", "AudMonkey"
-            VALUE "ProductVersion", AUDACITY_FILE_VERSION
+            VALUE "ProductVersion", AUDMONKEY_FILE_VERSION
 #endif            
         END
     END

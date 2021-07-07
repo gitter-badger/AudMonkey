@@ -11,8 +11,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SILENT_BLOCKFILE__
-#define __AUDACITY_SILENT_BLOCKFILE__
+#ifndef __AUDMONKEY_SILENT_BLOCKFILE__
+#define __AUDMONKEY_SILENT_BLOCKFILE__
 
 #include "../BlockFile.h"
 

@@ -8,8 +8,8 @@
  
  **********************************************************************/
 
-#ifndef __AUDACITY_TRANSLATABLE_STRING__
-#define __AUDACITY_TRANSLATABLE_STRING__
+#ifndef __AUDMONKEY_TRANSLATABLE_STRING__
+#define __AUDMONKEY_TRANSLATABLE_STRING__
 
 #include <stddef.h> // for size_t
 #include <functional>

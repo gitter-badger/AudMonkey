@@ -8,8 +8,8 @@
  
  **********************************************************************/
 
-#ifndef __AUDACITY_REALTIME_EFFECT_MANAGER__
-#define __AUDACITY_REALTIME_EFFECT_MANAGER__
+#ifndef __AUDMONKEY_REALTIME_EFFECT_MANAGER__
+#define __AUDMONKEY_REALTIME_EFFECT_MANAGER__
 
 #include <memory>
 #include <vector>
@@ -18,7 +18,7 @@
 class EffectClientInterface;
 class RealtimeEffectState;
 
-class AUDACITY_DLL_API RealtimeEffectManager final
+class AUDMONKEY_DLL_API RealtimeEffectManager final
 {
 public:
    using EffectArray = std::vector <EffectClientInterface*> ;

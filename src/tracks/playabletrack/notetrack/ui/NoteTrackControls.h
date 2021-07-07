@@ -8,8 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_NOTE_TRACK_CONTROLS__
-#define __AUDACITY_NOTE_TRACK_CONTROLS__
+#ifndef __AUDMONKEY_NOTE_TRACK_CONTROLS__
+#define __AUDMONKEY_NOTE_TRACK_CONTROLS__
 
 #include "../../ui/PlayableTrackControls.h" // to inherit
 class wxEvent;

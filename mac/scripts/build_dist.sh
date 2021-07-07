@@ -103,9 +103,9 @@ SRCROOT=$(realpath "${SRCROOT}")
 DSTROOT=$(realpath "${DSTROOT}")
 
 # Setup
-VERSION=`awk '/^#define+ AUDACITY_VERSION / {print $3}' ${SRCROOT}/../src/AudMonkey.h`
-RELEASE=`awk '/^#define+ AUDACITY_RELEASE / {print $3}' ${SRCROOT}/../src/AudMonkey.h`
-REVISION=`awk '/^#define+ AUDACITY_REVISION / {print $3}' ${SRCROOT}/../src/AudMonkey.h`
+VERSION=`awk '/^#define+ AUDMONKEY_VERSION / {print $3}' ${SRCROOT}/../src/AudMonkey.h`
+RELEASE=`awk '/^#define+ AUDMONKEY_RELEASE / {print $3}' ${SRCROOT}/../src/AudMonkey.h`
+REVISION=`awk '/^#define+ AUDMONKEY_REVISION / {print $3}' ${SRCROOT}/../src/AudMonkey.h`
 VERSION=$VERSION.$RELEASE.$REVISION
 IDENT=$(plist "${DSTROOT}/AudMonkey.app/Contents/Info.plist" "CFBundleIdentifier")
 

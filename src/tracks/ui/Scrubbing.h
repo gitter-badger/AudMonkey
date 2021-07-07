@@ -8,8 +8,8 @@ Paul Licameli split from TrackPanel.cpp
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SCRUBBING__
-#define __AUDACITY_SCRUBBING__
+#ifndef __AUDMONKEY_SCRUBBING__
+#define __AUDMONKEY_SCRUBBING__
 
 
 
@@ -37,7 +37,7 @@ class TranslatableString;
 #endif
 
 // Scrub state object
-class AUDACITY_DLL_API Scrubber final
+class AUDMONKEY_DLL_API Scrubber final
    : public wxEvtHandler
    , public ClientData::Base
    , private PrefsListener

@@ -83,7 +83,7 @@ AudMonkeyCommand::~AudMonkeyCommand()
 
 PluginPath AudMonkeyCommand::GetPath(){        return BUILTIN_GENERIC_COMMAND_PREFIX + GetSymbol().Internal(); }
 VendorSymbol AudMonkeyCommand::GetVendor(){      return XO("AudMonkey");}
-wxString AudMonkeyCommand::GetVersion(){     return AUDACITY_VERSION_STRING;}
+wxString AudMonkeyCommand::GetVersion(){     return AUDMONKEY_VERSION_STRING;}
 
 
 bool AudMonkeyCommand::Init(){

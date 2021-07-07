@@ -6,8 +6,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_CONTRAST_DIALOG__
-#define __AUDACITY_CONTRAST_DIALOG__
+#ifndef __AUDMONKEY_CONTRAST_DIALOG__
+#define __AUDMONKEY_CONTRAST_DIALOG__
 
 #include "../widgets/wxPanelWrapper.h" // to inherit
 

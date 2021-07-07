@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SPLASH_DLG__
-#define __AUDACITY_SPLASH_DLG__
+#ifndef __AUDMONKEY_SPLASH_DLG__
+#define __AUDMONKEY_SPLASH_DLG__
 
 #include "widgets/wxPanelWrapper.h" // to inherit
 

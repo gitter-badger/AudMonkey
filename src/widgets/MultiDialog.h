@@ -11,8 +11,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_MULTIDIALOG__
-#define __AUDACITY_MULTIDIALOG__
+#ifndef __AUDMONKEY_MULTIDIALOG__
+#define __AUDMONKEY_MULTIDIALOG__
 
 #include <wx/defs.h>
 
@@ -32,4 +32,4 @@ int ShowMultiDialog(const TranslatableString &message,
                        = DefaultMultiDialogMessage(),
                     bool log = true);
 
-#endif // __AUDACITY_MULTIDIALOG__
+#endif // __AUDMONKEY_MULTIDIALOG__

@@ -6,8 +6,8 @@ SampleBlock.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SAMPLE_BLOCK__
-#define __AUDACITY_SAMPLE_BLOCK__
+#ifndef __AUDMONKEY_SAMPLE_BLOCK__
+#define __AUDMONKEY_SAMPLE_BLOCK__
 
 #include "audmonkey/Types.h"
 

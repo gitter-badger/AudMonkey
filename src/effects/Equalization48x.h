@@ -8,8 +8,8 @@ Intrinsics (SSE/AVX) and Threaded Equalization
 
 ***********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_EQUALIZATION48X__
-#define __AUDACITY_EFFECT_EQUALIZATION48X__
+#ifndef __AUDMONKEY_EFFECT_EQUALIZATION48X__
+#define __AUDMONKEY_EFFECT_EQUALIZATION48X__
 
 #ifdef EXPERIMENTAL_EQ_SSE_THREADED
 

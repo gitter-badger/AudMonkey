@@ -8,8 +8,8 @@ Paul Licameli
 
 **********************************************************************/
 
-#ifndef __AUDACITY_CUTLINE_HANDLE__
-#define __AUDACITY_CUTLINE_HANDLE__
+#ifndef __AUDMONKEY_CUTLINE_HANDLE__
+#define __AUDMONKEY_CUTLINE_HANDLE__
 
 #include "../../../../UIHandle.h"
 #include "../../../../WaveTrackLocation.h"

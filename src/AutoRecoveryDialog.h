@@ -8,8 +8,8 @@ Paul Licameli split from AutoRecovery.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_AUTO_RECOVERY_DIALOG__
-#define __AUDACITY_AUTO_RECOVERY_DIALOG__
+#ifndef __AUDMONKEY_AUTO_RECOVERY_DIALOG__
+#define __AUDMONKEY_AUTO_RECOVERY_DIALOG__
 
 class AudMonkeyProject;
 

@@ -176,7 +176,7 @@ wxString Effect::GetVersion()
       return mClient->GetVersion();
    }
 
-   return AUDACITY_VERSION_STRING;
+   return AUDMONKEY_VERSION_STRING;
 }
 
 TranslatableString Effect::GetDescription()

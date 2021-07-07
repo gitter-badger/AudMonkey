@@ -10,8 +10,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_TRANSCRIPTION_TOOLBAR__
-#define __AUDACITY_TRANSCRIPTION_TOOLBAR__
+#ifndef __AUDMONKEY_TRANSCRIPTION_TOOLBAR__
+#define __AUDMONKEY_TRANSCRIPTION_TOOLBAR__
 
 #include "ToolBar.h"
 

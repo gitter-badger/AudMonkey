@@ -8,8 +8,8 @@ Paul Licameli -- split from WaveTrack.h
 
 **********************************************************************/
 
-#ifndef __AUDACITY_WAVE_TRACK_LOCATION__
-#define __AUDACITY_WAVE_TRACK_LOCATION__
+#ifndef __AUDMONKEY_WAVE_TRACK_LOCATION__
+#define __AUDMONKEY_WAVE_TRACK_LOCATION__
 
 struct WaveTrackLocation {
 

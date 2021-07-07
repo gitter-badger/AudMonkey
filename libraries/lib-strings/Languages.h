@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_LANGUAGES__
-#define __AUDACITY_LANGUAGES__
+#ifndef __AUDMONKEY_LANGUAGES__
+#define __AUDMONKEY_LANGUAGES__
 
 class wxArrayString;
 class wxString;
@@ -57,4 +57,4 @@ wxString GetLocaleName();
 
 }
 
-#endif // __AUDACITY_LANGUAGES__
+#endif // __AUDMONKEY_LANGUAGES__

@@ -271,12 +271,12 @@ void ExportPlugin::InitProgress(std::unique_ptr<ProgressDialog> &pDialog,
 //----------------------------------------------------------------------------
 
 
-wxDEFINE_EVENT(AUDACITY_FILE_SUFFIX_EVENT, wxCommandEvent);
+wxDEFINE_EVENT(AUDMONKEY_FILE_SUFFIX_EVENT, wxCommandEvent);
 
 BEGIN_EVENT_TABLE(Exporter, wxEvtHandler)
    EVT_FILECTRL_FILTERCHANGED(wxID_ANY, Exporter::OnFilterChanged)
    EVT_BUTTON(wxID_HELP, Exporter::OnHelp)
-   EVT_COMMAND(wxID_ANY, AUDACITY_FILE_SUFFIX_EVENT, Exporter::OnExtensionChanged)
+   EVT_COMMAND(wxID_ANY, AUDMONKEY_FILE_SUFFIX_EVENT, Exporter::OnExtensionChanged)
 END_EVENT_TABLE()
 
 namespace {

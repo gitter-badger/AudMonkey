@@ -19,7 +19,7 @@
 #include <wx/timer.h>
 
 namespace UpdatesCheckingSettings {
-    extern AUDACITY_DLL_API BoolSetting DefaultUpdatesCheckingFlag;
+    extern AUDMONKEY_DLL_API BoolSetting DefaultUpdatesCheckingFlag;
 }
 
 /// A class that managing of updates.

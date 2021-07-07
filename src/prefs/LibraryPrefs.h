@@ -10,8 +10,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_FILE_FORMAT_PREFS__
-#define __AUDACITY_FILE_FORMAT_PREFS__
+#ifndef __AUDMONKEY_FILE_FORMAT_PREFS__
+#define __AUDMONKEY_FILE_FORMAT_PREFS__
 
 #include <wx/defs.h>
 

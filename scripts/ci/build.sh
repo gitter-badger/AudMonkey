@@ -19,9 +19,9 @@ else # Linux & others
 fi
 
 # Build AudMonkey
-cmake --build build -j "${cpus}" --config "${AUDACITY_BUILD_TYPE}"
+cmake --build build -j "${cpus}" --config "${AUDMONKEY_BUILD_TYPE}"
 
-BIN_OUTPUT_DIR=build/bin/${AUDACITY_BUILD_TYPE}
+BIN_OUTPUT_DIR=build/bin/${AUDMONKEY_BUILD_TYPE}
 SYMBOLS_OUTPUT_DIR=debug
 
 mkdir ${SYMBOLS_OUTPUT_DIR}

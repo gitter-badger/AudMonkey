@@ -8,14 +8,14 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_SELECTION_BAR_LISTENER__
-#define __AUDACITY_SELECTION_BAR_LISTENER__
+#ifndef __AUDMONKEY_SELECTION_BAR_LISTENER__
+#define __AUDMONKEY_SELECTION_BAR_LISTENER__
 
 #include "audmonkey/Types.h"
 
 class SelectedRegion;
 
-class AUDACITY_DLL_API SelectionBarListener /* not final */ {
+class AUDMONKEY_DLL_API SelectionBarListener /* not final */ {
 
  public:
 
@@ -31,7 +31,7 @@ class AUDACITY_DLL_API SelectionBarListener /* not final */ {
    virtual void AS_ModifySelection(double &start, double &end, bool done) = 0;
 };
 
-class AUDACITY_DLL_API TimeToolBarListener /* not final */ {
+class AUDMONKEY_DLL_API TimeToolBarListener /* not final */ {
 
  public:
 

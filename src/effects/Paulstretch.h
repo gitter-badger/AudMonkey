@@ -7,8 +7,8 @@
 
  **********************************************************************/
 
-#ifndef __AUDACITY_EFFECT_PAULSTRETCH__
-#define __AUDACITY_EFFECT_PAULSTRETCH__
+#ifndef __AUDMONKEY_EFFECT_PAULSTRETCH__
+#define __AUDMONKEY_EFFECT_PAULSTRETCH__
 
 #include "Effect.h"
 

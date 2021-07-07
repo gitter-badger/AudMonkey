@@ -7,8 +7,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_DITHER_H__
-#define __AUDACITY_DITHER_H__
+#ifndef __AUDMONKEY_DITHER_H__
+#define __AUDMONKEY_DITHER_H__
 
 #include "audmonkey/Types.h" // for samplePtr
 
@@ -25,7 +25,7 @@ public:
     static DitherType FastDitherChoice();
     static DitherType BestDitherChoice();
 
-    static AUDACITY_DLL_API EnumSetting< DitherType > FastSetting, BestSetting;
+    static AUDMONKEY_DLL_API EnumSetting< DitherType > FastSetting, BestSetting;
 
     /// Default constructor
     Dither();
@@ -62,4 +62,4 @@ private:
     float mBuffer[8 /* = BUF_SIZE */];
 };
 
-#endif /* __AUDACITY_DITHER_H__ */
+#endif /* __AUDMONKEY_DITHER_H__ */

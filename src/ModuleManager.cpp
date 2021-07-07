@@ -104,7 +104,7 @@ bool Module::Load(wxString &deferredErrorMessage)
    }
 
    wxString moduleVersion = versionFn();
-   if( moduleVersion != AUDACITY_VERSION_STRING) {
+   if( moduleVersion != AUDMONKEY_VERSION_STRING) {
       AudMonkeyMessageBox(
          XO("The module \"%s\" is matched with AudMonkey version \"%s\".\n\nIt will not be loaded.")
             .Format(ShortName, moduleVersion),
@@ -221,7 +221,7 @@ void ModuleManager::FindModules(FilePaths &files)
    wxString pathVar;
 
    // Code from LoadLadspa that might be useful in load modules.
-   pathVar = wxGetenv(wxT("AUDACITY_MODULES_PATH"));
+   pathVar = wxGetenv(wxT("AUDMONKEY_MODULES_PATH"));
    if (!pathVar.empty())
       FileNames::AddMultiPathsToPathList(pathVar, pathList);
 
@@ -428,7 +428,7 @@ bool ModuleManager::DiscoverProviders()
    FilePaths pathList;
 
    // Code from LoadLadspa that might be useful in load modules.
-   wxString pathVar = wxString::FromUTF8(getenv("AUDACITY_MODULES_PATH"));
+   wxString pathVar = wxString::FromUTF8(getenv("AUDMONKEY_MODULES_PATH"));
 
    if (!pathVar.empty())
    {

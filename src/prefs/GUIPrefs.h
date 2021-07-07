@@ -10,8 +10,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_GUI_PREFS__
-#define __AUDACITY_GUI_PREFS__
+#ifndef __AUDMONKEY_GUI_PREFS__
+#define __AUDMONKEY_GUI_PREFS__
 
 #include <wx/defs.h>
 
@@ -22,7 +22,7 @@ class ShuttleGui;
 
 #define GUI_PREFS_PLUGIN_SYMBOL ComponentInterfaceSymbol{ XO("GUI") }
 
-class AUDACITY_DLL_API GUIPrefs final : public PrefsPanel
+class AUDMONKEY_DLL_API GUIPrefs final : public PrefsPanel
 {
  public:
    GUIPrefs(wxWindow * parent, wxWindowID winid);
@@ -55,12 +55,12 @@ class AUDACITY_DLL_API GUIPrefs final : public PrefsPanel
    int mDefaultRangeIndex;
 };
 
-AUDACITY_DLL_API
+AUDMONKEY_DLL_API
 int ShowClippingPrefsID();
-AUDACITY_DLL_API
+AUDMONKEY_DLL_API
 int ShowTrackNameInWaveformPrefsID();
 
-extern AUDACITY_DLL_API ChoiceSetting
+extern AUDMONKEY_DLL_API ChoiceSetting
      GUIManualLocation
 ;
 

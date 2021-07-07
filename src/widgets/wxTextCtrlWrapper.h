@@ -8,8 +8,8 @@
 
 **********************************************************************/
 
-#ifndef __AUDACITY_WXTEXTCTRLWRAPPER__
-#define __AUDACITY_WXTEXTCTRLWRAPPER__
+#ifndef __AUDMONKEY_WXTEXTCTRLWRAPPER__
+#define __AUDMONKEY_WXTEXTCTRLWRAPPER__
 
 
 
@@ -72,4 +72,4 @@ private:
    bool mReadOnly;
 };
 
-#endif // __AUDACITY_WXTEXTCTRLWRAPPER__
+#endif // __AUDMONKEY_WXTEXTCTRLWRAPPER__
