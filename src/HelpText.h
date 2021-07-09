@@ -22,7 +22,6 @@ using URLString = TaggedIdentifier< URLStringTag >;
 AUDMONKEY_DLL_API  wxString HelpText( const wxString & Key );
 AUDMONKEY_DLL_API TranslatableString TitleText( const wxString & Key );
 
-extern AUDMONKEY_DLL_API const wxString VerCheckArgs();
 extern AUDMONKEY_DLL_API const URLString VerCheckUrl();
 extern AUDMONKEY_DLL_API const wxString VerCheckHtml();
 extern AUDMONKEY_DLL_API wxString FormatHtmlText( const wxString & Text );
