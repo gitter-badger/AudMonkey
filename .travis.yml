@@ -41,4 +41,4 @@ stages:
 jobs:
   include:
     - stage: build
-      script: mkdir build && cd build && cmake --version && cmake -G "Unix Makefiles" .. && cmake --build . -- -j$(expr $(nproc) + 1)
+      script: mkdir build && cd build && cmake --version && cmake -G "Unix Makefiles" -DCMAKE_CXX_FLAGS='-w' .. && cmake --build . -- -j$(expr $(nproc) + 1)
