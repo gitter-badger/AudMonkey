@@ -28,7 +28,7 @@ cmake_options=(
     -Daudmonkey_use_mad=system # This library has bugs, that are fixed in *local* version
     -Daudmonkey_use_nyquist=local # This library is not available
     -Daudmonkey_use_vamp=local # The dev package for this library is not available
-    -Daudmonkey_use_ogg=system 
+    -Daudmonkey_use_ogg=system
     -Daudmonkey_use_vorbis=system
     -Daudmonkey_use_flac=system
     -Daudmonkey_use_lv2=system
@@ -38,7 +38,6 @@ cmake_options=(
     -Daudmonkey_use_sbsms=local # We prefer using the latest version of sbsms
     -Daudmonkey_use_soundtouch=system
     -Daudmonkey_use_twolame=system
-    -Daudmonkey_has_networking=yes 
     -Daudmonkey_use_curl=system
 )
 

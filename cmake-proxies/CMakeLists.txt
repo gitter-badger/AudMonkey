@@ -5,7 +5,7 @@ add_conan_lib(
    PKG_CONFIG "zlib >= 1.2.11"
    INTERFACE_NAME ZLIB::ZLIB
    OPTION_NAME zlib
-   CONAN_OPTIONS 
+   CONAN_OPTIONS
       zlib:shared=True
 )
 
@@ -14,13 +14,9 @@ add_conan_lib(
    expat/2.2.9@audacity/stable
    REQUIRED
    PKG_CONFIG "expat >= 2.1.0"
-   CONAN_OPTIONS 
+   CONAN_OPTIONS
       expat:shared=True
 )
-
-if(${_OPT}has_crashreports)
-   add_conan_lib(breakpad breakpad/0.1 REQUIRED)
-endif()
 
 set( wx_zlib "zlib" )
 
@@ -49,15 +45,15 @@ if (${_OPT}use_expat STREQUAL "system")
    set(wx_expat "sys")
 endif()
 
-add_conan_lib( 
-   wxWidgets 
-   wxwidgets/3.1.3.1-audacity 
-   REQUIRED 
+add_conan_lib(
+   wxWidgets
+   wxwidgets/3.1.3.1-audacity
+   REQUIRED
    ALWAYS_ALLOW_CONAN_FALLBACK
    OPTION_NAME wxwidgets
    FIND_PACKAGE_OPTIONS COMPONENTS adv base core html qa xml net
    INTERFACE_NAME wxwidgets::wxwidgets
-   CONAN_OPTIONS 
+   CONAN_OPTIONS
       wxwidgets:shared=True
       wxwidgets:zlib=${wx_zlib}
       wxwidgets:expat=${wx_expat}
@@ -78,7 +74,7 @@ add_conan_lib(
       wxwidgets:protocol=False
       # Building with SIMD requires a huge number of build dependencies
       # Probably this will be enabled in the future
-      libjpeg-turbo:SIMD=False 
+      libjpeg-turbo:SIMD=False
 )
 
 add_conan_lib(
@@ -119,23 +115,6 @@ add_conan_lib(
    REQUIRED
    ALWAYS_ALLOW_CONAN_FALLBACK
 )
-
-if( ${_OPT}has_networking )
-
-   add_conan_lib(
-      CURL
-      libcurl/7.75.0
-      REQUIRED
-      OPTION_NAME curl
-      PKG_CONFIG "libcurl >= 7.68.0"
-      INTERFACE_NAME CURL::libcurl
-      FIND_PACKAGE_OPTIONS
-      CONAN_OPTIONS
-         libcurl:with_ssl=${curl_ssl}
-         libcurl:shared=True
-   )
-
-endif()
 
 if( NOT CMAKE_SYSTEM_NAME MATCHES "Darwin|Windows")
    add_conan_lib(

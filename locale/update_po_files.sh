@@ -2,7 +2,7 @@
 # Run this script with locale as the current directory
 set -o errexit
 echo ";; Recreating audmonkey.pot using .h, .cpp and .mm files"
-for path in ../modules/mod-* ../libraries/lib-* ../include ../src ../crashreports ; do
+for path in ../modules/mod-* ../libraries/lib-* ../include ../src ; do
    find $path -name \*.h -o -name \*.cpp -o -name \*.mm
 done | LANG=c sort | \
 sed -E 's/\.\.\///g' |\
@@ -17,7 +17,7 @@ xargs xgettext \
 --package-name="audmonkey" \
 --package-version='3.0.3' \
 --msgid-bugs-address="audmonkey-translation@lists.sourceforge.net" \
---add-location=file -L C -o audmonkey.pot 
+--add-location=file -L C -o audmonkey.pot
 echo ";; Adding nyquist files to audmonkey.pot"
 for path in ../plug-ins ; do find $path -name \*.ny -not -name rms.ny; done | LANG=c sort | \
 sed -E 's/\.\.\///g' |\
@@ -32,7 +32,7 @@ xargs xgettext \
 --package-name="audmonkey" \
 --package-version='3.0.3' \
 --msgid-bugs-address="audmonkey-translation@lists.sourceforge.net" \
---add-location=file -L Lisp -j -o audmonkey.pot 
+--add-location=file -L Lisp -j -o audmonkey.pot
 if test "${AUDMONKEY_ONLY_POT:-}" = 'y'; then
     return 0
 fi

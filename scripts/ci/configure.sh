@@ -11,7 +11,6 @@ cmake_args=(
     -B build
     -G "${AUDMONKEY_CMAKE_GENERATOR}"
     -D audmonkey_use_pch=no
-    -D audmonkey_has_networking=no
     -D audmonkey_has_updates_check=yes
     -D CMAKE_BUILD_TYPE="${AUDMONKEY_BUILD_TYPE}"
     -D CMAKE_INSTALL_PREFIX="${AUDMONKEY_INSTALL_PREFIX}"
