@@ -1,0 +1,44 @@
+language: cpp
+dist: focal
+compiler:
+  - gcc
+
+os:
+  - linux
+
+addons:
+  apt:
+    update: true
+    packages:
+      - python3
+      - python3-pip
+      - libflac-dev
+      - libflac++-dev
+      - libogg-dev
+      - libsndfile1-dev
+      - libsoxr-dev
+      - libvamp-hostsdk3v5
+      - libvorbis-dev
+      - lv2-dev
+      - liblilv-dev
+      - libserd-dev
+      - libsratom-dev
+      - libsuil-dev
+      - libsoundtouch-dev
+      - sqlite3
+      - libtwolame-dev
+
+before_install:
+  - sudo pip3 install conan
+
+branches:
+  only:
+    - travis-ci
+    
+stages:
+  - build
+    
+jobs:
+  include:
+    - stage: build
+      script: mkdir build && cd build && cmake --version && cmake -G "Unix Makefiles" .. && cmake --build . -- -j$(expr $(nproc) + 1)
