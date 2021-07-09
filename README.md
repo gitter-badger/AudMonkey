@@ -4,7 +4,8 @@
 ![AudMonkey Logo](images/AudMonkeyLogo_WithText.svg)
 
 ---
- 
+[![Build Status](https://travis-ci.com/AudMonkey/AudMonkey.png?branch=master)](https://travis-ci.com/AudMonkey/AudMonkey)
+
 [![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg?style=flat-square)](https://www.firsttimersonly.com/)
 [![Open Source Helpers](https://www.codetriage.com/audmonkey/audmonkey/badges/users.svg)](https://www.codetriage.com/audmonkey/audmonkey)
 
