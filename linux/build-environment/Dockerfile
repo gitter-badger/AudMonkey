@@ -1,4 +1,4 @@
-FROM ubuntu:focal
+FROM ubuntu:rolling
 
 LABEL maintainer="d.vedenko@audacityteam.org"
 LABEL description="A build environment to check the builds for the package maintainers"
