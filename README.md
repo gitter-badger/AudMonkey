@@ -3,10 +3,13 @@
 
 ![AudMonkey Logo](images/AudMonkeyLogo_WithText.svg)
 
-</div>
-
 ---
+ 
+[![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg?style=flat-square)](https://www.firsttimersonly.com/)
+[![Open Source Helpers](https://www.codetriage.com/audmonkey/audmonkey/badges/users.svg)](https://www.codetriage.com/audmonkey/audmonkey)
 
+</div>
+  
 **AudMonkey** is an easy-to-use, multi-track audio editor and recorder for Windows, Mac OS X, GNU/Linux and other operating systems. AudMonkey is open source software licensed under GPL, version 2 or later.
 
 - **Recording** from any real, or virtual audio device that is available to the host system.
