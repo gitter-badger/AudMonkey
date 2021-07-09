@@ -33,7 +33,7 @@ before_install:
 
 branches:
   only:
-    - travis-ci
+    - master
     
 stages:
   - build
