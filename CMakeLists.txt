@@ -464,6 +464,24 @@ endif()
 # Do this before consistency checks for added third-party libraries
 include( "src/Experimental.cmake" )
 
+# Find dependencies
+# Required
+find_package(SndFile REQUIRED)
+pkg_check_modules(soxr soxr)
+pkg_check_modules(sqlite3 sqlite3)
+
+# Optional
+pkg_check_modules(libavcodec libavcodec)
+pkg_check_modules(libavformat libavformat)
+pkg_check_modules(libavutil libavutil)
+pkg_check_modules(vamp vamp)
+pkg_check_modules(ogg ogg)
+pkg_check_modules(vorbis vorbis)
+pkg_check_modules(flac flac)
+pkg_check_modules(lv2 lv2)
+pkg_check_modules(soundtouch soundtouch)
+pkg_check_modules(twolame twolame)
+
 # Add our children
 add_subdirectory( "cmake-proxies" )
 

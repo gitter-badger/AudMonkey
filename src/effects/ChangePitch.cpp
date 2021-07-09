@@ -55,7 +55,7 @@ the pitch without changing the tempo.
 #undef PACKAGE_BUGREPORT
 #undef PACKAGE
 #undef VERSION
-#include "SoundTouch.h"
+#include "soundtouch/SoundTouch.h"
 
 enum {
    ID_PercentChange = 10000,
@@ -857,4 +857,3 @@ void EffectChangePitch::Update_Slider_PercentChange()
 }
 
 #endif // USE_SOUNDTOUCH
-

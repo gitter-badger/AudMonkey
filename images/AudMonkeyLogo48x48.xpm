@@ -1,5 +1,5 @@
 /* XPM */
-static char * AudMonkeyLogo48x48_xpm[] = {
+static const char * AudMonkeyLogo48x48_xpm[] = {
 "48 48 444 2",
 "  	c None",
 ". 	c #000042",

@@ -52,7 +52,6 @@
 #include "../../widgets/wxPanelWrapper.h"
 #include "../../widgets/NumericTextCtrl.h"
 
-#include "lilv/lilv.h"
 #include "suil/suil.h"
 #include "lv2/atom/atom.h"
 #include "lv2/atom/forge.h"
@@ -396,7 +395,7 @@ LV2Effect::LV2Effect(const LilvPlugin *plug)
 
    mPositionSpeed = 1.0;
    mPositionFrame = 0.0;
-   
+
    mNativeWin = NULL;
    mNativeWinInitialSize = wxDefaultSize;
    mNativeWinLastSize = wxDefaultSize;
@@ -856,7 +855,7 @@ bool LV2Effect::SetHost(EffectHostInterface *host)
       {
          mCVPorts.push_back(std::make_shared<LV2CVPort>(port, index, isInput, symbol, name, groupName));
          std::shared_ptr<LV2CVPort> cvPort = mCVPorts.back();
-      
+
          // Collect the value and range info
          if (!std::isnan(minimumVals[i]))
          {
@@ -2002,7 +2001,7 @@ LV2Wrapper *LV2Effect::InitInstance(float sampleRate)
    {
       return NULL;
    }
-   
+
    LilvInstance *instance = wrapper->Instantiate(mPlug, sampleRate, mFeatures);
    if (!instance)
    {
@@ -2315,7 +2314,7 @@ bool LV2Effect::BuildPlain()
    wxSizer *innerSizer;
 
    wxASSERT(mParent); // To justify safenew
-   wxScrolledWindow *const w = safenew 
+   wxScrolledWindow *const w = safenew
       wxScrolledWindow(mParent,
                        wxID_ANY,
                        wxDefaultPosition,
@@ -2941,7 +2940,7 @@ LV2_URID LV2Effect::urid_map(LV2_URID_Map_Handle handle, const char *uri)
 LV2_URID LV2Effect::URID_Map(const char *uri)
 {
    LV2_URID urid;
-   
+
    urid = Lookup_URI(gURIDMap, uri, false);
    if (urid > 0)
    {
@@ -3528,4 +3527,3 @@ LV2_Worker_Status LV2Wrapper::Respond(uint32_t size, const void *data)
 }
 
 #endif
- 

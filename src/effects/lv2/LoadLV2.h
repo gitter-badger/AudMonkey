@@ -14,7 +14,8 @@
 
 #include <memory>
 
-#include "lilv/lilv.h"
+#include "HeaderPaths.h"
+#include LILV_H_PATH
 
 #include "lv2/core/lv2.h"
 #include "lv2/buf-size/buf-size.h"

@@ -34,8 +34,9 @@ class wxArrayString;
 #include "lv2/worker/worker.h"
 #include "lv2/ui/ui.h"
 
-#include <lilv/lilv.h>
-#include <suil/suil.h>
+#include "HeaderPaths.h"
+#include LILV_H_PATH
+#include SUIL_H_PATH
 
 #include "../../ShuttleGui.h"
 #include "../../SampleFormat.h"
@@ -120,7 +121,7 @@ public:
                const wxString & group)
    :  LV2Port(port, index, isInput, symbol, name, group)
    {
-  
+
       mIsMidi = false;
       mWantsPosition = false;
       mMinimumSize = 1024;
@@ -208,7 +209,7 @@ public:
       mCtrl.button = NULL;
       mText = NULL;
    };
- 
+
    wxString mUnits;
    float mMin;
    float mMax;
@@ -431,7 +432,7 @@ private:
                      uint32_t type);
 
 private:
- 
+
    // Declare the global and local URI maps
    static URIDMap gURIDMap;
    URIDMap mURIDMap;
@@ -527,7 +528,7 @@ private:
    bool mExternalUIClosed;
 
    LV2_Atom_Forge mForge;
-   
+
    std::vector<LV2_Options_Option> mOptions;
    size_t mBlockSizeOption;
    size_t mSampleRateOption;
@@ -605,7 +606,7 @@ public:
    void *Entry();
 
    LilvInstance *GetInstance();
-   
+
    LV2_Handle GetHandle();
 
    float GetLatency();

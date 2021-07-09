@@ -1089,26 +1089,27 @@ list( APPEND LIBRARIES
       wxwidgets::wxwidgets
       expat::expat
       libmp3lame::libmp3lame
-      libsndfile
-      libsoxr
+      ${SndFile_LIBRARIES}
+      ${soxr_LIBRARIES}
       portaudio-v19
-      sqlite
+      ${sqlite3_LIBRARIES}
       $<$<BOOL:${${_OPT}has_crashreports}>:crashreports>
-      $<$<BOOL:${USE_FFMPEG}>:ffmpeg>
+	   # $<$<BOOL:${USE_FFMPEG}>:${FFMPEG_LIBS}>
+	   ${libavcodec_LIBRARIES} ${libavformat_LIBRARIES} ${libavutil_LIBRARIES} # TODO only link against these if USE_FFMPEG is set
       $<$<BOOL:${USE_LIBID3TAG}>:libid3tag::libid3tag>
-      $<$<BOOL:${USE_LIBFLAC}>:libflac>
+      $<$<BOOL:${USE_LIBFLAC}>:${flac_LIBRARIES}>
       $<$<BOOL:${USE_LIBMAD}>:libmad::libmad>
-      $<$<BOOL:${USE_LIBOGG}>:libogg>
-      $<$<BOOL:${USE_LIBVORBIS}>:libvorbis>
+      $<$<BOOL:${USE_LIBOGG}>:${ogg_LIBRARIES}>
+      $<$<BOOL:${USE_LIBVORBIS}>:${vorbis_LIBRARIES}>
       $<$<BOOL:${USE_LIBTWOLAME}>:twolame>
-      $<$<BOOL:${USE_LV2}>:lv2>
+      $<$<BOOL:${USE_LV2}>:${lv2_LIBRARIES}>
       $<$<BOOL:${USE_MIDI}>:portmidi>
       $<$<BOOL:${USE_MIDI}>:portsmf>
       $<$<BOOL:${USE_NYQUIST}>:libnyquist>
       $<$<BOOL:${USE_PORTMIXER}>:portmixer>
       $<$<BOOL:${USE_SBSMS}>:libsbsms>
-      $<$<BOOL:${USE_SOUNDTOUCH}>:soundtouch>
-      $<$<BOOL:${USE_VAMP}>:libvamp>
+      $<$<BOOL:${USE_SOUNDTOUCH}>:${soundtouch_LIBRARIES}>
+      $<$<BOOL:${USE_VAMP}>:${vamp_LIBRARIES}>
       $<$<PLATFORM_ID:Linux,FreeBSD,OpenBSD,NetBSD,CYGWIN>:PkgConfig::GLIB>
       $<$<PLATFORM_ID:Linux,FreeBSD,OpenBSD,NetBSD,CYGWIN>:PkgConfig::GTK>
       $<$<PLATFORM_ID:Linux,FreeBSD,OpenBSD,NetBSD,CYGWIN>:z>
