@@ -1,7 +1,7 @@
 
 <div align="center">
 
-![Audacity](images/AudMonkeyLogo_Large.png)
+![AudMonkey Logo](images/AudMonkeyLogo_WithText.svg)
 
 </div>
 
