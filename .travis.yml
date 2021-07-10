@@ -12,6 +12,7 @@ addons:
     packages:
       - python3
       - python3-pip
+      - libasound-dev
       - libflac-dev
       - libflac++-dev
       - libogg-dev
@@ -28,20 +29,69 @@ addons:
       - sqlite3
       - libtwolame-dev
 
-before_install:
-  - sudo pip3 install conan
-
 branches:
-  only:
-    - master
+  except:
+    # This is actually a tag.
+    # We don't want to trigger the pipeline when we update it
+    # Since it's updated by the pipeline itself.
+    - nightly
 
-cache:
-  - /home/travis/.conan
-
-stages:
-  - build
+before_install:
+  - pip3 install conan
 
 jobs:
   include:
-    - stage: build
-      script: mkdir build && cd build && cmake --version && cmake -G "Unix Makefiles" -DCMAKE_CXX_FLAGS='-w' .. && cmake --build . -- -j$(expr $(nproc) + 1)
+    - # Build for testing
+      os: linux
+      if: branch = devel
+      env:
+        - FILE_NAME: AudMonkey-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1).tar.gz
+      script:
+        - mkdir build && cd build
+        - cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C{,XX}_FLAGS="-w" ..
+        - cmake --build . -- -j$(expr $(nproc) + 2)
+        # Package
+        - mkdir AudMonkey
+        - mv bin/Debug/* AudMonkey/
+        - tar cvf - AudMonkey | gzip -f >> $FILE_NAME
+      before_deploy: # Update the (nightly) tag to point to the latest commit
+        - git tag -f nightly
+        - git remote add gh https://${TRAVIS_REPO_SLUG%/*}:${GITHUB_API_KEY}@github.com/${TRAVIS_REPO_SLUG}.git
+        - git push -f gh nightly
+        - git remote remove gh
+      deploy:
+        provider: releases
+        prerelease: true
+        skip_cleanup: true
+        overwrite: true
+        on:
+          branch: devel
+        token: $GITHUB_API_KEY
+
+        name: AudMonkey development build
+        file: $FILE_NAME
+
+    - # Build for production
+      os: linux
+      if: branch = master OR tag IS present
+      env:
+        - RELEASE_NAME: AudMonkey-$TRAVIS_BRANCH
+        - FILE_NAME: $RELEASE_NAME-$TRAVIS_OS_NAME.tar.gz
+      script:
+        - mkdir build && cd build
+        - cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_C{,XX}_FLAGS="-w" ..
+        - cmake --build . -- -j$(expr $(nproc) + 2)
+        # Package
+        - mkdir AudMonkey
+        - mv bin/Release/* AudMonkey
+        - tar cvf - AudMonkey | gzip -f >> $FILE_NAME
+      deploy:
+        provider: releases
+        skip_cleanup: true
+        on:
+          tags: true
+        token: $GITHUB_API_KEY
+
+        name: $RELEASE_NAME
+        file: $FILE_NAME
+
