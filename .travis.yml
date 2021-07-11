@@ -51,9 +51,10 @@ jobs:
         - cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C{,XX}_FLAGS="-w" ..
         - cmake --build . -- -j$(expr $(nproc) + 2)
         # Package
+        - echo "Packaging to $FILENAME"
         - mkdir AudMonkey
         - mv bin/Debug/* AudMonkey/
-        - tar cvf - AudMonkey | gzip -f >> $FILE_NAME
+        - tar cvf - AudMonkey | gzip -f >> "$FILE_NAME"
       before_deploy: # Update the (nightly) tag to point to the latest commit
         - git tag -f nightly
         - git remote add gh https://${TRAVIS_REPO_SLUG%/*}:${GITHUB_API_KEY}@github.com/${TRAVIS_REPO_SLUG}.git
@@ -82,9 +83,10 @@ jobs:
         - cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_C{,XX}_FLAGS="-w" ..
         - cmake --build . -- -j$(expr $(nproc) + 2)
         # Package
+        - echo "Packaging to $FILENAME"
         - mkdir AudMonkey
         - mv bin/Release/* AudMonkey
-        - tar cvf - AudMonkey | gzip -f >> $FILE_NAME
+        - tar cvf - AudMonkey | gzip -f >> "$FILE_NAME"
       deploy:
         provider: releases
         skip_cleanup: true
