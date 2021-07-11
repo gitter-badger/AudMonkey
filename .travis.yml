@@ -45,7 +45,7 @@ jobs:
       os: linux
       if: branch = devel
       env:
-        - FILE_NAME: AudMonkey-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1).tar.gz
+        - FILE_NAME: "AudMonkey-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1).tar.gz"
       script:
         - mkdir build && cd build
         - cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C{,XX}_FLAGS="-w" ..
@@ -76,8 +76,8 @@ jobs:
       os: linux
       if: branch = master OR tag IS present
       env:
-        - RELEASE_NAME: AudMonkey-$TRAVIS_BRANCH
-        - FILE_NAME: $RELEASE_NAME-$TRAVIS_OS_NAME.tar.gz
+        - RELEASE_NAME: "AudMonkey-$TRAVIS_BRANCH"
+        - FILE_NAME: "$RELEASE_NAME-$TRAVIS_OS_NAME.tar.gz"
       script:
         - mkdir build && cd build
         - cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_C{,XX}_FLAGS="-w" ..
