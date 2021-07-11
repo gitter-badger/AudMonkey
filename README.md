@@ -4,11 +4,19 @@
 ![AudMonkey Logo](images/AudMonkeyLogo_WithText.svg)
 
 ---
-[![Build Status](https://travis-ci.com/AudMonkey/AudMonkey.png?branch=devel)](https://travis-ci.com/AudMonkey/AudMonkey)
 
-[![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg?style=flat-square)](https://www.firsttimersonly.com/)
-[![Open Source Helpers](https://www.codetriage.com/audmonkey/audmonkey/badges/users.svg)](https://www.codetriage.com/audmonkey/audmonkey)
-
+  [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/AudMonkey/AudMonkey/graphs/commit-activity)
+  [![Build Status](https://travis-ci.com/AudMonkey/AudMonkey.png?branch=devel)](https://travis-ci.com/AudMonkey/AudMonkey)
+  [![GPLv2 license](https://img.shields.io/badge/License-GPLv2-blue.svg)](https://github.com/AudMonkey/AudMonkey/blob/devel/LICENSE.txt)
+  
+  [![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg?style=flat-square)](https://www.firsttimersonly.com/)
+  [![Open Source Helpers](https://www.codetriage.com/audmonkey/audmonkey/badges/users.svg)](https://www.codetriage.com/audmonkey/audmonkey)
+  [![GitHub contributors](https://img.shields.io/github/contributors/AudMonkey/AudMonkey.svg)](https://github.com/AudMonkey/AudMonkey/graphs/contributors/)
+  
+  [![GitHub pull-requests](https://img.shields.io/github/issues-pr/AudMonkey/AudMonkey.svg)](https://github.com/AudMonkey/AudMonkey/pull/)
+  [![GitHub pull-requests closed](https://img.shields.io/github/issues-pr-closed/AudMonkey/AudMonkey.svg)](https://github.com/AudMonkey/AudMonkey/pull/)
+  [![GitHub issues](https://img.shields.io/github/issues/AudMonkey/AudMonkey.svg)](https://github.com/AudMonkey/AudMonkey/issues/)
+  [![GitHub issues-closed](https://img.shields.io/github/issues-closed/AudMonkey/AudMonkey.svg)](https://github.com/AudMonkey/AudMonkey/issues?q=is%3Aissue+is%3Aclosed)
 </div>
 
 **AudMonkey** is an easy-to-use, multi-track audio editor and recorder for Windows, Mac OS X, GNU/Linux and other operating systems. AudMonkey is open source software licensed under GPL, version 2 or later.
